@@ -1,0 +1,340 @@
+openapi: 3.0.1
+info:
+  version: 1.0.0
+  title: 201718q1_control_2
+  description: "Versió OpenAPI del l'apartat c de l'exercici del **201718q2_control_1**. Se suposa que els possibles clients (programes) que usen aquestes crides ho fan des d’una intranet segura i que, per tant, no cal considerar el tema de l’autenticació/autorització."
+servers:
+  - url: 'https://aswfib.free.beeceptor.com/api/'
+paths:
+  /projects/{code}/issues/{number}:
+    get:
+      tags:
+      - issues
+      summary: Consultar la info d’un Issue concret
+      parameters:
+      - in: path
+        name: code
+        schema:
+          type: string
+        required: true
+      - in: path
+        name: number
+        schema:
+          type: string
+        required: true
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IssueInfo'
+        404:
+          description: 'Error: Not Found'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error404_gi'
+  /projects/{code}/issues:
+    get:
+      tags:
+      - issues
+      summary: Consultar issues
+      parameters:
+      - in: path
+        name: code
+        schema:
+          type: string
+        description: Project's
+        required: true
+      - in: query
+        name: priority
+        schema:
+          $ref: '#/components/schemas/IssuePriority'
+        required: false
+      - in: query
+        name: type
+        schema:
+          $ref: '#/components/schemas/IssueType'
+        required: false
+      - in: query
+        name: dev_nif
+        schema:
+          type: string
+        required: false
+        description: Developer's identifier
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IssueInfo'
+        400:
+          description: 'Error: Bad Request'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error400_gc'
+        404:
+          description: 'Error: Not Found'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error404_gc'
+  /projects/{code}/issues/{number}/scheduling:
+    post:
+      tags:
+      - schedulings
+      summary: Planificar un issue
+      parameters:
+      - in: path
+        name: code
+        schema:
+          type: string
+        required: true
+      - in: path
+        name: number
+        schema:
+          type: integer
+        required: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              allOf:
+              - type: object
+                properties: 
+                  dev_nif:
+                    type: string
+                    example: "98988945K"
+              - $ref: '#/components/schemas/NewScheduling'
+      responses:
+        201:
+          description: "New Scheduling created successfully"
+          headers:
+            Location:
+              schema:
+                type: string
+                format: uri
+                example: "https://aswfib.free.beeceptor.com/api/projects/SUPERSEDE/issues/9780/scheduling"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NewScheduling'
+        400:
+          description: 'Error: Bad Request'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error400_put'
+        404:
+          description: 'Error: Not Found'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error404_gi'
+        409:
+          description: 'Error: Conflict'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error409_post'
+    delete:
+      tags:
+      - schedulings
+      summary: Desplanificar un issue
+      parameters:
+      - in: path
+        name: code
+        schema:
+          type: string
+        required: true
+      - in: path
+        name: number
+        schema:
+          type: integer
+        required: true
+      responses:
+        204:
+          description: "Scheduling removed"
+          content:
+            application/json: {}
+        404:
+          description: 'Error: Not Found'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error404_gi'
+    put:
+      tags:
+      - schedulings
+      summary: Canviar un scheduling
+      parameters:
+      - in: path
+        name: code
+        schema:
+          type: string
+        required: true
+      - in: path
+        name: number
+        schema:
+          type: integer
+        required: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewScheduling'
+      responses:
+        200:
+          description: "Scheduling changed"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NewScheduling'
+        400:
+          description: 'Error: Bad Request'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error400_put'
+        404:
+          description: 'Error: Not Found'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error404_gi'
+components:
+  schemas:
+    IssuePriority:
+      type: integer
+      enum: [1, 2, 3, 4, 5]
+    IssueType:
+      type: string
+      enum:
+      - bug
+      - enhancement
+      - new_feature
+    NewScheduling:
+      type: object
+      properties:
+        start_time:
+          type: string
+          format: date
+        end_time:
+          type: string
+          format: date
+    SchedulingInfo:
+      allOf:
+      - type: object
+        properties:
+          dev_nif:
+            type: string
+            example: "98988945K"
+          dev_name:
+            type: string
+            example: "Manolo R."
+      - $ref: '#/components/schemas/NewScheduling'
+    IssueInfo:
+      type: object
+      properties:
+        proj_code: 
+          type: string
+          example: SUPERSEDE
+        number: 
+          type: integer
+          example: 9780
+        name:
+          type: string
+          example: Login bug
+        description:
+          type: string
+          example: "When a careless user pushes the Login button ..."
+        priority:
+          $ref: '#/components/schemas/IssuePriority'
+        type:
+          $ref: '#/components/schemas/IssueType'
+        schedulling:
+          $ref: '#/components/schemas/SchedulingInfo'
+    ErrorResult:
+      type: object
+      properties:
+        status:
+          type: integer
+          enum: [400, 401, 403, 404, 409]
+        error: 
+          type: string
+          enum: ["Bad Request", "Unauthorized", "Forbidden", "Not Found", "Conflict"]
+        message: 
+          type: string
+  examples:
+    error400_gc:
+      value:
+        status: 400
+        error: "Bad Request"
+        message: "There is no developer with this dev_nif"
+    error400_put:
+      value:
+        status: 400
+        error: "Bad Request"
+        message: "Wrong dates"
+    error401:
+      value:
+        status: 401
+        error: "Unauthorized"
+        message: "You provided no api key (X-API-KEY Header)"
+    error403:
+      value:
+        status: 403
+        error: "Forbidden"
+        message: "Your api key (X-API-KEY Header) is not valid"
+    error404_gi:
+      value:
+        status: 404
+        error: "Not Found"
+        message: "No Issue with these code & number"
+    error404_gc:
+      value:
+        status: 404
+        error: "Not Found"
+        message: "No Project with this code"
+    error409_del:
+      value:
+        status: 409
+        error: "Conflict"
+        message: "Cannot delete: active reservations"
+    error409_post:
+      value:
+        status: 409
+        error: "Conflict"
+        message: "The issue was already scheduled"

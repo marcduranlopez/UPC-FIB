@@ -1,0 +1,376 @@
+openapi: 3.0.1
+info:
+  version: 1.0.0
+  title: 201819q1_control_2
+  description: "Versió OpenAPI del l'apartat c de l'exercici del **201819q1_control_2**. Se suposa que els possibles clients (programes) que usen aqueste crides ho fan des d’una intranet segura i que, per tant, no cal considerar el tema de l’autenticació/autorització."
+servers:
+  - url: 'https://aswfib.free.beeceptor.com/api/'
+paths:
+  /teachers/{name}:
+    get:
+      tags:
+      - teachers
+      summary: Consultar la info d’un Teacher concret
+      parameters:
+      - in: path
+        name: name
+        schema:
+          type: string
+        required: true
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Teacher'
+        404:
+          description: 'Error: Not Found'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error404_gi'
+  /lessons:
+    get:
+      tags:
+      - lessons
+      summary: Consultar lessons
+      parameters:
+      - in: query
+        name: start_time
+        schema:
+          type: string
+          format: date-time
+        required: true
+      - in: query
+        name: end_time
+        schema:
+          type: string
+          format: date-time
+        required: true
+      - in: query
+        name: teacher_name
+        schema:
+          type: string
+        required: false
+      - in: query
+        name: student_email
+        schema:
+          type: string
+          format: email
+        required: false
+      - in: query
+        name: status
+        schema:
+          $ref: '#/components/schemas/LessonStatus'
+        required: false
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Lesson'
+        400:
+          description: 'Error: Bad Request'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error400_gc'
+    post:
+      tags:
+      - lessons
+      summary: Programar una nova lesson
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewLesson'
+      responses:
+        201:
+          description: "Lesson created successfully"
+          headers:
+            Location:
+              schema:
+                type: string
+                format: uri
+                example: "https://aswfib.free.beeceptor.com/api/lessons/667766"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Lesson'
+        400:
+          description: 'Error: Bad Request'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error400_post'
+        409:
+          description: 'Error: Conflict'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error409_post'
+  /teachers/{name}/time_slots/{starts_at}:
+    delete:
+      tags:
+      - time_slots
+      summary: Eliminar un slot concret
+      parameters:
+      - in: path
+        name: name
+        schema:
+          type: string
+        required: true
+        description: Teacher's
+      - in: path
+        name: starts_at
+        schema:
+          type: string
+          format: date-time
+        required: true
+      responses:
+        204:
+          description: "TimeSlot removed"
+          content:
+            application/json: {}
+        404:
+          description: 'Error: Not Found'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error404_delete'
+        409:
+          description: 'Error: Conflict'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error409_delete'
+  /lessons/{number}:
+    put:
+      tags:
+      - lessons
+      summary: Reprogramar una lesson
+      parameters:
+      - in: path
+        name: number
+        schema:
+          type: integer
+        required: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                starts_at:
+                  type: string
+                  format: date-time
+      responses:
+        200:
+          description: "Lesson rescheduled"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Lesson'
+        400:
+          description: 'Error: Bad Request'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error400_put'
+        404:
+          description: 'Error: Not Found'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error404_put'
+        409:
+          description: 'Error: Conflict'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error409_put'
+components:
+  schemas:
+    Student:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Manolo"
+        email:
+          type: string
+          format: email
+          example: "manolo@g.cc"
+    LessonStatus:
+      type: string
+      enum:
+      - schedulled
+      - cancelled
+      - done
+    Lesson:
+      type: object
+      properties:
+        number:
+          type: integer
+          example: 667766
+        status:
+          $ref: '#/components/schemas/LessonStatus'
+        teacher_comments:
+          type: string
+          example: "Bring your notebook"
+        student_comments:
+          type: string
+          example: null
+        student:
+          $ref: '#/components/schemas/Student'
+        slot:
+          $ref: '#/components/schemas/Slot'
+        teacher_name:
+          type: string
+          example: Rance
+    Slot: 
+      type: object
+      properties:
+        starts_at:
+          type: string
+          format: date-time
+        type:
+          type: string
+          enum: [normal, premium]
+    Teacher:
+      type: object
+      properties:
+        name:
+            type: string
+            example: "Perico Palotes"
+        language:
+          type: array
+          items:
+            type: string
+            minItems: 1
+          example: [english, latin]
+        free_slots:
+          type: array
+          items:
+            $ref: '#/components/schemas/Slot'
+    NewLesson:
+      type: object
+      required:
+      - teacher_name
+      - starts_at
+      - student_email
+      properties:
+        teacher_name:
+          type: string
+          example: Rance
+        starts_at:
+          type: string
+          format: date-time
+        student_email:
+          type: string
+          format: email
+          example: manolo@g.cc
+        teacher_comments:
+          type: string
+          example: "Bring your notebook"
+        student_comments:
+          type: string
+          example: null
+    ErrorResult:
+      type: object
+      properties:
+        status:
+          type: integer
+          enum: [400, 401, 403, 404, 409]
+        error: 
+          type: string
+          enum: ["Bad Request", "Unauthorized", "Forbidden", "Not Found", "Conflict"]
+        message: 
+          type: string
+  examples:
+    error400_gc:
+      value:
+        status: 400
+        error: "Bad Request"
+        message: "Incorrect start_time - end_time interval"
+    error400_put:
+      value:
+        status: 400
+        error: "Bad Request"
+        message: "Invalid time format"
+    error400_post:
+      value:
+        status: 400
+        error: "Bad Request"
+        message: "No Student with this email"
+    error401:
+      value:
+        status: 401
+        error: "Unauthorized"
+        message: "You provided no api key (X-API-KEY Header)"
+    error403:
+      value:
+        status: 403
+        error: "Forbidden"
+        message: "Your api key (X-API-KEY Header) is not valid"
+    error404_gi:
+      value:
+        status: 404
+        error: "Not Found"
+        message: "No Teacher with this name"
+    error404_delete:
+      value:
+        status: 404
+        error: "Not Found"
+        message: "No TimeSlot for this Teacher's name and start_time"
+    error404_put:
+      value:
+        status: 404
+        error: "Not Found"
+        message: "No Lesson for this number"
+    error409_delete:
+      value:
+        status: 409
+        error: "Conflict"
+        message: "TimeSlot already assigned to a Lesson"
+    error409_put:
+      value:
+        status: 409
+        error: "Conflict"
+        message: "The new TimeSlot is not free"
+    error409_post:
+      value:
+        status: 409
+        error: "Conflict"
+        message: "The TimeSlot is not free"

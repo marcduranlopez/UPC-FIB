@@ -1,0 +1,392 @@
+openapi: 3.0.1
+info:
+  version: 1.0.0
+  title: 201819q2_control_2
+  description: "Versió OpenAPI del l'apartat c de l'exercici del **201819q2_control_2**. Se suposa que els possibles clients (programes) que usen aqueste crides ho fan des d’una intranet segura i que, per tant, no cal considerar el tema de l’autenticació/autorització"
+servers:
+  - url: 'https://aswfib.free.beeceptor.com/api/'
+paths:
+  /purchase_orders/{locator}:
+    get:
+      tags:
+      - purchase_orders
+      summary: Consultar la info d’un PurchaseOrder concret
+      parameters:
+      - in: path
+        name: locator
+        schema:
+          type: string
+        required: true
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PurchaseOrder'
+        404:
+          description: 'Error: Not Found'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error404_gi'
+  /purchase_orders:
+    post:
+      tags:
+      - purchase_orders
+      summary: Crear una PurchaseOrder
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewPO'
+      responses:
+        201:
+          description: "PurchaseOrder created successfully"
+          headers:
+            Location:
+              schema:
+                type: string
+                format: uri
+                example: "https://aswfib.free.beeceptor.com/api/tweets/4865651"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PurchaseOrder'
+        400:
+          description: 'Error: Bad Request'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error400_post'
+        409:
+          description: 'Error: Conflict'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error409_post'
+  /events:
+    get:
+      tags:
+      - events
+      summary: Consultar events
+      parameters:
+      - in: query
+        name: since_date
+        schema:
+          type: string
+          format: date
+        required: true
+        example: "2019-08-11"
+      - in: query
+        name: until_date
+        schema:
+          type: string
+          format: date
+        required: false
+        example: "2019-08-31"  
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Event'
+        400:
+          description: 'Error: Bad Request'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error400_gc'
+  /events/{name}/ticket_types/{code}:
+    delete:
+      tags:
+      - ticket_types
+      summary: Eliminar un TicketType concret
+      parameters:
+      - in: path
+        name: name
+        schema:
+          type: string
+        required: true
+      - in: path
+        name: code
+        schema:
+          type: string
+        required: true
+      responses:
+        204:
+          description: "TicketType removed"
+          content:
+            application/json: {}
+        404:
+          description: 'Error: Not Found'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error404_delete'
+        409:
+          description: 'Error: Conflict'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error409_delete'
+  /purchase_order/{locator}/tickets/{number}:
+    put:
+      tags:
+      - tickets
+      summary: Canviar el name_on_ticket d’un ticket
+      parameters:
+      - in: path
+        name: locator
+        schema:
+          type: string
+        required: true
+      - in: path
+        name: number
+        schema:
+          type: integer
+        required: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                new_name_on_ticket:
+                  type: string
+                  example: "M. Rajoy"
+      responses:
+        200:
+          description: "Name on ticket changed"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ticket'
+        400:
+          description: 'Error: Bad Request'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error400_put'
+        404:
+          description: 'Error: Not Found'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error404_put'
+        409:
+          description: 'Error: Conflict'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error409_put'
+components:
+  schemas:
+    TicketType:
+      type: object
+      properties:
+        code:
+          type: string
+          example: "VIP"
+        price:
+          type: number
+          format: float
+          example: 50.00
+        tickets_for_sale:
+          type: integer
+          example: 100
+        sold_tickets:
+          type: integer
+          example: 54
+    Event:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Wildest Party 2019"
+        description:
+          type: string
+          example: "The wildest party ever"
+        start_time:
+          type: string
+          format: date-time
+        end_time:
+          type: string
+          format: date-time
+        ticket_types:
+          type: array
+          items:
+            $ref: '#/components/schemas/TicketType'
+    Ticket: 
+      type: object
+      properties:
+        number:
+            type: integer
+            example: 1
+        name_on_ticket:
+          type: string
+          example: "M. Rajoy"
+        qr_code:
+          type: string
+          example: "data:image/png;base64,iVB...ggg=="
+        tt_code:
+          type: string
+          example: "VIP"
+        tt_price:
+          type: number
+          format: float
+          example: 50.00
+        event_name:
+          type: string
+          example: "Wildest Party 2019"
+        event_start_time:
+          type: string
+          format: date-time
+    PurchaseOrder:
+      type: object
+      properties:
+        locator:
+            type: string
+            example: "LMER45S"
+        email:
+          type: string
+          format: email
+          example: espe@ppm.com
+        created_at:
+          type: string
+          format: date-time
+        total_price:
+          type: number
+          format: float
+          example: 143.50
+        tickets:
+          type: array
+          items:
+            $ref: '#/components/schemas/Ticket'
+    TicketReq:
+      type: object
+      required:
+      - name_on_ticket
+      - tt_event_name
+      - tt_code
+      properties:
+        name_on_ticket:
+          type: string
+          example: "M. Rajoy"
+        tt_event_name:
+          type: string
+          example: "Wildest Party 2019"
+        tt_code:
+          type: string
+          example: "VIP"
+    NewPO:
+      type: object
+      required:
+      - email
+      - tickets_for
+      properties:
+        email:
+          type: string
+          format: email
+          example: espe@ppm.com
+        tickets_for:
+          type: array
+          items:
+            $ref: '#/components/schemas/TicketReq'
+    ErrorResult:
+      type: object
+      properties:
+        status:
+          type: integer
+          enum: [400, 401, 403, 404, 409]
+        error: 
+          type: string
+          enum: ["Bad Request", "Unauthorized", "Forbidden", "Not Found", "Conflict"]
+        message: 
+          type: string
+  examples:
+    error400_gc:
+      value:
+        status: 400
+        error: "Bad Request"
+        message: "Incorrect parameters"
+    error400_put:
+      value:
+        status: 400
+        error: "Bad Request"
+        message: "Missing parameter new_name_on_ticket"
+    error400_post:
+      value:
+        status: 400
+        error: "Bad Request"
+        message: "Missing tt_code in one ticket"
+    error401:
+      value:
+        status: 401
+        error: "Unauthorized"
+        message: "You provided no api key (X-API-KEY Header)"
+    error403:
+      value:
+        status: 403
+        error: "Forbidden"
+        message: "Your api key (X-API-KEY Header) is not valid"
+    error404_gi:
+      value:
+        status: 404
+        error: "Not Found"
+        message: "No PurchaseOrder with this locator"
+    error404_delete:
+      value:
+        status: 404
+        error: "Not Found"
+        message: "No TicketType for this event name and code"
+    error404_put:
+      value:
+        status: 404
+        error: "Not Found"
+        message: "No ticket for this PO locator and number"
+    error409_delete:
+      value:
+        status: 409
+        error: "Conflict"
+        message: "This TicketType has some tickets sold"
+    error409_put:
+      value:
+        status: 409
+        error: "Conflict"
+        message: "It is too late for changes in the ticket"
+    error409_post:
+      value:
+        status: 409
+        error: "Conflict"
+        message: "Sorry, there is no availability for all the requested tickets"

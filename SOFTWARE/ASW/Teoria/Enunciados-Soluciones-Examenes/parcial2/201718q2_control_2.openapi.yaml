@@ -1,0 +1,393 @@
+openapi: 3.0.1
+info:
+  version: 1.0.0
+  title: 201718q2_control_2
+  description: "Versió OpenAPI del l'apartat c de l'exercici del **201718q2_control_2**. Se suposa que els possibles clients (programes) que usen aqueste crides ho fan des d’una intranet segura i que, per tant, no cal considerar el tema de l’autenticació/autorització."
+servers:
+  - url: 'https://aswfib.free.beeceptor.com/api/'
+paths:
+  /restaurants/{id}:
+    get:
+      tags:
+      - restaurants
+      summary: Consultar la info d’un Restaurant concret
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestaurantFull'
+        404:
+          description: 'Error: Not Found'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error404_gi'
+  /reservations:
+    get:
+      tags:
+      - reservations
+      summary: Consultar reserves
+      parameters:
+      - in: query
+        name: restaurant_id
+        schema:
+          type: string
+        required: false
+      - in: query
+        name: customer_phone
+        schema:
+          type: string
+        required: false
+      - in: query
+        name: date
+        schema:
+          type: string
+          format: date
+        required: false
+      - in: query
+        name: service
+        schema:
+          $ref: '#/components/schemas/Service'
+        required: false
+      - in: query
+        name: status
+        schema:
+          $ref: '#/components/schemas/ReservationStatus'
+        required: false
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Reservation'
+        400:
+          description: 'Error: Bad Request'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error400_gc'
+    post:
+      tags:
+      - reservations
+      summary: Fer una nova reserva
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewReservation'
+      responses:
+        201:
+          description: "New Reservation created successfully"
+          headers:
+            Location:
+              schema:
+                type: string
+                format: uri
+                example: "https://aswfib.free.beeceptor.com/api/reservations/AEE344"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reservation'
+        400:
+          description: 'Error: Bad Request'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error400_post'
+        409:
+          description: 'Error: Conflict'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error409_post'
+  /restaurants/{id}/tables/{number}:
+    delete:
+      tags:
+      - tables
+      summary: Eliminar una taula
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      - in: path
+        name: number
+        schema:
+          type: integer
+        required: true
+      responses:
+        204:
+          description: "Table removed"
+          content:
+            application/json: {}
+        404:
+          description: 'Error: Not Found'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error404_del'
+        409:
+          description: 'Error: Conflict'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error409_del'
+  /reservations/{locator}:
+    put:
+      tags:
+      - reservations
+      summary: Modificar status d’una reserva
+      parameters:
+      - in: path
+        name: locator
+        schema:
+          type: string
+        required: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                status:
+                  $ref: '#/components/schemas/ReservationStatus'
+      responses:
+        200:
+          description: "Lesson rescheduled"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reservation'
+        400:
+          description: 'Error: Bad Request'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error400_put'
+        404:
+          description: 'Error: Not Found'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error404_put'
+        409:
+          description: 'Error: Conflict'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error409_put'
+components:
+  schemas:
+    Customer:
+      type: object
+      properties:
+        phone:
+          type: string
+          example: "+346892567"
+        name:
+          type: string
+          example: Nick Carraway
+    Service:
+      type: string
+      enum:
+      - lunch
+      - dinner
+    ReservationStatus:
+      type: string
+      enum:
+      - pending
+      - cancelled
+      - serving
+      - served
+      - no_show
+    Reservation:
+      type: object
+      properties:
+        locator:
+          type: string
+          example: AEE344
+        date:
+          type: string
+          format: date
+        service:
+          $ref: '#/components/schemas/Service'
+        num_people:
+          type: integer
+          minimum: 1
+          example: 6
+        status:
+          $ref: '#/components/schemas/ReservationStatus'
+        restaurant:
+          $ref: '#/components/schemas/Restaurant'
+        customer: 
+          $ref: '#/components/schemas/Customer'
+        tables:
+          type: array
+          items:
+           $ref: '#/components/schemas/Table'
+    Table: 
+      type: object
+      properties:
+        number:
+          type: integer
+          example: 1
+        capacity:
+          type: integer
+          example: 4
+    Restaurant:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "CELLERROCA"
+        name:
+          type: string
+          example: "El Celler de Rocallaura"
+        location:
+          type: string
+          example: "Rocallaura"
+    RestaurantFull:
+      allOf:
+      - $ref: '#/components/schemas/Restaurant'
+      - type: object
+        properties:
+          tables:
+            type: array
+            items:
+              $ref: '#/components/schemas/Table'
+    NewReservation:
+      type: object
+      required:
+      - date
+      - service
+      - num_people
+      - restarant_id
+      - customer_phone
+      - table_numbers
+      properties:
+        date:
+          type: string
+          format: date
+        service:
+          $ref: '#/components/schemas/Service'
+        num_people:
+          type: integer
+          minimum: 1
+          example: 6
+        restaurant_id:
+          type: string
+          example: CELLERROCA
+        customer_phone: 
+          type: string
+          example: "+346892567"
+        table_numbers:
+          type: array
+          items:
+           type: integer
+           example: 1
+    ErrorResult:
+      type: object
+      properties:
+        status:
+          type: integer
+          enum: [400, 401, 403, 404, 409]
+        error: 
+          type: string
+          enum: ["Bad Request", "Unauthorized", "Forbidden", "Not Found", "Conflict"]
+        message: 
+          type: string
+  examples:
+    error400_gc:
+      value:
+        status: 400
+        error: "Bad Request"
+        message: "Incorrect date format"
+    error400_put:
+      value:
+        status: 400
+        error: "Bad Request"
+        message: "Wrong status"
+    error400_post:
+      value:
+        status: 400
+        error: "Bad Request"
+        message: "Incorrect date format"
+    error401:
+      value:
+        status: 401
+        error: "Unauthorized"
+        message: "You provided no api key (X-API-KEY Header)"
+    error403:
+      value:
+        status: 403
+        error: "Forbidden"
+        message: "Your api key (X-API-KEY Header) is not valid"
+    error404_gi:
+      value:
+        status: 404
+        error: "Not Found"
+        message: "No Restaurant with this id"
+    error404_del:
+      value:
+        status: 404
+        error: "Not Found"
+        message: "No Table for this Restarant's id and number"
+    error404_put:
+      value:
+        status: 404
+        error: "Not Found"
+        message: "No Reservation for this locator"
+    error409_del:
+      value:
+        status: 409
+        error: "Conflict"
+        message: "Cannot delete: active reservations"
+    error409_put:
+      value:
+        status: 409
+        error: "Conflict"
+        message: "Illegal status change request"
+    error409_post:
+      value:
+        status: 409
+        error: "Conflict"
+        message: "No enough room in tables"

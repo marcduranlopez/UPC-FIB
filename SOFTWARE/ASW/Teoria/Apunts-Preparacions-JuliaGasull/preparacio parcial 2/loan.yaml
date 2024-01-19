@@ -1,0 +1,388 @@
+openapi: 3.0.1
+info:
+  version: 1.0.0
+  title: "201920q2_control_2. Apartat c"
+  description: "# Alumna: Júlia Gasull"
+servers:
+  - url: 'https://aswfib.free.beeceptor.com/api/'
+paths:
+  /copy/{number}/{isbn}:
+    get:
+      tags:
+      - copy
+      summary: Consultar la info (tots els atributs) d’una copy concreta. Caldrà incloure-hi també tota la info del book corresponent.
+      parameters:
+      - in: path
+        name: number
+        schema:
+          type: integer
+        required: true
+      - in: path
+        name: isbn
+        schema:
+          type: string
+        required: true
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Copy'
+        404:
+          description: 'Error: Not Found'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error404_gi'
+    delete:
+      tags:
+      - copy
+      summary: Eliminar una copy. Cal que aquesta no estigui on loan.
+      parameters:
+      - in: path
+        name: number
+        schema:
+          type: integer
+        required: true
+      - in: path
+        name: isbn
+        schema:
+          type: string
+        required: true
+      responses:
+        204:
+          description: "Copy removed"
+          content:
+            application/json: {}
+        404:
+          description: 'Error: Not Found'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error404_delete'
+        409:
+          description: 'Error: Conflict'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error409_delete'
+
+  /loan:
+    get:
+      tags:
+      - loan
+      summary: Consultar events
+      parameters:
+      - in: query
+        name: copy_number
+        schema:
+          type: number
+        required: false
+      - in: query
+        name: copy_isbn
+        schema:
+          type: string
+        required: false
+      - in: query
+        name: nid
+        schema:
+          type: string
+        required: false
+      - in: query
+        name: order
+        schema:
+          type: string
+        required: false
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LoanInfoRes2'
+        400:
+          description: 'Error: Bad Request'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error400_gc'
+    post:
+      tags:
+      - loan
+      summary: Prestar (fer el loan) d’una copy a un member. Cal que la copy estigui available. L’id del loan el genera el sistema de manera automàtica. Els valors start_date < expiry_date s’han de proporcionar quan s’invoca l’operació. El return_date tindrà un valor nul inicialment (s’enregistrarà en el moment de fer el retorn del loan). El sistema actualitzarà l’status de la copy a on loan.
+      requestBody:
+        content:
+          appliction/json:
+            schema:
+              $ref: '#/components/schemas/LoanInfoReq'
+      responses:
+        201:
+          description: "Loan created successfully"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LoanInfoRes1'
+        400:
+          description: 'Error: Bad Request'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error400_post'
+        409:
+          description: 'Error: Conflict'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error409_post'
+    
+  /loan/{id}/{new_expiry_date}:
+    put:
+      tags:
+      - loan
+      summary: Canviar l’expiry_date d’un determinat loan. Cal que el loan no hagi estat retornat encara i que la nova expiry_date > start_date.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: number
+        required: true
+      - in: path
+        name: new_expiry_date
+        schema:
+          type: string
+          format: time-date
+        required: true
+      responses:
+        200:
+          description: "Date on loan changed"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LoanInfoRes1'
+        400:
+          description: 'Error: Bad Request'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error400_put'
+        404:
+          description: 'Error: Not Found'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error404_put'
+        409:
+          description: 'Error: Conflict'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResult'
+              examples:
+                errorExample:
+                  $ref: '#/components/examples/error409_put'
+components:
+  schemas:
+    Copy:
+      type: object
+      properties:
+        number:
+          type: integer
+          example: "42"
+        book_isbn:
+          type: string
+          example: "jytfcsfg65"
+        status:
+          type: object
+          properties:
+            available:
+              type: boolean
+            on_loan:
+              type: boolean
+            excluded:
+              type: boolean
+    LoanInfoRes1:
+      type: object
+      required:
+      - code
+      - message
+      properties:
+        code:
+          type: integer
+          example: 6
+        message:
+          type: string
+          example: "created sucessfully"
+        loan_id: 
+          type: integer
+          example: 5
+        loan_start_date:
+          type: string
+          format: date-time
+          example: "10-12-2019"
+        loan_expiry_date: 
+          type: string
+          format: date-time
+          example: "10-12-2019"
+    LoanInfoRes2:
+      type: object
+      required:
+      - code
+      - message
+      properties:
+        code:
+          type: integer
+          example: 6
+        message:
+          type: string
+          example: "created sucessfully"
+        loan_id: 
+          type: integer
+          example: 5
+        loan_start_date:
+          type: string
+          format: date-time
+          example: "10-12-2019"
+        loan_expiry_date: 
+          type: string
+          format: date-time
+          example: "10-12-2019"
+        loan_return_date: 
+          type: string
+          format: date-time
+          example: "10-12-2019"
+        copy_number: 
+          type: integer
+          example: 5
+        copy_isbn: 
+          type: string
+          example: "nhgfvbhtrfghtr"
+        member_nid: 
+          type: string
+          example: "47426853G"
+        member_name: 
+          type: string
+          example: "Júlia Gasull"
+        member_email: 
+          type: string
+          format: email
+          example: "jgasull@ackcent.com"
+    LoanInfoReq:
+      type: object
+      required:
+        - loan_start_date
+        - loan_expiry_date
+        - copy_number
+        - copy_isbn
+        - member_nid
+      properties:
+        loan_start_date:
+          type: string
+          format: date-time
+          example: "10-12-2019"
+        loan_expiry_date: 
+          type: string
+          format: date-time
+          example: "10-12-2019"
+        copy_number: 
+          type: integer
+          example: 5
+        copy_isbn: 
+          type: string
+          example: "nhgfvbhtrfghtr"
+        member_nid:
+          type: string
+          example: "74286543Y"
+    ErrorResult:
+      type: object
+      properties:
+        status:
+          type: integer
+          enum: [400, 401, 403, 404, 409]
+        error: 
+          type: string
+          enum: ["Bad Request", "Unauthorized","Forbidden", "Not Found", "Conflict"]
+        message: 
+          type: string
+  examples:
+    error400_gc:
+      value:
+        status: 400
+        error: "Bad Request"
+        message: "Incorrect parameters"
+    error400_put:
+      value:
+        status: 400
+        error: "Bad Request"
+        message: "Missing parameter"
+    error400_post:
+      value:
+        status: 400
+        error: "Bad Request"
+        message: "Missing parameter"
+    error401:
+      value:
+        status: 401
+        error: "Unauthorized"
+        message: "You provided no api key (X-API-KEY Header)"
+    error403:
+      value:
+        status: 403
+        error: "Forbidden"
+        message: "Your api key (X-API-KEY Header) is not valid"
+    error404_gi:
+      value:
+        status: 404
+        error: "Not Found"
+        message: "No Copy with this number or isbn"
+    error404_delete:
+      value:
+        status: 404
+        error: "Not Found"
+        message: "No Copy for this number or isbn"
+    error404_put:
+      value:
+        status: 404
+        error: "Not Found"
+        message: "Not Found"
+    error409_delete:
+      value:
+        status: 409
+        error: "Conflict"
+        message: "Something went wrong"
+    error409_put:
+      value:
+        status: 409
+        error: "Conflict"
+        message: "Something went wrong"
+    error409_post:
+      value:
+        status: 409
+        error: "Conflict"
+        message: "Something went wrong"
