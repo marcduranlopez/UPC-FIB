@@ -1,0 +1,1 @@
+'From Pharo6.0 of 13 May 2016 [Latest update: #60547] on 23 October 2023 at 11:33:10.429999 am'!

@@ -1,0 +1,21 @@
+Podrias explicarme la diferencia entre  instance side y Class side?
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+En Smalltalk, la distinción entre el "lado de la instancia" (instance side) y el "lado de la clase" (class side) se refiere a dos aspectos diferentes de una clase:
+
+Lado de la Instancia (Instance Side):
+
+- En el lado de la instancia se definen y almacenan los métodos y las variables de instancia que pertenecen a las instancias individuales de la clase.
+- Aquí se colocan las características específicas de las instancias, como sus variables de instancia y métodos de instancia.
+- Cada objeto creado a partir de la clase tiene su propia copia de las variables de instancia y puede ejecutar los métodos de instancia definidos en este lado.
+
+
+Lado de la Clase (Class Side):
+
+- En el lado de la clase se definen y almacenan los métodos y las variables de clase que pertenecen a la clase misma y no a las instancias individuales.
+- Aquí se colocan métodos y variables que son compartidos por todas las instancias de la clase. Por ejemplo, métodos de clase, variables de clase y constantes.
+- Las variables de clase son compartidas por todas las instancias de la clase, mientras que las variables de instancia son específicas de cada instancia.
+
+
+En resumen, la distinción entre el lado de la instancia y el lado de la clase permite organizar y separar las características específicas de las instancias de las características compartidas por toda la clase. Algunas clases pueden tener comportamientos y datos que son específicos de cada instancia, mientras que otras pueden tener comportamientos y datos compartidos por todas las instancias. Esto facilita la comprensión y el mantenimiento del código en el entorno de Smalltalk.

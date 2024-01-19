@@ -1,0 +1,14 @@
+Per quina raó s'avalua a true la següent expressió?
+Class class class class == Class class class class class class
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+L'expressió es torna true perquè està avaluant la igualtat de les meta-classes. En Smalltalk, les classes també són objectes i tenen les seves pròpies meta-classes. Així doncs, Class class és la meta-classe de la classe Class.
+
+Quan fas Class class class, estàs obtenint la meta-classe de la meta-classe de la classe Class. Aquest procés es pot repetir, i en aquest cas, es repeteix diverses vegades amb el nombre de vegades especificat.
+
+Per tant, Class class class class == Class class class class class class compara dues meta-classes que estan a diferents nivells de jerarquia, i en Smalltalk, la igualtat es manté a través d'aquests nivells. En resum, estàs comparant la meta-classe de la classe Class amb la meta-classe de la meta-classe de la meta-classe de la meta-classe de la classe Class, i això es considera igual en Smalltalk.
+
+(SOLUCION PARCIAL 13-14)
+
+Per la circularitat que hi ha entre Metaclass i la seva metaclasse Metaclass class en la relació "ser-instància-de".

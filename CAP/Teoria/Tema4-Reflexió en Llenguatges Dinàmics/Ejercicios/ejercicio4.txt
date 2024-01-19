@@ -1,0 +1,19 @@
+Els mètodes #new i #new: són mètodes d'instància de la classe Behavior, tot i
+que és habitual que se'ls redefineixi en altres classes. Malgrat són mètodes
+d'instància de Behavior, usualment es redefineixen com a mètodes de classe. Per
+exemple, utilitzem Array new: 5 per crear instàncies de la classe Array, i el
+missatge #new: l'estem enviant a la classe Array. Les redefinicions, doncs,
+s'acostumen a fer en el Class side. Això aparentment viola la "regla" que diu que en
+l'herència els mètodes d'instància s'hereten en l'instance side i els mètodes de
+classe s'hereten en el Class side. Expliqueu per quina raó no hi ha res d'incorrecte
+en el fet de redefinir #new i #new: en el Class side.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+En Smalltalk, la regla d'herència que menciones no és una regla estricta. La regla general és que els mètodes d'instància s'hereten en l'instance side i els mètodes de classe s'hereten en el Class side. No obstant això, hi ha algunes excepcions com #new i #new:.
+
+La raó principal per la qual #new i #new: es redefineixen en el Class side és que aquests mètodes són responsables de la creació d'instàncies de la classe. Quan fas una crida com Array new, estàs creant una nova instància de la classe Array. Així doncs, té sentit que aquests mètodes estiguin en el Class side perquè estan directament relacionats amb la gestió de la creació d'objectes de la classe.
+
+A més, col·locar-los en el Class side també facilita la creació d'instàncies de subclasses. Si #new i #new: estiguessin en l'instance side, seria més complicat per les subclasses heretar aquest comportament sense haver de sobreescriure tots els mètodes. Mentre que, col·locant-los en el Class side, les subclasses poden heretar aquests mètodes per defecte i sobreescriure'ls si cal.
+
+En resum, no hi ha res d'incorrecte en redefinir #new i #new: en el Class side ja que aquesta decisió fa que la creació d'instàncies i la seva herència sigui més senzilla i flexible.

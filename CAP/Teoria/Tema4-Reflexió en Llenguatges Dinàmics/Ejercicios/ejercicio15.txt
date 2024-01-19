@@ -1,0 +1,13 @@
+Imaginem una expressió:
+
+Continuation callcc: [ :k | ... <cos del bloc>... ]
+
+on a <cos del bloc> s'ignora el paràmetre k del bloc (és a dir, no fem
+absolutament res amb la continuació). Sustitueix l'expressió anterior per una
+expressió equivalent que no utilitzi la classe Continuation.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+(SOLUCION PARCIAL 17-18)
+
+[ :k | ... <cos del bloc>... ] value: nil (aquest valor és irrellevant)

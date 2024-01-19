@@ -1,0 +1,31 @@
+Si seleccionem aquest programa al Transcript i fem Ctrl-p...
+
+| collection |
+collection := OrderedCollection new.
+#(1 2 3) do: [ :index |
+    | temp |
+    temp := index.
+    collection add: [ temp ] ].
+collection collect: [ :each | each value ].
+
+
+| collection temp |
+collection := OrderedCollection new.
+#(1 2 3) do: [ :index |
+    temp := index.
+    collection add: [ temp ] ].
+collection collect: [ :each | each value ].
+
+el resultat és: an OrderedCollection(3 3 3).
+
+Explica i justifica la diferència en el resultat.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+(SOLUCIO PARCIAL 18-19)
+
+En el primer cas temp és una variable local al bloc, i per tant diferent cada cop
+que s’avalua el block, en el segon cas temp és una variable lliure en el bloc i per tant és
+capturada des de l’exterior del bloc (blocs = closures). En aquest cas és la mateixa
+variable cada cop que s’avalua el bloc.
+

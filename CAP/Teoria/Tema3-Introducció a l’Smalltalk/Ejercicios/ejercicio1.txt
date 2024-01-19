@@ -1,0 +1,36 @@
+Respon a les següents preguntes:
+1. Què és el lligam dinàmic?
+2. Una classe és un objecte?
+3. Quina és la diferència entre un missatge i un mètode?
+4. Hi ha alguna cosa a Smalltalk que NO sigui un objecte?
+5. Hi ha alguna cosa a Smalltalk que NO es faci per pas de missatges?
+6. Quina és l’arrel de la jerarquia de classes?
+7. Com s’indica que un mètode és “privat”?
+8. Què és una cascada? Quin és el seu valor?
+9. Com es defineixen les classes abstractes a Smalltalk?
+10. Quina és la diferència entre self i super?
+11. Com s’inicialitzen les variables d’instància en crear un objecte?
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+1. El "lligam dinàmic" en Smalltalk es refereix a la resolució de mètodes en temps d'execució basant-se en el tipus d'objecte actual i en el seu estat actual.
+
+2. En Smalltalk, una classe és una instància de la classe Metaclass, la qual cosa significa que té propietats i comportaments que la fan semblar-se a un objecte, tot i que tècnicament és una instància d'una classe especial.
+
+3. La diferència entre un missatge i un mètode és que un missatge és una sol·licitud per a realitzar una acció, mentre que un mètode és la implementació concreta d'aquesta acció associada a un missatge.
+
+4. No, tot a Smalltalk és un objecte, des de nombres i col·leccions fins a classes i mètodes.
+
+5. o, a Smalltalk, totes les accions es realitzen a través de missatges, de manera que tot es fa per passar missatges (Hi ha una excepicio: l'assignacio).
+
+6. L'arrel de la jerarquia de classes a Smalltalk és la classe Object.
+
+7. A Smalltalk, un mètode és indicat com a "privat" mitjançant l'ús d'un guionet baix (_) abans del nom del mètode, per exemple, _nomDelMetode.
+
+8. Una cascada en Smalltalk és una seqüència de missatges enviat a un mateix receptor, utilitzant el punt i coma (;) per encadenar-los. La cascada permet realitzar múltiples operacions consecutives sobre el mateix objecte.
+
+9. Les classes abstractes a Smalltalk es defineixen creant mètodes abstractes, és a dir, mètodes que no tenen implementació a la classe abstracta i que han de ser implementats per les subclasses.
+
+10. La diferència entre self i super radica en que self es refereix al receptor actual del missatge, mentre que super es refereix al receptor de la superclasse actual.
+
+11. Les variables d'instància a Smalltalk no es inicialitzen automàticament en la creació de l'objecte. Normalment, es recomana inicialitzar-les en el mètode d'inicialització (usualment initialize) de la classe.

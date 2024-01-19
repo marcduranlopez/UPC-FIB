@@ -1,0 +1,28 @@
+Suposem que en una seqüència doble hi ha dues seqüències formades pels simbols A, C, T, o G. Direm que la
+seqüència doble està ben formada si els simbols es corresponen en parelles A,T o G,C. És a dir, si a la posició i
+d’una seqüència hi ha una A, a la posició i de l’altra seqüència ha d’haver una T, si a la posició i d’una seqüència hi
+ha una G, a la posició i de l’altra seqüència ha d’haver una C, etc. Implementeu un mètode #benFormada: que
+donada una seqûència formada pels simbols A, T, C, G retorni true si, donada una altra seqüència de A, T, C, G,
+les dues seqüències constueixen una seqüència doble ben formada.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+RESOLT A LA IMATGE DE PHARO (PACKAGE: ProblemesCAP2023)
+
+Aquí tens una implementació del mètode #benFormada: en Smalltalk:
+
+Object subclass: #Sequencia
+	instanceVariableNames: 'seq'
+	classVariableNames: ''
+	package: 'ProblemesCAP2023'
+
+benFormada: aSeq
+	| mida tmpseq1 tmpseq2 |
+	mida := (self seq size) min: (aSeq seq size).
+	tmpseq1 := self seq truncateTo: mida.
+	tmpseq2 := aSeq seq truncateTo: mida.
+	tmpseq1 with: tmpseq2 do: [ :c1 :c2 | (c1 check: c2) ifFalse: [ ^false ] ].
+	^ true 
+
+
+Aquest mètode compara cada element de la seqüència amb la corresponent posició de l'altra seqüència utilitzant un diccionari de parelles per verificar la correspondència. Retorna true si les dues seqüències són ben formades, sinó false. Pots utilitzar aquest mètode amb dues instàncies de la classe SeqDoble per determinar si formen una seqüència doble ben formada.

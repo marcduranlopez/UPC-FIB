@@ -1,0 +1,68 @@
+Utilitzar dos cops callcc: en una expressió fa que el codi resultant sigui força
+complicat, a part de tenir una certa importancia teòrica (que no podem discutir ni en
+aquest examen ni a l’assignatura). Veiem-ne un exemple. Primer definim
+twicecc:
+
+| twicecc |
+twicecc := [ :coll |
+                Continuation callcc: [ :f |
+                    [ :n | f value: { n . (coll at: 2) } ] value:
+                        (Continuation callcc: [ :q |
+                                f value: { (coll at: 1) . q } ] ) ] ].
+
+[ :k | [ :arr | (arr at: 2) value: ((arr at: 1) + 1) ]
+                    value: (twicecc value: { 0 . k } ) ] value: [ :x | x ]
+
+
+I després el fem servir en una expressió. Si avalueu aquest codi en el Playground el
+resultat és 2. 
+
+Expliqueu detalladament l’avaluació de l’expressió i com s’arriba a aquest resultat.
+(Consell: Primer feu la resta de l’examen i poseu-vos a pensar aquest problema només si
+teniu temps)
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+(SOLUCION PARCIAL 19-20)
+
+El càlcul comença assignant a twicecc el bolc indicat (però aquest no s’avalua). Després
+d’aquesta assignació, avaluem l’expressió
+
+[ :k | [ :arr | (arr at: 2) value: ((arr at: 1) + 1) ]
+                            value: (twicecc value: { 0 . k } ) ] value: [ :x | x ]
+
+on k pren per valor el bloc identitat [ :x | x ]. Així, la primera vegada que avaluem
+twicecc li passem com a paràmetre { 0 . [ :x | x ] } (on aquesta avaluació de
+twicecc és resultat de l’avaluació normal de blocs, pel bloc [ :arr | ... ] value: ...).
+
+Així doncs avaluem twicecc amb paràmetre { 0 . [ :x | x ] }. La primera crida a
+Continuation callcc: [ :f | ... ] el que fa és posar en f el fet de retornar de
+twicecc:
+
+    [ :arr | (arr at: 2) value: ((arr at: 1) + 1) ] value: □
+
+Aquest serà el valor de f, sempre tenint en compte que l’avaluació de la continuació
+elimina qualsevol context anterior.
+
+El cos del bloc del primer callcc: fa que haguem d’avaluar
+
+(Continuation callcc: [ :q | f value: { (coll at: 1) . q } ] )
+
+amb la qual cosa invoquem la primera continuació amb valor { 0 . q }. El quid de la
+qüestió és veure que q és:
+[ :n | f value: { n . (coll at: 2) } ] value: □
+
+(on no hem escrit la resta de codi per avaluar, només el més “proper”).
+
+Per tant, ara hem d’avaluar
+[ :arr | (arr at: 2) value: ((arr at: 1) + 1) ] value: { 0 . q }
+≡
+q value: 1
+
+i per tant tornem a:
+[ :n | f value: { n . (coll at: 2) } ] value: 1
+
+i provoquem una segona avaluació de la primera continuació:
+[ :arr | (arr at: 2) value: ((arr at: 1) + 1) ] value: { 1 . [ :x | x ] }
+
+la qual cosa finalitza el procés amb [ :x | x ] value: 2
+que finalment retorna 2.

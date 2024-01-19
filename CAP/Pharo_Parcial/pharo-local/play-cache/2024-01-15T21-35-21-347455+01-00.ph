@@ -1,0 +1,1 @@
+| selectorsContainingThis |selectorsContainingThis := (SystemNavigation default allClasses) inject: #() into: [ :coll :c |    coll, (c methodDict select: [ :method |        (method sourceCode includesSubstring: 'this') ] keys) ].^ selectorsContainingThis

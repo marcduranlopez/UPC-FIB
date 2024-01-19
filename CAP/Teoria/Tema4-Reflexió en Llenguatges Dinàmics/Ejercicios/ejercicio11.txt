@@ -1,0 +1,61 @@
+a) Què fa aquest codi?
+
+#aa bindTo: 1 in: [
+    Transcript show: #aa binding asString.
+    #aa bindTo: 2 in: [
+        Transcript show: #aa binding asString.
+    ].
+    Transcript show: #aa binding asString , 'again'.
+].
+
+
+b) I aquest codi?
+
+#aa bindTo: '1' in: [
+    #bb bindTo: 'a' in: [
+        Transcript show: #aa binding , '-' , #bb binding.
+        #aa bindTo: '2' in: [
+            #bb bindTo: 'b' in: [
+                Transcript show: #aa binding , '-' , #bb binding.
+            ].
+            Transcript show: #aa binding , '-' , #bb binding.
+        ].
+    ].
+    #bb bindTo: 'b' in: [
+        Transcript show: #aa binding , '-' , #bb binding.
+    ].
+]
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+a) Aquest codi utilitza la vinculació de variables en un bloc. Aquí hi ha el desglossament de les operacions:
+
+- Es vincula la variable #aa amb el valor 1 dins del primer bloc.
+- Dins d'aquest bloc, es mostra la representació en cadena de la vinculació de #aa a la sortida (Transcript).
+- Es vincula la mateixa variable #aa amb el valor 2 dins d'un segon bloc, anidat dins del primer.
+- Dins d'aquest bloc interior, es mostra de nou la representació en cadena de la vinculació de #aa.
+- Finalment, fora dels blocs, es mostra la representació en cadena de #aa juntament amb el text "again".
+
+El resultat esperat seria:
+1
+2
+1again
+
+
+b) Aquest codi fa ús de dues variables #aa i #bb dins de blocs anidats. Aquí hi ha el desglossament de les operacions:
+
+- Es vincula la variable #aa amb el valor '1' dins del primer bloc.
+- Dins d'aquest bloc, es vincula la variable #bb amb el valor 'a' dins d'un segon bloc anidat.
+- S'hi mostra la representació en cadena de les vinculacions #aa i #bb amb un guió entre elles.
+- Es vincula de nou #aa, ara amb el valor '2', dins d'un tercer bloc anidat.
+- Dins d'aquest bloc, es vincula de nou #bb amb el valor 'b' dins d'un quart bloc anidat.
+- S'hi mostra la representació en cadena de les vinculacions #aa i #bb amb un guió entre elles.
+- Fora d'aquests blocs, es vincula #bb amb el valor 'b' dins d'un cinquè bloc anidat.
+- També s'hi mostra la representació en cadena de les vinculacions #aa i #bb.
+
+El resultat esperat seria:
+1-a
+1-b
+2-b
+2-b

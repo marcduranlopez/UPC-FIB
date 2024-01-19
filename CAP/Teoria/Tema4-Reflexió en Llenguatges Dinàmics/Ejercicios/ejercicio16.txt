@@ -1,0 +1,20 @@
+Implementeu els bucles de tipus
+
+        repeat
+            <body>
+        until <boolean expression>
+
+En Smalltalk: BlockClosure >> #repeatUntil: aBlock, utilitzant
+continuacions. El paràmetre aBlock ha de ser un bloc sense paràmetres que, en
+ser avaluat, retorni un booleà.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+(SOLUCION PARCIAL 17-18)
+
+BlockClosure >> repeatUntil: aBlock
+    | cont |
+    self value.
+    cont := Continuation callcc: [ :cc | cc ].
+    aBlock value ifFalse: [self value. cont value: cont]
+                ifTrue: [^ nil].

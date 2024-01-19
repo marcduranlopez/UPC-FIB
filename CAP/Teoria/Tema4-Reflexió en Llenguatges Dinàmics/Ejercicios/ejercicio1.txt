@@ -1,0 +1,22 @@
+Fes un programa (per ser executat al Playground) que, donat un símbol que
+representarà el selector d'un mètode, generi un browser amb tots els mètodes que
+l'utilitzen dins el seu codi font. Per exemple, si el símbol fos #inject:into: el
+resultat hauria de ser:
+
+És a dir, un browser només amb els mètodes (i classes i paquets corresponents) que fan servir #inject:into:.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+(SOLUCIO DE PARCIAL 13-14)
+
+| metode |
+metode := #inject:into:.
+((RBBrowserEnvironment new forClasses: (Object withAllSubclasses))
+    selectMethods: [:m | m sendsSelector: metode])
+    label: 'Mètodes que utilitzen #', metode ;
+    open.
+
+
+(FUNCIONAL)
+
+SystemNavigation default allImplementorsOf: #inject:into:

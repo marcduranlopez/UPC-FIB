@@ -1,0 +1,56 @@
+A la plana 318 del capítol 14 del llibre Deep into Pharo, anomenat Blocks: a
+Detailed Analysis, quan fa referència a l’ús del retorn (recordeu, ^ expressió) dins
+d’un bloc (és a dir, quelcom similar a [... ^ expressió ]), diu:
+
+The evaluation of the block returns to the block home context sender (i.e., the
+context that invoked the method creating the block)
+
+I teniu un exemple bastant aclaridor del que això significa. A la plana 320 teniu
+explicats els riscos d’utilitzar retorns dins de blocs.
+
+Vull que escriviu codi que il·lustri el cas en que l’ús del retorn dins d’un bloc surt
+malament, és a dir, que genera un error (i que no sigui, literalment, l’exemple que hi
+ha en el llibre).
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+(SOLUCION PARCIAL 18-19)
+
+Aquí les solucions poden ser molt diverses. N’hi ha prou amb que el bloc amb el
+retorn s’avaluï un cop hagi desaparegut el context que correspón a la crida al mètode on
+s’ha creat el bloc. Per exemple:
+
+Classe1 >> creaBlocIRetorna
+        ^ [ ‘Es crea el bloc’ traceCr. ^ 0 ]
+Classe2 >> avaluaBloc: unBloc
+        unBloc value
+
+I executem al Transcript:
+
+| c |
+c := Classe1 new creaBlocIRetorna.
+Classe2 new avaluaBloc: c.
+
+Apareix un error BlockCannotReturn.
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Aclaraciones chatGPT
+
+Claro, la solución ilustra el problema de utilizar ^ dentro de un bloque. En este caso, el método creaBlocIRetorna de Classe1 crea un bloque que imprime "Es crea el bloc" utilizando traceCr, y luego intenta hacer un retorno con ^ 0. El problema es que, cuando este bloque se evalúa en el método avaluaBloc de Classe2, ya no hay un contexto de método correspondiente al método que creó originalmente el bloque. El contexto original ha desaparecido, y cuando el bloque intenta hacer el retorno con ^ 0, no hay ningún método para el cual retornar, lo que provoca el error BlockCannotReturn.
+
+En resumen, el bloque creado en un contexto específico intenta retornar a ese mismo contexto. Sin embargo, cuando se evalúa el bloque en otro contexto (como en el método avaluaBloc), ya no existe el contexto original, y eso causa el error. Esto destaca la importancia de tener cuidado al usar ^ dentro de bloques, especialmente cuando se utilizan en diferentes contextos.
+
+
+
+Porque desaparece el contexto original?
+
+En Smalltalk, un contexto es creado cada vez que se invoca un método. Este contexto contiene la información sobre la ejecución del método, como las variables locales y el estado del programa en ese momento. Cuando el método se completa, el contexto se elimina.
+
+Cuando se crea un bloque en el contexto de un método (por ejemplo, al definir un bloque dentro de un método), el bloque "captura" el contexto en el que fue creado. Esto significa que el bloque tiene acceso a las variables locales y al estado del programa en ese contexto específico. Sin embargo, una vez que el método que creó el bloque se ha completado, su contexto también se elimina.
+
+Entonces, cuando más tarde intentamos evaluar el bloque en otro contexto (en otro método), ya no hay un contexto original al que pueda hacer referencia el bloque. El contexto original se ha eliminado porque el método que lo creó ya ha terminado su ejecución.
+
+En resumen, la "captura" del contexto por parte del bloque significa que tiene acceso a las variables y al estado del programa en el momento de su creación. Sin embargo, también significa que el bloque se asocia específicamente con ese contexto, y si se evalúa fuera de ese contexto, puede conducir a problemas, como el error BlockCannotReturn. 

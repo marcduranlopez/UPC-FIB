@@ -1,0 +1,14 @@
+Escriviu un fragment de codi (per ser executat en el playground) que ens digui
+quants mètodes tenen la String 'this' en el seu codi font.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+(SOLUCION PARCIAL 15-16)
+
+(SystemNavigation default allClasses)
+inject: 0
+into: [ :coll :c |
+            coll + (c methodDict select: [ :v |
+                (v sourceCode findString: 'this') ~= 0 ] ) size ]
+
+I el resultat és 2544.

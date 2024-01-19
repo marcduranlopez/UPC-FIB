@@ -1,0 +1,23 @@
+En les següents expressions, quins parèntesi són redundants?:
+((5 + 6) + (2 * 5) + (2 - 1))
+(x isNil) ifTrue: [...] ifFalse: [...]
+(x = y) ifTrue: [...]
+(x includes: y) ifTrue: [...]
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Els parèntesis redundants són aquells que no afecten l'ordre d'avaluació o la comprensió de l'expressió, ja que l'associativitat dels operadors i la sintaxi de Smalltalk ja estableixen clarament l'ordre d'execució. Aquí estan els parèntesis redundants a les expressions proporcionades:
+
+((5 + 6) + (2 * 5) + (2 - 1))
+
+Els parèntesis externs són redundants. L'ordre d'execució ja està clarament definit per la jerarquia d'operacions. L'expressió podria ser simplement (5 + 6) + (2 * 5) + (2 - 1).
+(x isNil) ifTrue: [...] ifFalse: [...]
+
+Els parèntesis són redundants. L'expressió podria ser x isNil ifTrue: [...] ifFalse: [...].
+(x = y) ifTrue: [...]
+
+Els parèntesis són redundants. L'expressió podria ser x = y ifTrue: [...].
+(x includes: y) ifTrue: [...]
+
+Els parèntesis són redundants. L'expressió podria ser x includes: y ifTrue: [...].
+En general, a Smalltalk, els parèntesis són necessaris només per aclarir l'ordre d'execució o per agrupar expressions. Quan l'ordre d'execució és clar o està definit per la sintaxi, alguns parèntesis poden ser redundants i es poden eliminar per simplificar la lectura del codi.

@@ -1,0 +1,21 @@
+Un bloc en Smalltalk té variables locals (paràmetres, variables declarades dins el
+bloc), i variables lliures, que pertanyen al context en el que s’ha creat el bloc, però
+no són declarades dins el bloc. Sabem que els blocs en Smalltalk són realment el
+que hem anomenat closures. Aleshores:
+
+a) Què significa que un bloc d’Smalltalk sigui en realitat una closure?
+
+b) La pseudo-variable self es pot fer servir dins un bloc, si aquest es crea dins un
+mètode. Aquesta pseudo-variable és capturada per un bloc/closure que la faci
+servir? Dona un exemple que justifiqui la teva resposta.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+(SOLUCION PARCIAL 20-21)
+
+a) Significa que els blocs capturen el seu context lèxic, és a dir, les variables lliures del bloc
+han de poder-se trobar en el context on es crea el bloc, i aquest les captura podent
+sobreviure a la desaparició del context que ha creat el bloc.
+
+b) La pseudo-variable self també és capturada per un closure.Teniu un exemple a les
+planes 312 i 313 del capítol Blocks: A Detailed Analysis.

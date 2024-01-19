@@ -1,0 +1,58 @@
+Blocs: Què retornen aquests blocs avaluats tal com s’indica? (suposarem que cada bloc s’assigna a una variable anomenada b).
+
+Bloc:  [ :x | | y | y := x. y > 0 ifFalse: [ y := -1*y ]. y ]
+- Avaluació:  b value: -2
+- Avaluació:  b value: 2
+
+Bloc:  [ :x | | y | y := x. y > 0 ifFalse: [ y := -1*y ] ]
+- Avaluació:  b value: -2
+- Avaluació:  b value: 2
+
+Bloc:  [ :x | ...<càlculs molt complicats>... . 1 ]
+- Avaluació:  b value: 10
+- Avaluació:  b value: 15 factorial
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Anem a avaluar cadascun dels blocs amb les entrades proporcionades:
+
+Bloc 1:
+
+[ :x | | y | y := x. y > 0 ifFalse: [ y := -1*y ]. y ]
+
+- Avaluació: b value: -2
+  Resultat: -2 ja que y agafarà el valor de -2 ja que y > 0 ifFalse: [ y := -1*y ] es compleix.
+
+- Avaluació: b value: 2
+  Resultat: 2 ja que y agafarà el valor de 2 ja que y > 0 ifFalse: [ y := -1*y ] no es compleix.
+
+
+Bloc 2:
+
+[ :x | | y | y := x. y > 0 ifFalse: [ y := -1*y ] ]
+
+
+- Avaluació: b value: -2
+  Resultat: -2 ja que y agafarà el valor de -2 ja que y > 0 ifFalse: [ y := -1*y ] es compleix.
+
+- Avaluació: b value: 2
+  Resultat: 2 ja que y agafarà el valor de 2 ja que y > 0 ifFalse: [ y := -1*y ] no es compleix.
+
+
+Bloc 3:
+
+[ :x | ...<càlculs molt complicats>... . 1 ]
+
+
+Com que els càlculs són complicats i no es detallen, no podem proporcionar resultats específics. No obstant això, el bloc sempre retorna 1 al final, independentment dels càlculs complicats realitzats abans. Així que, per totes dues avaluacions, el resultat serà 1:
+
+- Avaluació: b value: 10
+  Resultat: 1
+
+- Avaluació: b value: 15 factorial
+  Resultat: 1
+
+
+
+
+

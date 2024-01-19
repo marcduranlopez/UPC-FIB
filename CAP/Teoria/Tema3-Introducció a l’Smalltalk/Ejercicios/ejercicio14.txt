@@ -1,0 +1,149 @@
+Implementeu en Smalltalk el TAD ArbreBinariCerca (em remeto als apunts d’EDA per a una explicació, descripció i implementació en C++ del TAD).
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+(Implementació amb una estructura semblant al exercici 15. Mes simple i clara)
+
+Object subclass: #ArbreBinariCerca
+    instanceVariableNames: 'arrel'
+    classVariableNames: ''
+    package: 'Exercicis'
+
+ArbreBinariCerca >> initialize
+    super initialize.
+    arrel := nil.
+
+ArbreBinariCerca >> buida
+    ^arrel isNil.
+
+ArbreBinariCerca >> inserir: unElement
+    arrel := self inserir: unElement arrel.
+
+ArbreBinariCerca >> inserir: unElement a: unNode
+    unNode isNil ifTrue: [^ unElement asOrderedCollection]. "Crea un nou node si l'arbre està buit"
+    (unElement <= unNode element) 
+        ifTrue: [unNode esquerre := self inserir: unElement a: unNode esquerre]
+        ifFalse: [unNode dret := self inserir: unElement a: unNode dret].
+    ^ unNode.
+
+ArbreBinariCerca >> cercar: unElement
+    ^ self cercar: unElement a: arrel.
+
+ArbreBinariCerca >> cercar: unElement a: unNode
+    unNode isNil ifTrue: [^ false]. "Element no trobat"
+    unElement = unNode element ifTrue: [^ true]. "Element trobat"
+    unElement < unNode element
+        ifTrue: [^ self cercar: unElement a: unNode esquerre]
+        ifFalse: [^ self cercar: unElement a: unNode dret].
+
+ArbreBinariCerca >> treureMin
+    arrel isNil ifTrue: [^ nil]. "L'arbre està buit"
+    | minim |
+    minim := arrel element.
+    arrel := self treureMinDe: arrel.
+    ^ minim.
+
+ArbreBinariCerca >> treureMinDe: unNode
+    unNode esquerre isNil ifTrue: [^ unNode dret]. "No té fills esquerres, retorna el fill dret"
+    unNode esquerre := self treureMinDe: unNode esquerre. "Elimina el node més petit a l'esquerra"
+    ^ unNode.
+
+ArbreBinariCerca >> preordre: unBlock
+    arrel isNil ifTrue: [^ self].
+    unBlock value: arrel element.
+    (arrel esquerre) preordre: unBlock.
+    (arrel dret) preordre: unBlock.
+
+ArbreBinariCerca >> enordre: unBlock
+    arrel isNil ifTrue: [^ self].
+    (arrel esquerre) enordre: unBlock.
+    unBlock value: arrel element.
+    (arrel dret) enordre: unBlock.
+
+ArbreBinariCerca >> postordre: unBlock
+    arrel isNil ifTrue: [^ self].
+    (arrel esquerre) postordre: unBlock.
+    (arrel dret) postordre: unBlock.
+    unBlock value: arrel element.
+
+
+
+-----------------------------------------------------------------------------------------------
+
+(Implementació donada per ChatGPT. Mes modular i escalable)
+
+Object subclass: #Node
+    instanceVariableNames: 'key left right'
+    classVariableNames: ''
+    package: 'ArbreBinariCerca'
+
+Node >> initializeWithKey: aKey
+    key := aKey.
+    left := right := nil.
+
+Node >> insert: aKey
+    aKey < key ifTrue: [
+        left isNil
+            ifTrue: [left := Node new initializeWithKey: aKey]
+            ifFalse: [left insert: aKey].
+    ] ifFalse: [
+        aKey > key
+            ifTrue: [
+                right isNil
+                    ifTrue: [right := Node new initializeWithKey: aKey]
+                    ifFalse: [right insert: aKey].
+            ] ifFalse: [^self "Key already exists"].
+    ].
+
+Node >> search: aKey
+    aKey = key ifTrue: [^self].
+    aKey < key ifTrue: [^left isNil ifTrue: [nil] ifFalse: [left search: aKey]].
+    aKey > key ifTrue: [^right isNil ifTrue: [nil] ifFalse: [right search: aKey]].
+    ^nil.
+
+Object subclass: #ArbreBinariCerca
+    instanceVariableNames: 'root'
+    classVariableNames: ''
+    package: 'ArbreBinariCerca'
+
+ArbreBinariCerca >> initialize
+    root := nil.
+
+ArbreBinariCerca >> insert: aKey
+    root isNil
+        ifTrue: [root := Node new initializeWithKey: aKey]
+        ifFalse: [root insert: aKey].
+
+ArbreBinariCerca >> search: aKey
+    ^root isNil ifTrue: [nil] ifFalse: [root search: aKey].
+
+
+-----------------------------------------------------------------------------------------------
+
+
+DIFERENCIES ENTRE ELLES:
+
+Les dues implementacions presenten aproximacions vàlides a la implementació d'un arbre binari de cerca. A continuació, es destaquen algunes diferències i consideracions que podrien ajudar a determinar quina implementació és més adequada per a certes situacions:
+
+Ús de Classes i Herència:
+
+La primera implementació (amb una sola classe ArbreBinariCerca) utilitza una estructura única amb una única classe i instància la classe Node a dins d'aquesta. Aquest enfocament és més simple i pot ser més senzill de mantenir.
+
+La segona implementació utilitza dues classes (ArbreBinariCerca i Node), amb Node representant els nodes de l'arbre. Aquesta separació pot proporcionar una estructura més modular i escalable si es preveu la possibilitat d'utilitzar nodes en altres contextos.
+
+Mètodes d'Inserció:
+
+En la primera implementació, la inserció es realitza mitjançant un mètode inserir que crida a altres mètodes interns. Aquesta implementació té una estructura més plana i senzilla.
+
+En la segona implementació, la inserció es realitza utilitzant el mètode insert de la classe Node. Aquesta estructura delega la inserció a la classe de nodes, oferint una estructura més orientada a objectes.
+
+Estructura de Nodes:
+
+La primera implementació utilitza un enfocament basat en col·leccions, amb la creació d'objectes OrderedCollection per representar els nodes.
+
+La segona implementació utilitza una classe específica Node amb instàncies per representar cada node.
+
+Complexitat i Optimització:
+
+Ambdues implementacions realitzen les operacions bàsiques d'un arbre binari de cerca de manera vàlida. La diferència entre elles radica més en l'estil de programació i la preferència de l'usuari que en la funcionalitat real.
+En resum, no hi ha una resposta única sobre quina implementació és "millor", ja que depèn del context específic i dels requisits del sistema. Algunes persones podrien preferir la simplicitat de la primera implementació, mentre que altres podrien optar per la modularitat de la segona. Ambdues implementacions són vàlides i poden ser adequades en diferents situacions.

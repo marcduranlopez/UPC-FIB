@@ -1,0 +1,176 @@
+Tenim les següents definicions de les classes A , B i C :
+
+Object subclass: #A
+ instanceVariableNames: 'a b'
+ classVariableNames: ''
+ package: 'Exercicis'
+
+A subclass: #B
+ instanceVariableNames: ''
+ classVariableNames: ''
+ package: 'Exercicis'
+
+A subclass: #C
+ instanceVariableNames: ''
+ classVariableNames: ''
+ package: 'Exercicis'
+
+i els següents mètodes:
+
+A >> a ^ a - 2
+A >> a: unNombre a := unNombre
+A >> b ^ b - 1
+A >> b: unNombre b := unNombre
+B >> a
+
+    | x |
+    ^super a <= 0 ifTrue: [1]
+        ifFalse:
+        [
+            x := B new.
+            x a: super a.
+            x a + 1
+        ]
+C >> b
+    | c |
+    ^super b = 0 ifTrue: [1]
+        ifFalse:
+        [
+            c := C new.
+            c b: super b.
+            c b + super b + 1
+        ]
+
+
+Per a les següents qüesons, mireu de trobar una solució sense escriure i executar el codi. Executeu‑ho a l’ordinador només quan ngueu pensades les solucions.
+
+- Avalueu l’expressió B new a: 3; a pas a pas
+
+- Quin és el resultat de l’expressió:
+
+| b |
+(1 to: 10) collect:
+[
+    :i |
+        b := B new. b a: i. ba
+]
+
+-Podeu simplificar el mètode a de la classe B de manera que no conngui més que una referència a super?
+
+-Podeu simplificar el mètode b de la classe C de manera que no conngui cap referència a super?
+
+- Quin és el resultat de l’expressió:
+
+| c |
+(1 to: 10) collect:
+[
+     :i |
+        c := C new.
+        c b: i.
+        cb
+]
+
+-Expliqueu matemàcament què calculen els mètodes a de la classe B i el mètode b de la classe C
+
+-Quin serà el resultat de la qüesó precedent si modifiquem el mètode b de la classe C de la següent manera:
+
+C >> b
+    | c |
+    ^ super b = 0
+        ifTrue: [1]
+        ifFalse:
+        [
+            c := C new.
+            c b: super b.
+            c b * super b + 1
+        ]
+
+- Com caldria canviar el mètode a de la classe B per a que calculi la divisió entera per 3 del valor de la variable d’instància a (arrodonit cap a l’enter més gran si a no era múlple de 3)?
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Analitzem les qüestions:
+
+1. Avalueu l’expressió B new a: 3; a pas a pas:
+
+- Creem una instància de B amb B new.
+- A cridar a: 3, crea una nova instància de B, li assigna el valor 3 a la variable d'instància a, i finalment retorna el resultat de x a + 1, on x és aquesta nova instància.
+- El resultat serà 4.
+
+
+2. Quin és el resultat de l’expressió:
+
+| b |
+(1 to: 10) collect:
+[
+ :i |
+ b := B new. 
+ b a: i. 
+ b a
+]
+
+- Creem una col·lecció amb els resultats de cridar a en diferents instàncies de B amb valors de 1 a 10.
+- El resultat serà una col·lecció amb els nombres de 0 a 9.
+
+
+3.Podeu simplificar el mètode a de la classe B de manera que no contingui més que una referència a super?
+
+- No es pot simplificar el mètode a de la classe B sense canviar el comportament, ja que fa servir B new per crear una nova instància de B.
+
+
+4. Podeu simplificar el mètode b de la classe C de manera que no contingui cap referència a super?
+
+- Sí, el mètode pot simplificar-se com a continuació:
+
+C >> b
+  ^ (self b = 0)
+    ifTrue: [1]
+    ifFalse: [self b + (self b + 1)]
+
+- Aquesta implementació utilitza només referències a self sense necessitat de fer servir super.
+
+
+5. Quin és el resultat de l’expressió:
+
+| c |
+(1 to: 10) collect:
+[
+ :i |
+ c := C new.
+ c b: i.
+ c b
+]
+
+- Creem una col·lecció amb els resultats de cridar b en diferents instàncies de C amb valors de 1 a 10.
+- El resultat serà una col·lecció amb els nombres de 1 a 30.
+
+
+6. Expliqueu matemàticament què calculen els mètodes a de la classe B i el mètode b de la classe C:
+
+- El mètode a de la classe B resta 2 del valor actual de la variable d'instància a.
+- El mètode b de la classe C retorna la suma del doble del valor actual de la variable d'instància b amb 1.
+
+
+7. Quin serà el resultat de la qüestió precedent si modifiquem el mètode b de la classe C de la següent manera:
+
+C >> b
+  | c |
+  ^ super b = 0
+    ifTrue: [1]
+    ifFalse: [
+      c := C new.
+      c b: super b.
+      c b * super b + 1
+    ]
+
+- Aquest canvi no afecta el resultat de l'expressió. La nova implementació retorna la mateixa cosa que l'anterior, ja que el valor que es multiplica pel valor actual de b és c b, que és el mateix que super b després de la crida a c b: super b.
+
+
+8. Com caldria canviar el mètode a de la classe B per a que calculi la divisió entera per 3 del valor de la variable d’instància a (arrodonit cap a l’enter més gran si a no era múltiple de 3)?
+
+B >> a
+  ^ (super a / 3) rounded up
+
+- Aquesta implementació retorna la divisió entera per 3 del valor actual de la variable d'instància a, arrodonit cap amunt si no és múltiple de 3.

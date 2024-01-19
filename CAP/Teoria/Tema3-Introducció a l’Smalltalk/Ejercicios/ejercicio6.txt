@@ -1,0 +1,70 @@
+Avalua les següents expressions:
+(11111111111111111111/11111111111111111112) + (1/11111111111111111112)
+2r1000
+16rFF
+256 printStringRadix:2
+(8 bitOr: 1) printStringRadix:2
+(8 bitAnd: 9)
+2e10 asInteger
+1 + 2; yourself
+1/12 + (1/6)
+1/12 + 1/6
+-2.5 truncated
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Avaluem les expressions proporcionades:
+
+(11111111111111111111/11111111111111111112) + (1/11111111111111111112)
+
+Resultat: 1.0
+
+
+2r1000
+
+Resultat: 8 (representació binària de 1000)
+
+
+16rFF
+
+Resultat: 255 (representació hexadecimal de FF)
+
+
+256 printStringRadix:2
+
+Resultat: '100000000' (representació en binari de 256)
+
+
+(8 bitOr: 1) printStringRadix:2
+
+Resultat: '1001' (resultat de la operació OR bit a bit entre 8 i 1)
+
+
+(8 bitAnd: 9)
+
+Resultat: 8 (resultat de la operació AND bit a bit entre 8 i 9)
+
+
+2e10 asInteger
+
+Resultat: 1024 (2 elevat a 10)
+
+
+1 + 2; yourself
+
+Resultat: 3 (s'avalua l'expressió 1 + 2 i després es retorna el mateix resultat amb yourself)
+
+
+1/12 + (1/6)
+
+Resultat: 0.25 (0.0833 + 0.1667)
+
+
+1/12 + 1/6
+
+Resultat: 0.25 (mateixa expressió que l'anterior, només que sense parèntesis)
+
+
+-2.5 truncated
+
+Resultat: -2 (elimina la part decimal i deixa només la part enter)

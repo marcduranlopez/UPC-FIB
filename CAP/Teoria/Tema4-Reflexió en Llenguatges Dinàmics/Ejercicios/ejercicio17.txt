@@ -1,0 +1,31 @@
+Executeu aquest codi al Playground:
+
+| b cont |
+b := Continuation callcc: [ :cc | cont := cc. false ].
+#(1 2 3 4 5) do: [ :each |
+                    (b ifFalse: [ 'NO' ]
+                        ifTrue: [ each asString ]) traceCr].
+b ifFalse: [ cont value: true ].
+
+Digueu què us surt al Transcript. Per què surt el que heu vist que surt?
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+(SOLUCION PARCIAL 20-21)
+
+Apareix al Transcript el següent:
+'NO'
+'NO'
+'NO'
+'NO'
+'NO'
+'1'
+'2'
+'3'
+'4'
+'5'
+
+I la raó és que quan s'avalua el bloc paràmetre del #callcc: retorna false (a part de
+guardar la continuació, és a dir, el fet d'assignar un valor a b). Així, la primera passada pel
+bucle escriurà 'NO' al Transcript. Però en ser b igual a false executarem l'avaluació de la
+continuació, que assigna true a b. I continua amb b valent true.

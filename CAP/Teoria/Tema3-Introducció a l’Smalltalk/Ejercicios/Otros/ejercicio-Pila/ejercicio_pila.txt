@@ -1,0 +1,72 @@
+creaPila
+	| pila index |
+	pila := OrderedCollection new.
+	index := 0.
+	^ { 
+	[ pila := OrderedCollection new. index := 0. ] .
+	[ index > 0 ifTrue: [ index := index - 1. pila removeLast ] 
+					ifFalse: [ Object error: 'Pila Buida' ] ] .
+	[ index > 0 ifTrue: [ pila last ]  ifFalse: [ Object error: 'Pila Buida' ] ] .
+	[ :elem | index := index + 1. pila add: elem. ] .
+	[ index ] .
+	[ index = 0 ] .
+	 }
+
+	
+
+EJEMPLO PARA UNA COLA:
+
+Object subclass: #Cola
+    instanceVariableNames: 'elements'
+
+Cola >> initialize
+    elements := OrderedCollection new.
+
+Cola >> isEmpty
+    ^ elements isEmpty.
+
+Cola >> size
+    ^ elements size.
+
+Cola >> enqueue: anElement
+    elements addLast: anElement.
+
+Cola >> dequeue
+    ^ elements isEmpty ifTrue: [Object error: 'Cua buida'] ifFalse: [elements removeFirst].
+
+Cola >> peek
+    ^ elements isEmpty ifTrue: [Object error: 'Cua buida'] ifFalse: [elements first].
+
+
+
+| cola |
+cola := Cola new.
+
+cola enqueue: 'Element 1'.
+cola enqueue: 'Element 2'.
+cola enqueue: 'Element 3'.
+
+Transcript show: 'Size: ', (cola size asString); cr.
+Transcript show: 'Peek: ', (cola peek); cr.
+
+cola dequeue.
+
+Transcript show: 'Size after dequeue: ', (cola size asString); cr.
+
+
+
+
+creaCua
+	| cua front rear |
+	cua := OrderedCollection new.
+	front := 0.
+	rear := 0.
+	^ { 
+	[ cua := OrderedCollection new. front := 0. rear := 0. ] .
+	[ front < rear ifTrue: [ front := front + 1. cua at: front ] 
+					ifFalse: [ Object error: 'Cua Buida' ] ] .
+	[ front < rear ifTrue: [ cua at: (front + 1) ]  ifFalse: [ Object error: 'Cua Buida' ] ] .
+	[ :elem | rear := rear + 1. cua add: elem. ] .
+	[ rear - front ] .
+	[ front >= rear ] .
+	}

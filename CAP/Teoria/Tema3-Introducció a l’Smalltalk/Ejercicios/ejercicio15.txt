@@ -1,0 +1,6 @@
+Implementeu en Smalltalk el TAD CuaAmbPrioritat (em remeto als apunts d’EDA per a una explicació,
+descripció i implementació en C++ del TAD).
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+RESOLT A LA IMATGE DE PHARO (PACKAGE ProblemesCAP2023)

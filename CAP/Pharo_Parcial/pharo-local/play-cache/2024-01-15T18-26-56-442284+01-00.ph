@@ -1,0 +1,1 @@
+Object class >> find: aString    | matchingSelectors |    matchingSelectors := OrderedCollection new.    self methodDictionary do: [:selector :method |        (method getSourceCode includesSubstring: aString)            ifTrue: [matchingSelectors add: selector].    ].matchingSelectors inspect.

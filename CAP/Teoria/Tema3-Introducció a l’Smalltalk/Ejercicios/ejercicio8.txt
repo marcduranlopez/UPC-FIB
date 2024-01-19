@@ -1,0 +1,29 @@
+Obriu un System Browser:
+Busqueu la classe Integer
+Examineu la jerarquia de la classe Integer
+Busqueu el mètode + de la classe Integer
+Busqueu tots els mètodes + (totes les implementacions del mètode anomenat + )
+Busqueu tots els mètodes que ulitzen el sel∙lector +
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+"Obre un System Browser"
+Browser open.
+
+"Busca la classe Integer"
+Object explore.
+
+"Examina la jerarquia de la classe Integer"
+Integer browseHierarchy.
+
+"Busca el mètode + de la classe Integer"
+Integer >> #+.
+
+"Busca tots els mètodes + (totes les implementacions del mètode anomenat +)"
+SystemNavigation default browseAllSelect: [ :method | method selector = #+ ].
+
+"Busca tots els mètodes que utilitzen el sel∙lector +"
+SystemNavigation default browseAllSelect: [ :method | method refersTo: #+ ].
+
+
+Aquest codi s'executaria a un entorn Smalltalk, com ara Squeak o Pharo, i realitzaria les accions que has demanat programàticament. Recorda que les interaccions amb eines com el System Browser poden variar lleugerament entre diferents implementacions de Smalltalk.

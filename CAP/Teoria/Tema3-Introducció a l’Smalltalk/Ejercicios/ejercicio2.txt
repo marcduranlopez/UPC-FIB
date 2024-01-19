@@ -1,0 +1,109 @@
+Per a cada expressió, respon a aquestes qüesons:
+1. Quin(s) és/són el(s) objecte(s) receptor(s)?
+2. Quin(s) és/són el(s) selector(s) del(s) missatge(s)? Quin(s) és/són el(s) argument(s)?
+3. Quin és el missatge? o Quins són els missatges? Quin és el resultat d’avaluar aquesta expressió?
+
+Expressions:
+5 + 6
+5 @ 6
+#($m $i $d $a) size
+Date today
+anArray at: 1 put: 'hola'
+anOrderedCollection inject: 1 into: [:acc :y | acc * y ]
+OrderedCollection new at: 1 put: 'un'; at: 2 put: 'dos'
+OrderedCollection new at: 1 put: 'un'; at: 2 put: 'dos'; yourself
+Transcript show: (2 + 1) printString.
+5@5 extent: 6.0 truncated @ 7
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+5 + 6
+
+Receptor: 5 (y también 6)
+Selector: +
+Argumento: 6 (y también 5)
+Mensaje: +
+Resultado: 11
+
+
+5 @ 6
+
+Receptor: 5
+Selector: @
+Argumento: 6
+Mensaje: @
+Resultado: Una instancia de Point con coordenadas x=5 e y=6
+
+
+#($m $i $d $a) size
+
+Receptor: #($m $i $d $a)
+Selector: size
+Mensaje: size
+Resultado: 4 (tamaño del array de caracteres)
+
+
+Date today
+
+Receptor: Date
+Selector: today
+Mensaje: today
+Resultado: Una instancia de la clase Date representando la fecha actual.
+
+
+anArray at: 1 put: 'hola'
+
+Receptor: anArray
+Selector: at:put:
+Argumentos: 1, 'hola'
+Mensaje: at:put:
+Resultado: Se coloca 'hola' en la posición 1 de anArray.
+
+
+anOrderedCollection inject: 1 into: [:acc :y | acc * y]
+
+Receptor: anOrderedCollection
+Selector: inject:into:
+Argumentos: 1, bloque [:acc :y | acc * y]
+Mensaje: inject:into:
+Resultado: El resultado de aplicar el bloque a los elementos de anOrderedCollection acumulando con el valor inicial 1.
+
+
+OrderedCollection new at: 1 put: 'un'; at: 2 put: 'dos'
+
+Receptor: OrderedCollection new
+Selector: at:put: (dos veces)
+Argumentos: 1, 'un' y luego 2, 'dos'
+Mensajes: at:put: (dos veces)
+Resultado: Una instancia de OrderedCollection con 'un' en la posición 1 y 'dos' en la posición 2.
+
+
+OrderedCollection new at: 1 put: 'un'; at: 2 put: 'dos'; yourself
+
+Receptor: OrderedCollection new
+Selector: at:put: (dos veces) y yourself
+Argumentos: 1, 'un' y luego 2, 'dos'
+Mensajes: at:put: (dos veces) y yourself
+Resultado: Una instancia de OrderedCollection con 'un' en la posición 1 y 'dos' en la posición 2, y se devuelve a sí misma.
+
+
+Transcript show: (2 + 1) printString.
+
+Receptor: Transcript
+Selector: show: y printString
+Argumentos: Resultado de 2 + 1 convertido a cadena.
+Mensajes: show: y printString
+Resultado: Muestra la representación de cadena de la suma de 2 y 1 en el Transcript.
+
+
+5 @ 5 extent: 6.0 truncated @ 7
+
+Receptores: 5, 5 (primero y segundo)
+Selectores: @, extent:, truncated, @
+Argumentos: 6.0, 7
+Mensajes: @, extent:, truncated, @
+Resultado: Una instancia de Rectangle con coordenadas x=5, y=5, ancho=6 y alto=7.
+
+
+
+

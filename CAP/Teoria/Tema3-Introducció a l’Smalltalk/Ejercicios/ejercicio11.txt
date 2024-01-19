@@ -1,0 +1,51 @@
+#mig ‑ donada una SequenceableCollecon retorna l’element del mig.
+
+#swap:with: ‑ que té dos indexos i i j com a arguments i canvia l’element i pel j i el j per
+l’ i a la col∙lecció receptora.
+
+#negated ‑ canvia el signe de tots els elements de la col∙lecció
+
+#copyWithFirst: ‑ que retorna una col∙lecció idènca a la receptora, però amb l’argument inserit en
+primer lloc
+
+#inject:into: ‑ Ja sabeu com funciona, ara, sense mirar la implementació de Pharo, proveu
+d’implementar‑lo vosaltres.
+
+#anySatisfy: ‑ Retornarà true si existeix al menys un element dins la col∙lecció tal que el bloc (d’un
+paràmetre) que passem com a argument retorna true quan l’apliquem a l’element
+
+#atAll: ‑ Retornarà una col∙lecció amb els elements corresponents a les posicions enumerades dins la
+col∙lecció que passem com a argument. P.ex:  #(a b c d) atAll: #(2 4) ndrà com a resultat #(b
+d)
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Un >> mig
+   ^self at: (self size // 2) + 1.
+
+
+Un >> swap: i with: j
+   | temp |
+   temp := self at: i.
+   self at: i put: (self at: j).
+   self at: j put: temp.
+
+
+Un >> negated
+   ^self collect: [ :each | each negated ].
+
+
+Un >> copyWithFirst: anElement
+   ^{anElement} , (self copyFrom: 1 to: self size).
+
+
+Un >> inject: aBlock into: initialValue
+   ^self reduce: [ :each :result | aBlock value: result value: each ] startingWith: initialValue.
+
+
+Un >> anySatisfy: aBlock
+   ^self anySatisfy: aBlock.
+
+
+Un >> atAll: indexes
+   ^indexes collect: [ :index | self at: index ].

@@ -1,0 +1,13 @@
+3. Quina mena d’objecte descriuen les expressions literals 'Hola, món' , #HolaMón i #($H $o $l $a)
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Les expressions literals 'Hola, món', #HolaMón i #($H $o $l $a) descriuen diferents tipus d'objectes a Smalltalk:
+
+1. 'Hola, món': Aquesta és una cadena literal (string literal). Representa una seqüència de caràcters i és una instància de la classe String a Smalltalk.
+
+2. #HolaMón: Aquesta és una literal de símbol (symbol literal). Els símbols són objectes únics i immutables que es poden utilitzar com a identificadors o claus en col·leccions. En aquest cas, #HolaMón es converteix en una instància de la classe Symbol.
+
+3. #($H $o $l $a): Aquesta és una literal de array de caràcters (character array literal). Representa una seqüència de caràcters com una matriu de caràcters. En aquest cas, es converteix en una instància de la classe Array, amb cada caràcter com a element individual.
+
+En resum, a Smalltalk, les literals de cadena ('Hola, món'), símbol (#HolaMón) i array de caràcters (#($H $o $l $a)) descriuen instàncies de les classes String, Symbol i Array, respectivament.

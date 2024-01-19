@@ -1,0 +1,26 @@
+Quines són les diferències entre intercessió i introspecció?
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+La intercessió (intercession en inglés) i la introspecció són conceptes relacionats amb la programació i l'exploració de les característiques i propietats d'un programa o sistema. Aquí tens una descripció de cadascun d'ells:
+
+
+Intercessió:
+
+Definició: L'intercessió fa referència a la capacitat d'un programa o sistema de modificar o influir en el comportament d'un altre programa o sistema en temps d'execució.
+
+Funcionament: Implica la capacitat de realitzar canvis en temps d'execució, com modificar variables, interceptar trucades a mètodes o altres formes d'influència en el flux d'execució.
+
+Exemple: Els frameworks d'injecció de dependències o altres formes d'aspectes poden utilitzar intercessió per modificar el comportament d'una aplicació sense modificar el seu codi font.
+
+
+Introspecció:
+
+Definició: L'introspecció fa referència a la capacitat d'un programa o sistema de conèixer les seves pròpies estructures internes, com les classes, mètodes, variables, etc.
+
+Funcionament: Implica l'anàlisi del codi font o la informació de temps d'execució per obtenir detalls sobre les classes, mètodes i altres components del sistema.
+
+Exemple: En llenguatges com Smalltalk, que tenen un fort suport per la introspecció, pots obtenir informació sobre les classes i mètodes en temps d'execució, com accedir als noms dels mètodes, conèixer els paràmetres, etc.
+
+
+En resum, mentre que la intercessió es centra en la capacitat d'influir o modificar altres parts del sistema en temps d'execució, la introspecció es centra en la capacitat de mirar cap a dins del propi sistema per obtenir informació sobre les seves pròpies estructures i components. A vegades, aquests dos conceptes es combinen per proporcionar funcionalitats més avançades en entorns de programació.

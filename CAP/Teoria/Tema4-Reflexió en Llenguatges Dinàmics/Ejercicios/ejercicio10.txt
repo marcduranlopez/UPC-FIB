@@ -1,0 +1,12 @@
+A classe vam veure un mètode anomenat #haltIf: aSymbol que permetia fer
+un halt només quan a la cadena de crides hi havia un mètode amb aSymbol com a
+nom. Feu ara un mètode #haltIfTrue: aBlock on aBlock és un bloc sense
+paràmetres. Aleshores, self haltIfTrue: [...] s'aturarà només si el resultat
+d'avaluar [...] és true. A quina classe ha d'anar aquest mètode?
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+(SOLUCION PARCIAL 15-16)
+
+ Object >> haltIf: aBlock
+    aBlock value ifTrue: [ Halt halt ]

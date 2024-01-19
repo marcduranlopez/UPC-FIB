@@ -1,0 +1,54 @@
+Col∙leccions. Feu mètodes que realitzin les següents accions:
+- Compteu el nombre d’elements d’una taula ( Array )
+- Fer la mitjana d’una taula
+- Construir una taula T a parr d’una altra A on Ti = A2i‑1 + A2i
+- A parr d’una col∙lecció C retornar la seva inversa
+- Donats un bloc amb un paràmetre i una col∙lecció C, cal retornar el resultat d’aplicar el bloc a tots els elements de la col∙lecció
+- Donat un element i una col∙lecció, afegir l’element a la col∙lecció només si aquest no hi és
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+1. Compteu el nombre d’elements d’una taula (Array):
+
+countElements: anArray
+   ^anArray size.
+
+
+2. Fer la mitjana d’una taula:
+
+calculateAverage: anArray
+   ^anArray sum / anArray size.
+
+
+3. Construir una taula T a partir d’una altra A on Ti = A2i‑1 + A2i:
+
+buildTable: anArray
+   | resultTable |
+   resultTable := OrderedCollection new.
+   1 to: (anArray size // 2) do: [ :i |
+      resultTable add: (anArray at: 2*i - 1) + (anArray at: 2*i).
+   ].
+   ^resultTable.
+
+
+4. A partir d’una col·lecció C, retornar la seva inversa:
+
+reverseCollection: aCollection
+   ^aCollection reverse.
+
+
+5. Donats un bloc amb un paràmetre i una col·lecció C, cal retornar el resultat d’aplicar el bloc a tots els elements de la col·lecció:
+
+applyBlock: aBlock toCollection: aCollection
+   ^aCollection collect: [ :each | aBlock value: each ].
+
+
+6. Donat un element i una col·lecció, afegir l’element a la col·lecció només si aquest no hi és:
+
+addElement: anElement toCollection: aCollection
+   (aCollection includes: anElement) ifFalse: [
+      aCollection add: anElement.
+   ].
+   ^aCollection.
+
+

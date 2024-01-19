@@ -1,0 +1,37 @@
+Si tenim el codi seguent:
+
+| unArray suma |
+suma := 0.
+unArray := #(21 23 53 66 87).
+unArray do: [ :each | suma := suma + each ].
+suma
+
+Quin és el resultat final de suma ?
+Com podriem reescriure el mateix però ulitzant l’indexat explícit de taules (amb el mètode #at: ) per accedir als seus elements?
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+El codi proporcionat calcula la suma dels elements de l'array unArray utilitzant el mètode do: de Smalltalk. Aquí tens el resultat final:
+
+| unArray suma |
+suma := 0.
+unArray := #(21 23 53 66 87).
+unArray do: [ :each | suma := suma + each ].
+^suma.
+
+El resultat final de suma serà la suma dels elements de unArray, que és 250.
+
+
+
+Ara, per reescriure el mateix codi utilitzant l'indexació explícita amb el mètode at:, podríem fer-ho així:
+
+| unArray suma |
+suma := 0.
+unArray := #(21 23 53 66 87).
+1 to: unArray size do: [ :index |
+    suma := suma + (unArray at: index)
+].
+^suma.
+
+En aquesta versió, utilitzem 1 to: unArray size per obtenir els índexs de l'array i, per a cada índex, afegim el valor de l'element corresponent utilitzant unArray at: index. 
+El resultat final és el mateix, i suma serà 250. Aquesta és una manera de fer el mateix sense utilitzar do:.

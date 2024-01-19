@@ -1,0 +1,69 @@
+Definirem dues versions del #whileTrueCC: amb continuacions que ja vam veure
+a classe:
+
+a) BlockClosure >> whileTrueCCa: aBlock
+    | cont tmp |
+    tmp := 0. “Aquí està l’única diferència”
+    cont := Continuation callcc: [ :cc | cc ].
+    self value ifTrue: [ aBlock value.
+                        ('inside whileTrueCC: ', tmp asString) traceCr.
+                        tmp := tmp + 1.
+                        cont value: cont]
+                ifFalse: [^ nil].
+
+b) BlockClosure >> whileTrueCCb: aBlock
+    | cont tmp |
+    [ tmp := 0 ] value. “Aquí està l’única diferència”
+    cont := Continuation callcc: [ :cc | cc ].
+    self value ifTrue: [ aBlock value.
+                        ('inside whileTrueCC: ', tmp asString) traceCr.
+                        tmp := tmp + 1.
+                        cont value: cont]
+                ifFalse: [^ nil].
+
+
+Si ara avaluem al Playground:
+| n |
+n := 4.
+[ n > 0 ] whileTrueCCa: [ n := n-1 ]
+
+el resultat és:
+inside whileTrueCC: 0
+inside whileTrueCC: 0
+inside whileTrueCC: 0
+inside whileTrueCC: 0
+
+
+Si ara faig el mateix al Playground, però amb BlockClosure >>
+#whileTrueCCb: :
+
+| n |
+n := 4.
+[ n > 0 ] whileTrueCCb: [ n := n-1 ]
+
+el resultat és:
+inside whileTrueCC: 0
+inside whileTrueCC: 1
+inside whileTrueCC: 2
+inside whileTrueCC: 3
+
+Mireu d’entendre què passa i especuleu sobre les possibles raons d’aquest
+comportament. 
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+(SOLUCION PARCIAL 18-19)
+
+La variable tmp en un cas és capturada per un bloc i en l’altre... també! Vull dir,
+en tots dos casos tmp es fa servir dins el bloc del ifTrue:, així que en teoria hauria
+d’haver estat capturada per aquest bloc (com a closure que és) en tots dos casos i
+s’hauria d’haver guardat en un array al heap, fora dels contextos de la pila d’execució. Així
+doncs, en teoria, hauríem d’haver observat el comportament de #whileTrueCCb: en tots
+dos casos. 
+
+El problema és que per questions d’eficiència, els blocs de l’ifTrue: (i de l’ifFalse: i
+d’altres missatges importants i utilitzats freqüentment)... no són blocs de veritat!! Aquests
+blocs es transformen inline i no són closures com cal. Per això, el bloc de l’ifTrue: a
+#whileTrueCCa: en realitat no captura la variable tmp, i per això observem la diferència en
+comportament. A #whileTrueCCb: la variable tmp sí que és capturada per un bloc [ tmp :=
+0 ] value, explícitament.

@@ -1,0 +1,29 @@
+Fes petits bocinets de Smalltalk (per ser executats al Playground) per respondre les
+següents qüestions:
+
+• Per a cada classe de la imatge, escriure al Transcript el nom de la classe i la
+quantitat de mètodes que té (en un format com, p.ex. 'OrderedCollection -- 61').
+• Obtenir una col·lecció amb tots els mètodes que fan servir en el seu codi #callcc:
+• Trobar quantes classes implementen el mètode de selector #name
+• Trobar quantes classes tenen al menys un mètode sobreescrit (overriden) en
+alguna subclasse.
+
+Nota: Recordeu que totes les classes hereten els getters per a les variables
+d'instància de la classe Behavior, superclasse de totes les metaclasses. També
+us pot interessar mirar si la classe CompiledMethod té algún mètode que us
+pugui ser útil.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+(SOLUCION PARCIAL 21-22)
+
+- SystemNavigation default allClassesDo:
+    [ :c | (c name , ' -- ' , c methodDict size asString) traceCr ]
+
+- SystemNavigation default allSendersOf: #callcc:.
+
+- (SystemNavigation default allClassesImplementing: #name) size
+
+- (SystemNavigation default allClasses select: [ :c |
+    ((c methodDict) select:
+        [ :m | m isOverridden ]) size > 0 ]) size.

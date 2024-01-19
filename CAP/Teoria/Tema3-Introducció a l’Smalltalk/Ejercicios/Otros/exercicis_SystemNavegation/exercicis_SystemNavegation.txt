@@ -1,0 +1,60 @@
+(SOLUCION PARCIAL 17-18)
+1.
+Solució:
+
+a) SystemNavigation default allCallsOn: #at:put:
+
+b) SystemNavigation default allImplementorsOf: #at:put:.
+
+c) SystemNavigation default allMethodsSelect: [ :m | m selector == #callcc: ].
+
+d) (SystemNavigation default allImplementorsOf: #at:put:) size
+
+
+(SOLUCION PARCIAL 20-21)
+2.
+Solució:
+
+a) SystemNavigation default allImplementorsOf: #inject:into:
+
+b) (SystemNavigation default allMethods size)
+- (SystemNavigation default allPrimitiveMethods size)
+N’hi ha 92119 en una imatge de Pharo 6.1 nova
+
+c) SystemNavigation default allClassesImplementing: #inject:into:
+
+d) (SystemNavigation default allClasses) size N’hi ha 6481 en una
+imatge de Pharo 6.1 nova
+
+
+(Ejercicio 2 de la coleccion: SOLUCION PARCIAL 21-22)
+3.
+Solució:
+
+a) SystemNavigation default allClassesDo:
+[ :c | (c name , ' -- ' , c methodDict size asString) traceCr ]
+
+b) SystemNavigation default allSendersOf: #callcc:.
+
+c) (SystemNavigation default allClassesImplementing: #name) size
+
+d) (SystemNavigation default allClasses select: [ :c |
+((c methodDict) select:
+[ :m | m isOverridden ]) size > 0 ]) size.
+
+
+(SOLUCION FINAL 22-23)
+4.
+Solució:
+
+a) SystemNavigation default browseAllSendersOf: metode.
+
+b) (SystemNavigation default allClasses)
+inject: 0
+into: [ :coll :c |
+coll + (c methodDict select: [ :v |
+(v sourceCode findString: 'this') ~= 0 ] ) size ]
+
+c) (SystemNavigation default allImplementorsOf: #new) size
+
+d) SystemNavigation default browseMethodsWhoseNamesContain: 'ifAbsent'

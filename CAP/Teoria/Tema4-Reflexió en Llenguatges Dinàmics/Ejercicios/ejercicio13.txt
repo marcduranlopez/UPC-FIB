@@ -1,0 +1,39 @@
+| comptador reset incrementa decrementa |
+comptador := [ | valor | { [ valor := 0. valor traceCr. ] .
+                            [ :n | valor := valor + n. valor traceCr. ] .
+                            [ :n | valor := valor - n. valor traceCr. ] } ] value.
+reset := comptador at: 1.
+incrementa := comptador at: 2.
+decrementa := comptador at: 3.
+reset value.
+incrementa value: 2.
+incrementa value: 2.
+decrementa value: 1.
+
+Apareixen al Transcript els números 0 2 4 3 (en aquest ordre).
+En canvi, si seleccionem aquest programa al Playground i fem Ctrl-d...
+
+| comptador reset incrementa decrementa |
+comptador := [ { [ | valor | valor := 0. valor traceCr. ] .
+                [ :n | | valor | valor := valor + n. valor traceCr. ] .
+                [ :n | | valor | valor := valor - n. valor traceCr. ] } ] value.
+reset := comptador at: 1.
+incrementa := comptador at: 2.
+decrementa := comptador at: 3.
+reset value.
+incrementa value: 2.
+incrementa value: 2.
+decrementa value: 1.
+
+el programa no funciona. Apareix un error (#+ was sent to nil).
+
+Explica i justifica la diferència en el resultat.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+(SOLUCION PARCIAL 19-20)
+
+En el primer cas valor és una variable capturada pels tres blocs retornats i
+assignats a comptador (recordem que un bloc en Smalltalk és un closure). En el segon
+cas, valor és una variable local a cada un dels blocs retornats, i per tant independent en
+cada bloc. A més, no està inicialitzada en dos dels blocs, d’aquí l’error.

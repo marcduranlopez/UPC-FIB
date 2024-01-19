@@ -1,0 +1,67 @@
+Implementeu una subclasse d’ Array tal que manngui la història dels valors assignats a cada posició i perme l’assignació de valors màxims i mínims a cada posició. Haureu d’implementar, sobre la classe:
+
+Array variableSubclass: #ArrayAmbHistoria
+ instanceVariableNames: ''
+ classVariableNames: ''
+ package: 'Exercicis'
+
+els mètodes:
+
+- #historia: ‑ retorna una col∙lecció amb tots els valors que ha tingut la posició que es passa com a argument.
+
+- #invertir ‑ Inverteix l’ordre dels valors de l’ ArrayAmbHistoria.
+
+- #at:valorMax: ‑ assigna un valor màxim a una determinada posició (els elements que siguin assignats a aquesta posició no poden ser més grans que aquest valor màxim).
+
+- #at:valorMin: ‑ assigna un valor mínim a una determinada posició.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+A continuació, es presenta una implementació de la subclasse ArrayAmbHistoria de Array amb els mètodes demanats:
+
+Array variableSubclass: #ArrayAmbHistoria
+    instanceVariableNames: 'historiaMaxima historiaMinima'
+    classVariableNames: ''
+    package: 'Exercicis'
+
+ArrayAmbHistoria >> initialize
+    super initialize.
+    historiaMaxima := Dictionary new.
+    historiaMinima := Dictionary new.
+
+ArrayAmbHistoria >> historia: unaPosicio
+    "Retorna la història dels valors assignats a una posició específica."
+    ^ (historiaMaxima at: unaPosicio ifAbsent: [#()]) , (historiaMinima at: unaPosicio ifAbsent: [#()]).
+
+ArrayAmbHistoria >> invertir
+    "Inverteix l'ordre dels valors de l'ArrayAmbHistoria."
+    self do: [:posicio |
+        | historialMax historialMin |
+        historialMax := historiaMaxima at: posicio ifAbsent: [#()].
+        historialMin := historiaMinima at: posicio ifAbsent: [#()].
+        historiaMaxima at: posicio put: historialMax reversed.
+        historiaMinima at: posicio put: historialMin reversed.
+    ].
+
+ArrayAmbHistoria >> at: unaPosicio put: unValor
+    "Assigna un valor a una posició específica i actualitza la història."
+    | historialMax historialMin |
+    super at: unaPosicio put: unValor.
+    
+    historialMax := (historiaMaxima at: unaPosicio ifAbsent: [#()]) copyWith: unValor.
+    historialMin := (historiaMinima at: unaPosicio ifAbsent: [#()]) copyWith: unValor.
+    
+    historiaMaxima at: unaPosicio put: historialMax.
+    historiaMinima at: unaPosicio put: historialMin.
+
+ArrayAmbHistoria >> at: unaPosicio valorMax: unMaximo
+    "Assigna un valor màxim a una posició específica."
+    historiaMaxima at: unaPosicio put: (#() copyWith: unMaximo).
+
+ArrayAmbHistoria >> at: unaPosicio valorMin: unMinimo
+    "Assigna un valor mínim a una posició específica."
+    historiaMinima at: unaPosicio put: (#() copyWith: unMinimo).
+
+
+Aquesta implementació manté dues col·leccions (diccionaris) historiaMaxima i historiaMinima per controlar els valors màxims i mínims assignats a cada posició, i utilitza els mètodes at:valorMax: i at:valorMin: per assignar els valors màxims i mínims, respectivament. Els mètodes historia: i invertir ofereixen funcionalitat addicional per accedir a la història dels valors assignats i invertir l'ordre dels valors.

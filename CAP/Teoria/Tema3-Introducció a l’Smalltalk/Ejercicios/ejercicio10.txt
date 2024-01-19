@@ -1,0 +1,52 @@
+Quins són els resultats d’avaluar les següents expressions?
+#(((1 2 3) 4) 5) first first first
+#(-1 2 -3 4) detect: [ :x | x>0 ]
+#(-1 2 -3 4) select: [ :x | x>0 ]
+#(1 ($a $b) 2) at: (#(1 ($a $b)
+#(1 2 3 (1 2 3) 2 3 (2 3) 3 2) indexOf: #($a $b))
+#(1 2 3) raisedTo: 3 (3)) copyWithout: 3
+#(1 2 3) * #(4 5 6)
+#(1 2 3) raisedTo: #(4 5 6)
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Avaluem les expressions proporcionades:
+
+1. #(((1 2 3) 4) 5) first first first
+
+Resultat: 1 (ja que anem successivament a través de cada nivell de l'array fins aconseguir el primer element)
+
+
+2. #(-1 2 -3 4) detect: [ :x | x>0 ]
+
+Resultat: 2 (ja que detect: retorna el primer element que compleix la condició especificada)
+
+
+3. #(-1 2 -3 4) select: [ :x | x>0 ]
+
+Resultat: #(2 4) (ja que select: retorna una nova col·lecció amb els elements que compleixen la condició)
+
+
+4. #(1 ($a $b) 2) at: (#(1 ($a $b)))
+
+Resultat: ($a $b) (ja que estem accedint a la posició indicada per l'array extern)
+
+
+5. #(1 2 3 (1 2 3) 2 3 (2 3) 3 2) indexOf: #($a $b)
+
+Resultat: 4 (ja que #($a $b) es troba a la posició 4 de l'array)
+
+
+6. #(1 2 3) raisedTo: 3 (3) copyWithout: 3
+
+Resultat: #(1 8 27) (ja que aixeca cada element a la tercera potència i després elimina l'element 3)
+
+
+7. #(1 2 3) * #(4 5 6)
+
+Resultat: #(4 10 18) (ja que multiplica els elements corresponents dels dos vectors)
+
+
+8. #(1 2 3) raisedTo: #(4 5 6)
+
+Resultat: #(1 32 729) (ja que aixeca cada element de l'array a la potència corresponent)

@@ -1,0 +1,50 @@
+Afegiu un mètode a la classe #BlockClosure anomenat #whileWithBreak:
+que funcioni de manera similar al mètode #whileTrue: que ja coneixem: El
+receptor del missatge és un bloc sense paràmetres que s'ha d'avaluar a un booleà,
+i l'argument és un bloc sense paràmetres que representa el cos del bucle, que es
+repetirà mentre el receptor sigui true.
+
+La diferència és que a #whileWithBreak: dins el cos del bucle (l'argument)
+podem utilitzar la següent expressió:
+
+(#breakWhile binding) value: <expressió> ⇨
+        Atura el bucle whileWithBreak: i retorna el valor resultant d'avaluar
+        <expressió>
+
+Fixeu-vos que, al contrari que #whileTrue:, de #whileWithBreak: s'espera
+que retorni un resultat. També, fixeu-vos que necessitareu utilitzar variables
+dinàmiques amb la classe Binding que ja vam veure a classe.
+
+Mireu aquest exemple, similar a l'exemple que vam veure de BlockWithExit
+(classe que no podeu fer servir en aquesta resposta), excepte que
+#whileWithBreak: aquí retorna true si troba un nombre menor que 100:
+
+| index found coll |
+coll := Array new: 1000.
+1 to: 1000 do: [ :i | coll at: i put: 1000 atRandom ].
+index := 1.
+found := [ index < 1000 ] whileWithBreak: [ 
+                    | each |
+                    each := coll at: index.
+                    each traceCr.
+                    (each < 100) ifTrue: [ (#breakWhile binding) value: true ].
+                    index := index + 1 ].
+
+Aquest exemple escriu al Transcript els nombres triats a l'atzar que hi ha a
+coll (que aquí és un Array) fins que troba un nombre menor que 100, moment
+en que atura el bucle retornant true, que serà el nou valor de la variable found.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+(SOLUCION PARCIAL 21-22)
+
+A la classe BlockClosure afegim:
+
+whileWithBreak: aBlock
+    ^ Continuation callcc: [ :cc |
+        #breakWhile bindTo: cc in: [ self whileTrue: aBlock ] ]
+
+També podem fer-ho sense continuacions:
+
+whileWithBreak: aBlock
+    #breakWhile bindTo: [ :x | ^ x ] in: [ self whileTrue: aBlock ] 

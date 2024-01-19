@@ -1,0 +1,30 @@
+Executeu aquest codi al Playground:
+
+| globalVariable bloc b |
+globalVariable := 'Primera assignació'.
+bloc := [ :s | [ (globalVariable , ' ', s) traceCr ] ].
+b := bloc value: '1'.
+b value.
+globalVariable := 'Segona assignació'.
+b value.
+b := bloc value: '2'.
+b value.
+
+Què surt? Explica amb precisió, però també breument, per què observeu el que
+observeu.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+(SOLUCION PARCIAL 21-22)
+
+Surt:
+
+'Primera assignació 1'
+'Segona assignació 1'
+'Segona assignació 2'
+
+bloc és un closure que captura globalVariable. Penseu que capturar una variable no significa
+capturar també el seu valor, així que si la variable capturada canvia de valor, això es veurà reflectit en
+l'execució de bloc. A més, bloc retorna un bloc sense paràmetres que captura el paràmetre s de
+bloc. Aquest bloc retornat es quedarà amb el valor donat a s fins que no tornem a avaluar bloc amb
+un altre paràmetre. La raó és la mateixa, la variable capturada pot canviar de valor.

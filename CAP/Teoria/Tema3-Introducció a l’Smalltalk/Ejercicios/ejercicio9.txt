@@ -1,0 +1,64 @@
+User
+Suposem que tenim la definició de tres classes anomenades Un , Dos i Tres :
+
+Object subclass: #Un
+ instanceVariableNames: ''
+ classVariableNames: ''
+ package: 'Exercicis'
+
+Un subclass: #Dos
+ instanceVariableNames: ''
+ classVariableNames: ''
+ package: 'Exercicis'
+
+Dos subclass: #Tres
+ instanceVariableNames: ''
+ classVariableNames: ''
+ package: 'Exercicis'
+
+amb els següents mètodes definits:
+ Un >> a ^1
+ Dos >> a ^2
+ Dos >> b ^super a
+Tres >> a ^3
+Tres >> b ^self a
+Tres >> c ^super b
+Tres >> d ^super a
+
+Què s’escriurà al Transcript quan avalui el següent?:
+
+un := Un new.
+dos := Dos new.
+tres := Tres new.
+ Transcript
+ show: un a; cr;
+ show: dos a; cr;
+ show: dos b; cr;
+ show: tres b; cr;
+ show: tres c; cr;
+ show: tres d; cr
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Quan avaluïs el següent codi, es mostrarà al Transcript el resultat de cridar els mètodes en les instàncies de les classes Un, Dos, i Tres. Aquí tens el que es mostrarà:
+
+un := Un new.
+dos := Dos new.
+tres := Tres new.
+Transcript
+    show: un a; cr;   "Mostrarà '1'"
+    show: dos a; cr;   "Mostrarà '2'"
+    show: dos b; cr;   "Mostrarà '1' (ja que `b` crida `super a`)"
+    show: tres b; cr;  "Mostrarà '3' (ja que `b` crida `self a`)"
+    show: tres c; cr;  "Mostrarà '2' (ja que `c` crida `super b` que és equivalent a `super (self b)`)"
+    show: tres d; cr.  "Mostrarà '1' (ja que `d` crida `super a`)"
+
+
+Per tant, el que es mostrarà al Transcript serà:
+
+1
+2
+1
+3
+2
+1

@@ -1,0 +1,59 @@
+Implementeu la classe Matriu (com a subclasse d’ OrderedCollection ). Ha de tenir els mètodes bàsics #new: , #at: , #at:put: . Podeu representar els parells de nombres amb la classe Point . Implementeu també el mètode #simetrica , que dirà si la matriu receptora és o no simètrica.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Implementació bàsica de la classe Matriu com a subclasse de OrderedCollection en Smalltalk, amb els mètodes demanats i un mètode addicional per determinar si la matriu és simètrica:
+
+Object subclass: #Matriu
+    instanceVariableNames: 'files columnes contingut'
+    classVariableNames: ''
+    package: 'Exercicis'
+
+Matriu >> initialize: filaSize : columnaSize
+    super initialize.
+    files := filaSize.
+    columnes := columnaSize.
+    contingut := OrderedCollection new: (files * columnes).
+
+Matriu >> new: filaSize : columnaSize
+    ^super new initialize: filaSize : columnaSize
+
+Matriu >> at: filaIndex at: columnaIndex
+    "Obtenir un element de la matriu"
+    ^contingut at: ((filaIndex - 1) * columnes) + columnaIndex
+
+Matriu >> at: filaIndex at: columnaIndex put: unElement
+    "Assignar un valor a la matriu"
+    contingut at: ((filaIndex - 1) * columnes) + columnaIndex put: unElement.
+
+Matriu >> simetrica
+    "Determinar si la matriu és simètrica"
+    (files = columnes) ifFalse: [^false]. "Només les matrius quadrades poden ser simètriques"
+    
+    1 to: files do: [ :i |
+        1 to: columnes do: [ :j |
+            (self at: i at: j) = (self at: j at: i)
+                ifFalse: [^false]. "Si trobem un element diferent al mirar l'altre costat, no és simètrica"
+        ].
+    ].
+    ^true.
+
+"Exemple d'ús:"
+|matriu|
+matriu := Matriu new: 3 : 3.
+matriu at: 1 at: 1 put: 1.
+matriu at: 1 at: 2 put: 2.
+matriu at: 1 at: 3 put: 3.
+matriu at: 2 at: 1 put: 2.
+matriu at: 2 at: 2 put: 4.
+matriu at: 2 at: 3 put: 5.
+matriu at: 3 at: 1 put: 3.
+matriu at: 3 at: 2 put: 5.
+matriu at: 3 at: 3 put: 6.
+
+Transcript show: 'La matriu és simètrica: ', (matriu simetrica printString); cr.
+
+
+En aquest exemple, la matriu és una col·lecció d'elements amb un nombre fix de files i columnes. Els mètodes at:at: i at:at:put: permeten accedir i modificar els elements de la matriu, respectivament. El mètode simetrica comprova si la matriu és simètrica comparant els elements amb la seva simètrica a la matriu.
+
+Aquest codi assumeix que la matriu serà quadrada (mateix nombre de files i columnes) per ser simètrica. Pots adaptar-ho segons les teves necessitats específiques.

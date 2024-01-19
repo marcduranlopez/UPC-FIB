@@ -1,0 +1,27 @@
+pc universitat: java -cp /home2/users/alumnes/1263994/dades/CAP/rhino1.7.14/lib/rhino-1.7.14.jar org.mozilla.javascript.tools.shell.Main -opt -2 nombreFichero
+pc casa: java -cp /home/marc/CAP/rhino1.7.14/lib/rhino-1.7.14.jar org.mozilla.javascript.tools.shell.Main -opt -2 nombreFichero
+portatil: java -cp /home/marc/UPC/CAP/rhino1.7.14/lib/rhino-1.7.14.jar org.mozilla.javascript.tools.shell.Main -opt -2 nombreFichero
+practica (portatil): java -cp /home/marc/UPC/CAP/PRACTICA_23-24/rhino-1.7.15-CAP.jar org.mozilla.javascript.tools.shell.Main -opt -2 nombreFichero
+
+
+
+
+
+
+En JavaScript, la elección de si una función debe estar en el prototipo (como CarMaker.prototype.drive) o como un método estático de una fábrica (como CarMaker.factory) depende de cómo quieras diseñar tu código y cuál sea el propósito de la función. Aquí hay algunas consideraciones para determinar dónde debe ir una función:
+
+Método de instancia vs. Método estático:
+
+Si la función se relaciona con las instancias individuales de una clase y necesita acceder a las propiedades específicas de una instancia, generalmente debe ir en el prototipo de la clase (método de instancia).
+Si la función no necesita acceder a propiedades de instancias y es relevante para la clase en su conjunto, puede ser un método estático de una fábrica u objeto relacionado.
+Compartir Funcionalidad:
+
+Si la función debe compartirse entre todas las instancias de una clase, generalmente debe ir en el prototipo. Esto ahorra memoria ya que todas las instancias utilizan una sola copia de la función.
+Si la función no necesita ser compartida entre las instancias, puede ser un método de la fábrica.
+Herencia y Polimorfismo:
+
+Si estás diseñando una jerarquía de clases donde las subclases heredan la función, es probable que quieras poner la función en el prototipo para que las subclases también la hereden.
+Si estás creando un método que se aplicará de manera diferente en diferentes subclases, puede ser un método estático que acepte un tipo o argumento y realice una operación específica para ese tipo.
+En el ejemplo que proporcionaste, el método drive se relaciona con todas las instancias de la clase CarMaker, ya que todas las instancias tienen un método drive que devuelve información sobre las puertas del automóvil. Por lo tanto, se coloca en el prototipo (CarMaker.prototype.drive).
+
+El método estático factory, por otro lado, es un método de fábrica que crea instancias de diferentes tipos de automóviles. No es específico de una instancia en particular y no necesita acceder a las propiedades de una instancia, por lo que tiene sentido como un método estático de la fábrica CarMaker.factory

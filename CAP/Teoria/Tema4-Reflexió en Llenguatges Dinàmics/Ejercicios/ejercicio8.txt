@@ -1,0 +1,79 @@
+Escriviu un mètode find: aString que, enviat a una classe, retorni una
+col·lecció de selectors tal que els mètodes corresponents contenen aString dins
+del seu codi font.
+
+Exemple: El resultat d'executar al playground Object find: 'reflect' hauria
+de ser una col·lecció amb els selectors de tots aquells mètodes d'Object tals que
+la string 'reflect' apareix en el seu codi font. En aquest cas obtindriem
+#(#perform:withArguments:inSuperclass: #perform:with:
+#perform:withArguments: #perform:with:with: #perform:
+#perform:with:with:with:)
+
+A quina classe cal posar aquest mètode per a que qualsevol classe o metaclasse
+del sistema sigui capaç d'executar-lo? I on el posem, a l'instance side o al Class
+side?
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Per implementar el mètode find: que retorna una col·lecció de selectors que contenen una cadena específica en el seu codi font, es pot utilitzar la reflexió en Smalltalk. Aquí tens una implementació possible:
+
+
+Object class >> find: aString
+    | matchingSelectors |
+    matchingSelectors := OrderedCollection new.
+
+    self methodDictionary do: [:selector :method |
+        (method getSourceCode includesSubstring: aString)
+            ifTrue: [matchingSelectors add: selector].
+    ].
+
+    ^matchingSelectors
+
+
+Aquest mètode recorre tots els mètodes de la classe actual i afegirà a la col·lecció matchingSelectors els selectors dels mètodes que contenen la cadena especificada en el seu codi font.
+
+Per a que aquest mètode estigui disponible per qualsevol classe o metaclasse del sistema, es pot posar a la classe Object. Ara bé, la pregunta sobre si s'ha de posar al costat d'instància (Object) o al costat de classe (Object class) depèn de la teva intenció d'ús.
+
+Si vols que el mètode estigui disponible per a instàncies de totes les classes (objectes), llavors ho posaries al costat d'instància (al prototipus de totes les instàncies).
+
+Si vols que estigui disponible per a totes les classes com a mètode de classe, ho posaries al costat de classe (al prototipus de totes les classes).
+
+En aquest cas, ja que el mètode està tractant amb la informació de mètodes de la classe, tindria sentit posar-lo al costat de classe, i ho faries així:
+
+
+Object class >> find: aString
+    ...
+
+
+Així, es podrà cridar com Object find: 'reflect' o String find: 'substring', ja que està disponible per a totes les classes com a mètode de classe.
+
+
+
+COMPILE
+
+Object class compile: 'find: aString
+    | matchingSelectors |
+    matchingSelectors := OrderedCollection new.
+
+    self methodDictionary do: [:selector :method |
+        | methodSource |
+        methodSource := (Decompiler new decompile: (self >> selector)) sourceText.
+        (methodSource includesSubstring: aString)
+            ifTrue: [matchingSelectors add: selector].
+    ].
+
+    ^ matchingSelectors'.
+
+
+------------------------------------------------------------------------------------------------
+
+(PARCIAL 15-16)
+
+- (2 punts) Escriviu un fragment de codi (per ser executat en el workspace)
+que ens digui quants mètodes tenen la String 'this' en el seu codi font.
+
+2.- (SystemNavigation default allClasses)
+inject: 0
+into: [ :coll :c |
+coll + (c methodDict select: [ :v |
+(v sourceCode findString: 'this') ~= 0 ] ) size ]
