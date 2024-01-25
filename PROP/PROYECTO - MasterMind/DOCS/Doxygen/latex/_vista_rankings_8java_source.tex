@@ -1,0 +1,206 @@
+\doxysection{Vista\+Rankings.\+java}
+\hypertarget{_vista_rankings_8java_source}{}\label{_vista_rankings_8java_source}\index{main/presentation/classes/VistaRankings.java@{main/presentation/classes/VistaRankings.java}}
+\mbox{\hyperlink{_vista_rankings_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00001}00001\ \textcolor{keyword}{package\ }main.presentation.classes;}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00003}00003\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1controllers}{controllers}}.*;}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00004}00004\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1presentation}{presentation}}.\mbox{\hyperlink{namespacemain_1_1presentation_1_1controllers}{controllers}}.\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_rankings}{CtrlRankings}};}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00006}00006\ \textcolor{keyword}{import}\ javax.swing.JFrame;}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00007}00007\ \textcolor{keyword}{import}\ javax.swing.JPanel;}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00008}00008\ \textcolor{keyword}{import}\ javax.swing.border.EmptyBorder;}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00010}00010\ \textcolor{keyword}{import}\ java.awt.Color;}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00011}00011\ \textcolor{keyword}{import}\ java.awt.Dimension;}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00013}00013\ \textcolor{keyword}{import}\ javax.swing.JButton;}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00014}00014\ \textcolor{keyword}{import}\ javax.swing.JLabel;}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00015}00015\ \textcolor{keyword}{import}\ javax.swing.ImageIcon;}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00016}00016\ \textcolor{keyword}{import}\ java.awt.Font;}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00017}00017\ \textcolor{keyword}{import}\ java.awt.Image;}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00019}00019\ \textcolor{keyword}{import}\ javax.swing.JScrollPane;}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00021}00021\ \textcolor{keyword}{import}\ javax.swing.JTable;}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00023}\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_rankings}{00023}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_rankings}{VistaRankings}}\ \textcolor{keyword}{extends}\ JFrame\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00028}00028\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ javax.swing.JFrame\ parent;}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00033}00033\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_rankings}{CtrlRankings}}\ crankings;}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00038}00038\ \ \ \ \ \textcolor{keyword}{private}\ JTable\ table;}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00043}00043\ \ \ \ \ \textcolor{keyword}{private}\ JButton\ buttonCm;}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00048}00048\ \ \ \ \ \textcolor{keyword}{private}\ JButton\ buttonCb;}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00053}00053\ \ \ \ \ \textcolor{keyword}{private}\ JScrollPane\ scrollPane;}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00061}\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_rankings_a265f9a65b24d9446439e1c96ebdff9b8}{00061}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_rankings_a265f9a65b24d9446439e1c96ebdff9b8}{VistaRankings}}(javax.swing.JFrame\ parent,\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}\ cd)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00062}00062\ \ \ \ \ \ \ \ \ crankings\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_rankings}{CtrlRankings}}(cd);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00063}00063\ \ \ \ \ \ \ \ \ this.parent\ =\ parent;}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00064}00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_rankings_a47c3f9623fb74949d23f6b3b893002c5}{InitVistaRankings}}();}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00065}00065\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00073}\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_rankings_a47c3f9623fb74949d23f6b3b893002c5}{00073}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_rankings_a47c3f9623fb74949d23f6b3b893002c5}{InitVistaRankings}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ setResizable(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ setTitle(\textcolor{stringliteral}{"{}Mastermind"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ setDefaultCloseOperation(JFrame.EXIT\_ON\_CLOSE);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00077}00077\ \ \ \ \ \ \ \ \ setBounds(100,\ 100,\ 557,\ 566);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00078}00078\ \ \ \ \ \ \ \ \ JPanel\ contentPane\ =\ \textcolor{keyword}{new}\ JPanel();}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00079}00079\ \ \ \ \ \ \ \ \ contentPane.setBackground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00080}00080\ \ \ \ \ \ \ \ \ contentPane.setBorder(\textcolor{keyword}{new}\ EmptyBorder(5,\ 5,\ 5,\ 5));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00082}00082\ \ \ \ \ \ \ \ \ setContentPane(contentPane);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00083}00083\ \ \ \ \ \ \ \ \ contentPane.setLayout(\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00084}00084\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00085}00085\ \ \ \ \ \ \ \ \ ImageIcon\ bg2\ =\ \textcolor{keyword}{new}\ ImageIcon(\textcolor{stringliteral}{"{}main/presentation/img/bg\_w.jpg"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00086}00086\ \ \ \ \ \ \ \ \ Image\ getBg2\ =\ bg2.getImage();}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00087}00087\ \ \ \ \ \ \ \ \ Image\ modBg2\ =\ getBg2.getScaledInstance(600,\ 600,\ java.awt.Image.SCALE\_SMOOTH);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00088}00088\ \ \ \ \ \ \ \ \ bg2\ =\ \textcolor{keyword}{new}\ ImageIcon(modBg2);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00089}00089\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00090}00090\ \ \ \ \ \ \ \ \ JLabel\ titleR\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}R"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00091}00091\ \ \ \ \ \ \ \ \ titleR.setForeground(\textcolor{keyword}{new}\ Color(255,\ 0,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00092}00092\ \ \ \ \ \ \ \ \ titleR.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Myanmar\ Text"{}},\ Font.BOLD\ |\ Font.ITALIC,\ 45));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00093}00093\ \ \ \ \ \ \ \ \ titleR.setBounds(63,\ 35,\ 46,\ 63);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00094}00094\ \ \ \ \ \ \ \ \ contentPane.add(titleR);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00095}00095\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00096}00096\ \ \ \ \ \ \ \ \ JLabel\ titleA\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}A"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00097}00097\ \ \ \ \ \ \ \ \ titleA.setForeground(\textcolor{keyword}{new}\ Color(0,\ 215,\ 11));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00098}00098\ \ \ \ \ \ \ \ \ titleA.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Myanmar\ Text"{}},\ Font.BOLD\ |\ Font.ITALIC,\ 45));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00099}00099\ \ \ \ \ \ \ \ \ titleA.setBounds(94,\ 35,\ 46,\ 63);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00100}00100\ \ \ \ \ \ \ \ \ contentPane.add(titleA);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00101}00101\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00102}00102\ \ \ \ \ \ \ \ \ JLabel\ titleN\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}N"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00103}00103\ \ \ \ \ \ \ \ \ titleN.setForeground(\textcolor{keyword}{new}\ Color(0,\ 0,\ 255));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00104}00104\ \ \ \ \ \ \ \ \ titleN.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Myanmar\ Text"{}},\ Font.BOLD\ |\ Font.ITALIC,\ 45));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00105}00105\ \ \ \ \ \ \ \ \ titleN.setBounds(125,\ 35,\ 46,\ 63);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00106}00106\ \ \ \ \ \ \ \ \ contentPane.add(titleN);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00107}00107\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00108}00108\ \ \ \ \ \ \ \ \ JLabel\ titleK\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}K"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00109}00109\ \ \ \ \ \ \ \ \ titleK.setForeground(\textcolor{keyword}{new}\ Color(255,\ 255,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00110}00110\ \ \ \ \ \ \ \ \ titleK.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Myanmar\ Text"{}},\ Font.BOLD\ |\ Font.ITALIC,\ 45));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00111}00111\ \ \ \ \ \ \ \ \ titleK.setBounds(158,\ 35,\ 46,\ 63);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00112}00112\ \ \ \ \ \ \ \ \ contentPane.add(titleK);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00113}00113\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00114}00114\ \ \ \ \ \ \ \ \ JLabel\ titleI\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}I"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00115}00115\ \ \ \ \ \ \ \ \ titleI.setForeground(\textcolor{keyword}{new}\ Color(255,\ 255,\ 255));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00116}00116\ \ \ \ \ \ \ \ \ titleI.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Myanmar\ Text"{}},\ Font.BOLD\ |\ Font.ITALIC,\ 45));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00117}00117\ \ \ \ \ \ \ \ \ titleI.setBounds(191,\ 35,\ 46,\ 63);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00118}00118\ \ \ \ \ \ \ \ \ contentPane.add(titleI);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00119}00119\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00120}00120\ \ \ \ \ \ \ \ \ JLabel\ titleN2\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}N"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00121}00121\ \ \ \ \ \ \ \ \ titleN2.setForeground(\textcolor{keyword}{new}\ Color(0,\ 0,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00122}00122\ \ \ \ \ \ \ \ \ titleN2.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Myanmar\ Text"{}},\ Font.BOLD\ |\ Font.ITALIC,\ 45));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00123}00123\ \ \ \ \ \ \ \ \ titleN2.setBounds(206,\ 35,\ 46,\ 63);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00124}00124\ \ \ \ \ \ \ \ \ contentPane.add(titleN2);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00125}00125\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00126}00126\ \ \ \ \ \ \ \ \ JLabel\ titleG\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}G"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00127}00127\ \ \ \ \ \ \ \ \ titleG.setForeground(\textcolor{keyword}{new}\ Color(255,\ 0,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00128}00128\ \ \ \ \ \ \ \ \ titleG.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Myanmar\ Text"{}},\ Font.BOLD\ |\ Font.ITALIC,\ 45));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00129}00129\ \ \ \ \ \ \ \ \ titleG.setBounds(241,\ 35,\ 46,\ 63);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00130}00130\ \ \ \ \ \ \ \ \ contentPane.add(titleG);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00131}00131\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00132}00132\ \ \ \ \ \ \ \ \ scrollPane\ =\ \textcolor{keyword}{new}\ JScrollPane();}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00133}00133\ \ \ \ \ \ \ \ \ scrollPane.setForeground(\textcolor{keyword}{new}\ Color(0,\ 119,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00134}00134\ \ \ \ \ \ \ \ \ scrollPane.setBounds(64,\ 138,\ 419,\ 312);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00135}00135\ \ \ \ \ \ \ \ \ contentPane.add(scrollPane);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00136}00136\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00137}00137\ \ \ \ \ \ \ \ \ table\ =\ \textcolor{keyword}{new}\ JTable();}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00138}00138\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00139}00139\ \ \ \ \ \ \ \ \ buttonCm\ =\ \textcolor{keyword}{new}\ JButton(\textcolor{stringliteral}{"{}CodeMaker"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00140}00140\ \ \ \ \ \ \ \ \ buttonCm.addActionListener(this::btnActionPerformedCM);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00141}00141\ \ \ \ \ \ \ \ \ buttonCm.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Tahoma"{}},\ Font.BOLD,\ 14));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00142}00142\ \ \ \ \ \ \ \ \ buttonCm.setBackground(\textcolor{keyword}{new}\ Color(0,\ 128,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00143}00143\ \ \ \ \ \ \ \ \ buttonCm.setForeground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00144}00144\ \ \ \ \ \ \ \ \ buttonCm.setBorderPainted(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00145}00145\ \ \ \ \ \ \ \ \ buttonCm.setBounds(64,\ 106,\ 208,\ 33);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00146}00146\ \ \ \ \ \ \ \ \ contentPane.add(buttonCm);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00148}00148\ \ \ \ \ \ \ \ \ buttonCb\ =\ \textcolor{keyword}{new}\ JButton(\textcolor{stringliteral}{"{}CodeBreaker"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00149}00149\ \ \ \ \ \ \ \ \ buttonCb.addActionListener(this::btnActionPerformedCB);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00150}00150\ \ \ \ \ \ \ \ \ buttonCb.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Tahoma"{}},\ Font.BOLD,\ 14));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00151}00151\ \ \ \ \ \ \ \ \ buttonCb.setBackground(\textcolor{keyword}{new}\ Color(0,\ 91,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00152}00152\ \ \ \ \ \ \ \ \ buttonCb.setForeground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00153}00153\ \ \ \ \ \ \ \ \ buttonCb.setBorderPainted(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00154}00154\ \ \ \ \ \ \ \ \ buttonCb.setBounds(272,\ 106,\ 211,\ 33);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00155}00155\ \ \ \ \ \ \ \ \ contentPane.add(buttonCb);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00156}00156\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00157}00157\ \ \ \ \ \ \ \ \ JButton\ buttonExit\ =\ \textcolor{keyword}{new}\ JButton(\textcolor{stringliteral}{"{}Return"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00158}00158\ \ \ \ \ \ \ \ \ buttonExit.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Tahoma"{}},\ Font.BOLD,\ 11));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00159}00159\ \ \ \ \ \ \ \ \ buttonExit.setBackground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00160}00160\ \ \ \ \ \ \ \ \ buttonExit.setBounds(63,\ 475,\ 117,\ 25);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00161}00161\ \ \ \ \ \ \ \ \ contentPane.add(buttonExit);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00162}00162\ \ \ \ \ \ \ \ \ buttonExit.addActionListener(this::botoReturnActionPerformed);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00163}00163\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00164}00164\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_rankings_a66c3da63f3dc7aa2592fba8654ba8f07}{initTable}}();}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00165}00165\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00166}00166\ \ \ \ \ \ \ \ \ JLabel\ b2Img\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00167}00167\ \ \ \ \ \ \ \ \ b2Img.setBackground(\textcolor{keyword}{new}\ Color(164,\ 104,\ 23));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00168}00168\ \ \ \ \ \ \ \ \ b2Img.setIcon(bg2);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00169}00169\ \ \ \ \ \ \ \ \ b2Img.setBounds(0,\ 0,\ 600,\ 600);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00170}00170\ \ \ \ \ \ \ \ \ contentPane.add(b2Img);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00171}00171\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00172}00172\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00178}00178\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ botoReturnActionPerformed(java.awt.event.ActionEvent\ evt)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00179}00179\ \ \ \ \ \ \ \ \ parent.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00180}00180\ \ \ \ \ \ \ \ \ dispose();}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00181}00181\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00182}00182\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00183}00183\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00188}\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_rankings_a79b8a24d5775729860d1431630e4a817}{00188}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_rankings_a79b8a24d5775729860d1431630e4a817}{btnActionPerformedCM}}(java.awt.event.ActionEvent\ evt)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00189}00189\ \ \ \ \ \ \ \ \ String[]\ titles\ =\ \{\textcolor{stringliteral}{"{}Position"{}},\ \textcolor{stringliteral}{"{}Name"{}},\ \textcolor{stringliteral}{"{}Points"{}}\};}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00190}00190\ \ \ \ \ \ \ \ \ String[][]\ t\ =\ crankings.\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_rankings_a9a17f0e3999cf7bbaf138bc466d8f243}{getRanking}}(\textcolor{stringliteral}{"{}CodeMaker"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00191}00191\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_rankings_a9299ccaf1f38d3a6abe02a8255c6c4e9}{showTable}}(t,\ titles);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00192}00192\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00193}00193\ \ \ \ \ \ \ \ \ buttonCb.setBackground(\textcolor{keyword}{new}\ Color(0,\ 85,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00194}00194\ \ \ \ \ \ \ \ \ buttonCm.setBackground(\textcolor{keyword}{new}\ Color(0,\ 128,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00195}00195\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00196}00196\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00197}00197\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00201}\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_rankings_a66c3da63f3dc7aa2592fba8654ba8f07}{00201}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_rankings_a66c3da63f3dc7aa2592fba8654ba8f07}{initTable}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00202}00202\ \ \ \ \ \ \ \ \ String[]\ titles\ =\ \{\textcolor{stringliteral}{"{}Position"{}},\ \textcolor{stringliteral}{"{}Name"{}},\ \textcolor{stringliteral}{"{}Points"{}}\};}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00203}00203\ \ \ \ \ \ \ \ \ String[][]\ t\ =\ crankings.\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_rankings_a9a17f0e3999cf7bbaf138bc466d8f243}{getRanking}}(\textcolor{stringliteral}{"{}CodeMaker"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00204}00204\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_rankings_a9299ccaf1f38d3a6abe02a8255c6c4e9}{showTable}}(t,\ titles);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00205}00205\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00206}00206\ \ \ \ \ \ \ \ \ buttonCb.setBackground(\textcolor{keyword}{new}\ Color(0,\ 85,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00207}00207\ \ \ \ \ \ \ \ \ buttonCm.setBackground(\textcolor{keyword}{new}\ Color(0,\ 128,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00208}00208\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00209}00209\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00215}\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_rankings_a625536fbe23e91eb2b197c510147332c}{00215}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_rankings_a625536fbe23e91eb2b197c510147332c}{btnActionPerformedCB}}(java.awt.event.ActionEvent\ evt)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00216}00216\ \ \ \ \ \ \ \ \ String[]\ titles\ =\ \{\textcolor{stringliteral}{"{}Position"{}},\ \textcolor{stringliteral}{"{}Name"{}},\ \textcolor{stringliteral}{"{}Points"{}}\};}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00217}00217\ \ \ \ \ \ \ \ \ String[][]\ t\ =\ crankings.\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_rankings_a9a17f0e3999cf7bbaf138bc466d8f243}{getRanking}}(\textcolor{stringliteral}{"{}CodeBreaker"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00218}00218\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_rankings_a9299ccaf1f38d3a6abe02a8255c6c4e9}{showTable}}(t,\ titles);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00219}00219\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00220}00220\ \ \ \ \ \ \ \ \ buttonCb.setBackground(\textcolor{keyword}{new}\ Color(0,\ 128,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00221}00221\ \ \ \ \ \ \ \ \ buttonCm.setBackground(\textcolor{keyword}{new}\ Color(0,\ 85,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00222}00222\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00223}00223\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00224}00224\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00228}\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_rankings_a9299ccaf1f38d3a6abe02a8255c6c4e9}{00228}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_rankings_a9299ccaf1f38d3a6abe02a8255c6c4e9}{showTable}}(String[][]\ t,\ String[]\ titles)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00229}00229\ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00230}00230\ \ \ \ \ \ \ \ \ table\ =\ \textcolor{keyword}{new}\ JTable(t,\ titles);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00231}00231\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00232}00232\ \ \ \ \ \ \ \ \ table.setBackground(\textcolor{keyword}{new}\ Color(0,128,0));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00233}00233\ \ \ \ \ \ \ \ \ table.setForeground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00234}00234\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00235}00235\ \ \ \ \ \ \ \ \ table.setMaximumSize(\textcolor{keyword}{new}\ Dimension(419,\ 312));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00236}00236\ \ \ \ \ \ \ \ \ table.setMinimumSize(\textcolor{keyword}{new}\ Dimension(419,\ 312));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00237}00237\ \ \ \ \ \ \ \ \ table.setPreferredSize(\textcolor{keyword}{new}\ Dimension(419,\ 312));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00238}00238\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00239}00239\ \ \ \ \ \ \ \ \ table.setRowHeight(30);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00240}00240\ \ \ \ \ \ \ \ \ table.getColumnModel().getColumn(0).setPreferredWidth(100);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00241}00241\ \ \ \ \ \ \ \ \ table.getColumnModel().getColumn(1).setPreferredWidth(500);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00242}00242\ \ \ \ \ \ \ \ \ table.getColumnModel().getColumn(2).setPreferredWidth(200);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00243}00243\ \ \ \ \ \ \ \ \ table.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Verdana"{}},\ Font.BOLD,\ 20));}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00244}00244\ \ \ \ \ \ \ \ \ scrollPane.setViewportView(table);}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00245}00245\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_rankings_8java_source_l00246}00246\ \}}
+
+\end{DoxyCode}

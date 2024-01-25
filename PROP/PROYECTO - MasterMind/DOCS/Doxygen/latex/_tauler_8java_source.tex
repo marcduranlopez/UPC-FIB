@@ -1,0 +1,87 @@
+\doxysection{Tauler.\+java}
+\hypertarget{_tauler_8java_source}{}\label{_tauler_8java_source}\index{main/domain/classes/Tauler.java@{main/domain/classes/Tauler.java}}
+\mbox{\hyperlink{_tauler_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00001}00001\ \textcolor{keyword}{package\ }main.domain.classes;}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00003}00003\ \textcolor{keyword}{import}\ com.google.gson.annotations.Expose;}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00004}00004\ \textcolor{keyword}{import}\ com.google.gson.annotations.SerializedName;}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00006}00006\ \textcolor{keyword}{import}\ java.util.*;}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00009}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler}{00009}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler}{Tauler}}\ \{}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00010}00010\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00011}00011\ \ \ \ \ @SerializedName(\textcolor{stringliteral}{"{}espaisSequencia"{}})}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00012}00012\ \ \ \ \ @Expose}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{private}\ Integer\ nBolas;}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00015}00015\ \ \ \ \ @SerializedName(\textcolor{stringliteral}{"{}board"{}})}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00016}00016\ \ \ \ \ @Expose}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00017}00017\ \ \ \ \ \textcolor{keyword}{private}\ List<List<Integer>>\ board\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00019}00019\ \ \ \ \ @SerializedName(\textcolor{stringliteral}{"{}sequenciaSolucio"{}})}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00020}00020\ \ \ \ \ @Expose}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{private}\ List<Integer>\ codiResoldre\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00023}00023\ \ \ \ \ @SerializedName(\textcolor{stringliteral}{"{}rondaActual"{}})}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00024}00024\ \ \ \ \ @Expose}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{private}\ Integer\ ronda\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00032}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_ab4c229342467a273f47fd013e9104137}{00032}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_ab4c229342467a273f47fd013e9104137}{Tauler}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00040}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_ac4d9095b5e9eb80b1cacc97e3465493d}{00040}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_ac4d9095b5e9eb80b1cacc97e3465493d}{Tauler}}(Integer\ nBolas)\ \{}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ this.nBolas\ =\ nBolas;}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ this.ronda\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ this.board\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ this.codiResoldre\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00045}00045\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00052}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a47a8849be2c423c3c38dec491fe7e9c3}{00052}}\ \ \ \ \ \textcolor{keyword}{public}\ List<List<Integer>>\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a47a8849be2c423c3c38dec491fe7e9c3}{getBoard}}()\ \{\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00053}00053\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ board;}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00054}00054\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00060}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a1d01b467af87c0e71bd31da006e31fb1}{00060}}\ \ \ \ \ \textcolor{keyword}{public}\ Integer\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a1d01b467af87c0e71bd31da006e31fb1}{getRonda}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ronda;}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00062}00062\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00069}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a2e39e56995137a02201df91ee5a2217b}{00069}}\ \ \ \ \ \textcolor{keyword}{public}\ List<Integer>\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a2e39e56995137a02201df91ee5a2217b}{getCodiActual}}(Integer\ ronda)\ \{}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00070}00070\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ board.get(ronda);}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00071}00071\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00077}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_aac13f8a98ab3226dc7030fce7fe8519b}{00077}}\ \ \ \ \ \textcolor{keyword}{public}\ List<Integer>\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_aac13f8a98ab3226dc7030fce7fe8519b}{getCodiResoldre}}()\ \{\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00078}00078\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ codiResoldre;}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00079}00079\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00081}00081\ \ \ \ \ \textcolor{comment}{//\ Getter\ numero\ de\ boles}}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00086}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a73e213b3116a24296479e9425433bd4a}{00086}}\ \textcolor{comment}{}\ \ \ \ \textcolor{keyword}{public}\ Integer\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a73e213b3116a24296479e9425433bd4a}{getNBolas}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ nBolas;}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00088}00088\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00095}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a04eb0bcc71c9c6d61fd9afa337984f6c}{00095}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a04eb0bcc71c9c6d61fd9afa337984f6c}{setBoard}}(List<List<Integer>>\ board)\ \{\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00096}00096\ \ \ \ \ \ \ \ this.board\ =\ board;}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00097}00097\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00103}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_ac16dcc23beeda8f5ef3d1710e5b7e9e1}{00103}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_ac16dcc23beeda8f5ef3d1710e5b7e9e1}{setRonda}}(Integer\ ronda)\ \{}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00104}00104\ \ \ \ \ \ \ \ \ this.ronda\ =\ ronda;}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00105}00105\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00111}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a6d9fe9eeb95c97c7819cac0af3d272cb}{00111}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a6d9fe9eeb95c97c7819cac0af3d272cb}{setNBolas}}(Integer\ nBolas)\ \{}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00112}00112\ \ \ \ \ \ \ \ \ this.nBolas\ =\ nBolas;}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00113}00113\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00119}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a7b8b892e350f192d1f19a3f9b4c4e6f8}{00119}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a7b8b892e350f192d1f19a3f9b4c4e6f8}{setCodiActual}}(List<Integer>\ codi)\ \{\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00120}00120\ \ \ \ \ \ \ \ \ board.add(codi);}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00121}00121\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00127}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a607b1222d4c5f3af45cbf2c9abf5dda4}{00127}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a607b1222d4c5f3af45cbf2c9abf5dda4}{setCodiResoldre}}(List<Integer>\ codiResoldre)\ \{\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00128}00128\ \ \ \ \ \ \ \ \ this.codiResoldre\ =\ codiResoldre;}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00129}00129\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_tauler_8java_source_l00130}00130\ \}\ }
+
+\end{DoxyCode}

@@ -1,0 +1,219 @@
+\doxysection{Vista\+Stats.\+java}
+\hypertarget{_vista_stats_8java_source}{}\label{_vista_stats_8java_source}\index{main/presentation/classes/VistaStats.java@{main/presentation/classes/VistaStats.java}}
+\mbox{\hyperlink{_vista_stats_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00001}00001\ \textcolor{keyword}{package\ }main.presentation.classes;}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00003}00003\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1controllers}{controllers}}.*;}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00004}00004\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1presentation}{presentation}}.\mbox{\hyperlink{namespacemain_1_1presentation_1_1controllers}{controllers}}.\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_stats}{CtrlStats}};}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00006}00006\ \textcolor{keyword}{import}\ javax.swing.JFrame;}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00007}00007\ \textcolor{keyword}{import}\ javax.swing.JPanel;}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00008}00008\ \textcolor{keyword}{import}\ javax.swing.border.BevelBorder;}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00009}00009\ \textcolor{keyword}{import}\ javax.swing.border.EmptyBorder;}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00011}00011\ \textcolor{keyword}{import}\ java.awt.Color;}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00013}00013\ \textcolor{keyword}{import}\ javax.swing.JButton;}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00014}00014\ \textcolor{keyword}{import}\ javax.swing.JLabel;}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00015}00015\ \textcolor{keyword}{import}\ javax.swing.ImageIcon;}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00016}00016\ \textcolor{keyword}{import}\ java.awt.Font;}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00017}00017\ \textcolor{keyword}{import}\ java.awt.Image;}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00018}00018\ \textcolor{keyword}{import}\ javax.swing.SwingConstants;}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00020}\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_stats}{00020}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_stats}{VistaStats}}\ \textcolor{keyword}{extends}\ JFrame\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ javax.swing.JFrame\ parent;}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_stats}{CtrlStats}}\ cstats;}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00038}\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_stats_a954be23f70ab286aa6a43c45449e279a}{00038}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_stats_a954be23f70ab286aa6a43c45449e279a}{VistaStats}}(javax.swing.JFrame\ parent,\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}\ cd)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ cstats\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_stats}{CtrlStats}}(cd);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ this.parent\ =\ parent;}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ iniVistaStats();}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00051}00051\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ iniVistaStats()\{}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ setResizable(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ setTitle(\textcolor{stringliteral}{"{}Mastermind"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ setDefaultCloseOperation(JFrame.EXIT\_ON\_CLOSE);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ setBounds(100,\ 100,\ 557,\ 566);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ JPanel\ contentPane\ =\ \textcolor{keyword}{new}\ JPanel();}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ contentPane.setBackground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00058}00058\ \ \ \ \ \ \ \ \ contentPane.setBorder(\textcolor{keyword}{new}\ EmptyBorder(5,\ 5,\ 5,\ 5));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ setContentPane(contentPane);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ contentPane.setLayout(\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00062}00062\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00063}00063\ \ \ \ \ \ \ \ \ ImageIcon\ bg\ =\ \textcolor{keyword}{new}\ ImageIcon(\textcolor{stringliteral}{"{}main/presentation/img/bg\_m.jpg"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00064}00064\ \ \ \ \ \ \ \ \ Image\ getBg\ =\ bg.getImage();}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00065}00065\ \ \ \ \ \ \ \ \ Image\ modBg\ =\ getBg.getScaledInstance(400,\ 600,\ java.awt.Image.SCALE\_SMOOTH);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00066}00066\ \ \ \ \ \ \ \ \ bg\ =\ \textcolor{keyword}{new}\ ImageIcon(modBg);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00068}00068\ \ \ \ \ \ \ \ \ ImageIcon\ bg2\ =\ \textcolor{keyword}{new}\ ImageIcon(\textcolor{stringliteral}{"{}main/presentation/img/bg\_w.jpg"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00069}00069\ \ \ \ \ \ \ \ \ Image\ getBg2\ =\ bg2.getImage();}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ Image\ modBg2\ =\ getBg2.getScaledInstance(225,\ 600,\ java.awt.Image.SCALE\_SMOOTH);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ bg2\ =\ \textcolor{keyword}{new}\ ImageIcon(modBg2);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00073}00073\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ JLabel\ wonText\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}Started\ Games"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ wonText.setHorizontalAlignment(SwingConstants.CENTER);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ wonText.setForeground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00077}00077\ \ \ \ \ \ \ \ \ wonText.setBounds(21,\ 148,\ 142,\ 15);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00078}00078\ \ \ \ \ \ \ \ \ contentPane.add(wonText);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00080}00080\ \ \ \ \ \ \ \ \ JLabel\ startedGames\ =\ \textcolor{keyword}{new}\ JLabel(cstats.\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_stats_ad8bf7b4a4a035f843006b1fef116d622}{getStarted}}().toString());}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00081}00081\ \ \ \ \ \ \ \ \ startedGames.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Tahoma"{}},\ Font.BOLD,\ 14));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00082}00082\ \ \ \ \ \ \ \ \ startedGames.setHorizontalAlignment(SwingConstants.CENTER);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00083}00083\ \ \ \ \ \ \ \ \ startedGames.setForeground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00084}00084\ \ \ \ \ \ \ \ \ startedGames.setBounds(21,\ 169,\ 142,\ 15);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00085}00085\ \ \ \ \ \ \ \ \ contentPane.add(startedGames);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00086}00086\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00087}00087\ \ \ \ \ \ \ \ \ JLabel\ playedText\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}Ended\ Games"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00088}00088\ \ \ \ \ \ \ \ \ playedText.setHorizontalAlignment(SwingConstants.CENTER);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00089}00089\ \ \ \ \ \ \ \ \ playedText.setForeground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00090}00090\ \ \ \ \ \ \ \ \ playedText.setBounds(21,\ 202,\ 142,\ 15);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00091}00091\ \ \ \ \ \ \ \ \ contentPane.add(playedText);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00093}00093\ \ \ \ \ \ \ \ \ JLabel\ endedGames\ =\ \textcolor{keyword}{new}\ JLabel(cstats.\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_stats_af0e09d9994e9e0d7426e9f3efc0c37ad}{getPartidesAcabades}}().toString());}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00094}00094\ \ \ \ \ \ \ \ \ endedGames.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Tahoma"{}},\ Font.BOLD,\ 14));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00095}00095\ \ \ \ \ \ \ \ \ endedGames.setHorizontalAlignment(SwingConstants.CENTER);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00096}00096\ \ \ \ \ \ \ \ \ endedGames.setForeground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00097}00097\ \ \ \ \ \ \ \ \ endedGames.setBounds(21,\ 223,\ 142,\ 15);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00098}00098\ \ \ \ \ \ \ \ \ contentPane.add(endedGames);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00099}00099\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00100}00100\ \ \ \ \ \ \ \ \ JLabel\ cmPText\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}CodeMaker\ Points"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00101}00101\ \ \ \ \ \ \ \ \ cmPText.setHorizontalAlignment(SwingConstants.CENTER);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00102}00102\ \ \ \ \ \ \ \ \ cmPText.setForeground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00103}00103\ \ \ \ \ \ \ \ \ cmPText.setBounds(21,\ 256,\ 142,\ 15);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00104}00104\ \ \ \ \ \ \ \ \ contentPane.add(cmPText);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00106}00106\ \ \ \ \ \ \ \ \ JLabel\ CMPoints\ =\ \textcolor{keyword}{new}\ JLabel(cstats.\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_stats_a639f3c48ad621f7d9eda9f975a96222c}{getPuntsCM}}().toString());}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00107}00107\ \ \ \ \ \ \ \ \ CMPoints.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Tahoma"{}},\ Font.BOLD,\ 14));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00108}00108\ \ \ \ \ \ \ \ \ CMPoints.setHorizontalAlignment(SwingConstants.CENTER);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00109}00109\ \ \ \ \ \ \ \ \ CMPoints.setForeground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00110}00110\ \ \ \ \ \ \ \ \ CMPoints.setBounds(21,\ 277,\ 142,\ 15);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00111}00111\ \ \ \ \ \ \ \ \ contentPane.add(CMPoints);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00112}00112\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00113}00113\ \ \ \ \ \ \ \ \ JLabel\ cbPText\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}CodeBreaker\ Points"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00114}00114\ \ \ \ \ \ \ \ \ cbPText.setHorizontalAlignment(SwingConstants.CENTER);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00115}00115\ \ \ \ \ \ \ \ \ cbPText.setForeground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00116}00116\ \ \ \ \ \ \ \ \ cbPText.setBounds(21,\ 310,\ 142,\ 15);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00117}00117\ \ \ \ \ \ \ \ \ contentPane.add(cbPText);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00119}00119\ \ \ \ \ \ \ \ \ JLabel\ CBPoints\ =\ \textcolor{keyword}{new}\ JLabel(cstats.\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_stats_aab5d7ee3e727f33361e52ddd869730e0}{getPuntsCB}}().toString());}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00120}00120\ \ \ \ \ \ \ \ \ CBPoints.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Tahoma"{}},\ Font.BOLD,\ 14));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00121}00121\ \ \ \ \ \ \ \ \ CBPoints.setHorizontalAlignment(SwingConstants.CENTER);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00122}00122\ \ \ \ \ \ \ \ \ CBPoints.setForeground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00123}00123\ \ \ \ \ \ \ \ \ CBPoints.setBounds(21,\ 331,\ 142,\ 15);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00124}00124\ \ \ \ \ \ \ \ \ contentPane.add(CBPoints);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00126}00126\ \ \ \ \ \ \ \ \ JLabel\ ajutsText\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}Helps\ Used"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00127}00127\ \ \ \ \ \ \ \ \ ajutsText.setHorizontalAlignment(SwingConstants.CENTER);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00128}00128\ \ \ \ \ \ \ \ \ ajutsText.setForeground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00129}00129\ \ \ \ \ \ \ \ \ ajutsText.setBounds(21,\ 364,\ 142,\ 15);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00130}00130\ \ \ \ \ \ \ \ \ contentPane.add(ajutsText);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00131}00131\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00132}00132\ \ \ \ \ \ \ \ \ JLabel\ ajuts\ =\ \textcolor{keyword}{new}\ JLabel(cstats.\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_stats_a3331019f1cd06c4bf3911586721e0d11}{getAjuts}}().toString());}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00133}00133\ \ \ \ \ \ \ \ \ ajuts.setHorizontalAlignment(SwingConstants.CENTER);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00134}00134\ \ \ \ \ \ \ \ \ ajuts.setForeground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00135}00135\ \ \ \ \ \ \ \ \ ajuts.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Tahoma"{}},\ Font.BOLD,\ 14));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00136}00136\ \ \ \ \ \ \ \ \ ajuts.setBounds(21,\ 385,\ 142,\ 15);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00137}00137\ \ \ \ \ \ \ \ \ contentPane.add(ajuts);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00138}00138\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00139}00139\ \ \ \ \ \ \ \ \ JLabel\ titleM1\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}M"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00140}00140\ \ \ \ \ \ \ \ \ titleM1.setForeground(\textcolor{keyword}{new}\ Color(255,\ 0,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00141}00141\ \ \ \ \ \ \ \ \ titleM1.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00142}00142\ \ \ \ \ \ \ \ \ titleM1.setBounds(18,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00143}00143\ \ \ \ \ \ \ \ \ contentPane.add(titleM1);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00144}00144\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00145}00145\ \ \ \ \ \ \ \ \ JLabel\ titleA\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}A"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00146}00146\ \ \ \ \ \ \ \ \ titleA.setForeground(\textcolor{keyword}{new}\ Color(0,\ 215,\ 11));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00147}00147\ \ \ \ \ \ \ \ \ titleA.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00148}00148\ \ \ \ \ \ \ \ \ titleA.setBounds(37,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00149}00149\ \ \ \ \ \ \ \ \ contentPane.add(titleA);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00150}00150\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00151}00151\ \ \ \ \ \ \ \ \ JLabel\ titleS\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}S"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00152}00152\ \ \ \ \ \ \ \ \ titleS.setForeground(\textcolor{keyword}{new}\ Color(0,\ 0,\ 255));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00153}00153\ \ \ \ \ \ \ \ \ titleS.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00154}00154\ \ \ \ \ \ \ \ \ titleS.setBounds(54,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00155}00155\ \ \ \ \ \ \ \ \ contentPane.add(titleS);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00156}00156\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00157}00157\ \ \ \ \ \ \ \ \ JLabel\ titleT\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}T"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00158}00158\ \ \ \ \ \ \ \ \ titleT.setForeground(\textcolor{keyword}{new}\ Color(255,\ 255,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00159}00159\ \ \ \ \ \ \ \ \ titleT.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00160}00160\ \ \ \ \ \ \ \ \ titleT.setBounds(71,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00161}00161\ \ \ \ \ \ \ \ \ contentPane.add(titleT);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00162}00162\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00163}00163\ \ \ \ \ \ \ \ \ JLabel\ titleE\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}E"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00164}00164\ \ \ \ \ \ \ \ \ titleE.setForeground(\textcolor{keyword}{new}\ Color(255,\ 255,\ 255));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00165}00165\ \ \ \ \ \ \ \ \ titleE.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00166}00166\ \ \ \ \ \ \ \ \ titleE.setBounds(90,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00167}00167\ \ \ \ \ \ \ \ \ contentPane.add(titleE);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00168}00168\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00169}00169\ \ \ \ \ \ \ \ \ JLabel\ titleR\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}R"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00170}00170\ \ \ \ \ \ \ \ \ titleR.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00171}00171\ \ \ \ \ \ \ \ \ titleR.setBounds(108,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00172}00172\ \ \ \ \ \ \ \ \ contentPane.add(titleR);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00173}00173\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00174}00174\ \ \ \ \ \ \ \ \ JLabel\ titleM2\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}M"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00175}00175\ \ \ \ \ \ \ \ \ titleM2.setForeground(\textcolor{keyword}{new}\ Color(255,\ 0,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00176}00176\ \ \ \ \ \ \ \ \ titleM2.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD\ |\ Font.ITALIC,\ 31));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00177}00177\ \ \ \ \ \ \ \ \ titleM2.setBounds(75,\ 51,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00178}00178\ \ \ \ \ \ \ \ \ contentPane.add(titleM2);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00179}00179\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00180}00180\ \ \ \ \ \ \ \ \ JLabel\ titleI\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}I"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00181}00181\ \ \ \ \ \ \ \ \ titleI.setForeground(\textcolor{keyword}{new}\ Color(0,\ 215,\ 11));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00182}00182\ \ \ \ \ \ \ \ \ titleI.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD\ |\ Font.ITALIC,\ 31));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00183}00183\ \ \ \ \ \ \ \ \ titleI.setBounds(97,\ 51,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00184}00184\ \ \ \ \ \ \ \ \ contentPane.add(titleI);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00185}00185\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00186}00186\ \ \ \ \ \ \ \ \ JLabel\ titleN\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}N"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00187}00187\ \ \ \ \ \ \ \ \ titleN.setForeground(\textcolor{keyword}{new}\ Color(0,\ 0,\ 255));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00188}00188\ \ \ \ \ \ \ \ \ titleN.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD\ |\ Font.ITALIC,\ 31));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00189}00189\ \ \ \ \ \ \ \ \ titleN.setBounds(117,\ 51,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00190}00190\ \ \ \ \ \ \ \ \ contentPane.add(titleN);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00191}00191\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00192}00192\ \ \ \ \ \ \ \ \ JLabel\ titleD\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}D"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00193}00193\ \ \ \ \ \ \ \ \ titleD.setForeground(\textcolor{keyword}{new}\ Color(255,\ 255,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00194}00194\ \ \ \ \ \ \ \ \ titleD.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD\ |\ Font.ITALIC,\ 31));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00195}00195\ \ \ \ \ \ \ \ \ titleD.setBounds(136,\ 51,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00196}00196\ \ \ \ \ \ \ \ \ contentPane.add(titleD);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00197}00197\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00198}00198\ \ \ \ \ \ \ \ \ JButton\ buttonExit\ =\ \textcolor{keyword}{new}\ JButton(\textcolor{stringliteral}{"{}Return"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00199}00199\ \ \ \ \ \ \ \ \ buttonExit.addActionListener(this::returnMainMenu);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00200}00200\ \ \ \ \ \ \ \ \ buttonExit.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Tahoma"{}},\ Font.BOLD,\ 11));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00201}00201\ \ \ \ \ \ \ \ \ buttonExit.setBackground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00202}00202\ \ \ \ \ \ \ \ \ buttonExit.setBounds(33,\ 467,\ 117,\ 25);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00203}00203\ \ \ \ \ \ \ \ \ contentPane.add(buttonExit);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00204}00204\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00205}00205\ \ \ \ \ \ \ \ \ JPanel\ statsMenu\ =\ \textcolor{keyword}{new}\ JPanel();}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00206}00206\ \ \ \ \ \ \ \ \ statsMenu.setBorder(\textcolor{keyword}{new}\ BevelBorder(BevelBorder.LOWERED,\ \textcolor{keyword}{null},\ \textcolor{keyword}{null},\ \textcolor{keyword}{null},\ \textcolor{keyword}{null}));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00207}00207\ \ \ \ \ \ \ \ \ statsMenu.setBackground(\textcolor{keyword}{new}\ Color(0,\ 128,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00208}00208\ \ \ \ \ \ \ \ \ statsMenu.setBounds(13,\ 129,\ 158,\ 290);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00209}00209\ \ \ \ \ \ \ \ \ contentPane.add(statsMenu);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00210}00210\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00211}00211\ \ \ \ \ \ \ \ \ JLabel\ bgImg\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00212}00212\ \ \ \ \ \ \ \ \ bgImg.setIcon(bg);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00213}00213\ \ \ \ \ \ \ \ \ bgImg.setBounds(187,\ 0,\ 371,\ 529);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00214}00214\ \ \ \ \ \ \ \ \ contentPane.add(bgImg);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00215}00215\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00216}00216\ \ \ \ \ \ \ \ \ JLabel\ b2Img\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00217}00217\ \ \ \ \ \ \ \ \ b2Img.setBackground(\textcolor{keyword}{new}\ Color(164,\ 104,\ 23));}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00218}00218\ \ \ \ \ \ \ \ \ b2Img.setIcon(bg2);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00219}00219\ \ \ \ \ \ \ \ \ b2Img.setBounds(0,\ 0,\ 225,\ 529);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00220}00220\ \ \ \ \ \ \ \ \ contentPane.add(b2Img);}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00221}00221\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00222}00222\ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00223}00223\ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00228}00228\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ returnMainMenu(java.awt.event.ActionEvent\ evt)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00229}00229\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00230}00230\ \ \ \ \ \ \ \ \ parent.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00231}00231\ \ \ \ \ \ \ \ \ dispose();}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00232}00232\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_stats_8java_source_l00233}00233\ \}}
+
+\end{DoxyCode}

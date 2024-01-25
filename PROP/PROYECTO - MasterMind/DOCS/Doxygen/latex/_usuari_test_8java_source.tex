@@ -1,0 +1,118 @@
+\doxysection{Usuari\+Test.\+java}
+\hypertarget{_usuari_test_8java_source}{}\label{_usuari_test_8java_source}\index{test/UsuariTest.java@{test/UsuariTest.java}}
+\mbox{\hyperlink{_usuari_test_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00001}00001\ \textcolor{keyword}{package\ }test;}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00003}00003\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes}{classes}}.*;}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00004}00004\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ org.junit.Assert.*;}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00006}00006\ \textcolor{keyword}{import}\ java.util.*;}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00008}00008\ \textcolor{keyword}{import}\ org.junit.Before;}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00009}00009\ \textcolor{keyword}{import}\ org.junit.Test;}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00010}00010\ \textcolor{keyword}{import}\ org.junit.runner.RunWith;}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00011}00011\ \textcolor{keyword}{import}\ org.junit.runners.Parameterized;}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00012}00012\ \textcolor{keyword}{import}\ org.junit.runners.Parameterized.Parameters;}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00014}00014\ @RunWith(Parameterized.class)}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00015}\mbox{\hyperlink{classtest_1_1_usuari_test}{00015}}\ public\ class\ \mbox{\hyperlink{classtest_1_1_usuari_test}{UsuariTest}}\ \{}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari}{Usuari}}\ usuari;}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ String\ nomusuari;}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ String\ password;}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00037}\mbox{\hyperlink{classtest_1_1_usuari_test_a784795f69e7fcce3c5dc15c3eef6b8cd}{00037}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtest_1_1_usuari_test_a784795f69e7fcce3c5dc15c3eef6b8cd}{UsuariTest}}(String\ nomusuari,\ String\ password)\ \{}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ this.nomusuari\ =\ nomusuari;}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ this.password\ =\ password;}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00045}00045\ \ \ \ \ @Before}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00046}\mbox{\hyperlink{classtest_1_1_usuari_test_adcc0cbead3d1c351e21b1960c7c07872}{00046}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtest_1_1_usuari_test_adcc0cbead3d1c351e21b1960c7c07872}{setUp}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ usuari\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari}{Usuari}}(nomusuari,\ password);}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00052}00052\ \ \ \ \ @Parameters}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00053}\mbox{\hyperlink{classtest_1_1_usuari_test_abe3143a7c61b68acecd75d30d9b4ce04}{00053}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Collection<Object[]>\ \mbox{\hyperlink{classtest_1_1_usuari_test_abe3143a7c61b68acecd75d30d9b4ce04}{data}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ Object[][]\ data\ =\ \textcolor{keyword}{new}\ Object[][]\ \{\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}user1"{}},\ \textcolor{stringliteral}{"{}pass1"{}}\ \},\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}user2"{}},\ \textcolor{stringliteral}{"{}pass2"{}}\ \},\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}user3"{}},\ \textcolor{stringliteral}{"{}pass3"{}}\ \}\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00058}00058\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Arrays.asList(data);}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00067}00067\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00068}\mbox{\hyperlink{classtest_1_1_usuari_test_ac1a695af94bee514d00983e98b3ac0fd}{00068}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtest_1_1_usuari_test_ac1a695af94bee514d00983e98b3ac0fd}{testSetNom}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00069}00069\ \ \ \ \ \ \ \ \ usuari.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_ae68b494821d2377d7bd91d203b4c5284}{setNom}}(nomusuari);}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ assertEquals(nomusuari,\ usuari.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a15b1b17059ff805f70d32adcd059540f}{getNom}}());}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00071}00071\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00078}00078\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00079}\mbox{\hyperlink{classtest_1_1_usuari_test_ab1f177474de7556eb90e54343f04c970}{00079}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtest_1_1_usuari_test_ab1f177474de7556eb90e54343f04c970}{testSetPassword}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00080}00080\ \ \ \ \ \ \ \ \ usuari.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_ad3618d716091ce441014c8ddcc4b0621}{setPassword}}(password);}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00081}00081\ \ \ \ \ \ \ \ \ assertEquals(password,\ usuari.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a8a2a0fef03cdbc1416162d70af5332e7}{getPassword}}());}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00082}00082\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00089}00089\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00090}\mbox{\hyperlink{classtest_1_1_usuari_test_af87416b65d968a6a6a903bfa898b9ce0}{00090}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtest_1_1_usuari_test_af87416b65d968a6a6a903bfa898b9ce0}{testAfegeixPartidaGuardada}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00091}00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}\ partida\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}();}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00092}00092\ \ \ \ \ \ \ \ \ usuari.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_ae19f6f3ef1765de6712f5218cee5168d}{afegeixPartidaGuardada}}(partida);}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00093}00093\ \ \ \ \ \ \ \ \ List<Partida>\ partidesGuardades\ =\ usuari.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a5bd7a0353595df4d5de1b9233e841aca}{getPartidesGuardades}}();}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00094}00094\ \ \ \ \ \ \ \ \ assertTrue(partidesGuardades.contains(partida));}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00095}00095\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00102}00102\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00103}\mbox{\hyperlink{classtest_1_1_usuari_test_a468495196b1971d89883c6123dec01f1}{00103}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtest_1_1_usuari_test_a468495196b1971d89883c6123dec01f1}{testGetListofStats}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00104}00104\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats}{Stats}}\ stats\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats}{Stats}}();}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00105}00105\ \ \ \ \ \ \ \ \ List<Integer>\ expectedStats\ =\ Arrays.asList(0,\ 0,\ 0,\ 0,\ 0);}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00106}00106\ \ \ \ \ \ \ \ \ List<Integer>\ actualStats\ =\ usuari.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a6e5bef750314d105959f371c89ae2b75}{getListofStats}}(stats);}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00107}00107\ \ \ \ \ \ \ \ \ assertEquals(expectedStats,\ actualStats);}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00108}00108\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00115}00115\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00116}\mbox{\hyperlink{classtest_1_1_usuari_test_a52e83d902598a5d1328ab81237e41d9c}{00116}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtest_1_1_usuari_test_a52e83d902598a5d1328ab81237e41d9c}{testGetPartidafromList}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00117}00117\ \ \ \ \ \ \ \ \ List<Partida>\ partidesGuardades\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00118}00118\ \ \ \ \ \ \ \ \ usuari.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_ac4dd387bc8cd6dcceb09c01837f3eb81}{setPartidesGuardades}}(partidesGuardades);}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00120}00120\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}\ partida1\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}();}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00121}00121\ \ \ \ \ \ \ \ \ partida1.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_ab2a2c27ddd7478fb4cb695116a245cb5}{setIdPartida}}(1);}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00122}00122\ \ \ \ \ \ \ \ \ usuari.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_ae19f6f3ef1765de6712f5218cee5168d}{afegeixPartidaGuardada}}(partida1);}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00124}00124\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}\ partida2\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}();}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00125}00125\ \ \ \ \ \ \ \ \ partida2.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_ab2a2c27ddd7478fb4cb695116a245cb5}{setIdPartida}}(2);}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00126}00126\ \ \ \ \ \ \ \ \ usuari.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_ae19f6f3ef1765de6712f5218cee5168d}{afegeixPartidaGuardada}}(partida2);}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00128}00128\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}\ partida3\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}();}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00129}00129\ \ \ \ \ \ \ \ \ partida3.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_ab2a2c27ddd7478fb4cb695116a245cb5}{setIdPartida}}(3);}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00130}00130\ \ \ \ \ \ \ \ \ usuari.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_ae19f6f3ef1765de6712f5218cee5168d}{afegeixPartidaGuardada}}(partida3);}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00132}00132\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}\ partidaBuscada\ =\ usuari.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a7de615a47af584ff43c56805876c8001}{getPartidafromList}}(3);}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00133}00133\ \ \ \ \ \ \ \ \ assertEquals(partida3,\ partidaBuscada);}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00134}00134\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00141}00141\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00142}\mbox{\hyperlink{classtest_1_1_usuari_test_a360048676a4a34f37389cc282754b46d}{00142}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtest_1_1_usuari_test_a360048676a4a34f37389cc282754b46d}{testGetPartidesGuardades}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00143}00143\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}\ partida1\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}();}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00144}00144\ \ \ \ \ \ \ \ \ partida1.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_ab2a2c27ddd7478fb4cb695116a245cb5}{setIdPartida}}(1);}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00145}00145\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}\ partida2\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}();}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00146}00146\ \ \ \ \ \ \ \ \ partida2.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_ab2a2c27ddd7478fb4cb695116a245cb5}{setIdPartida}}(2);}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00147}00147\ \ \ \ \ \ \ \ \ usuari.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_ac4dd387bc8cd6dcceb09c01837f3eb81}{setPartidesGuardades}}(Arrays.asList(partida1,\ partida2));}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00148}00148\ \ \ \ \ \ \ \ \ List<Integer>\ expectedIds\ =\ Arrays.asList(1,\ 2);}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00149}00149\ \ \ \ \ \ \ \ \ List<Integer>\ actualIds\ =\ usuari.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a5bd7a0353595df4d5de1b9233e841aca}{getPartidesGuardades}}(usuari.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a5bd7a0353595df4d5de1b9233e841aca}{getPartidesGuardades}}());}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00150}00150\ \ \ \ \ \ \ \ \ assertEquals(expectedIds,\ actualIds);}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00151}00151\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{_usuari_test_8java_source_l00153}00153\ \}}
+
+\end{DoxyCode}

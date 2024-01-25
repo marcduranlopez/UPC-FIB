@@ -1,0 +1,155 @@
+\doxysection{main.\+domain.\+classes.\+Jugador\+IA Class Reference}
+\hypertarget{classmain_1_1domain_1_1classes_1_1_jugador_i_a}{}\label{classmain_1_1domain_1_1classes_1_1_jugador_i_a}\index{main.domain.classes.JugadorIA@{main.domain.classes.JugadorIA}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_jugador_i_a_a2a3919a961a86111a8f60250de1452f6}{Jugador\+IA}} (\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}} partida)
+\begin{DoxyCompactList}\small\item\em Creadora amb valors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_jugador_i_a_ae61aeb6ddb2b6a6087444311775dc830}{set\+Strategy}} (Integer algorisme)
+\begin{DoxyCompactList}\small\item\em Setter de l\textquotesingle{}estrategia de la partida. \end{DoxyCompactList}\item 
+List$<$ List$<$ Integer $>$ $>$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_jugador_i_a_ae5eb3c5a2b678f67dfa560577ce42a97}{execute\+Maquina}} (List$<$ Integer $>$ sol)
+\begin{DoxyCompactList}\small\item\em Crida a la funció solve de la interfície Maquina de l\textquotesingle{}algorisme triat. \end{DoxyCompactList}\item 
+List$<$ String $>$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_jugador_i_a_a97b34a24e237d737b49a8d7c63d0a725}{get\+Pegs\+Maq}} ()
+\begin{DoxyCompactList}\small\item\em Aquesta funció retorna una llista amb la informació (feedback) del procés d\textquotesingle{}endevinar la seqüència per part de l\textquotesingle{}algorisme. \end{DoxyCompactList}\item 
+List$<$ List$<$ Integer $>$ $>$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_jugador_i_a_a6a8cf3af9e70c9121266b9f1cb821e3a}{get\+Cods\+Maq}} ()
+\begin{DoxyCompactList}\small\item\em Aquesta funció retorna la llista de codis emmagatzemats a la clase de l\textquotesingle{}algorisme utilitzat per utilitzar-\/los de nou en carregar partida. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_jugador_i_a_a3ba6fc2c090c6ec766615487aa3737fd}{check\+Code}} (List$<$ Integer $>$ codi\+Actual, List$<$ Integer $>$ codi\+Resoldre)
+\begin{DoxyCompactList}\small\item\em Aquesta funció retorna una la informació de la situació actual de la seqüència de l\textquotesingle{}usuari. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_jugador_i_a_8java_source_l00005}{5}} of file \mbox{\hyperlink{_jugador_i_a_8java_source}{Jugador\+IA.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_jugador_i_a_a2a3919a961a86111a8f60250de1452f6}\label{classmain_1_1domain_1_1classes_1_1_jugador_i_a_a2a3919a961a86111a8f60250de1452f6} 
+\index{main.domain.classes.JugadorIA@{main.domain.classes.JugadorIA}!JugadorIA@{JugadorIA}}
+\index{JugadorIA@{JugadorIA}!main.domain.classes.JugadorIA@{main.domain.classes.JugadorIA}}
+\doxysubsubsection{\texorpdfstring{JugadorIA()}{JugadorIA()}}
+{\footnotesize\ttfamily main.\+domain.\+classes.\+Jugador\+IA.\+Jugador\+IA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}}]{partida }\end{DoxyParamCaption})}
+
+
+
+Creadora amb valors. 
+
+Crea un jugador\+IA amb una partida
+
+
+\begin{DoxyParams}{Parameters}
+{\em partida} & representa una partida del sistema \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_jugador_i_a_8java_source_l00024}{24}} of file \mbox{\hyperlink{_jugador_i_a_8java_source}{Jugador\+IA.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_jugador_i_a_a3ba6fc2c090c6ec766615487aa3737fd}\label{classmain_1_1domain_1_1classes_1_1_jugador_i_a_a3ba6fc2c090c6ec766615487aa3737fd} 
+\index{main.domain.classes.JugadorIA@{main.domain.classes.JugadorIA}!checkCode@{checkCode}}
+\index{checkCode@{checkCode}!main.domain.classes.JugadorIA@{main.domain.classes.JugadorIA}}
+\doxysubsubsection{\texorpdfstring{checkCode()}{checkCode()}}
+{\footnotesize\ttfamily String main.\+domain.\+classes.\+Jugador\+IA.\+check\+Code (\begin{DoxyParamCaption}\item[{List$<$ Integer $>$}]{codi\+Actual,  }\item[{List$<$ Integer $>$}]{codi\+Resoldre }\end{DoxyParamCaption})}
+
+
+
+Aquesta funció retorna una la informació de la situació actual de la seqüència de l\textquotesingle{}usuari. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em codi\+Actual} & representa la seqüència introduïda per l\textquotesingle{}usuari \\
+\hline
+{\em codi\+Resoldre} & representa la seqüència a endevinar a la partida \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+el feedback donades les dos seqüències 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_jugador_i_a_8java_source_l00078}{78}} of file \mbox{\hyperlink{_jugador_i_a_8java_source}{Jugador\+IA.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_jugador_i_a_ae5eb3c5a2b678f67dfa560577ce42a97}\label{classmain_1_1domain_1_1classes_1_1_jugador_i_a_ae5eb3c5a2b678f67dfa560577ce42a97} 
+\index{main.domain.classes.JugadorIA@{main.domain.classes.JugadorIA}!executeMaquina@{executeMaquina}}
+\index{executeMaquina@{executeMaquina}!main.domain.classes.JugadorIA@{main.domain.classes.JugadorIA}}
+\doxysubsubsection{\texorpdfstring{executeMaquina()}{executeMaquina()}}
+{\footnotesize\ttfamily List$<$ List$<$ Integer $>$ $>$ main.\+domain.\+classes.\+Jugador\+IA.\+execute\+Maquina (\begin{DoxyParamCaption}\item[{List$<$ Integer $>$}]{sol }\end{DoxyParamCaption})}
+
+
+
+Crida a la funció solve de la interfície Maquina de l\textquotesingle{}algorisme triat. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sol} & representa la seqüència a resoldre a la partida \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna una llista de llistes que representa el board amb les seqüències obtingudes fins a arribar a la solució 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_jugador_i_a_8java_source_l00045}{45}} of file \mbox{\hyperlink{_jugador_i_a_8java_source}{Jugador\+IA.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_jugador_i_a_a6a8cf3af9e70c9121266b9f1cb821e3a}\label{classmain_1_1domain_1_1classes_1_1_jugador_i_a_a6a8cf3af9e70c9121266b9f1cb821e3a} 
+\index{main.domain.classes.JugadorIA@{main.domain.classes.JugadorIA}!getCodsMaq@{getCodsMaq}}
+\index{getCodsMaq@{getCodsMaq}!main.domain.classes.JugadorIA@{main.domain.classes.JugadorIA}}
+\doxysubsubsection{\texorpdfstring{getCodsMaq()}{getCodsMaq()}}
+{\footnotesize\ttfamily List$<$ List$<$ Integer $>$ $>$ main.\+domain.\+classes.\+Jugador\+IA.\+get\+Cods\+Maq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Aquesta funció retorna la llista de codis emmagatzemats a la clase de l\textquotesingle{}algorisme utilitzat per utilitzar-\/los de nou en carregar partida. 
+
+\begin{DoxyReturn}{Returns}
+llista de seqüències obtingudes per l\textquotesingle{}algorisme 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_jugador_i_a_8java_source_l00067}{67}} of file \mbox{\hyperlink{_jugador_i_a_8java_source}{Jugador\+IA.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_jugador_i_a_a97b34a24e237d737b49a8d7c63d0a725}\label{classmain_1_1domain_1_1classes_1_1_jugador_i_a_a97b34a24e237d737b49a8d7c63d0a725} 
+\index{main.domain.classes.JugadorIA@{main.domain.classes.JugadorIA}!getPegsMaq@{getPegsMaq}}
+\index{getPegsMaq@{getPegsMaq}!main.domain.classes.JugadorIA@{main.domain.classes.JugadorIA}}
+\doxysubsubsection{\texorpdfstring{getPegsMaq()}{getPegsMaq()}}
+{\footnotesize\ttfamily List$<$ String $>$ main.\+domain.\+classes.\+Jugador\+IA.\+get\+Pegs\+Maq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Aquesta funció retorna una llista amb la informació (feedback) del procés d\textquotesingle{}endevinar la seqüència per part de l\textquotesingle{}algorisme. 
+
+\begin{DoxyReturn}{Returns}
+feedback del procés d\textquotesingle{}endevinar la seqüència 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_jugador_i_a_8java_source_l00056}{56}} of file \mbox{\hyperlink{_jugador_i_a_8java_source}{Jugador\+IA.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_jugador_i_a_ae61aeb6ddb2b6a6087444311775dc830}\label{classmain_1_1domain_1_1classes_1_1_jugador_i_a_ae61aeb6ddb2b6a6087444311775dc830} 
+\index{main.domain.classes.JugadorIA@{main.domain.classes.JugadorIA}!setStrategy@{setStrategy}}
+\index{setStrategy@{setStrategy}!main.domain.classes.JugadorIA@{main.domain.classes.JugadorIA}}
+\doxysubsubsection{\texorpdfstring{setStrategy()}{setStrategy()}}
+{\footnotesize\ttfamily void main.\+domain.\+classes.\+Jugador\+IA.\+set\+Strategy (\begin{DoxyParamCaption}\item[{Integer}]{algorisme }\end{DoxyParamCaption})}
+
+
+
+Setter de l\textquotesingle{}estrategia de la partida. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em algorisme} & representa l\textquotesingle{}algorisme triat per la partida \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_jugador_i_a_8java_source_l00033}{33}} of file \mbox{\hyperlink{_jugador_i_a_8java_source}{Jugador\+IA.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/domain/classes/\mbox{\hyperlink{_jugador_i_a_8java}{Jugador\+IA.\+java}}\end{DoxyCompactItemize}

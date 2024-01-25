@@ -1,0 +1,274 @@
+\doxysection{Genetic.\+java}
+\hypertarget{_genetic_8java_source}{}\label{_genetic_8java_source}\index{main/domain/classes/Genetic.java@{main/domain/classes/Genetic.java}}
+\mbox{\hyperlink{_genetic_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00001}00001\ \textcolor{keyword}{package\ }main.domain.classes;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00003}00003\ \textcolor{keyword}{import}\ java.util.*;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00005}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic}{00005}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic}{Genetic}}\ \textcolor{keyword}{implements}\ \mbox{\hyperlink{interfacemain_1_1domain_1_1classes_1_1_maquina}{Maquina}}\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{static}\ Integer\ CODE\_LENGTH\ =\ 4;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ Integer\ N\_COLORS\ =\ 6;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ Integer\ POPULATION\_SIZE\ =\ 200;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{double}\ MUTATION\_RATE\ =\ 0.7;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ Integer\ MAX\_TORNS\ =\ 10;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00035}00035\ \ \ \ \ \textcolor{keyword}{static}\ List<Integer>\ code;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00040}00040\ \ \ \ \ \textcolor{keyword}{static}\ Integer[]\ colors\ =\ \{0,\ 1,\ 2,\ 3,\ 4,\ 5\};}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00045}00045\ \ \ \ \ \textcolor{keyword}{static}\ List<List<Integer>>\ combinations\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00050}00050\ \ \ \ \ \textcolor{keyword}{static}\ List<List<Integer>>\ population\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00055}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_aa5ce0db137525af0da1a9a9814582ec1}{00055}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ List<List<Integer>>\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_aa5ce0db137525af0da1a9a9814582ec1}{guessesAux}}\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00060}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a4dd894001c4d6373ea9e84f43498d1bb}{00060}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ List<String>\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a4dd894001c4d6373ea9e84f43498d1bb}{pegsAux}}\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00068}00068\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00069}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a22bfe12fb7f8510d10d9d5f89173219e}{00069}}\ \ \ \ \ \textcolor{keyword}{public}\ List<List<Integer>>\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a22bfe12fb7f8510d10d9d5f89173219e}{solve}}(List<Integer>\ codi)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ List<List<Integer>>\ guessesResult\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ List<String>\ pegsResult\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ CODE\_LENGTH\ =\ codi.size();}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ repetits\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ turn\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}[]\ visited\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{boolean}[colors.length];}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00077}00077\ \ \ \ \ \ \ \ \ Arrays.fill(visited,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00079}00079\ \ \ \ \ \ \ \ \ combinations.clear();}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00080}00080\ \ \ \ \ \ \ \ \ population.clear();}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00081}00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_aec293009e863ff5fdc4cd978d273ab64}{backtrackingCombinations}}(0,\ \textcolor{keyword}{new}\ Integer[CODE\_LENGTH],\ visited,\ repetits);}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Poblacio}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ POPULATION\_SIZE;\ ++i)\ population.add(\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a7d8c91117d7d1be00442b3196c5477bd}{randomMove}}());}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00086}00086\ \ \ \ \ \ \ \ \ code\ =\ codi;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00087}00087\ \ \ \ \ \ \ \ \ List<Integer>\ current;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ won\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00090}00090\ \ \ \ \ \ \ \ \ String\ pegs;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(!won\ \&\&\ turn\ <=\ MAX\_TORNS)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ EVALUATE}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ List<Integer>\ puntuacio\ =\ \textcolor{keyword}{new}\ ArrayList<>(POPULATION\_SIZE);}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ POPULATION\_SIZE;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ puntuacio.add(\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a998180fcde284b72ea3fd4f46a325546}{evaluatePopulation}}(population.get(i),\ code));\ \textcolor{comment}{//\ avaluar\ puntuacio}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a139287ed68ff2723f07e69fcbe5e2b43}{getBestPuntuacio}}(population);}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ CHECK\ SOLUTION}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ pegs\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a1eeae14e4f14b66fdb06006d665ffdcd}{checkCode}}(current,\ code);}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ pegsResult.add(pegs);}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ADD\ SELECTION}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ guessesResult.add(current);}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_ae03b8b108711723b2c9e6b4de9d3779f}{trobaPuntuacioMaxima}}(puntuacio,\ CODE\_LENGTH\ *\ 10))\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ won\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ PARENTS}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ List<List<Integer>>\ parents\ =\ \textcolor{keyword}{new}\ ArrayList<>(2);}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ (int)(Math.random()\ *\ POPULATION\_SIZE);}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ (int)(Math.random()\ *\ POPULATION\_SIZE);}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ >\ y)\ parents.add(population.get(x));}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ parents.add(population.get(y));}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ MUTATION}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ List<List<Integer>>\ newGeneration\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ POPULATION\_SIZE;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ List<Integer>\ child;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ child\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a54a3502fdbc54ea3d9b96dbf85cba3cd}{getChild}}(parents);}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ child\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_aa19970e1ac502aaf0fbb6682cb164294}{mutateChild}}(child);}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newGeneration.add(child);}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ REPLACE}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ population\ =\ newGeneration;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ ++turn;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00135}00135\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00136}00136\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a4dd894001c4d6373ea9e84f43498d1bb}{pegsAux}}\ =\ pegsResult;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00137}00137\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_aa5ce0db137525af0da1a9a9814582ec1}{guessesAux}}\ =\ guessesResult;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00139}00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ guessesResult;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00140}00140\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00148}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a139287ed68ff2723f07e69fcbe5e2b43}{00148}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ List<Integer>\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a139287ed68ff2723f07e69fcbe5e2b43}{getBestPuntuacio}}(List<List<Integer>>\ population)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00149}00149\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ maxPunts\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00150}00150\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ auxIndex\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00151}00151\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ population.size();\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ Integer\ avaluacio\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a998180fcde284b72ea3fd4f46a325546}{evaluatePopulation}}(population.get(i),\ code);}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (avaluacio\ >\ maxPunts)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ maxPunts\ =\ avaluacio;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ auxIndex\ =\ i;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00157}00157\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00158}00158\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00159}00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ population.get(auxIndex);}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00160}00160\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00168}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a54a3502fdbc54ea3d9b96dbf85cba3cd}{00168}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ List<Integer>\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a54a3502fdbc54ea3d9b96dbf85cba3cd}{getChild}}(List<List<Integer>>\ parents)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00169}00169\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ mergeValue\ =\ (int)(Math.random()\ *\ CODE\_LENGTH);}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00170}00170\ \ \ \ \ \ \ \ \ List<Integer>\ newChild\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00171}00171\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00172}00172\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ CODE\_LENGTH;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ <\ mergeValue)\ newChild.add(parents.get(0).get(i));}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ newChild.add(parents.get(1).get(i));}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00175}00175\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00177}00177\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ newChild;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00178}00178\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00179}00179\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00186}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_aa19970e1ac502aaf0fbb6682cb164294}{00186}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ List<Integer>\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_aa19970e1ac502aaf0fbb6682cb164294}{mutateChild}}(List<Integer>\ child)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00187}00187\ \ \ \ \ \ \ \ \ List<Integer>\ mutatedChild\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00189}00189\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ CODE\_LENGTH;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Math.random()\ <\ MUTATION\_RATE)\ mutatedChild.add((\textcolor{keywordtype}{int})(Math.random()\ *\ N\_COLORS));}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ mutatedChild.add(child.get(i));}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00192}00192\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00193}00193\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00194}00194\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mutatedChild;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00195}00195\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00196}00196\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00204}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a998180fcde284b72ea3fd4f46a325546}{00204}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Integer\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a998180fcde284b72ea3fd4f46a325546}{evaluatePopulation}}(List<Integer>\ code,\ List<Integer>\ secretCode)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00205}00205\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ correctPosition\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00206}00206\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ correctColor\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00207}00207\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00208}00208\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ CODE\_LENGTH;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (code.get(i).equals(secretCode.get(i)))\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ correctPosition++;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ CODE\_LENGTH;\ ++j)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (code.get(i).equals(secretCode.get(j)))\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ correctColor++;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00219}00219\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00220}00220\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00221}00221\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (correctPosition\ *\ 10)\ +\ correctColor;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00222}00222\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00223}00223\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00231}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_ae03b8b108711723b2c9e6b4de9d3779f}{00231}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_ae03b8b108711723b2c9e6b4de9d3779f}{trobaPuntuacioMaxima}}(List<Integer>\ puntuacio,\ \textcolor{keywordtype}{int}\ puntsMaxims)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00232}00232\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ puntuacio.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (puntuacio.get(i)\ ==\ puntsMaxims)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00236}00236\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00237}00237\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00238}00238\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00239}00239\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00247}00247\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00248}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a1eeae14e4f14b66fdb06006d665ffdcd}{00248}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a1eeae14e4f14b66fdb06006d665ffdcd}{checkCode}}(List<Integer>\ current,\ List<Integer>\ code)\ \{\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00249}00249\ \ \ \ \ \ \ \ \ CODE\_LENGTH\ =\ code.size();}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00250}00250\ \ \ \ \ \ \ \ \ StringBuilder\ result\ =\ \textcolor{keyword}{new}\ StringBuilder();}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00251}00251\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}[]\ vis1\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{boolean}[CODE\_LENGTH];}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00252}00252\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}[]\ vis2\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{boolean}[CODE\_LENGTH];}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00253}00253\ \ \ \ \ \ \ \ \ Arrays.fill(vis1,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00254}00254\ \ \ \ \ \ \ \ \ Arrays.fill(vis2,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00255}00255\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ aux\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00256}00256\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00257}00257\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Black}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00258}00258\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ CODE\_LENGTH;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00259}00259\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current.get(i).equals(code.get(i)))\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00260}00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.append(\textcolor{stringliteral}{"{}B"{}});}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00261}00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vis1[i]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00262}00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vis2[i]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00263}00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++aux;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00264}00264\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00265}00265\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00266}00266\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00267}00267\ \ \ \ \ \ \ \ \ \textcolor{comment}{//White}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00268}00268\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ CODE\_LENGTH;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00269}00269\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ trobat\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00270}00270\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!vis1[i])\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00271}00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ CODE\_LENGTH;\ ++j)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00272}00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!vis2[j]\ \&\&\ !trobat)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current.get(i).equals(code.get(j)))\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00274}00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.append(\textcolor{stringliteral}{"{}W"{}});}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00275}00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vis1[i]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vis2[j]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00277}00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trobat\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++aux;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00279}00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00280}00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00281}00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00282}00282\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00283}00283\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00284}00284\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00285}00285\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ CODE\_LENGTH-\/aux;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00286}00286\ \ \ \ \ \ \ \ \ \ \ \ \ result.append(\textcolor{stringliteral}{"{}\_"{}});}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00287}00287\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00288}00288\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result.toString();}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00289}00289\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00290}00290\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00295}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a95d416dfe99ddb85757c233145920528}{00295}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ List<Integer>\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a95d416dfe99ddb85757c233145920528}{addCombinations}}(Integer[]\ combination)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00296}00296\ \ \ \ \ \ \ \ \ List<Integer>\ help\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00297}00297\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ h\ =\ 0;\ h\ <\ combination.length;\ ++h)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00298}00298\ \ \ \ \ \ \ \ \ \ \ \ \ help.add(combination[h]);}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00299}00299\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00300}00300\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00301}00301\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ help;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00302}00302\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00303}00303\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00311}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_af0d6ef14626ac19a51d95a589eb2ae65}{00311}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_af0d6ef14626ac19a51d95a589eb2ae65}{backtrackingElse}}(\textcolor{keywordtype}{int}\ i,\ Integer[]\ combination,\ \textcolor{keywordtype}{boolean}[]\ visited,\ \textcolor{keywordtype}{int}\ repetits)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00312}00312\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (repetits\ ==\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00313}00313\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ colors.length;\ ++j)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00314}00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!visited[j])\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00315}00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ combination[i]\ =\ colors[j];}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00316}00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ visited[j]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00317}00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_aec293009e863ff5fdc4cd978d273ab64}{backtrackingCombinations}}(i\ +\ 1,\ combination,\ visited,\ repetits);}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00318}00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ combination[i]\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00319}00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ visited[j]\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00320}00320\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00321}00321\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00322}00322\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00323}00323\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ colors.length;\ ++j)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00324}00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ combination[i]\ =\ colors[j];}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00325}00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_aec293009e863ff5fdc4cd978d273ab64}{backtrackingCombinations}}(i\ +\ 1,\ combination,\ visited,\ repetits);}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00326}00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ combination[i]\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00327}00327\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00328}00328\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00329}00329\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00330}00330\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00338}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_aec293009e863ff5fdc4cd978d273ab64}{00338}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_aec293009e863ff5fdc4cd978d273ab64}{backtrackingCombinations}}(\textcolor{keywordtype}{int}\ i,\ Integer[]\ combination,\ \textcolor{keywordtype}{boolean}[]\ visited,\ \textcolor{keywordtype}{int}\ repetits)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00339}00339\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ combination.length)\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00340}00340\ \ \ \ \ \ \ \ \ \ \ \ \ List<Integer>\ help\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a95d416dfe99ddb85757c233145920528}{addCombinations}}(combination);}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00341}00341\ \ \ \ \ \ \ \ \ \ \ \ \ combinations.add(help);}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00342}00342\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00343}00343\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_af0d6ef14626ac19a51d95a589eb2ae65}{backtrackingElse}}(i,\ combination,\ visited,\ repetits);}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00344}00344\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00345}00345\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00346}00346\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00351}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a7d8c91117d7d1be00442b3196c5477bd}{00351}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ List<Integer>\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a7d8c91117d7d1be00442b3196c5477bd}{randomMove}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00352}00352\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ (int)(Math.random()\ *\ combinations.size());}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00353}00353\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ combinations.get(i);}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00354}00354\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00355}00355\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00360}00360\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00361}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_ab4a3404dd70134e1c4d25456368e6f09}{00361}}\ \ \ \ \ \textcolor{keyword}{public}\ List<String>\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_ab4a3404dd70134e1c4d25456368e6f09}{getPegsResult}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00362}00362\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a4dd894001c4d6373ea9e84f43498d1bb}{pegsAux}};}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00363}00363\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00364}00364\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00369}00369\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00370}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a7791d2f88ad104fa8beed510341610e1}{00370}}\ \ \ \ \ \textcolor{keyword}{public}\ List<List<Integer>>\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a7791d2f88ad104fa8beed510341610e1}{getCodsResult}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00371}00371\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_aa5ce0db137525af0da1a9a9814582ec1}{guessesAux}};}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00372}00372\ \ \ \ \ \}\ \ \ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00373}00373\ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00374}00374\ }
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00375}00375\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_genetic_8java_source_l00376}00376\ \textcolor{comment}{-\/\ explicar\ l'acces\ a\ llista\ que\ és\ constant*/}}
+
+\end{DoxyCode}

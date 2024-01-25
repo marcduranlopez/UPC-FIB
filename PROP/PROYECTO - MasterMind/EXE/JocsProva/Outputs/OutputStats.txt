@@ -1,0 +1,237 @@
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir
+Sessio no iniciada.
+
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Salir
+Introdueix nom usuari: 
+Introdueix nom password: 
+Usuari registrat: arnau
+Benvingut, arnau!
+
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir
+Puntuacio com a CodeMaker: 0
+Puntuacio com a CodeBreaker: 0
+Total partides acabades: 0
+Total partides iniciades: 0
+Total ajudes demanades: 0
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir
+Introdueix dificultat: 
+1. Facil: Tauler 4 espais
+2. Mig: Tauler 5 espais
+3. Dificil: Tauler 6 espais
+Introdueix rol: 
+1. CodeMaker 2. CodeBreaker
+(Exemple: 1 1 2 5)
+0. Vermell | 2. Blau | 4. Negre
+1. Verd    | 3. Groc | 5. Blanc
+Help: L'ajuda proporciona un numero del codi a resoldre.
+Vols una ajuda? 1. Si  2. No 
+Introdueix codi: 
+Tauler: 
+0. 1122 W___
+
+Vols guardar la partida? 1. Si  2. No 
+0. Vermell | 2. Blau | 4. Negre
+1. Verd    | 3. Groc | 5. Blanc
+Vols una ajuda? 1. Si  2. No 
+Introdueix codi: 
+Tauler: 
+0. 1122 W___
+1. 2233 BB__
+
+Vols guardar la partida? 1. Si  2. No 
+0. Vermell | 2. Blau | 4. Negre
+1. Verd    | 3. Groc | 5. Blanc
+Vols una ajuda? 1. Si  2. No 
+Introdueix codi: 
+Tauler: 
+0. 1122 W___
+1. 2233 BB__
+2. 2434 BBW_
+
+Vols guardar la partida? 1. Si  2. No 
+0. Vermell | 2. Blau | 4. Negre
+1. Verd    | 3. Groc | 5. Blanc
+Vols una ajuda? 1. Si  2. No 
+Introdueix codi: 
+Tauler: 
+0. 1122 W___
+1. 2233 BB__
+2. 2434 BBW_
+3. 2435 BBW_
+
+Vols guardar la partida? 1. Si  2. No 
+0. Vermell | 2. Blau | 4. Negre
+1. Verd    | 3. Groc | 5. Blanc
+Vols una ajuda? 1. Si  2. No 
+Introdueix codi: 
+Tauler: 
+0. 1122 W___
+1. 2233 BB__
+2. 2434 BBW_
+3. 2435 BBW_
+4. 2034 BWWW
+
+Vols guardar la partida? 1. Si  2. No 
+0. Vermell | 2. Blau | 4. Negre
+1. Verd    | 3. Groc | 5. Blanc
+Vols una ajuda? 1. Si  2. No 
+Introdueix codi: 
+Tauler: 
+0. 1122 W___
+1. 2233 BB__
+2. 2434 BBW_
+3. 2435 BBW_
+4. 2034 BWWW
+5. 2403 BBBB
+
+Has guanyat com a CodeBreaker
+puntuacio: 27
+
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir
+Puntuacio com a CodeMaker: 0
+Puntuacio com a CodeBreaker: 27
+Total partides acabades: 1
+Total partides iniciades: 1
+Total ajudes demanades: 0
+
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir
+Introdueix dificultat: 
+1. Facil: Tauler 4 espais
+2. Mig: Tauler 5 espais
+3. Dificil: Tauler 6 espais
+Introdueix rol: 
+1. CodeMaker 2. CodeBreaker
+(Exemple: 1 1 2 5)
+0. Vermell | 2. Blau | 4. Negre
+1. Verd    | 3. Groc | 5. Blanc
+Help: L'ajuda proporciona un numero del codi a resoldre.
+Vols una ajuda? 1. Si  2. No 
+Introdueix codi: 
+Tauler: 
+0. 1122 B___
+
+Vols guardar la partida? 1. Si  2. No 
+0. Vermell | 2. Blau | 4. Negre
+1. Verd    | 3. Groc | 5. Blanc
+Vols una ajuda? 1. Si  2. No 
+Introdueix codi: 
+Tauler: 
+0. 1122 B___
+1. 1133 BW__
+
+Vols guardar la partida? 1. Si  2. No 
+0. Vermell | 2. Blau | 4. Negre
+1. Verd    | 3. Groc | 5. Blanc
+Vols una ajuda? 1. Si  2. No 
+Introdueix codi: 
+Tauler: 
+0. 1122 B___
+1. 1133 BW__
+2. 1344 WW__
+
+Vols guardar la partida? 1. Si  2. No 
+0. Vermell | 2. Blau | 4. Negre
+1. Verd    | 3. Groc | 5. Blanc
+Vols una ajuda? 1. Si  2. No 
+Introdueix codi: 
+Tauler: 
+0. 1122 B___
+1. 1133 BW__
+2. 1344 WW__
+3. 3155 BB__
+
+Vols guardar la partida? 1. Si  2. No 
+0. Vermell | 2. Blau | 4. Negre
+1. Verd    | 3. Groc | 5. Blanc
+Vols una ajuda? 1. Si  2. No 
+Introdueix codi: 
+Tauler: 
+0. 1122 B___
+1. 1133 BW__
+2. 1344 WW__
+3. 3155 BB__
+4. 3100 BBBB
+
+Has guanyat com a CodeBreaker
+puntuacio: 33
+
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir
+Puntuacio com a CodeMaker: 0
+Puntuacio com a CodeBreaker: 60
+Total partides acabades: 2
+Total partides iniciades: 2
+Total ajudes demanades: 0
+
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir

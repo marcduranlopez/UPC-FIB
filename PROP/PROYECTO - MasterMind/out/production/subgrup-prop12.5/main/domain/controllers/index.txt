@@ -1,0 +1,11 @@
+# Directori controllers
+
+> Path absolut: /FONTS/src/main/domain/controllers
+
+## Descripció del directori
+El directori conte el controlador del sistema.
+
+## Elements del directori
+
+- **Arxiu CtrlDomain:**
+Controlador que domina el joc.

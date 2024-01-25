@@ -1,0 +1,253 @@
+\doxysection{Vista\+Load\+Game.\+java}
+\hypertarget{_vista_load_game_8java_source}{}\label{_vista_load_game_8java_source}\index{main/presentation/classes/VistaLoadGame.java@{main/presentation/classes/VistaLoadGame.java}}
+\mbox{\hyperlink{_vista_load_game_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00001}00001\ \textcolor{keyword}{package\ }main.presentation.classes;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00003}00003\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes}{classes}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}};}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00004}00004\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1presentation}{presentation}}.\mbox{\hyperlink{namespacemain_1_1presentation_1_1controllers}{controllers}}.\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_load_game}{CtrlLoadGame}};}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00006}00006\ \textcolor{keyword}{import}\ javax.swing.JFrame;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00007}00007\ \textcolor{keyword}{import}\ javax.swing.JPanel;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00008}00008\ \textcolor{keyword}{import}\ javax.swing.border.EmptyBorder;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00010}00010\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1controllers}{controllers}}.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}};}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00012}00012\ \textcolor{keyword}{import}\ java.awt.Color;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00014}00014\ \textcolor{keyword}{import}\ javax.swing.JButton;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00015}00015\ \textcolor{keyword}{import}\ javax.swing.JLabel;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00016}00016\ \textcolor{keyword}{import}\ javax.swing.ImageIcon;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00017}00017\ \textcolor{keyword}{import}\ java.awt.Font;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00018}00018\ \textcolor{keyword}{import}\ java.awt.Image;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00020}00020\ \textcolor{keyword}{import}\ javax.swing.JList;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00021}00021\ \textcolor{keyword}{import}\ javax.swing.AbstractListModel;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00023}00023\ \textcolor{keyword}{import}\ javax.swing.SwingConstants;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00024}00024\ \textcolor{keyword}{import}\ javax.swing.border.BevelBorder;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00026}00026\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00028}\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_load_game}{00028}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_load_game}{VistaLoadGame}}\ \textcolor{keyword}{extends}\ JFrame\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00033}00033\ \ \ \ \ \textcolor{keyword}{private}\ JPanel\ contentPane;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00038}00038\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ javax.swing.JFrame\ parent;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00043}00043\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_load_game}{CtrlLoadGame}}\ cLoadGame;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00048}00048\ \ \ \ \ List<Partida>\ listGames;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00053}00053\ \ \ \ \ \textcolor{keyword}{private}\ JButton\ buttonContinue;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00058}00058\ \ \ \ \ \textcolor{keyword}{private}\ JList\ list;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00059}00059\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00063}00063\ \ \ \ \ \textcolor{keyword}{private}\ JLabel\ missatge;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00069}00069\ \ \ \ \ String[]\ valors;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00074}00074\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ Integer\ DIFICULTY\_EASY\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00079}00079\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ Integer\ DIFICULTY\_MEDIUM\ =\ 2;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00084}00084\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ Integer\ DIFICULTY\_HARD\ =\ 3;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00092}\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_load_game_a91b072fca2b3b86b81845da04a51437a}{00092}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_load_game_a91b072fca2b3b86b81845da04a51437a}{VistaLoadGame}}(javax.swing.JFrame\ parent,\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}\ cd)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00093}00093\ \ \ \ \ \ \ \ \ cLoadGame\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_load_game}{CtrlLoadGame}}(cd);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00094}00094\ \ \ \ \ \ \ \ \ this.parent\ =\ parent;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00095}00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_load_game_a56db3202eb05f7c49629020dee773ce5}{InitVistaLoadGame}}();}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00096}00096\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00104}\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_load_game_a56db3202eb05f7c49629020dee773ce5}{00104}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_load_game_a56db3202eb05f7c49629020dee773ce5}{InitVistaLoadGame}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00105}00105\ \ \ \ \ \ \ \ \ setResizable(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00106}00106\ \ \ \ \ \ \ \ \ setTitle(\textcolor{stringliteral}{"{}Mastermind"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00107}00107\ \ \ \ \ \ \ \ \ setDefaultCloseOperation(JFrame.EXIT\_ON\_CLOSE);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00108}00108\ \ \ \ \ \ \ \ \ setBounds(100,\ 100,\ 557,\ 566);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00109}00109\ \ \ \ \ \ \ \ \ contentPane\ =\ \textcolor{keyword}{new}\ JPanel();}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00110}00110\ \ \ \ \ \ \ \ \ contentPane.setBackground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00111}00111\ \ \ \ \ \ \ \ \ contentPane.setBorder(\textcolor{keyword}{new}\ EmptyBorder(5,\ 5,\ 5,\ 5));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00113}00113\ \ \ \ \ \ \ \ \ setContentPane(contentPane);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00114}00114\ \ \ \ \ \ \ \ \ contentPane.setLayout(\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00115}00115\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00116}00116\ \ \ \ \ \ \ \ \ ImageIcon\ bg2\ =\ \textcolor{keyword}{new}\ ImageIcon(\textcolor{stringliteral}{"{}main/presentation/img/bg\_w.jpg"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00117}00117\ \ \ \ \ \ \ \ \ Image\ getBg2\ =\ bg2.getImage();}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00118}00118\ \ \ \ \ \ \ \ \ Image\ modBg2\ =\ getBg2.getScaledInstance(600,\ 600,\ java.awt.Image.SCALE\_SMOOTH);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00119}00119\ \ \ \ \ \ \ \ \ bg2\ =\ \textcolor{keyword}{new}\ ImageIcon(modBg2);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00120}00120\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00121}00121\ \ \ \ \ \ \ \ \ JLabel\ titleM1\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}M"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00122}00122\ \ \ \ \ \ \ \ \ titleM1.setForeground(\textcolor{keyword}{new}\ Color(255,\ 0,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00123}00123\ \ \ \ \ \ \ \ \ titleM1.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00124}00124\ \ \ \ \ \ \ \ \ titleM1.setBounds(38,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00125}00125\ \ \ \ \ \ \ \ \ contentPane.add(titleM1);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00126}00126\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00127}00127\ \ \ \ \ \ \ \ \ JLabel\ titleA\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}A"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00128}00128\ \ \ \ \ \ \ \ \ titleA.setForeground(\textcolor{keyword}{new}\ Color(0,\ 215,\ 11));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00129}00129\ \ \ \ \ \ \ \ \ titleA.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00130}00130\ \ \ \ \ \ \ \ \ titleA.setBounds(57,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00131}00131\ \ \ \ \ \ \ \ \ contentPane.add(titleA);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00132}00132\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00133}00133\ \ \ \ \ \ \ \ \ JLabel\ titleS\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}S"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00134}00134\ \ \ \ \ \ \ \ \ titleS.setForeground(\textcolor{keyword}{new}\ Color(0,\ 0,\ 255));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00135}00135\ \ \ \ \ \ \ \ \ titleS.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00136}00136\ \ \ \ \ \ \ \ \ titleS.setBounds(74,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00137}00137\ \ \ \ \ \ \ \ \ contentPane.add(titleS);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00138}00138\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00139}00139\ \ \ \ \ \ \ \ \ JLabel\ titleT\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}T"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00140}00140\ \ \ \ \ \ \ \ \ titleT.setForeground(\textcolor{keyword}{new}\ Color(255,\ 255,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00141}00141\ \ \ \ \ \ \ \ \ titleT.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00142}00142\ \ \ \ \ \ \ \ \ titleT.setBounds(91,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00143}00143\ \ \ \ \ \ \ \ \ contentPane.add(titleT);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00144}00144\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00145}00145\ \ \ \ \ \ \ \ \ JLabel\ titleE\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}E"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00146}00146\ \ \ \ \ \ \ \ \ titleE.setForeground(\textcolor{keyword}{new}\ Color(255,\ 255,\ 255));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00147}00147\ \ \ \ \ \ \ \ \ titleE.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00148}00148\ \ \ \ \ \ \ \ \ titleE.setBounds(110,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00149}00149\ \ \ \ \ \ \ \ \ contentPane.add(titleE);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00150}00150\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00151}00151\ \ \ \ \ \ \ \ \ JLabel\ titleR\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}R"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00152}00152\ \ \ \ \ \ \ \ \ titleR.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00153}00153\ \ \ \ \ \ \ \ \ titleR.setBounds(128,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00154}00154\ \ \ \ \ \ \ \ \ contentPane.add(titleR);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00155}00155\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00156}00156\ \ \ \ \ \ \ \ \ JLabel\ titleM2\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}M"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00157}00157\ \ \ \ \ \ \ \ \ titleM2.setForeground(\textcolor{keyword}{new}\ Color(255,\ 0,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00158}00158\ \ \ \ \ \ \ \ \ titleM2.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD\ |\ Font.ITALIC,\ 31));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00159}00159\ \ \ \ \ \ \ \ \ titleM2.setBounds(95,\ 51,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00160}00160\ \ \ \ \ \ \ \ \ contentPane.add(titleM2);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00161}00161\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00162}00162\ \ \ \ \ \ \ \ \ JLabel\ titleI\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}I"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00163}00163\ \ \ \ \ \ \ \ \ titleI.setForeground(\textcolor{keyword}{new}\ Color(0,\ 215,\ 11));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00164}00164\ \ \ \ \ \ \ \ \ titleI.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD\ |\ Font.ITALIC,\ 31));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00165}00165\ \ \ \ \ \ \ \ \ titleI.setBounds(117,\ 51,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00166}00166\ \ \ \ \ \ \ \ \ contentPane.add(titleI);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00167}00167\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00168}00168\ \ \ \ \ \ \ \ \ JLabel\ titleN\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}N"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00169}00169\ \ \ \ \ \ \ \ \ titleN.setForeground(\textcolor{keyword}{new}\ Color(0,\ 0,\ 255));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00170}00170\ \ \ \ \ \ \ \ \ titleN.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD\ |\ Font.ITALIC,\ 31));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00171}00171\ \ \ \ \ \ \ \ \ titleN.setBounds(137,\ 51,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00172}00172\ \ \ \ \ \ \ \ \ contentPane.add(titleN);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00173}00173\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00174}00174\ \ \ \ \ \ \ \ \ JLabel\ titleD\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}D"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00175}00175\ \ \ \ \ \ \ \ \ titleD.setForeground(\textcolor{keyword}{new}\ Color(255,\ 255,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00176}00176\ \ \ \ \ \ \ \ \ titleD.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD\ |\ Font.ITALIC,\ 31));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00177}00177\ \ \ \ \ \ \ \ \ titleD.setBounds(156,\ 51,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00178}00178\ \ \ \ \ \ \ \ \ contentPane.add(titleD);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00179}00179\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00180}00180\ \ \ \ \ \ \ \ \ missatge\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00181}00181\ \ \ \ \ \ \ \ \ missatge.setHorizontalAlignment(SwingConstants.CENTER);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00182}00182\ \ \ \ \ \ \ \ \ missatge.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Dialog"{}},\ Font.BOLD,\ 12));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00183}00183\ \ \ \ \ \ \ \ \ missatge.setForeground(Color.RED);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00184}00184\ \ \ \ \ \ \ \ \ missatge.setBounds(350,\ 445,\ 150,\ 19);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00185}00185\ \ \ \ \ \ \ \ \ contentPane.add(missatge);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00186}00186\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00187}00187\ \ \ \ \ \ \ \ \ JLabel\ lblSeleccio\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}Select\ a\ game\ to\ play:"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00188}00188\ \ \ \ \ \ \ \ \ lblSeleccio.setForeground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00189}00189\ \ \ \ \ \ \ \ \ lblSeleccio.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Tahoma"{}},\ Font.BOLD,\ 14));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00190}00190\ \ \ \ \ \ \ \ \ lblSeleccio.setBounds(41,\ 131,\ 460,\ 24);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00191}00191\ \ \ \ \ \ \ \ \ contentPane.add(lblSeleccio);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00193}00193\ \ \ \ \ \ \ \ \ JButton\ buttonReturn\ =\ \textcolor{keyword}{new}\ JButton(\textcolor{stringliteral}{"{}Return"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00194}00194\ \ \ \ \ \ \ \ \ buttonReturn.addActionListener(this::botoReturnActionPerformed);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00195}00195\ \ \ \ \ \ \ \ \ buttonReturn.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Tahoma"{}},\ Font.BOLD,\ 11));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00196}00196\ \ \ \ \ \ \ \ \ buttonReturn.setBackground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00197}00197\ \ \ \ \ \ \ \ \ buttonReturn.setBounds(37,\ 469,\ 117,\ 25);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00198}00198\ \ \ \ \ \ \ \ \ contentPane.add(buttonReturn);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00199}00199\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00200}00200\ \ \ \ \ \ \ \ \ buttonContinue\ =\ \textcolor{keyword}{new}\ JButton(\textcolor{stringliteral}{"{}Continue\ game"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00201}00201\ \ \ \ \ \ \ \ \ buttonContinue.addActionListener(this::botoContinueGameActionPerformed);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00202}00202\ \ \ \ \ \ \ \ \ buttonContinue.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Tahoma"{}},\ Font.BOLD,\ 11));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00203}00203\ \ \ \ \ \ \ \ \ buttonContinue.setBackground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00204}00204\ \ \ \ \ \ \ \ \ buttonContinue.setBounds(352,\ 469,\ 149,\ 25);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00205}00205\ \ \ \ \ \ \ \ \ contentPane.add(buttonContinue);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00206}00206\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00207}00207\ \ \ \ \ \ \ \ \ JPanel\ menuSelectGame\ =\ \textcolor{keyword}{new}\ JPanel();}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00208}00208\ \ \ \ \ \ \ \ \ menuSelectGame.setBorder(\textcolor{keyword}{new}\ BevelBorder(BevelBorder.LOWERED,\ \textcolor{keyword}{null},\ \textcolor{keyword}{null},\ \textcolor{keyword}{null},\ \textcolor{keyword}{null}));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00209}00209\ \ \ \ \ \ \ \ \ menuSelectGame.setBackground(\textcolor{keyword}{new}\ Color(0,\ 128,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00210}00210\ \ \ \ \ \ \ \ \ menuSelectGame.setBounds(37,\ 131,\ 464,\ 24);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00211}00211\ \ \ \ \ \ \ \ \ contentPane.add(menuSelectGame);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00212}00212\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00213}00213\ \ \ \ \ \ \ \ \ loadGames();}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00214}00214\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00215}00215\ \ \ \ \ \ \ \ \ list\ =\ \textcolor{keyword}{new}\ JList();}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00216}00216\ \ \ \ \ \ \ \ \ list.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Tahoma"{}},\ Font.BOLD,\ 12));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00217}00217\ \ \ \ \ \ \ \ \ list.setForeground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00218}00218\ \ \ \ \ \ \ \ \ list.setBackground(\textcolor{keyword}{new}\ Color(0,\ 128,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00219}00219\ \ \ \ \ \ \ \ \ list.setModel(\textcolor{keyword}{new}\ AbstractListModel()\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{final}\ String[]\ values\ =\ valors;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ getSize()\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ values.length;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Object\ getElementAt(\textcolor{keywordtype}{int}\ index)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ values[index];}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00227}00227\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00228}00228\ \ \ \ \ \ \ \ \ list.setBounds(37,\ 155,\ 463,\ 284);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00229}00229\ \ \ \ \ \ \ \ \ contentPane.add(list);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00230}00230\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00231}00231\ \ \ \ \ \ \ \ \ JLabel\ b2Img\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00232}00232\ \ \ \ \ \ \ \ \ b2Img.setBackground(\textcolor{keyword}{new}\ Color(164,\ 104,\ 23));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00233}00233\ \ \ \ \ \ \ \ \ b2Img.setIcon(bg2);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00234}00234\ \ \ \ \ \ \ \ \ b2Img.setBounds(0,\ 0,\ 600,\ 600);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00235}00235\ \ \ \ \ \ \ \ \ contentPane.add(b2Img);\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00236}00236\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00237}00237\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00238}00238\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00243}00243\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ botoReturnActionPerformed(java.awt.event.ActionEvent\ evt)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00244}00244\ \ \ \ \ \ \ \ \ parent.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00245}00245\ \ \ \ \ \ \ \ \ dispose();}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00246}00246\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00247}00247\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00248}00248\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00253}00253\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ botoContinueGameActionPerformed(java.awt.event.ActionEvent\ evt)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00254}00254\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(list.getSelectedIndex()\ !=\ -\/1)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00255}00255\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00256}00256\ \ \ \ \ \ \ \ \ \ \ \ \ VistaPlay\ vistaPlay\ =\ \textcolor{keyword}{new}\ VistaPlay(\textcolor{keyword}{this},\ cLoadGame,\ listGames.get(list.getSelectedIndex()).getIdPartida());}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00257}00257\ \ \ \ \ \ \ \ \ \ \ \ \ vistaPlay.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00258}00258\ \ \ \ \ \ \ \ \ \ \ \ \ this.setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00259}00259\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00260}00260\ \ \ \ \ \ \ \ \ \ \ \ \ missatge.setText(\textcolor{stringliteral}{"{}incorrect\ selection"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00261}00261\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00262}00262\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00263}00263\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00264}00264\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00267}00267\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ loadGames()\ \{\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00268}00268\ \ \ \ \ \ \ \ \ listGames\ =\ cLoadGame.\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_load_game_a7d70b67f00910250673e99a798677bb0}{getSavedGames}}();}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00269}00269\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00270}00270\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (listGames.size()\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00271}00271\ \ \ \ \ \ \ \ \ \ \ \ \ buttonContinue.setEnabled(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00272}00272\ \ \ \ \ \ \ \ \ \ \ \ \ JLabel\ noGames\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}No\ games\ saved"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ noGames.setBounds(44,\ 160,\ 150,\ 20);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00274}00274\ \ \ \ \ \ \ \ \ \ \ \ \ noGames.setForeground(\textcolor{keyword}{new}\ Color(255,\ 0,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00275}00275\ \ \ \ \ \ \ \ \ \ \ \ \ noGames.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Tahoma"{}},\ Font.BOLD,\ 14));}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ contentPane.add(noGames);}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00277}00277\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00278}00278\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00279}00279\ \ \ \ \ \ \ \ \ valors\ =\ \textcolor{keyword}{new}\ String[listGames.size()];}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00280}00280\ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00281}00281\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ listGames.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00282}00282\ \ \ \ \ \ \ \ \ \ \ \ \ Integer\ \textcolor{keywordtype}{id}\ =\ listGames.get(i).getIdPartida();}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00283}00283\ \ \ \ \ \ \ \ \ \ \ \ \ String\ rol\ =\ listGames.get(i).getRol();}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00284}00284\ \ \ \ \ \ \ \ \ \ \ \ \ Integer\ dif\ =\ listGames.get(i).getDificultat();}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00285}00285\ \ \ \ \ \ \ \ \ \ \ \ \ String\ dificultat\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00286}00286\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00287}00287\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dif.equals(DIFICULTY\_EASY))\ dificultat\ =\ \textcolor{stringliteral}{"{}Easy"{}};}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00288}00288\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (dif.equals(DIFICULTY\_MEDIUM))\ dificultat\ =\ \textcolor{stringliteral}{"{}Medium"{}};}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00289}00289\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (dif.equals(DIFICULTY\_HARD))\ dificultat\ =\ \textcolor{stringliteral}{"{}Hard"{}};}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00290}00290\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00291}00291\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ difAux\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00292}00292\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dif.equals(DIFICULTY\_EASY)\ ||\ dif.equals(DIFICULTY\_HARD))\ difAux\ =\ 4;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00293}00293\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00294}00294\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ aux\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00295}00295\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rol.equals(\textcolor{stringliteral}{"{}CodeBreaker"{}}))\ aux\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00296}00296\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00297}00297\ \ \ \ \ \ \ \ \ \ \ \ \ valors[i]\ =\ \textcolor{stringliteral}{"{}\ \ \ \ "{}}\ +\ \textcolor{keywordtype}{id}\ +\ \textcolor{stringliteral}{"{}\ "{}}.repeat(43-\/aux)\ +\ rol\ +\ \textcolor{stringliteral}{"{}\ "{}}.repeat(25+difAux)\ +\ dificultat;}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00298}00298\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00299}00299\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_load_game_8java_source_l00300}00300\ \}}
+
+\end{DoxyCode}

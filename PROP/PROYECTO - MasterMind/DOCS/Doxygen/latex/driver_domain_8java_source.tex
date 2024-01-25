@@ -1,0 +1,639 @@
+\doxysection{driver\+Domain.\+java}
+\hypertarget{driver_domain_8java_source}{}\label{driver_domain_8java_source}\index{main/domain/drivers/driverDomain.java@{main/domain/drivers/driverDomain.java}}
+\mbox{\hyperlink{driver_domain_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00001}\mbox{\hyperlink{namespacemain_1_1domain_1_1drivers}{00001}}\ \textcolor{keyword}{package\ }main.domain.drivers;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00003}00003\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1controllers}{controllers}}.*;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00004}00004\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes}{classes}}.*;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00005}00005\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes}{classes}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes_1_1_exceptions}{Exceptions}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_contrasenya_incorrecte}{ContrasenyaIncorrecte}};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00006}00006\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes}{classes}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes_1_1_exceptions}{Exceptions}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_dificultat_no_existeix}{DificultatNoExisteix}};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00007}00007\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes}{classes}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes_1_1_exceptions}{Exceptions}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_usuari_ja_existeix}{UsuariJaExisteix}};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00009}00009\ \textcolor{keyword}{import}\ java.io.FileNotFoundException;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00010}00010\ \textcolor{keyword}{import}\ java.util.*;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00011}00011\ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00012}\mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain}{00012}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain}{driverDomain}}\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ Scanner\ reader\ =\ \textcolor{keyword}{new}\ Scanner(System.in);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}\ CD;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00015}00015\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00016}\mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_a437e366b175a50420a3deda25928d15b}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_a437e366b175a50420a3deda25928d15b}{driverDomain}}()\{\}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00018}\mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_ad7c7c27b496aee0b857bac13964bdae5}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_ad7c7c27b496aee0b857bac13964bdae5}{main}}(String[]\ args)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00019}00019\ \ \ \ \ \ \ \ \ CD\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ usuariActual\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00022}00022\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Opciones:\ \(\backslash\)n\ 1.\ Crear\ Perfil\ \(\backslash\)n\ 2.\ Cargar\ Perfil\ \(\backslash\)n\ 3.\ Consultar\ Ranking\ \(\backslash\)n\ 4.\ Consultar\ Perfils\ \(\backslash\)n\ 5.\ Crear\ Partida\ \(\backslash\)n\ 6.\ Cargar\ Partida\ \(\backslash\)n\ 7.\ Consultar\ stats\ \(\backslash\)n\ 8.\ Tancar\ sessio\ \(\backslash\)n\ 9.\ Salir"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ value\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_a19bcce34b2a5ab022b1522cf618df1c7}{readOption}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (value\ !=\ 9)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (value)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:\ \textcolor{comment}{//Crear\ Perfil}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ String\ usuari1\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ String\ pswd1\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Introdueix\ nom\ usuari:\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(usuari1.equals(\textcolor{stringliteral}{"{}"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ usuari1\ =\ reader.nextLine();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Introdueix\ nom\ password:\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(pswd1.equals(\textcolor{stringliteral}{"{}"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pswd1\ =\ reader.nextLine();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a1d5dd1e064ef38713779d4a6a18105fe}{registrarUsuari}}(usuari1,\ pswd1);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Usuari\ registrat:\ "{}}\ +\ usuari1);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a10a7419fa8af037be59c8bcec68f9376}{carregarUsuari}}(usuari1,\ pswd1);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Benvingut,\ "{}}\ +\ usuari1\ +\ \textcolor{stringliteral}{"{}!"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (FileNotFoundException\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Usuari\ no\ existeix\ al\ sistema"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_contrasenya_incorrecte}{ContrasenyaIncorrecte}}\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Contrasenya\ incorrecte"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ usuariActual\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_usuari_ja_existeix}{UsuariJaExisteix}}\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Usuari\ ja\ existeix\ al\ sistema"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_contrasenya_incorrecte}{ContrasenyaIncorrecte}}\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Contrasenya\ incorrecte"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:\ \textcolor{comment}{//Cargar\ Perfil}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ String\ usuari2\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ String\ pswd2\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (usuariActual)\ System.out.println(\textcolor{stringliteral}{"{}Tanca\ la\ sessio\ actual."{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Introdueix\ nom\ usuari:\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(usuari2.equals(\textcolor{stringliteral}{"{}"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ usuari2\ =\ reader.nextLine();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Introdueix\ nom\ password:\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(pswd2.equals(\textcolor{stringliteral}{"{}"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pswd2\ =\ reader.nextLine();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a10a7419fa8af037be59c8bcec68f9376}{carregarUsuari}}(usuari2,\ pswd2);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ usuariActual\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Benvingut,\ "{}}\ +\ usuari2\ +\ \textcolor{stringliteral}{"{}!"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (FileNotFoundException\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Usuari\ no\ existeix\ al\ sistema"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_contrasenya_incorrecte}{ContrasenyaIncorrecte}}\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Contrasenya\ incorrecte"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:\ \textcolor{comment}{//Consultar\ Ranking}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a7e57e450851271b3055efd526e748808}{actualitzaRanking}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Introdueix\ ranking\ a\ consultar:\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}1.\ CodeMaker\ 2.\ CodeBreaker"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rol\ =\ reader.nextInt();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rol\ !=\ 1\ \&\&\ rol\ !=\ 2)\ System.out.println(\textcolor{stringliteral}{"{}Rol\ inexistent"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}N.\ Usuari\ Puntuacio"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rol\ ==\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ String[][]\ Ranquing\ =\ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa05f87b34d4690d62f262ec4ff273066}{consultarRanking}}(\textcolor{stringliteral}{"{}CodeMaker"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\ String[]\ rows\ :\ Ranquing)\ \{\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(rows[0]\ +\ \textcolor{stringliteral}{"{}\ \ "{}}\ \ +\ rows[1]\ +\ \textcolor{stringliteral}{"{}\ \ \ "{}}\ +\ rows[2]);\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ String[][]\ Ranquing\ =\ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa05f87b34d4690d62f262ec4ff273066}{consultarRanking}}(\textcolor{stringliteral}{"{}CodeBreaker"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\ String[]\ rows\ :\ Ranquing)\ \{\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(rows[0]\ +\ \textcolor{stringliteral}{"{}\ \ "{}}\ \ +\ rows[1]\ +\ \textcolor{stringliteral}{"{}\ \ \ "{}}\ +\ rows[2]);\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:\ \textcolor{comment}{//Consultar\ Perfils}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ArrayList<Usuari>\ llistaUsuaris\ =\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_af6c84078dc278875d24c37731a77643f}{getLlistaUsuaris}}();\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (llistaUsuaris.size()\ ==\ 0)\ System.out.println(\textcolor{stringliteral}{"{}Cap\ usuari\ registrat."{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Usuaris:"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari}{Usuari}}\ usuaris\ :\ llistaUsuaris)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ String\ nom\ =\ usuaris.getNom();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/\ "{}}\ +\ nom);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:\ \textcolor{comment}{//Crear\ Partida}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(usuariActual)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dif\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (dif\ !=\ 1\ \&\&\ dif\ !=\ 2\ \&\&\ dif\ !=\ 3)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Introdueix\ dificultat:\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}1.\ Facil:\ Tauler\ 4\ espais"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}2.\ Mig:\ Tauler\ 5\ espais"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}3.\ Dificil:\ Tauler\ 6\ espais"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dif\ =\ reader.nextInt();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rolUsuari\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (rolUsuari\ !=\ 1\ \&\&\ rolUsuari\ !=\ 2)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Introdueix\ rol:\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}1.\ CodeMaker\ 2.\ CodeBreaker"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rolUsuari\ =\ reader.nextInt();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ algorisme\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (algorisme\ !=\ 1\ \&\&\ algorisme\ !=\ 2)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Introdueix\ algorisme\ a\ utilitzar:\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}1.\ FiveGuess\ 2.\ Genetic"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ algorisme\ =\ reader.nextInt();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rolUsuari\ ==\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5f334a106ee1bbb235ae416a5c510349}{creaNovaPartida}}(dif,\ \textcolor{stringliteral}{"{}CodeMaker"{}},\ algorisme);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_dificultat_no_existeix}{DificultatNoExisteix}}\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Dificultat\ introduida\ no\ existeix"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_a1beac1591c408ba225727132131eb13e}{jugarPartida}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5f334a106ee1bbb235ae416a5c510349}{creaNovaPartida}}(dif,\ \textcolor{stringliteral}{"{}CodeBreaker"{}},\ algorisme);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_dificultat_no_existeix}{DificultatNoExisteix}}\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Dificultat\ introduida\ no\ existeix"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_a1beac1591c408ba225727132131eb13e}{jugarPartida}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Sessio\ no\ iniciada."{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00172}00172\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00174}00174\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 6:\ \textcolor{comment}{//Cargar\ partida\ }}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(usuariActual)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ List<Partida>\ LlistaPartides\ =\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a1159bddb9f55491bc85757505ccb9cdc}{getPartidesGuardades}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (LlistaPartides.size()\ ==\ 0)\ System.out.println(\textcolor{stringliteral}{"{}No\ hi\ ha\ partides\ guardades."{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Selecciona\ el\ num\ de\ la\ partida:\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00181}00181\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}\ P\ :\ LlistaPartides)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/\ "{}}\ +\ P.getIdPartida());}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ reader.nextInt();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{id}\ >=\ LlistaPartides.size()\ ||\ \textcolor{keywordtype}{id}\ <\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}La\ partida\ no\ existeix"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a34b846f4abcfdca237b2cfda7202fc39}{continuaPartida}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_af5bc505094f493ad1efff6d54ee0043f}{continuarPartida}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Sessio\ no\ iniciada."{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00197}00197\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 7:\ \textcolor{comment}{//Consultar\ stats}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(usuariActual)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Puntuacio\ com\ a\ CodeMaker:\ "{}}\ +\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_afdd0de1c45d5c6591f5f1b2f6f4f7f2f}{getPuntuacioCM}}());}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Puntuacio\ com\ a\ CodeBreaker:\ "{}}\ +\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac866574e73120444fa220d9737250ca5}{getPuntuacioCB}}());}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Total\ partides\ acabades:\ "{}}\ +\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ab5c3ed3766951b271bb0955a8860b604}{getPartidesAcabades}}());}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Total\ partides\ iniciades:\ "{}}\ +\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a4d762795c93104d30136edf8fdd7e55f}{getPartidesIniciades}}());}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Total\ ajudes\ demanades:\ "{}}\ +\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ae0cb6170df8b0c97e60a76f6ece0e08c}{getAjuts}}());}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Sessio\ no\ iniciada."{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 8:\ \textcolor{comment}{//Tancar\ sessio}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(usuariActual)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ usuariActual\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5866cb26750958e2a9814c831d326c74}{tancarSesioUsuari}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Sessio\ tancada."{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Sessio\ no\ iniciada."{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Opcio\ incorrecte."{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Opciones:\ \(\backslash\)n\ 1.\ Crear\ Perfil\ \(\backslash\)n\ 2.\ Cargar\ Perfil\ \(\backslash\)n\ 3.\ Consultar\ Ranking\ \(\backslash\)n\ 4.\ Consultar\ Perfils\ \(\backslash\)n\ 5.\ Crear\ Partida\ \(\backslash\)n\ 6.\ Cargar\ Partida\ \(\backslash\)n\ 7.\ Consultar\ stats\ \(\backslash\)n\ 8.\ Tancar\ sessio\ \(\backslash\)n\ 9.\ Sortir"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ value\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_a19bcce34b2a5ab022b1522cf618df1c7}{readOption}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00230}00230\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00231}00231\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Aplicacio\ tancada."{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00232}00232\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00233}00233\ \ \ \ \ \ \ \ \ System.exit(0);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00234}00234\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00235}00235\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00236}\mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_a19bcce34b2a5ab022b1522cf618df1c7}{00236}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Integer\ \mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_a19bcce34b2a5ab022b1522cf618df1c7}{readOption}}()\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00237}00237\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ n;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00238}00238\ \ \ \ \ \ \ \ \ n\ =\ reader.nextInt();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00239}00239\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ n;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00240}00240\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00241}00241\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00242}\mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_a1beac1591c408ba225727132131eb13e}{00242}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_a1beac1591c408ba225727132131eb13e}{jugarPartida}}()\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00243}00243\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}\ partidaActual\ =\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a3c676be15eafb8a739025afabf792b11}{getPartidaActual}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00244}00244\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00245}00245\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rondes\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00246}00246\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ resolt\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00247}00247\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00248}00248\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(partidaActual.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7e91faf02c258058a34456c8c09cd7ba}{getRol}}().equals(\textcolor{stringliteral}{"{}CodeMaker"{}}))\ \{\ \textcolor{comment}{//\ usuari\ com\ a\ codeMaker}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ Integer\ dif\ =\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a471884ad384a03df6ea0b063ee86c0c9}{getDificultatPartida}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00250}00250\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}0.\ Vermell\ |\ 2.\ Blau\ |\ 4.\ Negre"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00252}00252\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}1.\ Verd\ \ \ \ |\ 3.\ Groc\ |\ 5.\ Blanc"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00253}00253\ \ \ \ \ \ \ \ \ \ \ \ \ List<Integer>\ codi\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00254}00254\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00255}00255\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ seqvalida\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00256}00256\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!seqvalida)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00257}00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ codi\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00258}00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dif\ ==\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00259}00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}(Exemple:\ 1\ 1\ 2\ 5)"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00260}00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Introdeix\ codi\ de\ 4\ colors\ a\ resoldre:\ "{}});\ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00261}00261\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00262}00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 4;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00263}00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Integer\ color\ =\ reader.nextInt();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00264}00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ codi.add(color);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00265}00265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00266}00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(dif\ ==\ 2)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00267}00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}(Exemple:\ 4\ 1\ 1\ 2\ 5)"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00268}00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Introdeix\ codi\ de\ 5\ colors\ a\ resoldre:\ "{}});\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00269}00269\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00270}00270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 5;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00271}00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Integer\ color\ =\ reader.nextInt();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00272}00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ codi.add(color);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00274}00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00275}00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}(Exemple:\ 0\ 4\ 3\ 1\ 1\ 5)"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Introdeix\ codi\ de\ 6\ colors\ a\ resoldre:\ "{}});\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00277}00277\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 6;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00279}00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Integer\ color\ =\ reader.nextInt();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00280}00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ codi.add(color);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00281}00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00282}00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00283}00283\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00284}00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ seqvalida\ =\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a32b5c47d5fc7c1375e783a3d851d5f57}{checkValida}}(codi);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00285}00285\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00286}00286\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00287}00287\ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_add00241b2b1dd42fda9572a5bfc8f8a2}{asignaCodiCodeMaker}}(codi);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00288}00288\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00289}00289\ \ \ \ \ \ \ \ \ \ \ \ \ List<List<Integer>>\ como\ =\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a6e2df77608520f2ecea2982e6c185b35}{SequenciaMaq}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00290}00290\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00291}00291\ \ \ \ \ \ \ \ \ \ \ \ \ List<String>\ Pegs\ =\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa111a24442b876deb6f3c7f976c2c7d5}{getPegsMaq}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00292}00292\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00293}00293\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}'B'\ color\ en\ posicio\ correcte"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00294}00294\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}'W'\ existeix\ color\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00295}00295\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}'\_'\ no\ existeix\ color"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00296}00296\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dif\ ==\ 1)\ System.out.println(\textcolor{stringliteral}{"{}(Exemple:\ BBW\_)"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00297}00297\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(dif\ ==\ 2)\ System.out.println(\textcolor{stringliteral}{"{}(Exemple:\ BWW\_\_)"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00298}00298\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ System.out.println(\textcolor{stringliteral}{"{}(Exemple:\ WW\_\_\_\_)"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00299}00299\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00300}00300\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00301}00301\ \ \ \ \ \ \ \ \ \ \ \ \ List<Integer>\ coAux;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00302}00302\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00303}00303\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ acab\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00304}00304\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00305}00305\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(rondes\ <\ 10)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00306}00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_abc343088da05f80bf6796b429d9a53ea}{setRondaPartida}}(rondes);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00307}00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00308}00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ coAux\ =\ como.get(rondes);\ \textcolor{comment}{//\ <-\/\ java.lang}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00309}00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a988cb1c49546b8044ff4e29d8a8d15bf}{taulerSetCodiActual}}(coAux);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00310}00310\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_a6df716b278bdb6ee3180b9e91a96c53f}{mostrarCodi}}(coAux);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00311}00311\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00312}00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ String\ correccio\ =\ Pegs.get(rondes);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00313}00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_abbdd1b3d27e11ca32ae4ec2b92b3fa83}{correccioUsuari}}(correccio);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00314}00314\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00315}00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dif\ ==\ 1\ \&\&\ correccio.equals(\textcolor{stringliteral}{"{}BBBB"{}}))\ resolt\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00316}00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(dif\ ==\ 2\ \&\&\ correccio.equals(\textcolor{stringliteral}{"{}BBBBB"{}}))\ resolt\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00317}00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(dif\ ==\ 3\ \&\&\ correccio.equals(\textcolor{stringliteral}{"{}BBBBBB"{}}))\ resolt\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00318}00318\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00319}00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(resolt)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00320}00320\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a6bab069915056ee27a21f62c3d7addc0}{acabarPartida}}(partidaActual.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7e91faf02c258058a34456c8c09cd7ba}{getRol}}());}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00321}00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ acab\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00322}00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00323}00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00324}00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00325}00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rondes\ <\ 9)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00326}00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Vols\ guardar\ la\ partida?\ 1.\ Si\ \ 2.\ No\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00327}00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ guardar\ =\ reader.nextInt();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00328}00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(guardar\ ==\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00329}00329\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++rondes;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00330}00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ad53d7aa267aea2b944972a7bfd8980b6}{guardarPartida}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00331}00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ acab\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00332}00332\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Partida\ guardada."{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00333}00333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00334}00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00335}00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00336}00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00337}00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++rondes;\ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00338}00338\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00339}00339\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!acab)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00340}00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a6bab069915056ee27a21f62c3d7addc0}{acabarPartida}}(partidaActual.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7e91faf02c258058a34456c8c09cd7ba}{getRol}}());}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00341}00341\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00342}00342\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00343}00343\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (partidaActual.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7e91faf02c258058a34456c8c09cd7ba}{getRol}}().equals(\textcolor{stringliteral}{"{}CodeBreaker"{}}))\ \{\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00344}00344\ \ \ \ \ \ \ \ \ \ \ \ \ List<String>\ Pegs\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00345}00345\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00346}00346\ \ \ \ \ \ \ \ \ \ \ \ \ Integer\ diff\ =\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a471884ad384a03df6ea0b063ee86c0c9}{getDificultatPartida}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00347}00347\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nBoles;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00348}00348\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(diff\ ==\ 1)\ nBoles\ =\ 4;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00349}00349\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(diff\ ==\ 2)\ nBoles\ =\ 5;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00350}00350\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ nBoles\ =\ 6;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00351}00351\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00352}00352\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(diff\ ==\ 1)\ System.out.println(\textcolor{stringliteral}{"{}(Exemple:\ 1\ 1\ 2\ 5)"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00353}00353\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(diff\ ==\ 2)\ System.out.println(\textcolor{stringliteral}{"{}(Exemple:\ 4\ 1\ 1\ 2\ 5)"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00354}00354\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ System.out.println(\textcolor{stringliteral}{"{}(Exemple:\ 0\ 4\ 3\ 1\ 1\ 5)"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00355}00355\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00356}00356\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ acab\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00357}00357\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00358}00358\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(rondes\ <\ 10)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00359}00359\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_abc343088da05f80bf6796b429d9a53ea}{setRondaPartida}}(rondes);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00360}00360\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00361}00361\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}0.\ Vermell\ |\ 2.\ Blau\ |\ 4.\ Negre"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00362}00362\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}1.\ Verd\ \ \ \ |\ 3.\ Groc\ |\ 5.\ Blanc"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00363}00363\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rondes\ ==\ 0)\ System.out.println(\textcolor{stringliteral}{"{}Help:\ L'ajuda\ proporciona\ un\ numero\ del\ codi\ a\ resoldre."{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00364}00364\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00365}00365\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Vols\ una\ ajuda?\ 1.\ Si\ \ 2.\ No\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00366}00366\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ajuda\ =\ reader.nextInt();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00367}00367\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(ajuda\ ==\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00368}00368\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a78f51c8ab6ff2d1e83ad20d16e18e1c4}{ajutUsuari}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00369}00369\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00370}00370\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00371}00371\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ List<Integer>\ codi\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00372}00372\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00373}00373\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ seqvalida2\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00374}00374\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(!seqvalida2)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00375}00375\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ codi\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00376}00376\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Introdueix\ codi:\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00377}00377\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ nBoles;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00378}00378\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Integer\ color\ =\ reader.nextInt();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00379}00379\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ codi.add(color);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00380}00380\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00381}00381\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ seqvalida2\ =\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a32b5c47d5fc7c1375e783a3d851d5f57}{checkValida}}(codi);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00382}00382\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00383}00383\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a988cb1c49546b8044ff4e29d8a8d15bf}{taulerSetCodiActual}}(codi);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00384}00384\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00385}00385\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ String\ Peg\ =\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5fee5aee1eb31c8f9343f523fc09287f}{checkCode}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00386}00386\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Pegs.add(Peg);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00387}00387\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00388}00388\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Tauler:\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00389}00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ List<List<Integer>>\ board\ =\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ae4bfcda19cddecb20a223d0dfb958a95}{getBoardPartida}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00390}00390\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ board.size();\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00391}00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.print(i\ +\ \textcolor{stringliteral}{"{}.\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00392}00392\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ board.get(i).size();\ ++j)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00393}00393\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.print(board.get(i).get(j));}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00394}00394\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00395}00395\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\ "{}}\ +\ Pegs.get(i));}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00396}00396\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00397}00397\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00398}00398\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00399}00399\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(diff\ ==\ 1\ \&\&\ Peg.equals(\textcolor{stringliteral}{"{}BBBB"{}}))\ resolt\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00400}00400\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(diff\ ==\ 2\ \&\&\ Peg.equals(\textcolor{stringliteral}{"{}BBBBB"{}}))\ resolt\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00401}00401\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(diff\ ==\ 3\ \&\&\ Peg.equals(\textcolor{stringliteral}{"{}BBBBBB"{}}))\ resolt\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00402}00402\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00403}00403\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(resolt)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00404}00404\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ acab\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00405}00405\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a6bab069915056ee27a21f62c3d7addc0}{acabarPartida}}(partidaActual.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7e91faf02c258058a34456c8c09cd7ba}{getRol}}());}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00406}00406\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00407}00407\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00408}00408\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00409}00409\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rondes\ <\ 9)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00410}00410\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Vols\ guardar\ la\ partida?\ 1.\ Si\ \ 2.\ No\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00411}00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ guardar\ =\ reader.nextInt();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00412}00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(guardar\ ==\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00413}00413\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++rondes;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00414}00414\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ acab\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00415}00415\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ad53d7aa267aea2b944972a7bfd8980b6}{guardarPartida}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00416}00416\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00417}00417\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00418}00418\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00419}00419\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00420}00420\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++rondes;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00421}00421\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00422}00422\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!acab)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00423}00423\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Has\ perdut..."{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00424}00424\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Puntuacio:\ 0"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00425}00425\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00426}00426\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00427}00427\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00428}00428\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00429}\mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_af5bc505094f493ad1efff6d54ee0043f}{00429}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_af5bc505094f493ad1efff6d54ee0043f}{continuarPartida}}()\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00430}00430\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}\ partidaActual\ =\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a3c676be15eafb8a739025afabf792b11}{getPartidaActual}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00431}00431\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00432}00432\ \ \ \ \ \ \ \ \ Integer\ round;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00433}00433\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ resolt\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00434}00434\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00435}00435\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(partidaActual.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7e91faf02c258058a34456c8c09cd7ba}{getRol}}().equals(\textcolor{stringliteral}{"{}CodeMaker"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00436}00436\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.print(\textcolor{stringliteral}{"{}El\ teu\ codi\ era:\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00437}00437\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_a6df716b278bdb6ee3180b9e91a96c53f}{mostrarCodi}}(CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a29c0b7c7f933350a1122264543797279}{getCodiResoldre}}());}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00438}00438\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00439}00439\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00440}00440\ \ \ \ \ \ \ \ \ \ \ \ \ Integer\ dif\ =\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a471884ad384a03df6ea0b063ee86c0c9}{getDificultatPartida}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00441}00441\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_jugador_i_a}{JugadorIA}}\ playerIA\ =\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a07525180a4f4e1f591120261ba24d5a2}{getJugadorIA}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00442}00442\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00443}00443\ \ \ \ \ \ \ \ \ \ \ \ \ List<List<Integer>>\ como2\ =\ playerIA.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_jugador_i_a_a6a8cf3af9e70c9121266b9f1cb821e3a}{getCodsMaq}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00444}00444\ \ \ \ \ \ \ \ \ \ \ \ \ List<String>\ pegAux\ =\ playerIA.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_jugador_i_a_a97b34a24e237d737b49a8d7c63d0a725}{getPegsMaq}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00445}00445\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00446}00446\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}'B'\ color\ en\ posicio\ correcte"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00447}00447\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}'W'\ existeix\ color\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00448}00448\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}'\_'\ no\ existeix\ color"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00449}00449\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dif\ ==\ 1)\ System.out.println(\textcolor{stringliteral}{"{}(Exemple:\ BBW\_)"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00450}00450\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(dif\ ==\ 2)\ System.out.println(\textcolor{stringliteral}{"{}(Exemple:\ BWW\_\_)"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00451}00451\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ System.out.println(\textcolor{stringliteral}{"{}(Exemple:\ WW\_\_\_\_)"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00452}00452\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00453}00453\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00454}00454\ \ \ \ \ \ \ \ \ \ \ \ \ List<Integer>\ coAux2;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00455}00455\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00456}00456\ \ \ \ \ \ \ \ \ \ \ \ \ round\ =\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aaa0becaaa42b12b9e28c6dd0fe9feb39}{getRondaPartida}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00457}00457\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00458}00458\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Codis\ utilitzats:"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00459}00459\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ round+1;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00460}00460\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ como2.get(i).size();\ ++j)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00461}00461\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.print(como2.get(i).get(j)\ +\ \textcolor{stringliteral}{"{}\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00462}00462\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00463}00463\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00464}00464\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00465}00465\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00466}00466\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00467}00467\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00468}00468\ \ \ \ \ \ \ \ \ \ \ \ \ ++round;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00469}00469\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00470}00470\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ acab\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00471}00471\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00472}00472\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(round\ <\ 10)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00473}00473\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_abc343088da05f80bf6796b429d9a53ea}{setRondaPartida}}(round);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00474}00474\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00475}00475\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ coAux2\ =\ como2.get(round);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00476}00476\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a988cb1c49546b8044ff4e29d8a8d15bf}{taulerSetCodiActual}}(coAux2);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00477}00477\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_a6df716b278bdb6ee3180b9e91a96c53f}{mostrarCodi}}(coAux2);\ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00478}00478\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00479}00479\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ String\ correccio\ =\ pegAux.get(round);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00480}00480\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_abbdd1b3d27e11ca32ae4ec2b92b3fa83}{correccioUsuari}}(correccio);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00481}00481\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00482}00482\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dif\ ==\ 1\ \&\&\ correccio.equals(\textcolor{stringliteral}{"{}BBBB"{}}))\ resolt\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00483}00483\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(dif\ ==\ 2\ \&\&\ correccio.equals(\textcolor{stringliteral}{"{}BBBBB"{}}))\ resolt\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00484}00484\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(dif\ ==\ 3\ \&\&\ correccio.equals(\textcolor{stringliteral}{"{}BBBBBB"{}}))\ resolt\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00485}00485\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00486}00486\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(resolt)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00487}00487\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ acab\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00488}00488\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a6bab069915056ee27a21f62c3d7addc0}{acabarPartida}}(partidaActual.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7e91faf02c258058a34456c8c09cd7ba}{getRol}}());}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00489}00489\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00490}00490\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00491}00491\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00492}00492\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (round\ <\ 9)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00493}00493\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Vols\ guardar\ la\ partida?\ 1.\ Si\ \ 2.\ No\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00494}00494\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ guardar\ =\ reader.nextInt();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00495}00495\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(guardar\ ==\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00496}00496\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++round;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00497}00497\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ acab\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00498}00498\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ad53d7aa267aea2b944972a7bfd8980b6}{guardarPartida}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00499}00499\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00500}00500\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00501}00501\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00502}00502\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00503}00503\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++round;\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00504}00504\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00505}00505\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!acab)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00506}00506\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a6bab069915056ee27a21f62c3d7addc0}{acabarPartida}}(partidaActual.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7e91faf02c258058a34456c8c09cd7ba}{getRol}}());}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00507}00507\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00508}00508\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00509}00509\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00510}00510\ \ \ \ \ \ \ \ \ \ \ \ \ Integer\ diff\ =\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a471884ad384a03df6ea0b063ee86c0c9}{getDificultatPartida}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00511}00511\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nBoles;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00512}00512\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(diff\ ==\ 1)\ nBoles\ =\ 4;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00513}00513\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(diff\ ==\ 2)\ nBoles\ =\ 5;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00514}00514\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ nBoles\ =\ 6;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00515}00515\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00516}00516\ \ \ \ \ \ \ \ \ \ \ \ \ List<String>\ pegs2\ =\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aed337a0f44c88f4a0855ebb504469e4c}{getPegsPartida}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00517}00517\ \ \ \ \ \ \ \ \ \ \ \ \ List<List<Integer>>\ boardAct\ =\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ae4bfcda19cddecb20a223d0dfb958a95}{getBoardPartida}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00518}00518\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00519}00519\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ boardAct.size();\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00520}00520\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ boardAct.get(i).size();\ ++j)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00521}00521\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.print(boardAct.get(i).get(j));}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00522}00522\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00523}00523\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\ "{}}\ +\ pegs2.get(i));}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00524}00524\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00525}00525\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00526}00526\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00527}00527\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Tauler:\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00528}00528\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ boardAct.size();\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00529}00529\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.print(i\ +\ \textcolor{stringliteral}{"{}.\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00530}00530\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ boardAct.get(i).size();\ ++j)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00531}00531\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.print(boardAct.get(i).get(j));}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00532}00532\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00533}00533\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\ "{}}\ +\ pegs2.get(i));}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00534}00534\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00535}00535\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00536}00536\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00537}00537\ \ \ \ \ \ \ \ \ \ \ \ \ round\ =\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aaa0becaaa42b12b9e28c6dd0fe9feb39}{getRondaPartida}}()+1;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00538}00538\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00539}00539\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ acab\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00540}00540\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00541}00541\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(round\ <\ 10)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00542}00542\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_abc343088da05f80bf6796b429d9a53ea}{setRondaPartida}}(round);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00543}00543\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00544}00544\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}0.\ Vermell\ |\ 2.\ Blau\ |\ 4.\ Negre"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00545}00545\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}1.\ Verd\ \ \ \ |\ 3.\ Groc\ |\ 5.\ Blanc"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00546}00546\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (round\ ==\ 0)\ System.out.println(\textcolor{stringliteral}{"{}Help:\ L'ajuda\ proporciona\ un\ numero\ del\ codi\ a\ resoldre."{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00547}00547\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ List<Integer>\ codi\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00548}00548\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00549}00549\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Vols\ una\ ajuda?\ 1.\ Si\ \ 2.\ No\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00550}00550\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ajuda\ =\ reader.nextInt();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00551}00551\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(ajuda\ ==\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00552}00552\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a78f51c8ab6ff2d1e83ad20d16e18e1c4}{ajutUsuari}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00553}00553\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00554}00554\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00555}00555\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ seqvalida3\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00556}00556\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(!seqvalida3)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00557}00557\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ codi\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00558}00558\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Introdueix\ codi:\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00559}00559\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ nBoles;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00560}00560\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Integer\ color\ =\ reader.nextInt();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00561}00561\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ codi.add(color);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00562}00562\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00563}00563\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ seqvalida3\ =\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a32b5c47d5fc7c1375e783a3d851d5f57}{checkValida}}(codi);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00564}00564\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00565}00565\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00566}00566\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a988cb1c49546b8044ff4e29d8a8d15bf}{taulerSetCodiActual}}(codi);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00567}00567\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00568}00568\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ String\ peg2\ =\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5fee5aee1eb31c8f9343f523fc09287f}{checkCode}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00569}00569\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pegs2.add(peg2);}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00570}00570\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00571}00571\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ List<List<Integer>>\ board\ =\ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ae4bfcda19cddecb20a223d0dfb958a95}{getBoardPartida}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00572}00572\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Tauler:\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00573}00573\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ board.size();\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00574}00574\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.print(i\ +\ \textcolor{stringliteral}{"{}.\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00575}00575\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ board.get(i).size();\ ++j)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00576}00576\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.print(board.get(i).get(j));}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00577}00577\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00578}00578\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\ "{}}\ +\ pegs2.get(i));}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00579}00579\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00580}00580\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00581}00581\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00582}00582\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(diff\ ==\ 1\ \&\&\ peg2.equals(\textcolor{stringliteral}{"{}BBBB"{}}))\ resolt\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00583}00583\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(diff\ ==\ 2\ \&\&\ peg2.equals(\textcolor{stringliteral}{"{}BBBBB"{}}))\ resolt\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00584}00584\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(diff\ ==\ 3\ \&\&\ peg2.equals(\textcolor{stringliteral}{"{}BBBBBB"{}}))\ resolt\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00585}00585\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00586}00586\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(resolt)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00587}00587\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ acab\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00588}00588\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a6bab069915056ee27a21f62c3d7addc0}{acabarPartida}}(partidaActual.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7e91faf02c258058a34456c8c09cd7ba}{getRol}}());}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00589}00589\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00590}00590\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00591}00591\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00592}00592\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (round\ <\ 9)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00593}00593\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Vols\ guardar\ la\ partida?\ 1.\ Si\ \ 2.\ No\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00594}00594\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ guardar\ =\ reader.nextInt();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00595}00595\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(guardar\ ==\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00596}00596\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++round;}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00597}00597\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ acab\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00598}00598\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CD.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ad53d7aa267aea2b944972a7bfd8980b6}{guardarPartida}}();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00599}00599\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00600}00600\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00601}00601\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00602}00602\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00603}00603\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++round;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00604}00604\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00605}00605\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!acab)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00606}00606\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Has\ perdut..."{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00607}00607\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Puntuacio:\ 0"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00608}00608\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00609}00609\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00610}00610\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00611}00611\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00612}\mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_a6df716b278bdb6ee3180b9e91a96c53f}{00612}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_a6df716b278bdb6ee3180b9e91a96c53f}{mostrarCodi}}(List<Integer>\ codiActual)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00613}00613\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (Integer\ integer\ :\ codiActual)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00614}00614\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.print(integer\ +\ \textcolor{stringliteral}{"{}\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00615}00615\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00616}00616\ \ \ \ \ \ \ \ \ System.out.println();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00617}00617\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00618}00618\ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00619}\mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_abbdd1b3d27e11ca32ae4ec2b92b3fa83}{00619}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1drivers_1_1driver_domain_abbdd1b3d27e11ca32ae4ec2b92b3fa83}{correccioUsuari}}(String\ correccio)\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00620}00620\ \ \ \ \ \ \ \ \ String\ correccioUs\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00621}00621\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Introdueix\ correcio:\ "{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00622}00622\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(correccioUs.equals(\textcolor{stringliteral}{"{}"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00623}00623\ \ \ \ \ \ \ \ \ \ \ \ \ correccioUs\ =\ reader.nextLine();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00624}00624\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00625}00625\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00626}00626\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(!correccioUs.equals(correccio))\ \{}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00627}00627\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(correccioUs\ +\ \textcolor{stringliteral}{"{}\ (Pegs\ correctes:\ '"{}}\ +\ correccio\ +\ \textcolor{stringliteral}{"{}')"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00628}00628\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Correccio\ incorrecte,\ introdueix\ correcio:"{}});}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00629}00629\ \ \ \ \ \ \ \ \ \ \ \ \ correccioUs\ =\ reader.nextLine();}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00630}00630\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00631}00631\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Correccio\ correcte"{}});\ \ }
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00632}00632\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{driver_domain_8java_source_l00633}00633\ \}}
+
+\end{DoxyCode}

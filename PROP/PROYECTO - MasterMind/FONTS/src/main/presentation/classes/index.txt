@@ -1,0 +1,35 @@
+# Directori classes
+
+> Path absolut: /FONTS/src/main/presentation/classes
+
+## Descripció del directori
+En aquest directori es troben totes les vistes del nostre programa.
+
+## Elements del directori
+
+- **Arxiu RoundButton:**
+Classe que implementa els botons rodons
+
+- **Arxiu VistaCrearPartida:**
+Vista que implementa la creació d'una partida
+
+- **Arxiu VistaLoadGame:**
+Vista que implementa la carrega d'una partida
+
+- **Arxiu VistaLogin:**
+Vista que implementa el login d'usuari
+
+- **Arxiu VistaMainMenu:**
+Vista que implementa el main menu 
+
+- **Arxiu VistaPlay:**
+Vista que implementa la partida del joc
+
+- **Arxiu VistaRanking:**
+Vista que implementa la presentació del ranking
+
+- **Arxiu VistaSignUp:**
+Vista que implementa el sign up d'usuari
+
+- **Arxiu VistaStats:**
+Vista que implementa la presentació dels stats

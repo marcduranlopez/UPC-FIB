@@ -1,0 +1,14 @@
+# Directori Doxygen
+
+> Path absolut: /DOCS/Doxygen
+
+## Descripció del directori
+Aquest directori conté els directoris de html i latex
+
+## Elements del directori
+
+- **Directori html:**
+Conté els arxius que implementen el doxygen
+
+- **Directori latex:**
+Conté els arxius latex del doxygen

@@ -1,0 +1,12 @@
+Objecte de la prova: Jugar Partida com a CodeBreaker.
+
+Altres elements integrats a la prova: S'ha hagut de crear un usuari i registrar-lo.
+
+Drivers construïts per aquesta prova: driverDomain.
+
+Valors estudiats: Es proven diferents valors coneixent la interfície del joc, no l'estructura interna (caixa negra). Es cobreixen casos extrems i es comprova el seu correcte funcionament.
+
+Operativa: Es crea una partida de dificultat fàcil i es selecciona el rol de "CodeBreaker". Per últim, abans de crear la partida, s'esmenta si es vol una ajuda. Es juga la partida introduint un codi. La màquina respòn amb el feedback correcte. Després de cada ronda la màquina pregunta si es vol guardar la partida i si es vol una ajuda. S'acaba la partida després d'adivinar el codi. 
+
+*Els inputs i outputs en el transcurs d'una partida, canvien en cada partida ja que són codis generats de forma random.  
+*Una ajuda consisteix en mostrar un element del codi que l'usuari no ha intentat en el seu codi en aquella ronda.

@@ -1,0 +1,397 @@
+\doxysection{main.\+domain.\+classes.\+Five\+Guess Class Reference}
+\hypertarget{classmain_1_1domain_1_1classes_1_1_five_guess}{}\label{classmain_1_1domain_1_1classes_1_1_five_guess}\index{main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}}
+Inheritance diagram for main.\+domain.\+classes.\+Five\+Guess\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmain_1_1domain_1_1classes_1_1_five_guess}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ List$<$ Integer $>$ $>$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_five_guess_a4894dc7ea69c1d7bd0f77465c0dd973b}{solve}} (List$<$ Integer $>$ codi)
+\begin{DoxyCompactList}\small\item\em Funció que controla el procès d\textquotesingle{}endivinar el codi. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_five_guess_a4fa2692899836507519fdc141d05bda4}{prune\+Candidates}} (List$<$ Integer $>$ current, String pegs)
+\begin{DoxyCompactList}\small\item\em Eliminació dels candidats amb pegs diferent de l\textquotesingle{}últim guess. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_five_guess_ad698a7a26b427cb93aaafc611263cfdf}{check\+Code}} (List$<$ Integer $>$ current, List$<$ Integer $>$ code)
+\begin{DoxyCompactList}\small\item\em Obtenció dels pegs resultant per l\textquotesingle{}últim guess. \end{DoxyCompactList}\item 
+List$<$ List$<$ Integer $>$ $>$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_five_guess_a2a77d34e14b3266109726c4e3e235137}{find\+Min\+Max}} ()
+\begin{DoxyCompactList}\small\item\em Obtenció dels millors possibles guesses. \end{DoxyCompactList}\item 
+List$<$ String $>$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_five_guess_a330b869594571e13ee8324fb4f7d3a42}{get\+Pegs\+Result}} ()
+\begin{DoxyCompactList}\small\item\em Getter del pegs\+Result. \end{DoxyCompactList}\item 
+List$<$ List$<$ Integer $>$ $>$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_five_guess_a9db9736b98db550ee4bd937f485e1fa4}{get\+Cods\+Result}} ()
+\begin{DoxyCompactList}\small\item\em Getter del codis resultants. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ List$<$ Integer $>$ $>$ \mbox{\hyperlink{interfacemain_1_1domain_1_1classes_1_1_maquina_a2d9d3de1930679d69151c335f2a38171}{solve}} (List$<$ Integer $>$ solution)
+\item 
+List$<$ String $>$ \mbox{\hyperlink{interfacemain_1_1domain_1_1classes_1_1_maquina_a2dc6dc50cb7590b64109d95e6ab352d8}{get\+Pegs\+Result}} ()
+\item 
+List$<$ List$<$ Integer $>$ $>$ \mbox{\hyperlink{interfacemain_1_1domain_1_1classes_1_1_maquina_aa295bed8a658ccb37cd619aad3379db9}{get\+Cods\+Result}} ()
+\item 
+String \mbox{\hyperlink{interfacemain_1_1domain_1_1classes_1_1_maquina_aa3e22ace30cdfe54521d183ea639003c}{check\+Code}} (List$<$ Integer $>$ codi\+Actual, List$<$ Integer $>$ Codi\+Resoldre)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static List$<$ Integer $>$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_five_guess_afe2e3f9ee814fea06689b90b4d163556}{add\+Combinations}} (Integer\mbox{[}$\,$\mbox{]} combination)
+\begin{DoxyCompactList}\small\item\em Afegir la combinació resultant de la iteració x. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_five_guess_a462a9c67f6fb2ed3ab15f8fde88fdb52}{backtracking\+Else}} (int i, Integer\mbox{[}$\,$\mbox{]} combination, boolean\mbox{[}$\,$\mbox{]} visited, int repetits)
+\begin{DoxyCompactList}\small\item\em Generació de les combinacions. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_five_guess_ac5a514892dd6a6e7d63378ab9a2fc1bd}{backtracking\+Combinations}} (int i, Integer\mbox{[}$\,$\mbox{]} combination, boolean\mbox{[}$\,$\mbox{]} visited, int repetits)
+\begin{DoxyCompactList}\small\item\em Generació de les combinacions. \end{DoxyCompactList}\item 
+static List$<$ Integer $>$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_five_guess_a594b423097e6a447e184b1de91c30d3b}{random\+Move}} ()
+\begin{DoxyCompactList}\small\item\em Generació d\textquotesingle{}un moviment aleatori. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_five_guess_a207acbc79c07e3dae836c6039741be42}{remove\+Code}} (List$<$ Integer $>$ c)
+\begin{DoxyCompactList}\small\item\em Eliminació d\textquotesingle{}una combinació utilitzada. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_five_guess_afbdd09664ec2df76fe1fb23426e8e4c8}{get\+Max\+Score}} (Map$<$ String, Integer $>$ score\+Count)
+\begin{DoxyCompactList}\small\item\em Obtenció de la màxima puntuació \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_five_guess_a7410faa4293c574ae4debd3938acf5aa}{get\+Min\+Score}} (Map$<$ List$<$ Integer $>$, Integer $>$ score)
+\begin{DoxyCompactList}\small\item\em Obtenció de la mínima puntuació \end{DoxyCompactList}\item 
+static List$<$ Integer $>$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_five_guess_a8494593e028a792219d69790d5b94792}{new\+Guess}} ()
+\begin{DoxyCompactList}\small\item\em Obtenció d\textquotesingle{}una combinació resultant del minmax. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static List$<$ List$<$ Integer $>$ $>$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_five_guess_ae30405dc784f6b5677564831bf822e46}{guesses\+Aux}} = new Array\+List$<$$>$()
+\item 
+static List$<$ String $>$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_five_guess_a67022801d4ba65b03c6341c750b6517d}{pegs\+Aux}} = new Array\+List$<$$>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_five_guess_8java_source_l00005}{5}} of file \mbox{\hyperlink{_five_guess_8java_source}{Five\+Guess.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_five_guess_afe2e3f9ee814fea06689b90b4d163556}\label{classmain_1_1domain_1_1classes_1_1_five_guess_afe2e3f9ee814fea06689b90b4d163556} 
+\index{main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}!addCombinations@{addCombinations}}
+\index{addCombinations@{addCombinations}!main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}}
+\doxysubsubsection{\texorpdfstring{addCombinations()}{addCombinations()}}
+{\footnotesize\ttfamily static List$<$ Integer $>$ main.\+domain.\+classes.\+Five\+Guess.\+add\+Combinations (\begin{DoxyParamCaption}\item[{Integer\mbox{[}$\,$\mbox{]}}]{combination }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Afegir la combinació resultant de la iteració x. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em combination} & llistat de combinacions \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_five_guess_8java_source_l00131}{131}} of file \mbox{\hyperlink{_five_guess_8java_source}{Five\+Guess.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_five_guess_ac5a514892dd6a6e7d63378ab9a2fc1bd}\label{classmain_1_1domain_1_1classes_1_1_five_guess_ac5a514892dd6a6e7d63378ab9a2fc1bd} 
+\index{main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}!backtrackingCombinations@{backtrackingCombinations}}
+\index{backtrackingCombinations@{backtrackingCombinations}!main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}}
+\doxysubsubsection{\texorpdfstring{backtrackingCombinations()}{backtrackingCombinations()}}
+{\footnotesize\ttfamily static void main.\+domain.\+classes.\+Five\+Guess.\+backtracking\+Combinations (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{Integer\mbox{[}$\,$\mbox{]}}]{combination,  }\item[{boolean\mbox{[}$\,$\mbox{]}}]{visited,  }\item[{int}]{repetits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Generació de les combinacions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & iterador del backtracking \\
+\hline
+{\em combination} & llistat de combinacions \\
+\hline
+{\em visited} & array de visitats del backtracking \\
+\hline
+{\em repetits} & indica si hi ha repetits o no a la combinació \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_five_guess_8java_source_l00174}{174}} of file \mbox{\hyperlink{_five_guess_8java_source}{Five\+Guess.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_five_guess_a462a9c67f6fb2ed3ab15f8fde88fdb52}\label{classmain_1_1domain_1_1classes_1_1_five_guess_a462a9c67f6fb2ed3ab15f8fde88fdb52} 
+\index{main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}!backtrackingElse@{backtrackingElse}}
+\index{backtrackingElse@{backtrackingElse}!main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}}
+\doxysubsubsection{\texorpdfstring{backtrackingElse()}{backtrackingElse()}}
+{\footnotesize\ttfamily static void main.\+domain.\+classes.\+Five\+Guess.\+backtracking\+Else (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{Integer\mbox{[}$\,$\mbox{]}}]{combination,  }\item[{boolean\mbox{[}$\,$\mbox{]}}]{visited,  }\item[{int}]{repetits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Generació de les combinacions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & iterador del backtracking \\
+\hline
+{\em combination} & llistat de combinacions \\
+\hline
+{\em visited} & array de visitats del backtracking \\
+\hline
+{\em repetits} & indica si hi ha repetits o no a la combinació \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_five_guess_8java_source_l00147}{147}} of file \mbox{\hyperlink{_five_guess_8java_source}{Five\+Guess.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_five_guess_ad698a7a26b427cb93aaafc611263cfdf}\label{classmain_1_1domain_1_1classes_1_1_five_guess_ad698a7a26b427cb93aaafc611263cfdf} 
+\index{main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}!checkCode@{checkCode}}
+\index{checkCode@{checkCode}!main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}}
+\doxysubsubsection{\texorpdfstring{checkCode()}{checkCode()}}
+{\footnotesize\ttfamily String main.\+domain.\+classes.\+Five\+Guess.\+check\+Code (\begin{DoxyParamCaption}\item[{List$<$ Integer $>$}]{current,  }\item[{List$<$ Integer $>$}]{code }\end{DoxyParamCaption})}
+
+
+
+Obtenció dels pegs resultant per l\textquotesingle{}últim guess. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current} & últim guess utilitzat \\
+\hline
+{\em code} & codi correcte per comparar l\textquotesingle{}últim guess\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacemain_1_1domain_1_1classes_1_1_maquina_aa3e22ace30cdfe54521d183ea639003c}{main.\+domain.\+classes.\+Maquina}}.
+
+
+
+Definition at line \mbox{\hyperlink{_five_guess_8java_source_l00239}{239}} of file \mbox{\hyperlink{_five_guess_8java_source}{Five\+Guess.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_five_guess_a2a77d34e14b3266109726c4e3e235137}\label{classmain_1_1domain_1_1classes_1_1_five_guess_a2a77d34e14b3266109726c4e3e235137} 
+\index{main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}!findMinMax@{findMinMax}}
+\index{findMinMax@{findMinMax}!main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}}
+\doxysubsubsection{\texorpdfstring{findMinMax()}{findMinMax()}}
+{\footnotesize\ttfamily List$<$ List$<$ Integer $>$ $>$ main.\+domain.\+classes.\+Five\+Guess.\+find\+Min\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtenció dels millors possibles guesses. 
+
+\begin{DoxyReturn}{Returns}
+nextG 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_five_guess_8java_source_l00286}{286}} of file \mbox{\hyperlink{_five_guess_8java_source}{Five\+Guess.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_five_guess_a9db9736b98db550ee4bd937f485e1fa4}\label{classmain_1_1domain_1_1classes_1_1_five_guess_a9db9736b98db550ee4bd937f485e1fa4} 
+\index{main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}!getCodsResult@{getCodsResult}}
+\index{getCodsResult@{getCodsResult}!main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}}
+\doxysubsubsection{\texorpdfstring{getCodsResult()}{getCodsResult()}}
+{\footnotesize\ttfamily List$<$ List$<$ Integer $>$ $>$ main.\+domain.\+classes.\+Five\+Guess.\+get\+Cods\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter del codis resultants. 
+
+\begin{DoxyReturn}{Returns}
+guesses\+Aux 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacemain_1_1domain_1_1classes_1_1_maquina_aa295bed8a658ccb37cd619aad3379db9}{main.\+domain.\+classes.\+Maquina}}.
+
+
+
+Definition at line \mbox{\hyperlink{_five_guess_8java_source_l00391}{391}} of file \mbox{\hyperlink{_five_guess_8java_source}{Five\+Guess.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_five_guess_afbdd09664ec2df76fe1fb23426e8e4c8}\label{classmain_1_1domain_1_1classes_1_1_five_guess_afbdd09664ec2df76fe1fb23426e8e4c8} 
+\index{main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}!getMaxScore@{getMaxScore}}
+\index{getMaxScore@{getMaxScore}!main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}}
+\doxysubsubsection{\texorpdfstring{getMaxScore()}{getMaxScore()}}
+{\footnotesize\ttfamily static int main.\+domain.\+classes.\+Five\+Guess.\+get\+Max\+Score (\begin{DoxyParamCaption}\item[{Map$<$ String, Integer $>$}]{score\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Obtenció de la màxima puntuació 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score\+Count} & llistat de puntuacions\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+max 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_five_guess_8java_source_l00323}{323}} of file \mbox{\hyperlink{_five_guess_8java_source}{Five\+Guess.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_five_guess_a7410faa4293c574ae4debd3938acf5aa}\label{classmain_1_1domain_1_1classes_1_1_five_guess_a7410faa4293c574ae4debd3938acf5aa} 
+\index{main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}!getMinScore@{getMinScore}}
+\index{getMinScore@{getMinScore}!main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}}
+\doxysubsubsection{\texorpdfstring{getMinScore()}{getMinScore()}}
+{\footnotesize\ttfamily static int main.\+domain.\+classes.\+Five\+Guess.\+get\+Min\+Score (\begin{DoxyParamCaption}\item[{Map$<$ List$<$ Integer $>$, Integer $>$}]{score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Obtenció de la mínima puntuació 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & cap de tots els màxims scores\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+min 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_five_guess_8java_source_l00339}{339}} of file \mbox{\hyperlink{_five_guess_8java_source}{Five\+Guess.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_five_guess_a330b869594571e13ee8324fb4f7d3a42}\label{classmain_1_1domain_1_1classes_1_1_five_guess_a330b869594571e13ee8324fb4f7d3a42} 
+\index{main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}!getPegsResult@{getPegsResult}}
+\index{getPegsResult@{getPegsResult}!main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}}
+\doxysubsubsection{\texorpdfstring{getPegsResult()}{getPegsResult()}}
+{\footnotesize\ttfamily List$<$ String $>$ main.\+domain.\+classes.\+Five\+Guess.\+get\+Pegs\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter del pegs\+Result. 
+
+\begin{DoxyReturn}{Returns}
+pegs\+Result 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacemain_1_1domain_1_1classes_1_1_maquina_a2dc6dc50cb7590b64109d95e6ab352d8}{main.\+domain.\+classes.\+Maquina}}.
+
+
+
+Definition at line \mbox{\hyperlink{_five_guess_8java_source_l00382}{382}} of file \mbox{\hyperlink{_five_guess_8java_source}{Five\+Guess.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_five_guess_a8494593e028a792219d69790d5b94792}\label{classmain_1_1domain_1_1classes_1_1_five_guess_a8494593e028a792219d69790d5b94792} 
+\index{main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}!newGuess@{newGuess}}
+\index{newGuess@{newGuess}!main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}}
+\doxysubsubsection{\texorpdfstring{newGuess()}{newGuess()}}
+{\footnotesize\ttfamily static List$<$ Integer $>$ main.\+domain.\+classes.\+Five\+Guess.\+new\+Guess (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Obtenció d\textquotesingle{}una combinació resultant del minmax. 
+
+\begin{DoxyReturn}{Returns}
+aux 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_five_guess_8java_source_l00353}{353}} of file \mbox{\hyperlink{_five_guess_8java_source}{Five\+Guess.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_five_guess_a4fa2692899836507519fdc141d05bda4}\label{classmain_1_1domain_1_1classes_1_1_five_guess_a4fa2692899836507519fdc141d05bda4} 
+\index{main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}!pruneCandidates@{pruneCandidates}}
+\index{pruneCandidates@{pruneCandidates}!main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}}
+\doxysubsubsection{\texorpdfstring{pruneCandidates()}{pruneCandidates()}}
+{\footnotesize\ttfamily void main.\+domain.\+classes.\+Five\+Guess.\+prune\+Candidates (\begin{DoxyParamCaption}\item[{List$<$ Integer $>$}]{current,  }\item[{String}]{pegs }\end{DoxyParamCaption})}
+
+
+
+Eliminació dels candidats amb pegs diferent de l\textquotesingle{}últim guess. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current} & últim guess utilitzat \\
+\hline
+{\em pegs} & pegs resultants decurrent \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_five_guess_8java_source_l00216}{216}} of file \mbox{\hyperlink{_five_guess_8java_source}{Five\+Guess.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_five_guess_a594b423097e6a447e184b1de91c30d3b}\label{classmain_1_1domain_1_1classes_1_1_five_guess_a594b423097e6a447e184b1de91c30d3b} 
+\index{main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}!randomMove@{randomMove}}
+\index{randomMove@{randomMove}!main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}}
+\doxysubsubsection{\texorpdfstring{randomMove()}{randomMove()}}
+{\footnotesize\ttfamily static List$<$ Integer $>$ main.\+domain.\+classes.\+Five\+Guess.\+random\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Generació d\textquotesingle{}un moviment aleatori. 
+
+\begin{DoxyReturn}{Returns}
+combinació random 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_five_guess_8java_source_l00188}{188}} of file \mbox{\hyperlink{_five_guess_8java_source}{Five\+Guess.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_five_guess_a207acbc79c07e3dae836c6039741be42}\label{classmain_1_1domain_1_1classes_1_1_five_guess_a207acbc79c07e3dae836c6039741be42} 
+\index{main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}!removeCode@{removeCode}}
+\index{removeCode@{removeCode}!main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}}
+\doxysubsubsection{\texorpdfstring{removeCode()}{removeCode()}}
+{\footnotesize\ttfamily static void main.\+domain.\+classes.\+Five\+Guess.\+remove\+Code (\begin{DoxyParamCaption}\item[{List$<$ Integer $>$}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Eliminació d\textquotesingle{}una combinació utilitzada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & combinació a eliminar \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_five_guess_8java_source_l00197}{197}} of file \mbox{\hyperlink{_five_guess_8java_source}{Five\+Guess.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_five_guess_a4894dc7ea69c1d7bd0f77465c0dd973b}\label{classmain_1_1domain_1_1classes_1_1_five_guess_a4894dc7ea69c1d7bd0f77465c0dd973b} 
+\index{main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}!solve@{solve}}
+\index{solve@{solve}!main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily List$<$ List$<$ Integer $>$ $>$ main.\+domain.\+classes.\+Five\+Guess.\+solve (\begin{DoxyParamCaption}\item[{List$<$ Integer $>$}]{codi }\end{DoxyParamCaption})}
+
+
+
+Funció que controla el procès d\textquotesingle{}endivinar el codi. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em codi} & codi a adivinar\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+partida resultant 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacemain_1_1domain_1_1classes_1_1_maquina_a2d9d3de1930679d69151c335f2a38171}{main.\+domain.\+classes.\+Maquina}}.
+
+
+
+Definition at line \mbox{\hyperlink{_five_guess_8java_source_l00075}{75}} of file \mbox{\hyperlink{_five_guess_8java_source}{Five\+Guess.\+java}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_five_guess_ae30405dc784f6b5677564831bf822e46}\label{classmain_1_1domain_1_1classes_1_1_five_guess_ae30405dc784f6b5677564831bf822e46} 
+\index{main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}!guessesAux@{guessesAux}}
+\index{guessesAux@{guessesAux}!main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}}
+\doxysubsubsection{\texorpdfstring{guessesAux}{guessesAux}}
+{\footnotesize\ttfamily List$<$List$<$Integer$>$ $>$ main.\+domain.\+classes.\+Five\+Guess.\+guesses\+Aux = new Array\+List$<$$>$()\hspace{0.3cm}{\ttfamily [static]}}
+
+Conté les combinacions utilitzades per endevinar el codi 
+
+Definition at line \mbox{\hyperlink{_five_guess_8java_source_l00060}{60}} of file \mbox{\hyperlink{_five_guess_8java_source}{Five\+Guess.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_five_guess_a67022801d4ba65b03c6341c750b6517d}\label{classmain_1_1domain_1_1classes_1_1_five_guess_a67022801d4ba65b03c6341c750b6517d} 
+\index{main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}!pegsAux@{pegsAux}}
+\index{pegsAux@{pegsAux}!main.domain.classes.FiveGuess@{main.domain.classes.FiveGuess}}
+\doxysubsubsection{\texorpdfstring{pegsAux}{pegsAux}}
+{\footnotesize\ttfamily List$<$String$>$ main.\+domain.\+classes.\+Five\+Guess.\+pegs\+Aux = new Array\+List$<$$>$()\hspace{0.3cm}{\ttfamily [static]}}
+
+Conté els pegs resultants de les combinacions guesses\+Result 
+
+Definition at line \mbox{\hyperlink{_five_guess_8java_source_l00065}{65}} of file \mbox{\hyperlink{_five_guess_8java_source}{Five\+Guess.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/domain/classes/\mbox{\hyperlink{_five_guess_8java}{Five\+Guess.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,126 @@
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Salir
+Introdueix nom usuari: 
+arnau
+Introdueix nom password: 
+1234
+Usuari registrat: arnau
+Benvingut, arnau!
+
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir
+Introdueix dificultat: 
+1. Facil: Tauler 4 espais
+2. Mig: Tauler 5 espais
+3. Dificil: Tauler 6 espais
+Introdueix rol: 
+1. CodeMaker 2. CodeBreaker
+(Exemple: 1 1 2 5)
+0. Vermell | 2. Blau | 4. Negre
+1. Verd    | 3. Groc | 5. Blanc
+Help: L'ajuda proporciona un numero del codi a resoldre.
+Vols una ajuda? 1. Si  2. No 
+Introdueix codi: 
+Tauler: 
+0. 1122 WW__
+
+Vols guardar la partida? 1. Si  2. No 
+0. Vermell | 2. Blau | 4. Negre
+1. Verd    | 3. Groc | 5. Blanc
+Vols una ajuda? 1. Si  2. No 
+Pista: existeix el 4
+Introdueix codi: 
+Tauler: 
+0. 1122 WW__
+1. 4121 BBW_
+
+Vols guardar la partida? 1. Si  2. No 
+0. Vermell | 2. Blau | 4. Negre
+1. Verd    | 3. Groc | 5. Blanc
+Vols una ajuda? 1. Si  2. No 
+Pista: existeix el 3
+Introdueix codi: 
+Tauler: 
+0. 1122 WW__
+1. 4121 BBW_
+2. 4213 BBWW
+
+Vols guardar la partida? 1. Si  2. No 
+0. Vermell | 2. Blau | 4. Negre
+1. Verd    | 3. Groc | 5. Blanc
+Vols una ajuda? 1. Si  2. No 
+Introdueix codi: 
+Tauler: 
+0. 1122 WW__
+1. 4121 BBW_
+2. 4213 BBWW
+3. 4123 BWWW
+
+Vols guardar la partida? 1. Si  2. No 
+0. Vermell | 2. Blau | 4. Negre
+1. Verd    | 3. Groc | 5. Blanc
+Vols una ajuda? 1. Si  2. No 
+Introdueix codi: 
+Tauler: 
+0. 1122 WW__
+1. 4121 BBW_
+2. 4213 BBWW
+3. 4123 BWWW
+4. 1423 WWWW
+
+Vols guardar la partida? 1. Si  2. No 
+0. Vermell | 2. Blau | 4. Negre
+1. Verd    | 3. Groc | 5. Blanc
+Vols una ajuda? 1. Si  2. No 
+Introdueix codi: 
+Tauler: 
+0. 1122 WW__
+1. 4121 BBW_
+2. 4213 BBWW
+3. 4123 BWWW
+4. 1423 WWWW
+5. 4321 BBWW
+
+Vols guardar la partida? 1. Si  2. No 
+0. Vermell | 2. Blau | 4. Negre
+1. Verd    | 3. Groc | 5. Blanc
+Vols una ajuda? 1. Si  2. No 
+Introdueix codi: 
+Tauler: 
+0. 1122 WW__
+1. 4121 BBW_
+2. 4213 BBWW
+3. 4123 BWWW
+4. 1423 WWWW
+5. 4321 BBWW
+6. 4231 BBBB
+
+Has guanyat com a CodeBreaker
+puntuacio: 3
+
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir

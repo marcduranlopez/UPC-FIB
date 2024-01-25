@@ -1,0 +1,34 @@
+\doxysection{Genetic\+Test.\+java}
+\hypertarget{_genetic_test_8java_source}{}\label{_genetic_test_8java_source}\index{test/GeneticTest.java@{test/GeneticTest.java}}
+\mbox{\hyperlink{_genetic_test_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00001}00001\ \textcolor{keyword}{package\ }test;}
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00003}00003\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes}{classes}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_five_guess}{FiveGuess}};}
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00004}00004\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes}{classes}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic}{Genetic}};}
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00005}00005\ \textcolor{keyword}{import}\ org.junit.Test;}
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00006}00006\ \textcolor{keyword}{import}\ java.util.Arrays;}
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00007}00007\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00009}00009\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ org.junit.Assert.*;}
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00010}\mbox{\hyperlink{classtest_1_1_genetic_test}{00010}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtest_1_1_genetic_test}{GeneticTest}}\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00018}00018\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00019}\mbox{\hyperlink{classtest_1_1_genetic_test_aa1b2571d80cffaba969d01f6cb30b78f}{00019}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtest_1_1_genetic_test_aa1b2571d80cffaba969d01f6cb30b78f}{testSolve}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Combinación\ objetivo}}
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00021}00021\ \ \ \ \ \ \ \ \ List<Integer>\ code\ =\ Arrays.asList(1,\ 2,\ 3,\ 4);}
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Instanciamos\ un\ objeto\ Genetic}}
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00024}00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic}{Genetic}}\ maquina\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic}{Genetic}}();}
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Invocamos\ el\ método\ solve\ con\ la\ combinación\ objetivo}}
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00027}00027\ \ \ \ \ \ \ \ \ List<List<Integer>>\ guesses\ =\ maquina.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a22bfe12fb7f8510d10d9d5f89173219e}{solve}}(code);}
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index\_combinacioCorrecte\ =\ guesses.size()-\/\ 1;}
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ assertEquals(code,\ guesses.get(index\_combinacioCorrecte));}
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00033}00033\ \}}
+\DoxyCodeLine{\Hypertarget{_genetic_test_8java_source_l00034}00034\ }
+
+\end{DoxyCode}

@@ -1,0 +1,150 @@
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Salir
+Cap usuari registrat.
+
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir
+Introdueix nom usuari: 
+Introdueix nom password: 
+Usuari registrat: arnau
+Benvingut, arnau!
+
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir
+Usuaris:
+- arnau
+
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir
+Introdueix nom usuari: 
+Introdueix nom password: 
+Usuari registrat: sergi
+Benvingut, sergi!
+
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir
+Usuaris:
+- arnau
+- sergi
+
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir
+Introdueix nom usuari: 
+Introdueix nom password: 
+Usuari ja existeix al sistema
+
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir
+Introdueix nom usuari: 
+Introdueix nom password: 
+Usuari ja existeix al sistema
+
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir
+Sessio tancada.
+
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir
+Introdueix nom usuari: 
+Introdueix nom password: 
+Usuari no existeix al sistema
+
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir
+Introdueix nom usuari: 
+Introdueix nom password: 
+Contrasenya incorrecte
+
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir
+Introdueix nom usuari: 
+Introdueix nom password:
+Benvingut, arnau!

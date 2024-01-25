@@ -1,0 +1,7 @@
+# Directori latex
+
+> Path absolut: /DOCS/Doxygen/latex
+
+## Descripció del directori
+Aquest directori conté els arxius latex del doxygen
+

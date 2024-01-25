@@ -1,0 +1,185 @@
+\doxysection{main.\+data.\+Ctrl\+Data Class Reference}
+\hypertarget{classmain_1_1data_1_1_ctrl_data}{}\label{classmain_1_1data_1_1_ctrl_data}\index{main.data.CtrlData@{main.data.CtrlData}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmain_1_1data_1_1_ctrl_data_a985ef574f2e79d7a710d0ffc63e8ddb2}{Ctrl\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecte. \end{DoxyCompactList}\item 
+Json\+Reader \mbox{\hyperlink{classmain_1_1data_1_1_ctrl_data_a5a90c863bc452dd92ce3b0390075fcf2}{get\+Usuari}} (String nomusuari)  throws File\+Not\+Found\+Exception 
+\begin{DoxyCompactList}\small\item\em Aquesta funció retorna l\textquotesingle{}arxiu json de l\textquotesingle{}usuari corresponent. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmain_1_1data_1_1_ctrl_data_a3dfcd95d7cf340ba537155e3eae2c9db}{get\+Numero\+De\+Jugadors}} ()  throws Null\+Pointer\+Exception 
+\begin{DoxyCompactList}\small\item\em Aquesta funció retorna el nombre de jugadors. \end{DoxyCompactList}\item 
+Json\+Reader\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmain_1_1data_1_1_ctrl_data_a8bf04827ed2ccc0b92086e0555e45532}{get\+Llista\+Usuaris}} ()  throws Null\+Pointer\+Exception 
+\begin{DoxyCompactList}\small\item\em Aquesta funció retorna una llista dels jugadors. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classmain_1_1data_1_1_ctrl_data_aa258578bc989f438f6fb38fa5bff0fa4}{existeix\+Usuari}} (String nomusuari)
+\begin{DoxyCompactList}\small\item\em Aquesta funció ens indica si existeix un jugador amb el nom d\textquotesingle{}usuari passat per paràmetre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1data_1_1_ctrl_data_a9df4561d7989668ee13d8d2ad48d6a6b}{guardar\+Usuari}} (String nomusuari, String usuari\+JSON)
+\begin{DoxyCompactList}\small\item\em Guarda el jugador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classmain_1_1data_1_1_ctrl_data}{Ctrl\+Data}} \mbox{\hyperlink{classmain_1_1data_1_1_ctrl_data_af635693df71af4aac586fdf4e57b0b80}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Obté la instància de Ctrl\+Data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_data_8java_source_l00007}{7}} of file \mbox{\hyperlink{_ctrl_data_8java_source}{Ctrl\+Data.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmain_1_1data_1_1_ctrl_data_a985ef574f2e79d7a710d0ffc63e8ddb2}\label{classmain_1_1data_1_1_ctrl_data_a985ef574f2e79d7a710d0ffc63e8ddb2} 
+\index{main.data.CtrlData@{main.data.CtrlData}!CtrlData@{CtrlData}}
+\index{CtrlData@{CtrlData}!main.data.CtrlData@{main.data.CtrlData}}
+\doxysubsubsection{\texorpdfstring{CtrlData()}{CtrlData()}}
+{\footnotesize\ttfamily main.\+data.\+Ctrl\+Data.\+Ctrl\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecte. 
+
+
+
+Definition at line \mbox{\hyperlink{_ctrl_data_8java_source_l00032}{32}} of file \mbox{\hyperlink{_ctrl_data_8java_source}{Ctrl\+Data.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmain_1_1data_1_1_ctrl_data_aa258578bc989f438f6fb38fa5bff0fa4}\label{classmain_1_1data_1_1_ctrl_data_aa258578bc989f438f6fb38fa5bff0fa4} 
+\index{main.data.CtrlData@{main.data.CtrlData}!existeixUsuari@{existeixUsuari}}
+\index{existeixUsuari@{existeixUsuari}!main.data.CtrlData@{main.data.CtrlData}}
+\doxysubsubsection{\texorpdfstring{existeixUsuari()}{existeixUsuari()}}
+{\footnotesize\ttfamily boolean main.\+data.\+Ctrl\+Data.\+existeix\+Usuari (\begin{DoxyParamCaption}\item[{String}]{nomusuari }\end{DoxyParamCaption})}
+
+
+
+Aquesta funció ens indica si existeix un jugador amb el nom d\textquotesingle{}usuari passat per paràmetre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nomusuari} & nom d\textquotesingle{}usuari a comprovar si ja existeix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cert en cas que ja existeixi un usuari amb el nom d\textquotesingle{}usuari username, fals en cas contrari 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_data_8java_source_l00094}{94}} of file \mbox{\hyperlink{_ctrl_data_8java_source}{Ctrl\+Data.\+java}}.
+
+\Hypertarget{classmain_1_1data_1_1_ctrl_data_af635693df71af4aac586fdf4e57b0b80}\label{classmain_1_1data_1_1_ctrl_data_af635693df71af4aac586fdf4e57b0b80} 
+\index{main.data.CtrlData@{main.data.CtrlData}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!main.data.CtrlData@{main.data.CtrlData}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classmain_1_1data_1_1_ctrl_data}{Ctrl\+Data}} main.\+data.\+Ctrl\+Data.\+get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Obté la instància de Ctrl\+Data. 
+
+\begin{DoxyReturn}{Returns}
+la instància 
+\end{DoxyReturn}
+Si no existeix una instància singleton d\textquotesingle{}aquesta classe, en crea una i la retorna. En cas contrari, retorna la que ja existeix 
+
+Definition at line \mbox{\hyperlink{_ctrl_data_8java_source_l00022}{22}} of file \mbox{\hyperlink{_ctrl_data_8java_source}{Ctrl\+Data.\+java}}.
+
+\Hypertarget{classmain_1_1data_1_1_ctrl_data_a8bf04827ed2ccc0b92086e0555e45532}\label{classmain_1_1data_1_1_ctrl_data_a8bf04827ed2ccc0b92086e0555e45532} 
+\index{main.data.CtrlData@{main.data.CtrlData}!getLlistaUsuaris@{getLlistaUsuaris}}
+\index{getLlistaUsuaris@{getLlistaUsuaris}!main.data.CtrlData@{main.data.CtrlData}}
+\doxysubsubsection{\texorpdfstring{getLlistaUsuaris()}{getLlistaUsuaris()}}
+{\footnotesize\ttfamily Json\+Reader\mbox{[}$\,$\mbox{]} main.\+data.\+Ctrl\+Data.\+get\+Llista\+Usuaris (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Null\+Pointer\+Exception}
+
+
+
+Aquesta funció retorna una llista dels jugadors. 
+
+\begin{DoxyReturn}{Returns}
+un vector amb tots els jugadors en format json 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Null\+Pointer\+Exception} & en cas que no hi hagi jugadors \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_data_8java_source_l00068}{68}} of file \mbox{\hyperlink{_ctrl_data_8java_source}{Ctrl\+Data.\+java}}.
+
+\Hypertarget{classmain_1_1data_1_1_ctrl_data_a3dfcd95d7cf340ba537155e3eae2c9db}\label{classmain_1_1data_1_1_ctrl_data_a3dfcd95d7cf340ba537155e3eae2c9db} 
+\index{main.data.CtrlData@{main.data.CtrlData}!getNumeroDeJugadors@{getNumeroDeJugadors}}
+\index{getNumeroDeJugadors@{getNumeroDeJugadors}!main.data.CtrlData@{main.data.CtrlData}}
+\doxysubsubsection{\texorpdfstring{getNumeroDeJugadors()}{getNumeroDeJugadors()}}
+{\footnotesize\ttfamily int main.\+data.\+Ctrl\+Data.\+get\+Numero\+De\+Jugadors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Null\+Pointer\+Exception}
+
+
+
+Aquesta funció retorna el nombre de jugadors. 
+
+\begin{DoxyReturn}{Returns}
+un enter que representa el nombre de jugadors 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Null\+Pointer\+Exception} & en cas que no hi hagi jugadors \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_data_8java_source_l00053}{53}} of file \mbox{\hyperlink{_ctrl_data_8java_source}{Ctrl\+Data.\+java}}.
+
+\Hypertarget{classmain_1_1data_1_1_ctrl_data_a5a90c863bc452dd92ce3b0390075fcf2}\label{classmain_1_1data_1_1_ctrl_data_a5a90c863bc452dd92ce3b0390075fcf2} 
+\index{main.data.CtrlData@{main.data.CtrlData}!getUsuari@{getUsuari}}
+\index{getUsuari@{getUsuari}!main.data.CtrlData@{main.data.CtrlData}}
+\doxysubsubsection{\texorpdfstring{getUsuari()}{getUsuari()}}
+{\footnotesize\ttfamily Json\+Reader main.\+data.\+Ctrl\+Data.\+get\+Usuari (\begin{DoxyParamCaption}\item[{String}]{nomusuari }\end{DoxyParamCaption}) throws File\+Not\+Found\+Exception}
+
+
+
+Aquesta funció retorna l\textquotesingle{}arxiu json de l\textquotesingle{}usuari corresponent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nomusuari} & nom d\textquotesingle{}usuari del qual s\textquotesingle{}ha de retornar l\textquotesingle{}arxiu json \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un json amb la informació de l\textquotesingle{}usuari corresponent 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em File\+Not\+Found\+Exception} & en cas que no existeixi un usuari amb aquest nom d\textquotesingle{}usuari \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_data_8java_source_l00043}{43}} of file \mbox{\hyperlink{_ctrl_data_8java_source}{Ctrl\+Data.\+java}}.
+
+\Hypertarget{classmain_1_1data_1_1_ctrl_data_a9df4561d7989668ee13d8d2ad48d6a6b}\label{classmain_1_1data_1_1_ctrl_data_a9df4561d7989668ee13d8d2ad48d6a6b} 
+\index{main.data.CtrlData@{main.data.CtrlData}!guardarUsuari@{guardarUsuari}}
+\index{guardarUsuari@{guardarUsuari}!main.data.CtrlData@{main.data.CtrlData}}
+\doxysubsubsection{\texorpdfstring{guardarUsuari()}{guardarUsuari()}}
+{\footnotesize\ttfamily void main.\+data.\+Ctrl\+Data.\+guardar\+Usuari (\begin{DoxyParamCaption}\item[{String}]{nomusuari,  }\item[{String}]{usuari\+JSON }\end{DoxyParamCaption})}
+
+
+
+Guarda el jugador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nomusuari} & nom d\textquotesingle{}usuari del jugador a guardar \\
+\hline
+{\em usuari\+JSON} & contingut del ficher associat al jugador \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_data_8java_source_l00105}{105}} of file \mbox{\hyperlink{_ctrl_data_8java_source}{Ctrl\+Data.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/data/\mbox{\hyperlink{_ctrl_data_8java}{Ctrl\+Data.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,11 @@
+Objecte de la prova: Crear Partida/Carregar Partida.
+
+Altres elements integrats a la prova: S'ha hagut de crear un usuari i registrar-lo.
+
+Drivers construïts per aquesta prova: driverDomain.
+
+Valors estudiats: Es proven diferents valors coneixent la interfície del joc, no l'estructura interna (caixa negra). Es cobreixen casos extrems i es comprova el seu correcte funcionament.
+
+Operativa: Es crea una partida sense haver iniciat sessió. Es carrega una partida sense haver iniciat sessió. Es crea una partida i es guarda. S'intenta carregar una partida que no existeix. Es carrega la partida correcte, es torna a guardar i es crea una nova partida. Es guarda la nova partida. Es carrega la nova partida i sobreescriu a l'anterior.
+
+*Els inputs i outputs en el transcurs d'una partida, canvien en cada partida ja que són codis generats de forma random.  

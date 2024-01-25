@@ -1,0 +1,35 @@
+# Directori classes
+
+> Path absolut: /FONTS/src/main/domain/classes
+
+## Descripció del directori
+En aquest directori es troben totes les clases de el nostre programa.
+
+## Elements del directori
+
+- **Arxiu FiveGuess:**
+Classe FiveGuess que conté el algoritme 1 del Mastermind.
+
+- **Arxiu Genetic:**
+Classe Genetic que conté el algoritme 2 del Mastermind.
+
+- **Arxiu Maquina:**
+Interficie que escull entre FiveGuess o Genetic.
+
+- **Arxiu Partida:**
+Classe Partida que conté la informació de cada partida.
+
+- **Arxiu Ranking:**
+Classe Ranking que conté el ranking de tots els usuaris registrats.
+
+- **Arxiu Record:**
+Classe Record que conté les millor puntuacions d'un usuari.
+
+- **Arxiu Stats:**
+Classe stat que conté les estadístiques principals d'un usuari.
+
+- **Arxiu Tauler:**
+Classe Tauler que conté la informació del tauler: mida, combinacions utilitzades, etc.
+
+- **Arxiu Usuari:**
+Classe Usuari que conté la informació de cada usuari registrat al sistema.

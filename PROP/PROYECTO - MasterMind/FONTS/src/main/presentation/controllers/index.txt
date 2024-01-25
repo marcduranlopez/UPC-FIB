@@ -1,0 +1,33 @@
+# Directori controllers
+
+> Path absolut: /FONTS/src/main/presentation/controllers
+
+## Descripció del directori
+En aquest directori es troben tots els controladors de cada vista
+
+## Elements del directori
+
+- **Arxiu CtrlCrearPartida:**
+Vista que implementa la creació d'una partida
+
+- **Arxiu CtrlLoadGame:**
+Vista que implementa la carrega d'una partida
+
+- **Arxiu CtrlLogin:**
+Vista que implementa el login d'usuari
+
+- **Arxiu CtrlMainMenu:**
+Vista que implementa el main menu 
+
+- **Arxiu CtrlPlay:**
+Vista que implementa la partida del joc
+
+- **Arxiu CtrlRanking:**
+Vista que implementa la presentació del ranking
+
+- **Arxiu CtrlSignUp:**
+Vista que implementa el sign up d'usuari
+
+- **Arxiu CtrlStats:**
+Vista que implementa la presentació dels stats
+

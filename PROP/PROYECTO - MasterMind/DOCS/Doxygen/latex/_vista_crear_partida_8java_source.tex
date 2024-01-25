@@ -1,0 +1,314 @@
+\doxysection{Vista\+Crear\+Partida.\+java}
+\hypertarget{_vista_crear_partida_8java_source}{}\label{_vista_crear_partida_8java_source}\index{main/presentation/classes/VistaCrearPartida.java@{main/presentation/classes/VistaCrearPartida.java}}
+\mbox{\hyperlink{_vista_crear_partida_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00001}00001\ \textcolor{keyword}{package\ }main.presentation.classes;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00003}00003\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes}{classes}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes_1_1_exceptions}{Exceptions}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_dificultat_no_existeix}{DificultatNoExisteix}};}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00004}00004\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1presentation}{presentation}}.\mbox{\hyperlink{namespacemain_1_1presentation_1_1controllers}{controllers}}.\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_crear_partida}{CtrlCrearPartida}};}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00005}00005\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1presentation}{presentation}}.\mbox{\hyperlink{namespacemain_1_1presentation_1_1controllers}{controllers}}.\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_main_menu}{CtrlMainMenu}};}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00007}00007\ \textcolor{keyword}{import}\ javax.swing.JFrame;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00008}00008\ \textcolor{keyword}{import}\ javax.swing.JPanel;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00009}00009\ \textcolor{keyword}{import}\ javax.swing.border.EmptyBorder;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00011}00011\ \textcolor{keyword}{import}\ java.awt.Color;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00013}00013\ \textcolor{keyword}{import}\ javax.swing.JButton;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00014}00014\ \textcolor{keyword}{import}\ javax.swing.JLabel;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00015}00015\ \textcolor{keyword}{import}\ javax.swing.ImageIcon;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00016}00016\ \textcolor{keyword}{import}\ java.awt.Font;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00017}00017\ \textcolor{keyword}{import}\ java.awt.Image;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00019}00019\ \textcolor{keyword}{import}\ javax.swing.JRadioButton;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00020}00020\ \textcolor{keyword}{import}\ javax.swing.SwingConstants;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00021}00021\ \textcolor{keyword}{import}\ javax.swing.JTextField;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00024}\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_crear_partida}{00024}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_crear_partida}{VistaCrearPartida}}\ \textcolor{keyword}{extends}\ JFrame\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00029}00029\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_crear_partida}{CtrlCrearPartida}}\ cCrearPartida;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00034}00034\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ javax.swing.JFrame\ parent;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00039}00039\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{boolean}\ False\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00044}00044\ \ \ \ \ \textcolor{keyword}{private}\ String\ Rol;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00049}00049\ \ \ \ \ \textcolor{keyword}{private}\ Integer\ Dificultat;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00054}00054\ \ \ \ \ \textcolor{keyword}{private}\ Integer\ Algorithm;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00060}00060\ \ \ \ \ \textcolor{keyword}{private}\ JRadioButton\ radioButton\_CB;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00065}00065\ \ \ \ \ \textcolor{keyword}{private}\ JRadioButton\ radioButton\_CM;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00070}00070\ \ \ \ \ \textcolor{keyword}{private}\ JRadioButton\ radioButton\_Easy;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00075}00075\ \ \ \ \ \textcolor{keyword}{private}\ JRadioButton\ radioButton\_Medium;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00080}00080\ \ \ \ \ \textcolor{keyword}{private}\ JRadioButton\ radioButton\_Hard;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00085}00085\ \ \ \ \ \textcolor{keyword}{private}\ JRadioButton\ radioButton\_FG;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00090}00090\ \ \ \ \ \textcolor{keyword}{private}\ JRadioButton\ radioButton\_G;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00095}00095\ \ \ \ \ \textcolor{keyword}{private}\ JLabel\ missatge;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00103}\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_crear_partida_aad5e2236ced317ee78ac153c7326ba0a}{00103}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_crear_partida_aad5e2236ced317ee78ac153c7326ba0a}{VistaCrearPartida}}(javax.swing.JFrame\ parent,\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_main_menu}{CtrlMainMenu}}\ cmainmenu)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00104}00104\ \ \ \ \ \ \ \ \ cCrearPartida\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_crear_partida}{CtrlCrearPartida}}(cmainmenu.\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_main_menu_a845418a6fd339d3ca53c2cb0fd78790f}{getCD}}());}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00105}00105\ \ \ \ \ \ \ \ \ this.parent\ =\ parent;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00106}00106\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_crear_partida_a18266bebc3a7e08e3e992d3bf551020b}{InitVistaCrearPartida}}();}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00107}00107\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00114}\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_crear_partida_a18266bebc3a7e08e3e992d3bf551020b}{00114}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_crear_partida_a18266bebc3a7e08e3e992d3bf551020b}{InitVistaCrearPartida}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00115}00115\ \ \ \ \ \ \ \ \ setResizable(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00116}00116\ \ \ \ \ \ \ \ \ setTitle(\textcolor{stringliteral}{"{}Mastermind"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00117}00117\ \ \ \ \ \ \ \ \ setDefaultCloseOperation(JFrame.EXIT\_ON\_CLOSE);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00118}00118\ \ \ \ \ \ \ \ \ setBounds(100,\ 100,\ 557,\ 566);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00120}00120\ \ \ \ \ \ \ \ \ JPanel\ contentPane\ =\ \textcolor{keyword}{new}\ JPanel();}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00121}00121\ \ \ \ \ \ \ \ \ contentPane.setBackground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00122}00122\ \ \ \ \ \ \ \ \ contentPane.setBorder(\textcolor{keyword}{new}\ EmptyBorder(5,\ 5,\ 5,\ 5));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00124}00124\ \ \ \ \ \ \ \ \ setContentPane(contentPane);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00125}00125\ \ \ \ \ \ \ \ \ contentPane.setLayout(\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00126}00126\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00127}00127\ \ \ \ \ \ \ \ \ ImageIcon\ arrow\ =\ \textcolor{keyword}{new}\ ImageIcon(\textcolor{stringliteral}{"{}main/presentation/img/arrow.png"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00128}00128\ \ \ \ \ \ \ \ \ Image\ getarrow\ =\ arrow.getImage();}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00129}00129\ \ \ \ \ \ \ \ \ Image\ modarrow\ =\ getarrow.getScaledInstance(40,\ 40,\ java.awt.Image.SCALE\_SMOOTH);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00130}00130\ \ \ \ \ \ \ \ \ arrow\ =\ \textcolor{keyword}{new}\ ImageIcon(modarrow);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00131}00131\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00132}00132\ \ \ \ \ \ \ \ \ ImageIcon\ bg\ =\ \textcolor{keyword}{new}\ ImageIcon(\textcolor{stringliteral}{"{}main/presentation/img/bg\_m.jpg"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00133}00133\ \ \ \ \ \ \ \ \ Image\ getBg\ =\ bg.getImage();}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00134}00134\ \ \ \ \ \ \ \ \ Image\ modBg\ =\ getBg.getScaledInstance(400,\ 600,\ java.awt.Image.SCALE\_SMOOTH);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00135}00135\ \ \ \ \ \ \ \ \ bg\ =\ \textcolor{keyword}{new}\ ImageIcon(modBg);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00137}00137\ \ \ \ \ \ \ \ \ ImageIcon\ bg2\ =\ \textcolor{keyword}{new}\ ImageIcon(\textcolor{stringliteral}{"{}main/presentation/img/bg\_w.jpg"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00138}00138\ \ \ \ \ \ \ \ \ Image\ getBg2\ =\ bg2.getImage();}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00139}00139\ \ \ \ \ \ \ \ \ Image\ modBg2\ =\ getBg2.getScaledInstance(225,\ 600,\ java.awt.Image.SCALE\_SMOOTH);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00140}00140\ \ \ \ \ \ \ \ \ bg2\ =\ \textcolor{keyword}{new}\ ImageIcon(modBg2);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00141}00141\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00142}00142\ \ \ \ \ \ \ \ \ JLabel\ titleM1\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}M"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00143}00143\ \ \ \ \ \ \ \ \ titleM1.setForeground(\textcolor{keyword}{new}\ Color(255,\ 0,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00144}00144\ \ \ \ \ \ \ \ \ titleM1.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00145}00145\ \ \ \ \ \ \ \ \ titleM1.setBounds(18,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00146}00146\ \ \ \ \ \ \ \ \ contentPane.add(titleM1);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00148}00148\ \ \ \ \ \ \ \ \ JLabel\ titleA\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}A"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00149}00149\ \ \ \ \ \ \ \ \ titleA.setForeground(\textcolor{keyword}{new}\ Color(0,\ 215,\ 11));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00150}00150\ \ \ \ \ \ \ \ \ titleA.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00151}00151\ \ \ \ \ \ \ \ \ titleA.setBounds(37,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00152}00152\ \ \ \ \ \ \ \ \ contentPane.add(titleA);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00153}00153\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00154}00154\ \ \ \ \ \ \ \ \ JLabel\ titleS\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}S"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00155}00155\ \ \ \ \ \ \ \ \ titleS.setForeground(\textcolor{keyword}{new}\ Color(0,\ 0,\ 255));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00156}00156\ \ \ \ \ \ \ \ \ titleS.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00157}00157\ \ \ \ \ \ \ \ \ titleS.setBounds(54,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00158}00158\ \ \ \ \ \ \ \ \ contentPane.add(titleS);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00159}00159\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00160}00160\ \ \ \ \ \ \ \ \ JLabel\ titleT\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}T"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00161}00161\ \ \ \ \ \ \ \ \ titleT.setForeground(\textcolor{keyword}{new}\ Color(255,\ 255,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00162}00162\ \ \ \ \ \ \ \ \ titleT.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00163}00163\ \ \ \ \ \ \ \ \ titleT.setBounds(71,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00164}00164\ \ \ \ \ \ \ \ \ contentPane.add(titleT);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00165}00165\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00166}00166\ \ \ \ \ \ \ \ \ JLabel\ titleE\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}E"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00167}00167\ \ \ \ \ \ \ \ \ titleE.setForeground(\textcolor{keyword}{new}\ Color(255,\ 255,\ 255));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00168}00168\ \ \ \ \ \ \ \ \ titleE.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00169}00169\ \ \ \ \ \ \ \ \ titleE.setBounds(90,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00170}00170\ \ \ \ \ \ \ \ \ contentPane.add(titleE);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00171}00171\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00172}00172\ \ \ \ \ \ \ \ \ JLabel\ titleR\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}R"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00173}00173\ \ \ \ \ \ \ \ \ titleR.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00174}00174\ \ \ \ \ \ \ \ \ titleR.setBounds(108,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00175}00175\ \ \ \ \ \ \ \ \ contentPane.add(titleR);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00176}00176\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00177}00177\ \ \ \ \ \ \ \ \ JLabel\ titleM2\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}M"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00178}00178\ \ \ \ \ \ \ \ \ titleM2.setForeground(\textcolor{keyword}{new}\ Color(255,\ 0,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00179}00179\ \ \ \ \ \ \ \ \ titleM2.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD\ |\ Font.ITALIC,\ 31));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00180}00180\ \ \ \ \ \ \ \ \ titleM2.setBounds(75,\ 51,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00181}00181\ \ \ \ \ \ \ \ \ contentPane.add(titleM2);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00182}00182\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00183}00183\ \ \ \ \ \ \ \ \ JLabel\ titleI\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}I"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00184}00184\ \ \ \ \ \ \ \ \ titleI.setForeground(\textcolor{keyword}{new}\ Color(0,\ 215,\ 11));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00185}00185\ \ \ \ \ \ \ \ \ titleI.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD\ |\ Font.ITALIC,\ 31));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00186}00186\ \ \ \ \ \ \ \ \ titleI.setBounds(97,\ 51,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00187}00187\ \ \ \ \ \ \ \ \ contentPane.add(titleI);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00188}00188\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00189}00189\ \ \ \ \ \ \ \ \ JLabel\ titleN\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}N"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00190}00190\ \ \ \ \ \ \ \ \ titleN.setForeground(\textcolor{keyword}{new}\ Color(0,\ 0,\ 255));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00191}00191\ \ \ \ \ \ \ \ \ titleN.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD\ |\ Font.ITALIC,\ 31));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00192}00192\ \ \ \ \ \ \ \ \ titleN.setBounds(117,\ 51,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00193}00193\ \ \ \ \ \ \ \ \ contentPane.add(titleN);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00194}00194\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00195}00195\ \ \ \ \ \ \ \ \ JLabel\ titleD\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}D"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00196}00196\ \ \ \ \ \ \ \ \ titleD.setForeground(\textcolor{keyword}{new}\ Color(255,\ 255,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00197}00197\ \ \ \ \ \ \ \ \ titleD.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD\ |\ Font.ITALIC,\ 31));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00198}00198\ \ \ \ \ \ \ \ \ titleD.setBounds(136,\ 51,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00199}00199\ \ \ \ \ \ \ \ \ contentPane.add(titleD);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00200}00200\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00201}00201\ \ \ \ \ \ \ \ \ JLabel\ textRol\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}Role:"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00202}00202\ \ \ \ \ \ \ \ \ textRol.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Myanmar\ Text"{}},\ Font.BOLD,\ 11));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00203}00203\ \ \ \ \ \ \ \ \ textRol.setBounds(22,\ 100,\ 35,\ 15);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00204}00204\ \ \ \ \ \ \ \ \ contentPane.add(textRol);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00205}00205\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00206}00206\ \ \ \ \ \ \ \ \ JButton\ buttonPlay\ =\ \textcolor{keyword}{new}\ JButton(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00207}00207\ \ \ \ \ \ \ \ \ buttonPlay.setBounds(65,\ 388,\ 45,\ 45);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00208}00208\ \ \ \ \ \ \ \ \ contentPane.add(buttonPlay);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00209}00209\ \ \ \ \ \ \ \ \ buttonPlay.setBackground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00210}00210\ \ \ \ \ \ \ \ \ buttonPlay.setIcon(arrow);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00211}00211\ \ \ \ \ \ \ \ \ buttonPlay.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Tahoma"{}},\ Font.BOLD,\ 14));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00212}00212\ \ \ \ \ \ \ \ \ buttonPlay.addActionListener(this::botoPlayPerformed);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00213}00213\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00214}00214\ \ \ \ \ \ \ \ \ JButton\ btnReturn\ =\ \textcolor{keyword}{new}\ JButton(\textcolor{stringliteral}{"{}Return"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00215}00215\ \ \ \ \ \ \ \ \ btnReturn.addActionListener(this::returnMainMenu);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00216}00216\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00217}00217\ \ \ \ \ \ \ \ \ btnReturn.setBackground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00218}00218\ \ \ \ \ \ \ \ \ btnReturn.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Tahoma"{}},\ Font.BOLD,\ 11));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00219}00219\ \ \ \ \ \ \ \ \ btnReturn.setBounds(31,\ 479,\ 117,\ 25);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00220}00220\ \ \ \ \ \ \ \ \ contentPane.add(btnReturn);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00221}00221\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00222}00222\ \ \ \ \ \ \ \ \ radioButton\_CM\ =\ \textcolor{keyword}{new}\ JRadioButton(\textcolor{stringliteral}{"{}CodeMaker"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00223}00223\ \ \ \ \ \ \ \ \ radioButton\_CM.addActionListener(e\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00224}00224\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ radioButton\_CB.setSelected(False);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ Rol\ =\ \textcolor{stringliteral}{"{}CodeMaker"{}};}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00227}00227\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00228}00228\ \ \ \ \ \ \ \ \ radioButton\_CM.setBackground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00229}00229\ \ \ \ \ \ \ \ \ radioButton\_CM.setBounds(22,\ 114,\ 141,\ 23);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00230}00230\ \ \ \ \ \ \ \ \ contentPane.add(radioButton\_CM);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00231}00231\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00232}00232\ \ \ \ \ \ \ \ \ radioButton\_CB\ =\ \textcolor{keyword}{new}\ JRadioButton(\textcolor{stringliteral}{"{}CodeBreaker"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00233}00233\ \ \ \ \ \ \ \ \ radioButton\_CB.addActionListener(e\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00234}00234\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \ \ radioButton\_CM.setSelected(False);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00236}00236\ \ \ \ \ \ \ \ \ \ \ \ \ Rol\ =\ \textcolor{stringliteral}{"{}CodeBreaker"{}};}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00237}00237\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00238}00238\ \ \ \ \ \ \ \ \ radioButton\_CB.setBackground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00239}00239\ \ \ \ \ \ \ \ \ radioButton\_CB.setBounds(22,\ 140,\ 141,\ 23);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00240}00240\ \ \ \ \ \ \ \ \ contentPane.add(radioButton\_CB);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00241}00241\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00242}00242\ \ \ \ \ \ \ \ \ JLabel\ textDificultat\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}Dififculty:"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00243}00243\ \ \ \ \ \ \ \ \ textDificultat.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Myanmar\ Text"{}},\ Font.BOLD,\ 11));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00244}00244\ \ \ \ \ \ \ \ \ textDificultat.setBounds(22,\ 184,\ 76,\ 15);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00245}00245\ \ \ \ \ \ \ \ \ contentPane.add(textDificultat);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00246}00246\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00247}00247\ \ \ \ \ \ \ \ \ radioButton\_Easy\ =\ \textcolor{keyword}{new}\ JRadioButton(\textcolor{stringliteral}{"{}Easy"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00248}00248\ \ \ \ \ \ \ \ \ radioButton\_Easy.addActionListener(e\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00249}00249\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00250}00250\ \ \ \ \ \ \ \ \ \ \ \ \ radioButton\_Medium.setSelected(False);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ radioButton\_Hard.setSelected(False);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00252}00252\ \ \ \ \ \ \ \ \ \ \ \ \ Dificultat\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00253}00253\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00254}00254\ \ \ \ \ \ \ \ \ radioButton\_Easy.setBackground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00255}00255\ \ \ \ \ \ \ \ \ radioButton\_Easy.setBounds(22,\ 196,\ 141,\ 23);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00256}00256\ \ \ \ \ \ \ \ \ contentPane.add(radioButton\_Easy);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00257}00257\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00258}00258\ \ \ \ \ \ \ \ \ radioButton\_Medium\ =\ \textcolor{keyword}{new}\ JRadioButton(\textcolor{stringliteral}{"{}Medium"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00259}00259\ \ \ \ \ \ \ \ \ radioButton\_Medium.addActionListener(e\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00260}00260\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00261}00261\ \ \ \ \ \ \ \ \ \ \ \ \ radioButton\_Easy.setSelected(False);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00262}00262\ \ \ \ \ \ \ \ \ \ \ \ \ radioButton\_Hard.setSelected(False);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00263}00263\ \ \ \ \ \ \ \ \ \ \ \ \ Dificultat\ =\ 2;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00264}00264\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00265}00265\ \ \ \ \ \ \ \ \ radioButton\_Medium.setBackground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00266}00266\ \ \ \ \ \ \ \ \ radioButton\_Medium.setBounds(22,\ 222,\ 141,\ 23);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00267}00267\ \ \ \ \ \ \ \ \ contentPane.add(radioButton\_Medium);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00268}00268\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00269}00269\ \ \ \ \ \ \ \ \ radioButton\_Hard\ =\ \textcolor{keyword}{new}\ JRadioButton(\textcolor{stringliteral}{"{}Hard"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00270}00270\ \ \ \ \ \ \ \ \ radioButton\_Hard.addActionListener(e\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00271}00271\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00272}00272\ \ \ \ \ \ \ \ \ \ \ \ \ radioButton\_Easy.setSelected(False);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ radioButton\_Medium.setSelected(False);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00274}00274\ \ \ \ \ \ \ \ \ \ \ \ \ Dificultat\ =\ 3;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00275}00275\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00276}00276\ \ \ \ \ \ \ \ \ radioButton\_Hard.setBackground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00277}00277\ \ \ \ \ \ \ \ \ radioButton\_Hard.setBounds(22,\ 248,\ 141,\ 23);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00278}00278\ \ \ \ \ \ \ \ \ contentPane.add(radioButton\_Hard);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00279}00279\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00280}00280\ \ \ \ \ \ \ \ \ JLabel\ textAlgorithm\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}Algorithm:"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00281}00281\ \ \ \ \ \ \ \ \ textAlgorithm.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Myanmar\ Text"{}},\ Font.BOLD,\ 11));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00282}00282\ \ \ \ \ \ \ \ \ textAlgorithm.setBounds(22,\ 292,\ 76,\ 15);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00283}00283\ \ \ \ \ \ \ \ \ contentPane.add(textAlgorithm);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00284}00284\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00285}00285\ \ \ \ \ \ \ \ \ radioButton\_FG\ =\ \textcolor{keyword}{new}\ JRadioButton(\textcolor{stringliteral}{"{}FiveGuess"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00286}00286\ \ \ \ \ \ \ \ \ radioButton\_FG.addActionListener(e\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00287}00287\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00288}00288\ \ \ \ \ \ \ \ \ \ \ \ \ radioButton\_G.setSelected(False);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00289}00289\ \ \ \ \ \ \ \ \ \ \ \ \ Algorithm\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00290}00290\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00291}00291\ \ \ \ \ \ \ \ \ radioButton\_FG.setBackground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00292}00292\ \ \ \ \ \ \ \ \ radioButton\_FG.setBounds(22,\ 304,\ 141,\ 23);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00293}00293\ \ \ \ \ \ \ \ \ contentPane.add(radioButton\_FG);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00294}00294\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00295}00295\ \ \ \ \ \ \ \ \ radioButton\_G\ =\ \textcolor{keyword}{new}\ JRadioButton(\textcolor{stringliteral}{"{}Genetic"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00296}00296\ \ \ \ \ \ \ \ \ radioButton\_G.addActionListener(e\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00297}00297\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00298}00298\ \ \ \ \ \ \ \ \ \ \ \ \ radioButton\_FG.setSelected(False);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00299}00299\ \ \ \ \ \ \ \ \ \ \ \ \ Algorithm\ =\ 2;}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00300}00300\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00301}00301\ \ \ \ \ \ \ \ \ radioButton\_G.setBackground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00302}00302\ \ \ \ \ \ \ \ \ radioButton\_G.setBounds(22,\ 330,\ 141,\ 23);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00303}00303\ \ \ \ \ \ \ \ \ contentPane.add(radioButton\_G);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00304}00304\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00305}00305\ \ \ \ \ \ \ \ \ missatge\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00306}00306\ \ \ \ \ \ \ \ \ missatge.setHorizontalAlignment(SwingConstants.CENTER);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00307}00307\ \ \ \ \ \ \ \ \ missatge.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Dialog"{}},\ Font.BOLD,\ 14));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00308}00308\ \ \ \ \ \ \ \ \ missatge.setForeground(Color.RED);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00309}00309\ \ \ \ \ \ \ \ \ missatge.setBounds(18,\ 445,\ 150,\ 15);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00310}00310\ \ \ \ \ \ \ \ \ contentPane.add(missatge);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00311}00311\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00312}00312\ \ \ \ \ \ \ \ \ JLabel\ bgImg\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00313}00313\ \ \ \ \ \ \ \ \ bgImg.setIcon(bg);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00314}00314\ \ \ \ \ \ \ \ \ bgImg.setBounds(187,\ 0,\ 371,\ 529);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00315}00315\ \ \ \ \ \ \ \ \ contentPane.add(bgImg);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00316}00316\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00317}00317\ \ \ \ \ \ \ \ \ JLabel\ b2Img\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00318}00318\ \ \ \ \ \ \ \ \ b2Img.setBackground(\textcolor{keyword}{new}\ Color(164,\ 104,\ 23));}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00319}00319\ \ \ \ \ \ \ \ \ b2Img.setIcon(bg2);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00320}00320\ \ \ \ \ \ \ \ \ b2Img.setBounds(0,\ 0,\ 225,\ 529);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00321}00321\ \ \ \ \ \ \ \ \ contentPane.add(b2Img);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00322}00322\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00323}00323\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00324}00324\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00331}00331\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ botoPlayPerformed(java.awt.event.ActionEvent\ evt)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00332}00332\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00333}00333\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(comprovaSeleccioCorrecte())\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00334}00334\ \ \ \ \ \ \ \ \ \ \ \ \ cCrearPartida.\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_crear_partida_a1e28099406e807e2c36bfeedf89cf7c3}{crearNovaPartida}}(Dificultat,\ Rol,\ Algorithm);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00335}00335\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//cCrearPartida.mostraInfo();}}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00336}00336\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_play}{VistaPlay}}\ vistaPlay\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_play}{VistaPlay}}(\textcolor{keyword}{this},\ cCrearPartida);}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00337}00337\ \ \ \ \ \ \ \ \ \ \ \ \ vistaPlay.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00338}00338\ \ \ \ \ \ \ \ \ \ \ \ \ this.setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00339}00339\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00340}00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ missatge.setText(\textcolor{stringliteral}{"{}incorrect\ selection"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00341}00341\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00342}00342\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}(DificultatNoExisteix\ ignored)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00343}00343\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00344}00344\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00345}00345\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00346}00346\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00347}00347\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00351}00351\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{boolean}\ comprovaSeleccioCorrecte()\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00352}00352\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00353}00353\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (radioButton\_CB.isSelected()\ ||\ radioButton\_CM.isSelected())\ \&\&\ (radioButton\_Easy.isSelected()\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00354}00354\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ||\ radioButton\_Medium.isSelected()\ ||\ radioButton\_Hard.isSelected())\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00355}00355\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ (radioButton\_FG.isSelected()\ ||\ radioButton\_G.isSelected());}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00356}00356\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00357}00357\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00358}00358\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00363}00363\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ returnMainMenu(java.awt.event.ActionEvent\ evt)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00364}00364\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00365}00365\ \ \ \ \ \ \ \ \ \ \ \ \ parent.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00366}00366\ \ \ \ \ \ \ \ \ \ \ \ \ dispose();}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00367}00367\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00368}00368\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00369}00369\ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00374}00374\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ guardarSeqCodeMaker(java.awt.event.ActionEvent\ evt)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00375}00375\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00376}00376\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_crear_partida_8java_source_l00377}00377\ \}}
+
+\end{DoxyCode}

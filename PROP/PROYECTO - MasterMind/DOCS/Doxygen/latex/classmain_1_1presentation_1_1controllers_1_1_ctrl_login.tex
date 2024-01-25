@@ -1,0 +1,149 @@
+\doxysection{main.\+presentation.\+controllers.\+Ctrl\+Login Class Reference}
+\hypertarget{classmain_1_1presentation_1_1controllers_1_1_ctrl_login}{}\label{classmain_1_1presentation_1_1controllers_1_1_ctrl_login}\index{main.presentation.controllers.CtrlLogin@{main.presentation.controllers.CtrlLogin}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_login_a93e9d87d3fd7ef9a116b738629a93fea}{Ctrl\+Login}} ()
+\begin{DoxyCompactList}\small\item\em Creadora per defecte. Crea una instància Ctrl\+Domain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_login_ab82fdcfcf7ac6930927336db3edd7713}{run}} ()
+\begin{DoxyCompactList}\small\item\em Funció que inicialitza la Vista\+Login i la fa visible. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{Ctrl\+Domain}} \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_login_a367d6503768d3b1c041129b36f8ab9d6}{get\+CD}} ()
+\begin{DoxyCompactList}\small\item\em Getter del Ctrl\+Domain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_login_aad65b99aa7de1c70a78dac14dfeb5ae1}{set\+CD}} (\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{Ctrl\+Domain}} cd)
+\begin{DoxyCompactList}\small\item\em Setter del Ctrl\+Domain. \end{DoxyCompactList}\item 
+Boolean \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_login_a924335779b5dbbcdf81c38c0c29d4b41}{existeix\+Usuari}} (String User\+Name)
+\begin{DoxyCompactList}\small\item\em Funció que comprova si existex ell\textquotesingle{}usuari amb el nom d\textquotesingle{}usuari passat per paràmetre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_login_aa147a0dec5466dfb985c651e46faa08b}{login}} (String username, String pswd)  throws File\+Not\+Found\+Exception, \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_contrasenya_incorrecte}{Contrasenya\+Incorrecte}}
+\begin{DoxyCompactList}\small\item\em Funció que permet carregar l\textquotesingle{}usuari (inicia sessio). Crida la funció carregar\+Usuari de Ctrl\+Domain. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_login_8java_source_l00011}{11}} of file \mbox{\hyperlink{_ctrl_login_8java_source}{Ctrl\+Login.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmain_1_1presentation_1_1controllers_1_1_ctrl_login_a93e9d87d3fd7ef9a116b738629a93fea}\label{classmain_1_1presentation_1_1controllers_1_1_ctrl_login_a93e9d87d3fd7ef9a116b738629a93fea} 
+\index{main.presentation.controllers.CtrlLogin@{main.presentation.controllers.CtrlLogin}!CtrlLogin@{CtrlLogin}}
+\index{CtrlLogin@{CtrlLogin}!main.presentation.controllers.CtrlLogin@{main.presentation.controllers.CtrlLogin}}
+\doxysubsubsection{\texorpdfstring{CtrlLogin()}{CtrlLogin()}}
+{\footnotesize\ttfamily main.\+presentation.\+controllers.\+Ctrl\+Login.\+Ctrl\+Login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora per defecte. Crea una instància Ctrl\+Domain. 
+
+
+
+Definition at line \mbox{\hyperlink{_ctrl_login_8java_source_l00021}{21}} of file \mbox{\hyperlink{_ctrl_login_8java_source}{Ctrl\+Login.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmain_1_1presentation_1_1controllers_1_1_ctrl_login_a924335779b5dbbcdf81c38c0c29d4b41}\label{classmain_1_1presentation_1_1controllers_1_1_ctrl_login_a924335779b5dbbcdf81c38c0c29d4b41} 
+\index{main.presentation.controllers.CtrlLogin@{main.presentation.controllers.CtrlLogin}!existeixUsuari@{existeixUsuari}}
+\index{existeixUsuari@{existeixUsuari}!main.presentation.controllers.CtrlLogin@{main.presentation.controllers.CtrlLogin}}
+\doxysubsubsection{\texorpdfstring{existeixUsuari()}{existeixUsuari()}}
+{\footnotesize\ttfamily Boolean main.\+presentation.\+controllers.\+Ctrl\+Login.\+existeix\+Usuari (\begin{DoxyParamCaption}\item[{String}]{User\+Name }\end{DoxyParamCaption})}
+
+
+
+Funció que comprova si existex ell\textquotesingle{}usuari amb el nom d\textquotesingle{}usuari passat per paràmetre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em User\+Name} & representa un nom d\textquotesingle{}usuari vàlid \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cert si existeix l\textquotesingle{}usuari, en cas contrari, retorna fals 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_login_8java_source_l00058}{58}} of file \mbox{\hyperlink{_ctrl_login_8java_source}{Ctrl\+Login.\+java}}.
+
+\Hypertarget{classmain_1_1presentation_1_1controllers_1_1_ctrl_login_a367d6503768d3b1c041129b36f8ab9d6}\label{classmain_1_1presentation_1_1controllers_1_1_ctrl_login_a367d6503768d3b1c041129b36f8ab9d6} 
+\index{main.presentation.controllers.CtrlLogin@{main.presentation.controllers.CtrlLogin}!getCD@{getCD}}
+\index{getCD@{getCD}!main.presentation.controllers.CtrlLogin@{main.presentation.controllers.CtrlLogin}}
+\doxysubsubsection{\texorpdfstring{getCD()}{getCD()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{Ctrl\+Domain}} main.\+presentation.\+controllers.\+Ctrl\+Login.\+get\+CD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter del Ctrl\+Domain. 
+
+\begin{DoxyReturn}{Returns}
+instància de Ctrl\+Domain 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_login_8java_source_l00038}{38}} of file \mbox{\hyperlink{_ctrl_login_8java_source}{Ctrl\+Login.\+java}}.
+
+\Hypertarget{classmain_1_1presentation_1_1controllers_1_1_ctrl_login_aa147a0dec5466dfb985c651e46faa08b}\label{classmain_1_1presentation_1_1controllers_1_1_ctrl_login_aa147a0dec5466dfb985c651e46faa08b} 
+\index{main.presentation.controllers.CtrlLogin@{main.presentation.controllers.CtrlLogin}!login@{login}}
+\index{login@{login}!main.presentation.controllers.CtrlLogin@{main.presentation.controllers.CtrlLogin}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily void main.\+presentation.\+controllers.\+Ctrl\+Login.\+login (\begin{DoxyParamCaption}\item[{String}]{username,  }\item[{String}]{pswd }\end{DoxyParamCaption}) throws File\+Not\+Found\+Exception, \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_contrasenya_incorrecte}{Contrasenya\+Incorrecte}}}
+
+
+
+Funció que permet carregar l\textquotesingle{}usuari (inicia sessio). Crida la funció carregar\+Usuari de Ctrl\+Domain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & representa el nom d\textquotesingle{}usuari \\
+\hline
+{\em pswd} & representa la contraseña del usuari \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em File\+Not\+Found\+Exception} & en cas que l\textquotesingle{}usuari no existeixi \\
+\hline
+{\em Contrasenya\+Incorrecte} & en cas que la contraseña no sigui correcte \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_login_8java_source_l00071}{71}} of file \mbox{\hyperlink{_ctrl_login_8java_source}{Ctrl\+Login.\+java}}.
+
+\Hypertarget{classmain_1_1presentation_1_1controllers_1_1_ctrl_login_ab82fdcfcf7ac6930927336db3edd7713}\label{classmain_1_1presentation_1_1controllers_1_1_ctrl_login_ab82fdcfcf7ac6930927336db3edd7713} 
+\index{main.presentation.controllers.CtrlLogin@{main.presentation.controllers.CtrlLogin}!run@{run}}
+\index{run@{run}!main.presentation.controllers.CtrlLogin@{main.presentation.controllers.CtrlLogin}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void main.\+presentation.\+controllers.\+Ctrl\+Login.\+run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funció que inicialitza la Vista\+Login i la fa visible. 
+
+
+
+Definition at line \mbox{\hyperlink{_ctrl_login_8java_source_l00028}{28}} of file \mbox{\hyperlink{_ctrl_login_8java_source}{Ctrl\+Login.\+java}}.
+
+\Hypertarget{classmain_1_1presentation_1_1controllers_1_1_ctrl_login_aad65b99aa7de1c70a78dac14dfeb5ae1}\label{classmain_1_1presentation_1_1controllers_1_1_ctrl_login_aad65b99aa7de1c70a78dac14dfeb5ae1} 
+\index{main.presentation.controllers.CtrlLogin@{main.presentation.controllers.CtrlLogin}!setCD@{setCD}}
+\index{setCD@{setCD}!main.presentation.controllers.CtrlLogin@{main.presentation.controllers.CtrlLogin}}
+\doxysubsubsection{\texorpdfstring{setCD()}{setCD()}}
+{\footnotesize\ttfamily void main.\+presentation.\+controllers.\+Ctrl\+Login.\+set\+CD (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{Ctrl\+Domain}}}]{cd }\end{DoxyParamCaption})}
+
+
+
+Setter del Ctrl\+Domain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cd} & instància de Ctrl\+Domain \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_login_8java_source_l00047}{47}} of file \mbox{\hyperlink{_ctrl_login_8java_source}{Ctrl\+Login.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/presentation/controllers/\mbox{\hyperlink{_ctrl_login_8java}{Ctrl\+Login.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,53 @@
+\doxysection{Round\+Button.\+java}
+\hypertarget{_round_button_8java_source}{}\label{_round_button_8java_source}\index{main/presentation/classes/RoundButton.java@{main/presentation/classes/RoundButton.java}}
+\mbox{\hyperlink{_round_button_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00001}\mbox{\hyperlink{namespacemain_1_1presentation_1_1classes}{00001}}\ \textcolor{keyword}{package\ }main.presentation.classes;}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00003}00003\ \textcolor{keyword}{import}\ javax.swing.JButton;}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00004}00004\ \textcolor{keyword}{import}\ java.awt.Color;}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00005}00005\ \textcolor{keyword}{import}\ java.awt.Dimension;}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00006}00006\ \textcolor{keyword}{import}\ java.awt.Graphics;}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00007}00007\ \textcolor{keyword}{import}\ java.awt.Shape;}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00008}00008\ \textcolor{keyword}{import}\ java.awt.geom.Ellipse2D;}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00010}\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_round_button}{00010}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_round_button}{RoundButton}}\ \textcolor{keyword}{extends}\ JButton\ \{}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{long}\ serialVersionUID\ =\ 1L;}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00015}00015\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00016}\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_round_button_ae6746e6ac7af839fc024753a973201a4}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_round_button_ae6746e6ac7af839fc024753a973201a4}{RoundButton}}(String\ text)\ \{}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00017}00017\ \ \ \ \ \ \ \ \ super(text);}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00018}00018\ \ \ \ \ \ \ \ \ setOpaque(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00019}00019\ \ \ \ \ \ \ \ \ setContentAreaFilled(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00020}00020\ \ \ \ \ \ \ \ \ setBorderPainted(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00021}00021\ \ \ \ \ \ \ \ \ setPreferredSize(\textcolor{keyword}{new}\ Dimension(50,\ 50));}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00022}00022\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00023}00023\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00024}00024\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00025}\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_round_button_aac408988c291289283c728adee2e46a0}{00025}}\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_round_button_aac408988c291289283c728adee2e46a0}{paintComponent}}(Graphics\ g)\ \{}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (getModel().isArmed())\ \{}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ g.setColor(Color.gray);}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00028}00028\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ g.setColor(getBackground());}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ g.fillOval(0,\ 0,\ getSize().width\ -\/\ 1,\ getSize().height\ -\/\ 1);}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ super.paintComponent(g);}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00034}00034\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00035}00035\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00036}\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_round_button_a143bfce961e30005a51072983009895b}{00036}}\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_round_button_a143bfce961e30005a51072983009895b}{paintBorder}}(Graphics\ g)\ \{}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ g.setColor(getForeground());}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ g.drawOval(0,\ 0,\ getSize().width\ -\/\ 1,\ getSize().height\ -\/\ 1);}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00039}00039\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00041}00041\ \ \ \ \ Shape\ shape;}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00042}00042\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00043}00043\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00044}\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_round_button_a0e17ac8bafc821a9a308e994a675a135}{00044}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_round_button_a0e17ac8bafc821a9a308e994a675a135}{contains}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \{}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (shape\ ==\ \textcolor{keyword}{null}\ ||\ !shape.getBounds().equals(getBounds()))\ \{}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ shape\ =\ \textcolor{keyword}{new}\ Ellipse2D.Float(0,\ 0,\ getWidth(),\ getHeight());}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ shape.contains(x,\ y);}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_round_button_8java_source_l00050}00050\ \}}
+
+\end{DoxyCode}

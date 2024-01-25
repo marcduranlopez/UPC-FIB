@@ -1,0 +1,429 @@
+\doxysection{Ctrl\+Domain.\+java}
+\hypertarget{_ctrl_domain_8java_source}{}\label{_ctrl_domain_8java_source}\index{main/domain/controllers/CtrlDomain.java@{main/domain/controllers/CtrlDomain.java}}
+\mbox{\hyperlink{_ctrl_domain_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00001}\mbox{\hyperlink{namespacemain_1_1domain_1_1controllers}{00001}}\ \textcolor{keyword}{package\ }main.domain.controllers;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00003}00003\ \textcolor{keyword}{import}\ com.google.gson.Gson;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00004}00004\ \textcolor{keyword}{import}\ com.google.gson.stream.JsonReader;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00005}00005\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1data}{data}}.\mbox{\hyperlink{classmain_1_1data_1_1_ctrl_data}{CtrlData}};}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00006}00006\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes}{classes}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes_1_1_exceptions}{Exceptions}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_contrasenya_incorrecte}{ContrasenyaIncorrecte}};}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00007}00007\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes}{classes}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes_1_1_exceptions}{Exceptions}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_dificultat_no_existeix}{DificultatNoExisteix}};}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00008}00008\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes}{classes}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes_1_1_exceptions}{Exceptions}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_usuari_ja_existeix}{UsuariJaExisteix}};}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00009}00009\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes}{classes}}.*;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00010}00010\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes}{classes}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_record}{Record}};}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00012}00012\ \textcolor{keyword}{import}\ java.io.FileNotFoundException;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00013}00013\ \textcolor{keyword}{import}\ java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00014}00014\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00015}00015\ \textcolor{keyword}{import}\ java.util.Random;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00019}00019\ \textcolor{comment}{/*\ @file\ CtrlDomain.java}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00020}00020\ \textcolor{comment}{@brief\ Clase\ <em>CtrlDomain</em>.}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00021}00021\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00027}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{00027}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00032}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{00032}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari}{Usuari}}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}};}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00036}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{00036}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}};}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00041}00041\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking}{Ranking}}\ ranking;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00046}00046\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_jugador_i_a}{JugadorIA}}\ jugadorIA;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00051}00051\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ \mbox{\hyperlink{classmain_1_1data_1_1_ctrl_data}{CtrlData}}\ dades;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00056}00056\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ Gson\ usuarisJSON;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00061}00061\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}\ ctrlDomain;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00062}00062\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00069}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5d047d98c72a5bee854cb6c881a95b39}{00069}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5d047d98c72a5bee854cb6c881a95b39}{CtrlDomain}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ dades\ =\ \mbox{\hyperlink{classmain_1_1data_1_1_ctrl_data}{CtrlData}}.\mbox{\hyperlink{classmain_1_1data_1_1_ctrl_data_af635693df71af4aac586fdf4e57b0b80}{getInstance}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ usuarisJSON\ =\ \textcolor{keyword}{new}\ Gson();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ ranking\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking}{Ranking}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00082}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a25d610faa4da74c654e15fe50ab015b4}{00082}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a25d610faa4da74c654e15fe50ab015b4}{getInstance}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ctrlDomain\ ==\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ ctrlDomain\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5d047d98c72a5bee854cb6c881a95b39}{CtrlDomain}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00085}00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ctrlDomain;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00087}00087\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00096}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a1bd4ae214f716bf44109a07a50afa285}{00096}}\ \ \ \ \ \textcolor{keyword}{public}\ JsonReader\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a1bd4ae214f716bf44109a07a50afa285}{getUsuari}}(String\ nomusuari)\ \textcolor{keywordflow}{throws}\ FileNotFoundException\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dades.\mbox{\hyperlink{classmain_1_1data_1_1_ctrl_data_a5a90c863bc452dd92ce3b0390075fcf2}{getUsuari}}(nomusuari);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00098}00098\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00106}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a2b0a70437437dafd3dc178526d7cf6ce}{00106}}\ \ \ \ \ \textcolor{keyword}{public}\ Boolean\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a2b0a70437437dafd3dc178526d7cf6ce}{existeixUsuari}}(String\ username)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00107}00107\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dades.\mbox{\hyperlink{classmain_1_1data_1_1_ctrl_data_aa258578bc989f438f6fb38fa5bff0fa4}{existeixUsuari}}(username);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00109}00109\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00115}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a7e57e450851271b3055efd526e748808}{00115}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a7e57e450851271b3055efd526e748808}{actualitzaRanking}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00116}00116\ \ \ \ \ \ \ \ \ ranking\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking}{Ranking}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00117}00117\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00129}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a10a7419fa8af037be59c8bcec68f9376}{00129}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a10a7419fa8af037be59c8bcec68f9376}{carregarUsuari}}(String\ nomusuari,\ String\ password)\ \textcolor{keywordflow}{throws}\ FileNotFoundException,\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_contrasenya_incorrecte}{ContrasenyaIncorrecte}}\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00130}00130\ \ \ \ \ \ \ \ \ JsonReader\ usuariSel\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a1bd4ae214f716bf44109a07a50afa285}{getUsuari}}(nomusuari);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00131}00131\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}}\ =\ usuarisJSON.fromJson(usuariSel,\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari}{Usuari}}.class);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!password.equals(\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a8a2a0fef03cdbc1416162d70af5332e7}{getPassword}}()))\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}}\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_contrasenya_incorrecte}{ContrasenyaIncorrecte}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00135}00135\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00136}00136\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00137}00137\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00145}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5866cb26750958e2a9814c831d326c74}{00145}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5866cb26750958e2a9814c831d326c74}{tancarSesioUsuari}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00146}00146\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}}\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00147}00147\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00148}00148\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00160}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a1d5dd1e064ef38713779d4a6a18105fe}{00160}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a1d5dd1e064ef38713779d4a6a18105fe}{registrarUsuari}}(String\ nomusuari,\ String\ password)\ \textcolor{keywordflow}{throws}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_usuari_ja_existeix}{UsuariJaExisteix}},\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_contrasenya_incorrecte}{ContrasenyaIncorrecte}}\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00161}00161\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari}{Usuari}}(nomusuari,\ password);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00162}00162\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (password.equals(\textcolor{stringliteral}{"{}\ "{}}))\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_contrasenya_incorrecte}{ContrasenyaIncorrecte}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00163}00163\ \ \ \ \ \ \ \ \ String\ usuariJSON\ =\ usuarisJSON.toJson(\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}});}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00164}00164\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ab79a986455c97b696ff8ea969d83a329}{guardarNouUsuari}}(nomusuari,\ usuariJSON);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00165}00165\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a7e57e450851271b3055efd526e748808}{actualitzaRanking}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00166}00166\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00173}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a1159bddb9f55491bc85757505ccb9cdc}{00173}}\ \ \ \ \ \textcolor{keyword}{public}\ List<Partida>\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a1159bddb9f55491bc85757505ccb9cdc}{getPartidesGuardades}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00174}00174\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a5bd7a0353595df4d5de1b9233e841aca}{getPartidesGuardades}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00175}00175\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00180}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ad53d7aa267aea2b944972a7bfd8980b6}{00180}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ad53d7aa267aea2b944972a7bfd8980b6}{guardarPartida}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00181}00181\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_ae19f6f3ef1765de6712f5218cee5168d}{afegeixPartidaGuardada}}(\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}});}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00182}00182\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a340d2e13e424e5d65028996851036987}{guardarUsuari}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00183}00183\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00188}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a340d2e13e424e5d65028996851036987}{00188}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a340d2e13e424e5d65028996851036987}{guardarUsuari}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00189}00189\ \ \ \ \ \ \ \ \ String\ playerJSON\ =\ usuarisJSON.toJson(\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}});}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00190}00190\ \ \ \ \ \ \ \ \ dades.\mbox{\hyperlink{classmain_1_1data_1_1_ctrl_data_a9df4561d7989668ee13d8d2ad48d6a6b}{guardarUsuari}}(\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a15b1b17059ff805f70d32adcd059540f}{getNom}}(),\ playerJSON);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00191}00191\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00198}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ab79a986455c97b696ff8ea969d83a329}{00198}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ab79a986455c97b696ff8ea969d83a329}{guardarNouUsuari}}(String\ nomusuari,\ String\ usuariJSON)\ \textcolor{keywordflow}{throws}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_usuari_ja_existeix}{UsuariJaExisteix}}\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00199}00199\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dades.\mbox{\hyperlink{classmain_1_1data_1_1_ctrl_data_aa258578bc989f438f6fb38fa5bff0fa4}{existeixUsuari}}(nomusuari))\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_usuari_ja_existeix}{UsuariJaExisteix}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00201}00201\ \ \ \ \ \ \ \ \ dades.\mbox{\hyperlink{classmain_1_1data_1_1_ctrl_data_a9df4561d7989668ee13d8d2ad48d6a6b}{guardarUsuari}}(nomusuari,\ usuariJSON);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00202}00202\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00203}00203\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00211}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a50856e4946114801a8a2c2e6d799c7bf}{00211}}\ \ \ \ \ \textcolor{keyword}{public}\ List<Integer>\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a50856e4946114801a8a2c2e6d799c7bf}{generadorCodiResoldre}}(Integer\ min,\ Integer\ max)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00212}00212\ \ \ \ \ \ \ \ \ List<Integer>\ codiResoldre\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7053b31658248430cd8ca701aa80620b}{getTauler}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_aac13f8a98ab3226dc7030fce7fe8519b}{getCodiResoldre}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00213}00213\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ min;\ i\ <\ max;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ Random\ rand\ =\ \textcolor{keyword}{new}\ Random();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ Integer\ randomNum\ =\ rand.nextInt(6);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ codiResoldre.add(randomNum);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00217}00217\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00218}00218\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ codiResoldre;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00219}00219\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00220}00220\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00231}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5f334a106ee1bbb235ae416a5c510349}{00231}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5f334a106ee1bbb235ae416a5c510349}{creaNovaPartida}}(Integer\ dificultat,\ String\ rol,\ Integer\ algorisme)\ \textcolor{keywordflow}{throws}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_dificultat_no_existeix}{DificultatNoExisteix}}\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00232}00232\ \ \ \ \ \ \ \ \ List<Partida>\ partidesGuardades\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a1159bddb9f55491bc85757505ccb9cdc}{getPartidesGuardades}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00233}00233\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ idPartida;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00234}00234\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (partidesGuardades.size()\ ==\ 0)\ idPartida\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00235}00235\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ idPartida\ =\ partidesGuardades.get(partidesGuardades.size()\ -\/\ 1).getIdPartida()\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00236}00236\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00237}00237\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}(idPartida,\ dificultat,\ rol,\ algorisme);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00238}00238\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a05d8f9e1cfccc8714896a68a1dc8cd8a}{getStats}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a0243068f7184a61f985fcc3bc3c2bb00}{afegirIniciadesStats}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00239}00239\ \ \ \ \ \ \ \ \ jugadorIA\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_jugador_i_a}{JugadorIA}}(\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}});}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00240}00240\ \ \ \ \ \ \ \ \ jugadorIA.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_jugador_i_a_ae61aeb6ddb2b6a6087444311775dc830}{setStrategy}}(algorisme);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00241}00241\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00242}00242\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numBolas;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00243}00243\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dificultat\ ==\ 1)\ numBolas\ =\ 4;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00244}00244\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (dificultat\ ==\ 2)\ numBolas\ =\ 5;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00245}00245\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (dificultat\ ==\ 3)\ numBolas\ =\ 6;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00246}00246\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_dificultat_no_existeix}{DificultatNoExisteix}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00247}00247\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00248}00248\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rol.equals(\textcolor{stringliteral}{"{}CodeBreaker"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7053b31658248430cd8ca701aa80620b}{getTauler}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a607b1222d4c5f3af45cbf2c9abf5dda4}{setCodiResoldre}}(\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a50856e4946114801a8a2c2e6d799c7bf}{generadorCodiResoldre}}(0,\ numBolas));}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00250}00250\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00251}00251\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00252}00252\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00258}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a34b846f4abcfdca237b2cfda7202fc39}{00258}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a34b846f4abcfdca237b2cfda7202fc39}{continuaPartida}}(Integer\ idPartida)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00259}00259\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a7de615a47af584ff43c56805876c8001}{getPartidafromList}}(idPartida);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00260}00260\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}\ ==\ \textcolor{keyword}{null})\ System.out.println(\textcolor{stringliteral}{"{}Partida\ no\ guardada"{}});}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00261}00261\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00262}00262\ \ \ \ \ \ \ \ \ jugadorIA\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_jugador_i_a}{JugadorIA}}(\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}});}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00263}00263\ \ \ \ \ \ \ \ \ jugadorIA.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_jugador_i_a_ae61aeb6ddb2b6a6087444311775dc830}{setStrategy}}(\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a2df2e7874b170a13b78835619da132e3}{getAlgorisme}}());}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00264}00264\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00265}00265\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00271}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_add00241b2b1dd42fda9572a5bfc8f8a2}{00271}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_add00241b2b1dd42fda9572a5bfc8f8a2}{asignaCodiCodeMaker}}(List<Integer>\ codi)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00272}00272\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7053b31658248430cd8ca701aa80620b}{getTauler}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a607b1222d4c5f3af45cbf2c9abf5dda4}{setCodiResoldre}}(codi);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00273}00273\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00274}00274\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00280}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a29c0b7c7f933350a1122264543797279}{00280}}\ \ \ \ \ \textcolor{keyword}{public}\ List<Integer>\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a29c0b7c7f933350a1122264543797279}{getCodiResoldre}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00281}00281\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7053b31658248430cd8ca701aa80620b}{getTauler}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_aac13f8a98ab3226dc7030fce7fe8519b}{getCodiResoldre}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00282}00282\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00283}00283\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00288}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a6e2df77608520f2ecea2982e6c185b35}{00288}}\ \ \ \ \ \textcolor{keyword}{public}\ List<List<Integer>>\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a6e2df77608520f2ecea2982e6c185b35}{SequenciaMaq}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00289}00289\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ jugadorIA.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_jugador_i_a_ae5eb3c5a2b678f67dfa560577ce42a97}{executeMaquina}}(\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a29c0b7c7f933350a1122264543797279}{getCodiResoldre}}());}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00290}00290\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00291}00291\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00296}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa111a24442b876deb6f3c7f976c2c7d5}{00296}}\ \ \ \ \ \textcolor{keyword}{public}\ List<String>\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa111a24442b876deb6f3c7f976c2c7d5}{getPegsMaq}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00297}00297\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ jugadorIA.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_jugador_i_a_a97b34a24e237d737b49a8d7c63d0a725}{getPegsMaq}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00298}00298\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00299}00299\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00304}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a32b5c47d5fc7c1375e783a3d851d5f57}{00304}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a32b5c47d5fc7c1375e783a3d851d5f57}{checkValida}}(List<Integer>\ codi)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00305}00305\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (Integer\ integer\ :\ codi)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00306}00306\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (integer\ <\ 0\ ||\ integer\ >\ 5)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00307}00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Sequencia\ incorrecte:\ Valors\ 0\string~5"{}});}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00308}00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00309}00309\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00310}00310\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00311}00311\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00312}00312\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00313}00313\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00314}00314\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00320}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a789897ea17344db207db55030297589f}{00320}}\ \ \ \ \ \textcolor{keyword}{public}\ Integer\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a789897ea17344db207db55030297589f}{mostraColorExistent}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00321}00321\ \ \ \ \ \ \ \ \ Integer\ ronda\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7053b31658248430cd8ca701aa80620b}{getTauler}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a1d01b467af87c0e71bd31da006e31fb1}{getRonda}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00322}00322\ \ \ \ \ \ \ \ \ List<Integer>\ codiResoldre\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7053b31658248430cd8ca701aa80620b}{getTauler}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_aac13f8a98ab3226dc7030fce7fe8519b}{getCodiResoldre}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00323}00323\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00324}00324\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ronda\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00325}00325\ \ \ \ \ \ \ \ \ \ \ \ \ Random\ rand\ =\ \textcolor{keyword}{new}\ Random();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00326}00326\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ aux;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00327}00327\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (codiResoldre.size()\ ==\ 4)\ aux\ =\ rand.nextInt(3);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00328}00328\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (codiResoldre.size()\ ==\ 5)\ aux\ =\ rand.nextInt(4);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00329}00329\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ aux\ =\ rand.nextInt(5);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00330}00330\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00331}00331\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ codiResoldre.get(aux);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00332}00332\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00333}00333\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ found;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00334}00334\ \ \ \ \ \ \ \ \ \ \ \ \ List<Integer>\ codiSolucio\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7053b31658248430cd8ca701aa80620b}{getTauler}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a2e39e56995137a02201df91ee5a2217b}{getCodiActual}}(ronda\ -\/\ 1);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00335}00335\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7053b31658248430cd8ca701aa80620b}{getTauler}}().getNBolas();\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00336}00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ found\ =\ !codiSolucio.contains(codiResoldre.get(i));}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00337}00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (found)\ \textcolor{keywordflow}{return}\ codiResoldre.get(i);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00338}00338\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00339}00339\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00340}00340\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00341}00341\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00342}00342\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00349}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a78f51c8ab6ff2d1e83ad20d16e18e1c4}{00349}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a78f51c8ab6ff2d1e83ad20d16e18e1c4}{ajutUsuari}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00350}00350\ \ \ \ \ \ \ \ \ Integer\ ajuda\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a789897ea17344db207db55030297589f}{mostraColorExistent}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00351}00351\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ajuda\ !=\ -\/1)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00352}00352\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a434c44a0fada92835c8f66813445a5a3}{sumaNumAjudes}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00353}00353\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a05d8f9e1cfccc8714896a68a1dc8cd8a}{getStats}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a0c1239a9e0b9c320caba093f5fa4472a}{setAjudes}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00354}00354\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Pista:\ existeix\ el\ "{}}\ +\ ajuda);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00355}00355\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00356}00356\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00357}00357\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00358}00358\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00365}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ad8f311e37a4b48463b85e8adc3ac8068}{00365}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ad8f311e37a4b48463b85e8adc3ac8068}{partidaGuanyada}}(String\ rol)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00366}00366\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ronda\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7053b31658248430cd8ca701aa80620b}{getTauler}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a1d01b467af87c0e71bd31da006e31fb1}{getRonda}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00367}00367\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00368}00368\ \ \ \ \ \ \ \ \ List<Integer>\ codiSolucio\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7053b31658248430cd8ca701aa80620b}{getTauler}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a2e39e56995137a02201df91ee5a2217b}{getCodiActual}}(ronda);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00369}00369\ \ \ \ \ \ \ \ \ List<Integer>\ codiResoldre\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7053b31658248430cd8ca701aa80620b}{getTauler}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_aac13f8a98ab3226dc7030fce7fe8519b}{getCodiResoldre}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00370}00370\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00371}00371\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rol.equals(\textcolor{stringliteral}{"{}CodeMaker"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00372}00372\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7053b31658248430cd8ca701aa80620b}{getTauler}}().getNBolas();\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00373}00373\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!codiSolucio.get(i).equals(codiResoldre.get(i)))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00374}00374\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00375}00375\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00376}00376\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7053b31658248430cd8ca701aa80620b}{getTauler}}().getNBolas();\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00377}00377\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (codiSolucio.get(i).equals(codiResoldre.get(i)))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00378}00378\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00379}00379\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00380}00380\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00381}00381\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00382}00382\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00392}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ad6ddc2a0ad127593c6ef98a4b8006289}{00392}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ad6ddc2a0ad127593c6ef98a4b8006289}{actualitzaPuntuacio}}(Integer\ puntuacioCM,\ Integer\ puntuacioCB)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00393}00393\ \ \ \ \ \ \ \ \ Integer\ ajudes\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a0e54ca4d600364e7a7d3a50e1851ef37}{getNumAjudes}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00394}00394\ \ \ \ \ \ \ \ \ Integer\ penalitzacioAjudes\ =\ ajudes\ *\ 10;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00395}00395\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a3a783f978046f2c8f729814e9e10c8c2}{setPuntuacioCM}}(puntuacioCM);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00396}00396\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00397}00397\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (puntuacioCB\ >\ penalitzacioAjudes)\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a60180d42386bf10af31a7c5053979493}{setPuntuacioCB}}(puntuacioCB\ -\/\ penalitzacioAjudes);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00398}00398\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a60180d42386bf10af31a7c5053979493}{setPuntuacioCB}}(0);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00399}00399\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00400}00400\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00405}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_afdd0de1c45d5c6591f5f1b2f6f4f7f2f}{00405}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_afdd0de1c45d5c6591f5f1b2f6f4f7f2f}{getPuntuacioCM}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00406}00406\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00407}00407\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a05d8f9e1cfccc8714896a68a1dc8cd8a}{getStats}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a7d34b145f273a286404e395291910c3f}{getPuntuacioCodeMaker}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00408}00408\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00409}00409\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00414}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac866574e73120444fa220d9737250ca5}{00414}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac866574e73120444fa220d9737250ca5}{getPuntuacioCB}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00415}00415\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00416}00416\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a05d8f9e1cfccc8714896a68a1dc8cd8a}{getStats}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a1eb7a913106b0a6b25e8f4d7ba0f0ffa}{getPuntuacioCodeBreaker}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00417}00417\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00418}00418\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00423}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ab5c3ed3766951b271bb0955a8860b604}{00423}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ab5c3ed3766951b271bb0955a8860b604}{getPartidesAcabades}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00424}00424\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00425}00425\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a05d8f9e1cfccc8714896a68a1dc8cd8a}{getStats}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_af526c59868dfab38e754025e6c8d310d}{getAcabades}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00426}00426\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00427}00427\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00432}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a4d762795c93104d30136edf8fdd7e55f}{00432}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a4d762795c93104d30136edf8fdd7e55f}{getPartidesIniciades}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00433}00433\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00434}00434\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a05d8f9e1cfccc8714896a68a1dc8cd8a}{getStats}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a12e8c4cf300e94c5359778fa65f7e66b}{getIniciades}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00435}00435\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00436}00436\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00441}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ae0cb6170df8b0c97e60a76f6ece0e08c}{00441}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ae0cb6170df8b0c97e60a76f6ece0e08c}{getAjuts}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00442}00442\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00443}00443\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a05d8f9e1cfccc8714896a68a1dc8cd8a}{getStats}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a12c0b69581fc3cb452d782752c7880cb}{getAjudes}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00444}00444\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00445}00445\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00449}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa8483c3c51f252dac9b96aaec6c68db2}{00449}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa8483c3c51f252dac9b96aaec6c68db2}{afegirAcabadesStats}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00450}00450\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00451}00451\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a05d8f9e1cfccc8714896a68a1dc8cd8a}{getStats}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a0e5ec26df85c5ad9219ca7eab43ea174}{afegirAcabadesStats}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00452}00452\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00453}00453\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00454}00454\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00459}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a63fe7d03d4199054ca78b0710272f6b5}{00459}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a63fe7d03d4199054ca78b0710272f6b5}{getRol}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00460}00460\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7e91faf02c258058a34456c8c09cd7ba}{getRol}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00461}00461\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00462}00462\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00463}00463\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00470}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a7105a60a463456ee5335835df6355b60}{00470}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a7105a60a463456ee5335835df6355b60}{procedimentsFinalPartida}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00471}00471\ \ \ \ \ \ \ \ \ List<Partida>\ partidesGuardades\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a5bd7a0353595df4d5de1b9233e841aca}{getPartidesGuardades}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00472}00472\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ partidesGuardades.indexOf(\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}});}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00473}00473\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ !=\ -\/1)\ partidesGuardades.remove(i);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00474}00474\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00475}00475\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa8483c3c51f252dac9b96aaec6c68db2}{afegirAcabadesStats}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00476}00476\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a340d2e13e424e5d65028996851036987}{guardarUsuari}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00477}00477\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00478}00478\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00479}00479\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00485}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a564d5fffaa020fc5ff54a0d0d70d1de4}{00485}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a564d5fffaa020fc5ff54a0d0d70d1de4}{procedimentsFinalClose}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00486}00486\ \ \ \ \ \ \ \ \ List<Partida>\ partidesGuardades\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a5bd7a0353595df4d5de1b9233e841aca}{getPartidesGuardades}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00487}00487\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ partidesGuardades.indexOf(\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}});}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00488}00488\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ !=\ -\/1)\ partidesGuardades.remove(i);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00489}00489\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00490}00490\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a340d2e13e424e5d65028996851036987}{guardarUsuari}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00491}00491\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00492}00492\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00493}00493\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00498}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a6bab069915056ee27a21f62c3d7addc0}{00498}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a6bab069915056ee27a21f62c3d7addc0}{acabarPartida}}(String\ ignoredRol)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00499}00499\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ puntuacio;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00500}00500\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00501}00501\ \ \ \ \ \ \ \ \ Integer\ dif\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_af94185d4a54d08a6e61a3f1a86f51bc1}{getDificultat}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00502}00502\ \ \ \ \ \ \ \ \ Integer\ ronda\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7053b31658248430cd8ca701aa80620b}{getTauler}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a1d01b467af87c0e71bd31da006e31fb1}{getRonda}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00503}00503\ \ \ \ \ \ \ \ \ String\ tempsPartida\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a83267476d01235f1d2fae8b9a3b00030}{getTemps}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00504}00504\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00505}00505\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ guanyada\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ad8f311e37a4b48463b85e8adc3ac8068}{partidaGuanyada}}(\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7e91faf02c258058a34456c8c09cd7ba}{getRol}}());}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00506}00506\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00507}00507\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!guanyada)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00508}00508\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a3a783f978046f2c8f729814e9e10c8c2}{setPuntuacioCM}}(0);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00509}00509\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a60180d42386bf10af31a7c5053979493}{setPuntuacioCB}}(0);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00510}00510\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00511}00511\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7e91faf02c258058a34456c8c09cd7ba}{getRol}}().equals(\textcolor{stringliteral}{"{}CodeMaker"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00512}00512\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00513}00513\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ puntuacio\ =\ ronda\ *\ dif\ *\ 5;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00514}00514\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ad6ddc2a0ad127593c6ef98a4b8006289}{actualitzaPuntuacio}}(puntuacio,\ 0);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00515}00515\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}puntuacio:\ "{}}\ +\ puntuacio);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00516}00516\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a05d8f9e1cfccc8714896a68a1dc8cd8a}{getStats}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a84c5406a9ec3d9664423667ff8d5e271}{setPuntuacioCodeMaker}}(puntuacio);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00517}00517\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00518}00518\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00519}00519\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ puntuacio\ =\ dif\ *\ 10000\ /\ (tempsASegons(tempsPartida)\ *\ ronda+1);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00520}00520\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ad6ddc2a0ad127593c6ef98a4b8006289}{actualitzaPuntuacio}}(0,\ puntuacio);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00521}00521\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a05d8f9e1cfccc8714896a68a1dc8cd8a}{getStats}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a3dbb077dfa0d462bc2eca16de0025905}{setPuntuacioCodeBreaker}}(\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a4e7592df591ac98235bf8434b8333d99}{getPuntuacioCB}}());}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00522}00522\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00523}00523\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00524}00524\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00525}00525\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_record}{Record}}\ record\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_ac3873b21b645b214ea44e6cc5c8fba25}{getRecord}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00526}00526\ \ \ \ \ \ \ \ \ record.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_record_a3ccff5960fc04989d8ce9a7891b973d4}{guardarRecord}}(\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}});}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00527}00527\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00528}00528\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a7105a60a463456ee5335835df6355b60}{procedimentsFinalPartida}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00529}00529\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00530}00530\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00531}00531\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00534}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a8f34a1542a3db38603b156fc9b01918b}{00534}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a8f34a1542a3db38603b156fc9b01918b}{acabarClosePartida}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00535}00535\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a564d5fffaa020fc5ff54a0d0d70d1de4}{procedimentsFinalClose}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00536}00536\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00537}00537\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00538}00538\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00544}00544\ \ \ \ \ \textcolor{keyword}{private}\ Integer\ tempsASegons(String\ tempsPartida)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00545}00545\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00546}00546\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Integer.parseInt(tempsPartida.substring(0,\ 2))\ *\ 3600\ +\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00547}00547\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Integer.parseInt(tempsPartida.substring(3,\ 5))\ *\ 60\ +\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00548}00548\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Integer.parseInt(tempsPartida.substring(6,\ 8));}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00549}00549\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00550}00550\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00556}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5fee5aee1eb31c8f9343f523fc09287f}{00556}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5fee5aee1eb31c8f9343f523fc09287f}{checkCode}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00557}00557\ \ \ \ \ \ \ \ \ Integer\ ronda\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aaa0becaaa42b12b9e28c6dd0fe9feb39}{getRondaPartida}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00558}00558\ \ \ \ \ \ \ \ \ List<Integer>\ codiActual\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7053b31658248430cd8ca701aa80620b}{getTauler}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a2e39e56995137a02201df91ee5a2217b}{getCodiActual}}(ronda);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00559}00559\ \ \ \ \ \ \ \ \ List<Integer>\ codiResoldre\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7053b31658248430cd8ca701aa80620b}{getTauler}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_aac13f8a98ab3226dc7030fce7fe8519b}{getCodiResoldre}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00560}00560\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ jugadorIA.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_jugador_i_a_a3ba6fc2c090c6ec766615487aa3737fd}{checkCode}}(codiActual,\ codiResoldre);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00561}00561\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00562}00562\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00563}00563\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00564}00564\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00569}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a988cb1c49546b8044ff4e29d8a8d15bf}{00569}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a988cb1c49546b8044ff4e29d8a8d15bf}{taulerSetCodiActual}}(List<Integer>\ codi)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00570}00570\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7053b31658248430cd8ca701aa80620b}{getTauler}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a7b8b892e350f192d1f19a3f9b4c4e6f8}{setCodiActual}}(codi);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00571}00571\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00572}00572\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00573}00573\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00580}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa05f87b34d4690d62f262ec4ff273066}{00580}}\ \ \ \ \ \textcolor{keyword}{public}\ String[][]\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa05f87b34d4690d62f262ec4ff273066}{consultarRanking}}(String\ rol)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00581}00581\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ranking.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking_a130d11cb312e023d4604f04bcc1f0846}{getList}}(rol);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00582}00582\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00583}00583\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00584}00584\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00590}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ae4bfcda19cddecb20a223d0dfb958a95}{00590}}\ \ \ \ \ \textcolor{keyword}{public}\ List<List<Integer>>\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ae4bfcda19cddecb20a223d0dfb958a95}{getBoardPartida}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00591}00591\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7053b31658248430cd8ca701aa80620b}{getTauler}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a47a8849be2c423c3c38dec491fe7e9c3}{getBoard}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00592}00592\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00593}00593\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00594}00594\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00599}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a471884ad384a03df6ea0b063ee86c0c9}{00599}}\ \ \ \ \ \textcolor{keyword}{public}\ Integer\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a471884ad384a03df6ea0b063ee86c0c9}{getDificultatPartida}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00600}00600\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_af94185d4a54d08a6e61a3f1a86f51bc1}{getDificultat}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00601}00601\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00602}00602\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00603}00603\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00609}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aedc09833c317039b0e06576f0ca5cef7}{00609}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aedc09833c317039b0e06576f0ca5cef7}{getTempsPartida}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00610}00610\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a83267476d01235f1d2fae8b9a3b00030}{getTemps}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00611}00611\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00612}00612\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00618}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a3c676be15eafb8a739025afabf792b11}{00618}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a3c676be15eafb8a739025afabf792b11}{getPartidaActual}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00619}00619\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}};}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00620}00620\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00621}00621\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00622}00622\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00628}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aaa0becaaa42b12b9e28c6dd0fe9feb39}{00628}}\ \ \ \ \ \textcolor{keyword}{public}\ Integer\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aaa0becaaa42b12b9e28c6dd0fe9feb39}{getRondaPartida}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00629}00629\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7053b31658248430cd8ca701aa80620b}{getTauler}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a1d01b467af87c0e71bd31da006e31fb1}{getRonda}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00630}00630\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00631}00631\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00632}00632\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00638}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_af6c84078dc278875d24c37731a77643f}{00638}}\ \ \ \ \ \textcolor{keyword}{public}\ ArrayList<Usuari>\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_af6c84078dc278875d24c37731a77643f}{getLlistaUsuaris}}()\ throws\ NullPointerException\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00639}00639\ \ \ \ \ \ \ \ \ JsonReader[]\ llistaUsuarisJSON\ =\ dades.\mbox{\hyperlink{classmain_1_1data_1_1_ctrl_data_a8bf04827ed2ccc0b92086e0555e45532}{getLlistaUsuaris}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00640}00640\ \ \ \ \ \ \ \ \ ArrayList<Usuari>\ llistaUsuaris\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00641}00641\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00642}00642\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (JsonReader\ jsonReader\ :\ llistaUsuarisJSON)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00643}00643\ \ \ \ \ \ \ \ \ \ \ \ \ llistaUsuaris.add(usuarisJSON.fromJson(jsonReader,\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari}{Usuari}}.class));}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00644}00644\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00645}00645\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ llistaUsuaris;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00646}00646\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00647}00647\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00648}00648\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00654}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a7c4e2b8935c996919932ce76e527df20}{00654}}\ \ \ \ \ \textcolor{keyword}{public}\ JsonReader[]\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a7c4e2b8935c996919932ce76e527df20}{getLlistaUsuarisJSON}}()\ throws\ NullPointerException\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00655}00655\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dades.\mbox{\hyperlink{classmain_1_1data_1_1_ctrl_data_a8bf04827ed2ccc0b92086e0555e45532}{getLlistaUsuaris}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00656}00656\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00657}00657\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00658}00658\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00659}00659\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00665}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aed337a0f44c88f4a0855ebb504469e4c}{00665}}\ \ \ \ \ \textcolor{keyword}{public}\ List<String>\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aed337a0f44c88f4a0855ebb504469e4c}{getPegsPartida}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00666}00666\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_abc0e7875c94c0168d05e904e898e72ac}{getPegsPartida}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00667}00667\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00668}00668\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00669}00669\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00674}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a3420408890f12012d516dc8056f7e2d5}{00674}}\ \ \ \ \ \textcolor{keyword}{public}\ List<String>\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a3420408890f12012d516dc8056f7e2d5}{getPegsPartidaMaq}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00675}00675\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a5f7e5d580638b478adcbdeccc0d4a056}{getPegsPartidaMaq}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00676}00676\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00677}00677\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00678}00678\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00683}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aac4f3a155c3c3531e542a62951509034}{00683}}\ \ \ \ \ \textcolor{keyword}{public}\ List<List<Integer>>\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aac4f3a155c3c3531e542a62951509034}{getCodsMaq}}()\{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00684}00684\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a70462182f4cfa02a5e8648556edba1ec}{getCodsPartida}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00685}00685\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00686}00686\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00687}00687\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00693}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a07525180a4f4e1f591120261ba24d5a2}{00693}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_jugador_i_a}{JugadorIA}}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a07525180a4f4e1f591120261ba24d5a2}{getJugadorIA}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00694}00694\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ jugadorIA;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00695}00695\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00696}00696\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00697}00697\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00702}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_abc343088da05f80bf6796b429d9a53ea}{00702}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_abc343088da05f80bf6796b429d9a53ea}{setRondaPartida}}(Integer\ ronda)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00703}00703\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7053b31658248430cd8ca701aa80620b}{getTauler}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_ac16dcc23beeda8f5ef3d1710e5b7e9e1}{setRonda}}(ronda);}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00704}00704\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00705}00705\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00710}\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa92d72b50d1095f2eb5725124d6543b5}{00710}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa92d72b50d1095f2eb5725124d6543b5}{setTempsPartida}}(String\ temps)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00711}00711\ \ \ \ \ \ \ \ \ partidaActual.tempsPartida\ =\ temps;}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00712}00712\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00713}00713\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_domain_8java_source_l00714}00714\ \}}
+
+\end{DoxyCode}

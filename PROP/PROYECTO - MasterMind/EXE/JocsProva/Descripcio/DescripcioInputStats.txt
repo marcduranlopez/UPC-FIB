@@ -1,0 +1,11 @@
+Objecte de la prova: Consultar/Actualitzar Stats
+
+Altres elements integrats a la prova: S'ha hagut de crear un usuari i registrar-lo.
+
+Drivers construïts per aquesta prova: driverDomain.
+
+Valors estudiats: Es proven diferents valors coneixent la interfície del joc, no l'estructura interna (caixa negra). Es cobreixen casos extrems i es comprova el seu correcte funcionament.
+
+Operativa: Es consulten les stats quan no hi ha usuaris registrats. Es consulten les stats quan hi ha un usuari registrat. Es juga una partida i es consulten les stats. Es mira si s'ha actualitzat correctament. Es juga una altre partida i es consulten les stats. Es mira si s'ha actualitzat correctament.
+
+*Els inputs i outputs en el transcurs d'una partida, canvien en cada partida ja que són codis generats de forma random.  

@@ -1,0 +1,299 @@
+\doxysection{Vista\+Sign\+Up.\+java}
+\hypertarget{_vista_sign_up_8java_source}{}\label{_vista_sign_up_8java_source}\index{main/presentation/classes/VistaSignUp.java@{main/presentation/classes/VistaSignUp.java}}
+\mbox{\hyperlink{_vista_sign_up_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00001}00001\ \textcolor{keyword}{package\ }main.presentation.classes;}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00003}00003\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1presentation}{presentation}}.\mbox{\hyperlink{namespacemain_1_1presentation_1_1controllers}{controllers}}.\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_sign_up}{CtrlSignUp}};}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00004}00004\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1presentation}{presentation}}.\mbox{\hyperlink{namespacemain_1_1presentation_1_1controllers}{controllers}}.\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_login}{CtrlLogin}};}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00006}00006\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes}{classes}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes_1_1_exceptions}{Exceptions}}.*;}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00008}00008\ \textcolor{keyword}{import}\ javax.swing.JFrame;}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00009}00009\ \textcolor{keyword}{import}\ javax.swing.JPanel;}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00010}00010\ \textcolor{keyword}{import}\ javax.swing.border.EmptyBorder;}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00012}00012\ \textcolor{keyword}{import}\ javax.swing.JTextField;}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00013}00013\ \textcolor{keyword}{import}\ javax.swing.SwingConstants;}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00014}00014\ \textcolor{keyword}{import}\ javax.swing.JPasswordField;}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00015}00015\ \textcolor{keyword}{import}\ javax.swing.JButton;}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00016}00016\ \textcolor{keyword}{import}\ javax.swing.JLabel;}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00017}00017\ \textcolor{keyword}{import}\ javax.swing.ImageIcon;}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00018}00018\ \textcolor{keyword}{import}\ java.awt.Font;}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00019}00019\ \textcolor{keyword}{import}\ java.awt.Image;}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00021}00021\ \textcolor{keyword}{import}\ java.awt.event.MouseEvent;}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00022}00022\ \textcolor{keyword}{import}\ java.awt.Color;}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00024}\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_sign_up}{00024}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_sign_up}{VistaSignUp}}\ \textcolor{keyword}{extends}\ JFrame\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00026}00026\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ javax.swing.JFrame\ parent;}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00031}00031\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_sign_up}{CtrlSignUp}}\ csignup;}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00036}00036\ \ \ \ \ \textcolor{keyword}{private}\ JTextField\ user;}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00041}00041\ \ \ \ \ \textcolor{keyword}{private}\ JPasswordField\ pswd;}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00046}00046\ \ \ \ \ \textcolor{keyword}{private}\ JPasswordField\ confPswd;}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00051}00051\ \ \ \ \ \textcolor{keyword}{private}\ JLabel\ missatge;}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00059}\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_sign_up_a21f0a111b955d4e51d99797af73fa446}{00059}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_sign_up_a21f0a111b955d4e51d99797af73fa446}{VistaSignUp}}(javax.swing.JFrame\ parent,\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_login}{CtrlLogin}}\ clogin)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ csignup\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_sign_up}{CtrlSignUp}}(clogin.\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_login_a367d6503768d3b1c041129b36f8ab9d6}{getCD}}());}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ this.parent\ =\ parent;}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00062}00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_sign_up_a0cc1d68100beb2baf3034f7868359a59}{InitVistaSignUp}}();}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00063}00063\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00071}\mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_sign_up_a0cc1d68100beb2baf3034f7868359a59}{00071}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1presentation_1_1classes_1_1_vista_sign_up_a0cc1d68100beb2baf3034f7868359a59}{InitVistaSignUp}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ setResizable(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00073}00073\ \ \ \ \ \ \ \ \ setTitle(\textcolor{stringliteral}{"{}Mastermind"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ setDefaultCloseOperation(JFrame.EXIT\_ON\_CLOSE);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ setBounds(100,\ 100,\ 557,\ 566);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ JPanel\ contentPane\ =\ \textcolor{keyword}{new}\ JPanel();}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00077}00077\ \ \ \ \ \ \ \ \ contentPane.setBackground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00078}00078\ \ \ \ \ \ \ \ \ contentPane.setBorder(\textcolor{keyword}{new}\ EmptyBorder(5,\ 5,\ 5,\ 5));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00080}00080\ \ \ \ \ \ \ \ \ setContentPane(contentPane);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00081}00081\ \ \ \ \ \ \ \ \ contentPane.setLayout(\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00082}00082\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00083}00083\ \ \ \ \ \ \ \ \ ImageIcon\ arrow\ =\ \textcolor{keyword}{new}\ ImageIcon(\textcolor{stringliteral}{"{}main/presentation/img/arrow.png"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00084}00084\ \ \ \ \ \ \ \ \ Image\ getarrow\ =\ arrow.getImage();}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00085}00085\ \ \ \ \ \ \ \ \ Image\ modarrow\ =\ getarrow.getScaledInstance(40,\ 40,\ java.awt.Image.SCALE\_SMOOTH);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00086}00086\ \ \ \ \ \ \ \ \ arrow\ =\ \textcolor{keyword}{new}\ ImageIcon(modarrow);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00087}00087\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00088}00088\ \ \ \ \ \ \ \ \ ImageIcon\ bg\ =\ \textcolor{keyword}{new}\ ImageIcon(\textcolor{stringliteral}{"{}main/presentation/img/bg\_m.jpg"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00089}00089\ \ \ \ \ \ \ \ \ Image\ getBg\ =\ bg.getImage();}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00090}00090\ \ \ \ \ \ \ \ \ Image\ modBg\ =\ getBg.getScaledInstance(400,\ 600,\ java.awt.Image.SCALE\_SMOOTH);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00091}00091\ \ \ \ \ \ \ \ \ bg\ =\ \textcolor{keyword}{new}\ ImageIcon(modBg);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00093}00093\ \ \ \ \ \ \ \ \ ImageIcon\ bg2\ =\ \textcolor{keyword}{new}\ ImageIcon(\textcolor{stringliteral}{"{}main/presentation/img/bg\_w.jpg"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00094}00094\ \ \ \ \ \ \ \ \ Image\ getBg2\ =\ bg2.getImage();}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00095}00095\ \ \ \ \ \ \ \ \ Image\ modBg2\ =\ getBg2.getScaledInstance(225,\ 600,\ java.awt.Image.SCALE\_SMOOTH);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00096}00096\ \ \ \ \ \ \ \ \ bg2\ =\ \textcolor{keyword}{new}\ ImageIcon(modBg2);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00097}00097\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00098}00098\ \ \ \ \ \ \ \ \ user\ =\ \textcolor{keyword}{new}\ JTextField();}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00099}00099\ \ \ \ \ \ \ \ \ user.setBackground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00100}00100\ \ \ \ \ \ \ \ \ user.setBounds(33,\ 148,\ 114,\ 42);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00101}00101\ \ \ \ \ \ \ \ \ contentPane.add(user);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00102}00102\ \ \ \ \ \ \ \ \ user.setColumns(10);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00103}00103\ \ \ \ \ \ \ \ \ user.addMouseListener(\textcolor{keyword}{new}\ java.awt.event.MouseAdapter()\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ public\ void\ mouseClicked(java.awt.event.MouseEvent\ evt)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ userMouseClicked(evt);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00107}00107\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00108}00108\ \ \ \ \ \ \ \ \ user.addKeyListener(\textcolor{keyword}{new}\ java.awt.event.KeyAdapter()\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ public\ void\ keyPressed(java.awt.event.KeyEvent\ evt)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ userKeyPressed(evt);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00112}00112\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00113}00113\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00114}00114\ \ \ \ \ \ \ \ \ pswd\ =\ \textcolor{keyword}{new}\ JPasswordField();}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00115}00115\ \ \ \ \ \ \ \ \ pswd.setBackground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00116}00116\ \ \ \ \ \ \ \ \ pswd.setBounds(33,\ 213,\ 114,\ 42);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00117}00117\ \ \ \ \ \ \ \ \ contentPane.add(pswd);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00118}00118\ \ \ \ \ \ \ \ \ pswd.addKeyListener(\textcolor{keyword}{new}\ java.awt.event.KeyAdapter()\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ public\ void\ keyPressed(java.awt.event.KeyEvent\ evt)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pswdKeyPressed(evt);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00122}00122\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00123}00123\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00124}00124\ \ \ \ \ \ \ \ \ confPswd\ =\ \textcolor{keyword}{new}\ JPasswordField();}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00125}00125\ \ \ \ \ \ \ \ \ confPswd.setBackground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00126}00126\ \ \ \ \ \ \ \ \ confPswd.setBounds(33,\ 278,\ 114,\ 42);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00127}00127\ \ \ \ \ \ \ \ \ contentPane.add(confPswd);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00128}00128\ \ \ \ \ \ \ \ \ confPswd.addKeyListener(\textcolor{keyword}{new}\ java.awt.event.KeyAdapter()\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ public\ void\ keyPressed(java.awt.event.KeyEvent\ evt)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ confPswdKeyPressed(evt);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00132}00132\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00133}00133\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00134}00134\ \ \ \ \ \ \ \ \ JLabel\ textSignIn\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}Sign\ up"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00135}00135\ \ \ \ \ \ \ \ \ textSignIn.setForeground(\textcolor{keyword}{new}\ Color(0,\ 0,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00136}00136\ \ \ \ \ \ \ \ \ textSignIn.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Myanmar\ Text"{}},\ Font.BOLD,\ 14));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00137}00137\ \ \ \ \ \ \ \ \ textSignIn.setHorizontalAlignment(SwingConstants.CENTER);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00138}00138\ \ \ \ \ \ \ \ \ textSignIn.setBounds(52,\ 100,\ 58,\ 25);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00139}00139\ \ \ \ \ \ \ \ \ contentPane.add(textSignIn);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00140}00140\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00141}00141\ \ \ \ \ \ \ \ \ JLabel\ textUsername\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}Username"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00142}00142\ \ \ \ \ \ \ \ \ textUsername.setForeground(\textcolor{keyword}{new}\ Color(0,\ 0,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00143}00143\ \ \ \ \ \ \ \ \ textUsername.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Myanmar\ Text"{}},\ Font.BOLD,\ 11));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00144}00144\ \ \ \ \ \ \ \ \ textUsername.setBounds(33,\ 136,\ 64,\ 14);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00145}00145\ \ \ \ \ \ \ \ \ contentPane.add(textUsername);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00146}00146\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00147}00147\ \ \ \ \ \ \ \ \ JLabel\ textPassword\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}Password"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00148}00148\ \ \ \ \ \ \ \ \ textPassword.setForeground(\textcolor{keyword}{new}\ Color(0,\ 0,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00149}00149\ \ \ \ \ \ \ \ \ textPassword.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Myanmar\ Text"{}},\ Font.BOLD,\ 11));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00150}00150\ \ \ \ \ \ \ \ \ textPassword.setBounds(33,\ 201,\ 64,\ 14);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00151}00151\ \ \ \ \ \ \ \ \ contentPane.add(textPassword);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00152}00152\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00153}00153\ \ \ \ \ \ \ \ \ JLabel\ textConfPassword\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}Confirm\ password"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00154}00154\ \ \ \ \ \ \ \ \ textConfPassword.setForeground(\textcolor{keyword}{new}\ Color(0,\ 0,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00155}00155\ \ \ \ \ \ \ \ \ textConfPassword.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Myanmar\ Text"{}},\ Font.BOLD,\ 11));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00156}00156\ \ \ \ \ \ \ \ \ textConfPassword.setBounds(33,\ 266,\ 114,\ 14);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00157}00157\ \ \ \ \ \ \ \ \ contentPane.add(textConfPassword);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00158}00158\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00159}00159\ \ \ \ \ \ \ \ \ JButton\ buttonLogIn\ =\ \textcolor{keyword}{new}\ JButton(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00160}00160\ \ \ \ \ \ \ \ \ buttonLogIn.setBounds(65,\ 376,\ 45,\ 45);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00161}00161\ \ \ \ \ \ \ \ \ contentPane.add(buttonLogIn);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00162}00162\ \ \ \ \ \ \ \ \ buttonLogIn.setBackground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00163}00163\ \ \ \ \ \ \ \ \ buttonLogIn.setIcon(arrow);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00164}00164\ \ \ \ \ \ \ \ \ buttonLogIn.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Tahoma"{}},\ Font.BOLD,\ 14));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00165}00165\ \ \ \ \ \ \ \ \ buttonLogIn.addActionListener(this::botoLogInActionPerformed);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00167}00167\ \ \ \ \ \ \ \ \ JButton\ btnReturn\ =\ \textcolor{keyword}{new}\ JButton(\textcolor{stringliteral}{"{}Return"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00168}00168\ \ \ \ \ \ \ \ \ btnReturn.addActionListener(this::botoReturnActionPerformed);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00169}00169\ \ \ \ \ \ \ \ \ btnReturn.setBackground(\textcolor{keyword}{new}\ Color(242,\ 222,\ 193));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00170}00170\ \ \ \ \ \ \ \ \ btnReturn.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Tahoma"{}},\ Font.BOLD,\ 11));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00171}00171\ \ \ \ \ \ \ \ \ btnReturn.setBounds(31,\ 479,\ 117,\ 25);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00172}00172\ \ \ \ \ \ \ \ \ contentPane.add(btnReturn);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00173}00173\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00174}00174\ \ \ \ \ \ \ \ \ JLabel\ titleM1\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}M"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00175}00175\ \ \ \ \ \ \ \ \ titleM1.setForeground(\textcolor{keyword}{new}\ Color(255,\ 0,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00176}00176\ \ \ \ \ \ \ \ \ titleM1.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00177}00177\ \ \ \ \ \ \ \ \ titleM1.setBounds(18,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00178}00178\ \ \ \ \ \ \ \ \ contentPane.add(titleM1);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00179}00179\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00180}00180\ \ \ \ \ \ \ \ \ JLabel\ titleA\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}A"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00181}00181\ \ \ \ \ \ \ \ \ titleA.setForeground(\textcolor{keyword}{new}\ Color(0,\ 215,\ 11));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00182}00182\ \ \ \ \ \ \ \ \ titleA.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00183}00183\ \ \ \ \ \ \ \ \ titleA.setBounds(37,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00184}00184\ \ \ \ \ \ \ \ \ contentPane.add(titleA);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00185}00185\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00186}00186\ \ \ \ \ \ \ \ \ JLabel\ titleS\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}S"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00187}00187\ \ \ \ \ \ \ \ \ titleS.setForeground(\textcolor{keyword}{new}\ Color(0,\ 0,\ 255));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00188}00188\ \ \ \ \ \ \ \ \ titleS.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00189}00189\ \ \ \ \ \ \ \ \ titleS.setBounds(54,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00190}00190\ \ \ \ \ \ \ \ \ contentPane.add(titleS);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00191}00191\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00192}00192\ \ \ \ \ \ \ \ \ JLabel\ titleT\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}T"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00193}00193\ \ \ \ \ \ \ \ \ titleT.setForeground(\textcolor{keyword}{new}\ Color(255,\ 255,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00194}00194\ \ \ \ \ \ \ \ \ titleT.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00195}00195\ \ \ \ \ \ \ \ \ titleT.setBounds(71,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00196}00196\ \ \ \ \ \ \ \ \ contentPane.add(titleT);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00197}00197\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00198}00198\ \ \ \ \ \ \ \ \ JLabel\ titleE\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}E"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00199}00199\ \ \ \ \ \ \ \ \ titleE.setForeground(\textcolor{keyword}{new}\ Color(255,\ 255,\ 255));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00200}00200\ \ \ \ \ \ \ \ \ titleE.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00201}00201\ \ \ \ \ \ \ \ \ titleE.setBounds(90,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00202}00202\ \ \ \ \ \ \ \ \ contentPane.add(titleE);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00203}00203\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00204}00204\ \ \ \ \ \ \ \ \ JLabel\ titleR\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}R"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00205}00205\ \ \ \ \ \ \ \ \ titleR.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD,\ 27));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00206}00206\ \ \ \ \ \ \ \ \ titleR.setBounds(108,\ 28,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00207}00207\ \ \ \ \ \ \ \ \ contentPane.add(titleR);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00208}00208\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00209}00209\ \ \ \ \ \ \ \ \ JLabel\ titleM2\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}M"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00210}00210\ \ \ \ \ \ \ \ \ titleM2.setForeground(\textcolor{keyword}{new}\ Color(255,\ 0,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00211}00211\ \ \ \ \ \ \ \ \ titleM2.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD\ |\ Font.ITALIC,\ 31));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00212}00212\ \ \ \ \ \ \ \ \ titleM2.setBounds(75,\ 51,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00213}00213\ \ \ \ \ \ \ \ \ contentPane.add(titleM2);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00214}00214\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00215}00215\ \ \ \ \ \ \ \ \ JLabel\ titleI\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}I"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00216}00216\ \ \ \ \ \ \ \ \ titleI.setForeground(\textcolor{keyword}{new}\ Color(0,\ 215,\ 11));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00217}00217\ \ \ \ \ \ \ \ \ titleI.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD\ |\ Font.ITALIC,\ 31));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00218}00218\ \ \ \ \ \ \ \ \ titleI.setBounds(97,\ 51,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00219}00219\ \ \ \ \ \ \ \ \ contentPane.add(titleI);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00220}00220\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00221}00221\ \ \ \ \ \ \ \ \ JLabel\ titleN\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}N"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00222}00222\ \ \ \ \ \ \ \ \ titleN.setForeground(\textcolor{keyword}{new}\ Color(0,\ 0,\ 255));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00223}00223\ \ \ \ \ \ \ \ \ titleN.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD\ |\ Font.ITALIC,\ 31));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00224}00224\ \ \ \ \ \ \ \ \ titleN.setBounds(117,\ 51,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00225}00225\ \ \ \ \ \ \ \ \ contentPane.add(titleN);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00226}00226\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00227}00227\ \ \ \ \ \ \ \ \ JLabel\ titleD\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}D"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00228}00228\ \ \ \ \ \ \ \ \ titleD.setForeground(\textcolor{keyword}{new}\ Color(255,\ 255,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00229}00229\ \ \ \ \ \ \ \ \ titleD.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Monospaced"{}},\ Font.BOLD\ |\ Font.ITALIC,\ 31));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00230}00230\ \ \ \ \ \ \ \ \ titleD.setBounds(136,\ 51,\ 27,\ 31);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00231}00231\ \ \ \ \ \ \ \ \ contentPane.add(titleD);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00232}00232\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00233}00233\ \ \ \ \ \ \ \ \ missatge\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00234}00234\ \ \ \ \ \ \ \ \ missatge.setFont(\textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Dialog"{}},\ Font.BOLD,\ 14));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00235}00235\ \ \ \ \ \ \ \ \ missatge.setHorizontalAlignment(SwingConstants.CENTER);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00236}00236\ \ \ \ \ \ \ \ \ missatge.setForeground(\textcolor{keyword}{new}\ Color(255,\ 0,\ 0));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00237}00237\ \ \ \ \ \ \ \ \ missatge.setBounds(0,\ 332,\ 188,\ 15);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00238}00238\ \ \ \ \ \ \ \ \ contentPane.add(missatge);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00239}00239\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00240}00240\ \ \ \ \ \ \ \ \ JLabel\ bgImg\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00241}00241\ \ \ \ \ \ \ \ \ bgImg.setIcon(bg);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00242}00242\ \ \ \ \ \ \ \ \ bgImg.setBounds(187,\ 0,\ 371,\ 529);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00243}00243\ \ \ \ \ \ \ \ \ contentPane.add(bgImg);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00244}00244\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00245}00245\ \ \ \ \ \ \ \ \ JLabel\ b2Img\ =\ \textcolor{keyword}{new}\ JLabel(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00246}00246\ \ \ \ \ \ \ \ \ b2Img.setBackground(\textcolor{keyword}{new}\ Color(164,\ 104,\ 23));}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00247}00247\ \ \ \ \ \ \ \ \ b2Img.setIcon(bg2);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00248}00248\ \ \ \ \ \ \ \ \ b2Img.setBounds(0,\ 0,\ 225,\ 529);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00249}00249\ \ \ \ \ \ \ \ \ contentPane.add(b2Img);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00250}00250\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00251}00251\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00252}00252\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00257}00257\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ botoLogInActionPerformed(java.awt.event.ActionEvent\ evt)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00258}00258\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00259}00259\ \ \ \ \ \ \ \ \ String\ u\ =\ user.getText();}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00260}00260\ \ \ \ \ \ \ \ \ String\ psw\ =\ \textcolor{keyword}{new}\ String\ (pswd.getPassword());}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00261}00261\ \ \ \ \ \ \ \ \ String\ confirmPsw\ =\ \textcolor{keyword}{new}\ String\ (confPswd.getPassword());}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00262}00262\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00263}00263\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(u.isBlank())\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00264}00264\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00265}00265\ \ \ \ \ \ \ \ \ \ \ \ \ user.setText(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00266}00266\ \ \ \ \ \ \ \ \ \ \ \ \ pswd.setText(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00267}00267\ \ \ \ \ \ \ \ \ \ \ \ \ confPswd.setText(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00268}00268\ \ \ \ \ \ \ \ \ \ \ \ \ missatge.setText(\textcolor{stringliteral}{"{}User\ incorrect"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00269}00269\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00270}00270\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(psw.equals(confirmPsw))\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00271}00271\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00272}00272\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ missatge.setText(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00274}00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ csignup.\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_sign_up_a236c8b7a5a50a80b15e0d34e8c510a6f}{signUp}}(u,\ psw);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00275}00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VistaMainMenu\ mainmenu\ =\ \textcolor{keyword}{new}\ VistaMainMenu(\textcolor{keyword}{this},\ csignup);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mainmenu.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00277}00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dispose();}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}(\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_usuari_ja_existeix}{UsuariJaExisteix}}\ usuarijaexisteix)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00279}00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ missatge.setText(\textcolor{stringliteral}{"{}User\ already\ exists"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00280}00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ user.setText(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00281}00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pswd.setText(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00282}00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ confPswd.setText(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00283}00283\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_contrasenya_incorrecte}{ContrasenyaIncorrecte}}\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00284}00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ RuntimeException(e);}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00285}00285\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00286}00286\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00287}00287\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00288}00288\ \ \ \ \ \ \ \ \ \ \ \ \ pswd.setText(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00289}00289\ \ \ \ \ \ \ \ \ \ \ \ \ confPswd.setText(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00290}00290\ \ \ \ \ \ \ \ \ \ \ \ \ missatge.setText(\textcolor{stringliteral}{"{}Password\ not\ match"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00291}00291\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00292}00292\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00293}00293\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00294}00294\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00299}00299\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ userMouseClicked(MouseEvent\ evt)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00300}00300\ \ \ \ \ \ \ \ \ user.setEditable(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00301}00301\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00302}00302\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00303}00303\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00308}00308\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ userKeyPressed(java.awt.event.KeyEvent\ evt)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00309}00309\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ c\ =\ evt.getKeyChar();}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00310}00310\ \ \ \ \ \ \ \ \ user.setEditable(c\ !=\ \textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00311}00311\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00312}00312\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00313}00313\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00318}00318\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ pswdKeyPressed(java.awt.event.KeyEvent\ evt)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00319}00319\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ c\ =\ evt.getKeyChar();}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00320}00320\ \ \ \ \ \ \ \ \ pswd.setEditable(c\ !=\ \textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00321}00321\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00322}00322\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00323}00323\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00328}00328\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ confPswdKeyPressed(java.awt.event.KeyEvent\ evt)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00329}00329\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ c\ =\ evt.getKeyChar();}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00330}00330\ \ \ \ \ \ \ \ \ confPswd.setEditable(c\ !=\ \textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00331}00331\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00332}00332\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00333}00333\ }
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00338}00338\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ botoReturnActionPerformed(java.awt.event.ActionEvent\ evt)\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00339}00339\ \ \ \ \ \ \ \ \ parent.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00340}00340\ \ \ \ \ \ \ \ \ dispose();}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00341}00341\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_sign_up_8java_source_l00342}00342\ \}}
+
+\end{DoxyCode}

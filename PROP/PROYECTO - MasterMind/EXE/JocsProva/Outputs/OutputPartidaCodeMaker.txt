@@ -1,0 +1,293 @@
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Salir
+Introdueix nom usuari: 
+Introdueix nom password: 
+Usuari registrat: arnau
+Benvingut, arnau!
+
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir
+Introdueix dificultat: 
+1. Facil: Tauler 4 espais
+2. Mig: Tauler 5 espais
+3. Dificil: Tauler 6 espais
+Introdueix rol: 
+1. CodeMaker 2. CodeBreaker
+0. Vermell | 2. Blau | 4. Negre
+1. Verd    | 3. Groc | 5. Blanc
+(Exemple: 1 1 2 5)
+Introdeix codi de 4 colors a resoldre: 
+'B' color en posicio correcte
+'W' existeix color 
+'_' no existeix color
+(Exemple: BBW_)
+
+5 5 4 2 
+Introdueix correcio: 
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+3 1 3 1 
+Introdueix correcio: 
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+1 3 0 5 
+Introdueix correcio: 
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+4 4 0 4 
+Introdueix correcio: 
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+4 4 0 1 
+Introdueix correcio: 
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+1 1 1 1 
+Introdueix correcio: 
+Correccio correcte
+Has perdut...
+Puntuacio: 0
+
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir
+Introdueix dificultat: 
+1. Facil: Tauler 4 espais
+2. Mig: Tauler 5 espais
+3. Dificil: Tauler 6 espais
+Introdueix rol: 
+1. CodeMaker 2. CodeBreaker
+0. Vermell | 2. Blau | 4. Negre
+1. Verd    | 3. Groc | 5. Blanc
+(Exemple: 4 1 1 2 5)
+Introdeix codi de 5 colors a resoldre: 
+'B' color en posicio correcte
+'W' existeix color 
+'_' no existeix color
+(Exemple: BWW__)
+
+0 1 5 5 3 
+Introdueix correcio: 
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+2 3 0 1 0 
+Introdueix correcio: 
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+4 2 1 0 5 
+Introdueix correcio: 
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+4 0 4 1 3 
+Introdueix correcio: 
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+1 1 1 1 1 
+Introdueix correcio: 
+Correccio correcte
+Has perdut...
+Puntuacio: 0
+
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir
+Introdueix dificultat: 
+1. Facil: Tauler 4 espais
+2. Mig: Tauler 5 espais
+3. Dificil: Tauler 6 espais
+Introdueix rol: 
+1. CodeMaker 2. CodeBreaker
+0. Vermell | 2. Blau | 4. Negre
+1. Verd    | 3. Groc | 5. Blanc
+(Exemple: 0 4 3 1 1 5)
+Introdeix codi de 6 colors a resoldre: 
+1 2 3 4 5 1
+'B' color en posicio correcte
+'W' existeix color 
+'_' no existeix color
+(Exemple: WW____)
+
+3 5 5 0 0 2 
+Introdueix correcio: 
+______ (Pegs correctes: 'WWW___')
+Correccio incorrecte, introdueix correcio:
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+5 3 0 3 0 5 
+Introdueix correcio: 
+______ (Pegs correctes: 'WW____')
+Correccio incorrecte, introdueix correcio:
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+3 3 5 1 5 1 
+Introdueix correcio: 
+______ (Pegs correctes: 'BBWW__')
+Correccio incorrecte, introdueix correcio:
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+3 3 0 0 5 0 
+Introdueix correcio: 
+______ (Pegs correctes: 'BW____')
+Correccio incorrecte, introdueix correcio:
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+3 5 3 2 3 3 
+Introdueix correcio: 
+______ (Pegs correctes: 'BWW___')
+Correccio incorrecte, introdueix correcio:
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+1 4 4 2 1 1 
+Introdueix correcio: 
+______ (Pegs correctes: 'BBWW__')
+Correccio incorrecte, introdueix correcio:
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+2 2 1 0 3 3 
+Introdueix correcio: 
+BB_WW (Pegs correctes: 'BWW__')
+Correccio incorrecte, introdueix correcio:
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+2 5 2 2 5 0 
+Introdueix correcio: 
+______ (Pegs correctes: 'BW____')
+Correccio incorrecte, introdueix correcio:
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+1 2 3 4 5 1 
+Introdueix correcio: 
+______ (Pegs correctes: 'BBBBBB')
+Correccio incorrecte, introdueix correcio:
+Correccio correcte
+Has perdut...
+Puntuacio: 0
+
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir
+Introdueix dificultat: 
+1. Facil: Tauler 4 espais
+2. Mig: Tauler 5 espais
+3. Dificil: Tauler 6 espais
+Introdueix rol: 
+1. CodeMaker 2. CodeBreaker
+0. Vermell | 2. Blau | 4. Negre
+1. Verd    | 3. Groc | 5. Blanc
+(Exemple: 0 4 3 1 1 5)
+Introdeix codi de 6 colors a resoldre: 
+'B' color en posicio correcte
+'W' existeix color 
+'_' no existeix color
+(Exemple: WW____)
+
+3 1 2 3 5 0 
+Introdueix correcio: 
+______ (Pegs correctes: 'BWW___')
+Correccio incorrecte, introdueix correcio:
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+3 5 3 2 3 0 
+Introdueix correcio: 
+______ (Pegs correctes: 'BW____')
+Correccio incorrecte, introdueix correcio:
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+0 3 1 5 0 2 
+Introdueix correcio: 
+______ (Pegs correctes: 'BWW___')
+Correccio incorrecte, introdueix correcio:
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+5 5 1 0 3 5 
+Introdueix correcio: 
+______ (Pegs correctes: 'BW____')
+Correccio incorrecte, introdueix correcio:
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+2 5 0 3 1 4 
+Introdueix correcio: 
+______ (Pegs correctes: 'WWW___')
+Correccio incorrecte, introdueix correcio:
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+1 0 1 1 0 0 
+Introdueix correcio: 
+______ (Pegs correctes: 'BBW___')
+Correccio incorrecte, introdueix correcio:
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+5 2 1 3 3 3 
+Introdueix correcio: 
+______ (Pegs correctes: 'BBW___')
+Correccio incorrecte, introdueix correcio:
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+0 3 5 1 0 4 
+Introdueix correcio: 
+______ (Pegs correctes: 'WW____')
+Correccio incorrecte, introdueix correcio:
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+0 0 3 5 3 4 
+Introdueix correcio: 
+______ (Pegs correctes: 'W_____')
+Correccio incorrecte, introdueix correcio:
+Correccio correcte
+Vols guardar la partida? 1. Si  2. No 
+2 5 2 4 4 2 
+Introdueix correcio: 
+______ (Pegs correctes: 'WW____')
+Correccio incorrecte, introdueix correcio:
+Correccio correcte
+Has guanyat com a CodeMaker
+puntuacio: 165
+Has guanyat
+
+Opciones: 
+ 1. Crear Perfil 
+ 2. Cargar Perfil 
+ 3. Consultar Ranking 
+ 4. Consultar Perfils 
+ 5. Crear Partida 
+ 6. Cargar Partida 
+ 7. Consultar stats 
+ 8. Tancar sessio 
+ 9. Sortir

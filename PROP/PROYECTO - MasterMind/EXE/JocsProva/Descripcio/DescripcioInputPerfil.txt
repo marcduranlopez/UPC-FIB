@@ -1,0 +1,7 @@
+Objecte de la prova: Crear Perfil/Carregar Perfil/Consultar perfils/Tancar sessió.
+
+Drivers construïts per aquesta prova: driverDomain.
+
+Valors estudiats: Es proven diferents valors coneixent la interfície del joc, no l'estructura interna (caixa negra). Es cobreixen casos extrems i es comprova el seu correcte funcionament.
+
+Operativa: Es consulten perfils quan no existeix cap. Es crea un perfil i es torna a consultar els perfils. Es crea un altre perfil i es torna a consultar els perfils. S'intenta crear un perfil que ja existeix (amb i sense la mateixa contrasenya però mateix nom). Es tanca la sessió del ususari que la tenia oberta i es carrega un usuari que no existeix. S'intenta carregar un perfil que existeix però donant una contrasenya incorrecte. Finalment es carrega l'usuari.

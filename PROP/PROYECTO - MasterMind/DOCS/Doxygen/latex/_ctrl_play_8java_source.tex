@@ -1,0 +1,162 @@
+\doxysection{Ctrl\+Play.\+java}
+\hypertarget{_ctrl_play_8java_source}{}\label{_ctrl_play_8java_source}\index{main/presentation/controllers/CtrlPlay.java@{main/presentation/controllers/CtrlPlay.java}}
+\mbox{\hyperlink{_ctrl_play_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00001}00001\ \textcolor{keyword}{package\ }main.presentation.controllers;}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00003}00003\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1controllers}{controllers}}.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}};}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00005}00005\ \textcolor{keyword}{import}\ java.util.*;}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00008}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play}{00008}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play}{CtrlPlay}}\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}\ cd;}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00018}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_af46f07eb397916b51e858fb636333d31}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_af46f07eb397916b51e858fb636333d31}{CtrlPlay}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00019}00019\ \ \ \ \ \ \ \ \ cd\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a25d610faa4da74c654e15fe50ab015b4}{getInstance}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00027}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a086c82201b8522665dd383b39b3b29b2}{00027}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a086c82201b8522665dd383b39b3b29b2}{CtrlPlay}}(\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}\ cd)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00028}00028\ \ \ \ \ \ \ \ \ this.cd\ =\ cd;}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00036}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_aa98c12a0ca6210b4214a44c2e37cb38a}{00036}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_aa98c12a0ca6210b4214a44c2e37cb38a}{getCD}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cd;}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00045}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a20edeb2f74d8d16cda77cbb7145f7c15}{00045}}\ \ \ \ \ \textcolor{keyword}{public}\ Integer\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a20edeb2f74d8d16cda77cbb7145f7c15}{getDificultat}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a471884ad384a03df6ea0b063ee86c0c9}{getDificultatPartida}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00054}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_acd1bad32613d8107ddd14691dea34a9b}{00054}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_acd1bad32613d8107ddd14691dea34a9b}{getTempsPartida}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aedc09833c317039b0e06576f0ca5cef7}{getTempsPartida}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00063}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a95f95d063ee1da34e259b3a2a7971fa8}{00063}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a95f95d063ee1da34e259b3a2a7971fa8}{getRol}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a63fe7d03d4199054ca78b0710272f6b5}{getRol}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00065}00065\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00072}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_abfcf6e8b67093544a0d6bf045284145c}{00072}}\ \ \ \ \ \textcolor{keyword}{public}\ Integer\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_abfcf6e8b67093544a0d6bf045284145c}{getRonda}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00073}00073\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aaa0becaaa42b12b9e28c6dd0fe9feb39}{getRondaPartida}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00075}00075\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00081}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a11224214bdb865db761b680821760c0c}{00081}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a11224214bdb865db761b680821760c0c}{actualitzaRonda}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00082}00082\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00083}00083\ \ \ \ \ \ \ \ \ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_abc343088da05f80bf6796b429d9a53ea}{setRondaPartida}}(cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aaa0becaaa42b12b9e28c6dd0fe9feb39}{getRondaPartida}}()+1);}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00084}00084\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00092}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a0fd07fc1d123e9caabe2dd5a9692f014}{00092}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a0fd07fc1d123e9caabe2dd5a9692f014}{resetRonda}}(Integer\ n)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00093}00093\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00094}00094\ \ \ \ \ \ \ \ \ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_abc343088da05f80bf6796b429d9a53ea}{setRondaPartida}}(n);}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00095}00095\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00103}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_ad37a50ff731cb49ad5d07bcab07c54aa}{00103}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_ad37a50ff731cb49ad5d07bcab07c54aa}{actualitzaTauler}}(List<Integer>\ coAux)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00104}00104\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00105}00105\ \ \ \ \ \ \ \ \ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a988cb1c49546b8044ff4e29d8a8d15bf}{taulerSetCodiActual}}(coAux);}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00106}00106\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00114}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a35d91298c0a45817b75fbedf284d24e5}{00114}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a35d91298c0a45817b75fbedf284d24e5}{setTempsPartida}}(String\ temps)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00115}00115\ \ \ \ \ \ \ \ \ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa92d72b50d1095f2eb5725124d6543b5}{setTempsPartida}}(temps);}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00116}00116\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00124}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a0e5785dc7f0061430081a0ed68deb539}{00124}}\ \ \ \ \ \textcolor{keyword}{public}\ Integer\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a0e5785dc7f0061430081a0ed68deb539}{getPuntsCM}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00125}00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.getPuntuacioCM();}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00126}00126\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00134}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_ab6e9ac1e5c78c1384d0734da916d882c}{00134}}\ \ \ \ \ \textcolor{keyword}{public}\ Integer\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_ab6e9ac1e5c78c1384d0734da916d882c}{getPuntsCB}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00135}00135\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.getPuntuacioCB();}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00136}00136\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00137}00137\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00144}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_ab8c1968d05d2ca230dde1f3df9d6220b}{00144}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_ab8c1968d05d2ca230dde1f3df9d6220b}{acabarPartida}}(String\ rol)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00145}00145\ \ \ \ \ \ \ \ \ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a6bab069915056ee27a21f62c3d7addc0}{acabarPartida}}(rol);}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00146}00146\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00152}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a50a916c97077271247e8c1410978e92f}{00152}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a50a916c97077271247e8c1410978e92f}{acabarClosePartida}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00153}00153\ \ \ \ \ \ \ \ \ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a8f34a1542a3db38603b156fc9b01918b}{acabarClosePartida}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00154}00154\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00161}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a72a3dae2cd9a22d560f080403feaf41c}{00161}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a72a3dae2cd9a22d560f080403feaf41c}{guardarPartida}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00162}00162\ \ \ \ \ \ \ \ \ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ad53d7aa267aea2b944972a7bfd8980b6}{guardarPartida}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00163}00163\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00165}00165\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00172}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_ac744e2287a97deb1889e34c4be66492a}{00172}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_ac744e2287a97deb1889e34c4be66492a}{asignaCodiCodeMaker}}(List<Integer>\ codi)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00173}00173\ \ \ \ \ \ \ \ \ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_add00241b2b1dd42fda9572a5bfc8f8a2}{asignaCodiCodeMaker}}(codi);}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00174}00174\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00180}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_aa92385054613ac5458c1631e3f7ec431}{00180}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_aa92385054613ac5458c1631e3f7ec431}{actualitzaRanking}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00181}00181\ \ \ \ \ \ \ \ \ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a7e57e450851271b3055efd526e748808}{actualitzaRanking}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00182}00182\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00183}00183\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00190}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a673b0d1e0f61f08b79b890bf55494cce}{00190}}\ \ \ \ \ \textcolor{keyword}{public}\ Integer\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a673b0d1e0f61f08b79b890bf55494cce}{ajutUsuari}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00191}00191\ \ \ \ \ \ \ \ \ Integer\ aux\ =\ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a789897ea17344db207db55030297589f}{mostraColorExistent}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00192}00192\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (aux\ !=\ -\/1)\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.sumaNumAjudes();}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuariActual}}.getStats().setAjudes();}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00195}00195\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00196}00196\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ aux;}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00197}00197\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00198}00198\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00199}00199\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00203}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a8e68c6971ca8a4c02cc9d48cc9c40ecb}{00203}}\ \ \ \ \ \textcolor{keyword}{public}\ List<Integer>\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a8e68c6971ca8a4c02cc9d48cc9c40ecb}{getCodiResoldre}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00204}00204\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partidaActual}}.getTauler().getCodiResoldre();}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00205}00205\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00206}00206\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00207}00207\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00213}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a2fc0377e0e0bedcefd3b5de2dd38d43c}{00213}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a2fc0377e0e0bedcefd3b5de2dd38d43c}{checkCode}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00214}00214\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5fee5aee1eb31c8f9343f523fc09287f}{checkCode}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00215}00215\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00216}00216\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00217}00217\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00223}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_aaaf272211551fcfa492150d164fa4f66}{00223}}\ \ \ \ \ \textcolor{keyword}{public}\ List<String>\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_aaaf272211551fcfa492150d164fa4f66}{getPegsMaq}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00224}00224\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa111a24442b876deb6f3c7f976c2c7d5}{getPegsMaq}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00225}00225\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00226}00226\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00227}00227\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00233}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_ac0960f3599e633c71739f9d50a915504}{00233}}\ \ \ \ \ \textcolor{keyword}{public}\ List<List<Integer>>\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_ac0960f3599e633c71739f9d50a915504}{getSeqSolve}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00234}00234\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a6e2df77608520f2ecea2982e6c185b35}{SequenciaMaq}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00235}00235\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00236}00236\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00237}00237\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00243}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_aedb1a26f3ebf8c261b32498e72d8d6a7}{00243}}\ \ \ \ \ \textcolor{keyword}{public}\ List<String>\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_aedb1a26f3ebf8c261b32498e72d8d6a7}{getPegsPartida}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00244}00244\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aed337a0f44c88f4a0855ebb504469e4c}{getPegsPartida}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00245}00245\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00246}00246\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00247}00247\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00253}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a391188a3696bb8f1e3f9a7f4fd36e45f}{00253}}\ \ \ \ \ \textcolor{keyword}{public}\ List<List<Integer>>\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a391188a3696bb8f1e3f9a7f4fd36e45f}{getCodsPartida}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00254}00254\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ae4bfcda19cddecb20a223d0dfb958a95}{getBoardPartida}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00255}00255\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00256}00256\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00257}00257\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00263}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a2073352e1c6c3e06c2e0104eee56948f}{00263}}\ \ \ \ \ \textcolor{keyword}{public}\ List<List<Integer>>\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_a2073352e1c6c3e06c2e0104eee56948f}{getCodsPartidaMaq}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00264}00264\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aac4f3a155c3c3531e542a62951509034}{getCodsMaq}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00265}00265\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00266}00266\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00267}00267\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00273}\mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_ab592e7ac316238f82e26a46492b37c89}{00273}}\ \ \ \ \ \textcolor{keyword}{public}\ List<String>\ \mbox{\hyperlink{classmain_1_1presentation_1_1controllers_1_1_ctrl_play_ab592e7ac316238f82e26a46492b37c89}{getPegsPartidaMaq}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00274}00274\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cd.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a3420408890f12012d516dc8056f7e2d5}{getPegsPartidaMaq}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00275}00275\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00276}00276\ }
+\DoxyCodeLine{\Hypertarget{_ctrl_play_8java_source_l00277}00277\ \}}
+
+\end{DoxyCode}

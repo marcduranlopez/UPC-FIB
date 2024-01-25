@@ -1,0 +1,74 @@
+\doxysection{Partida\+Test.\+java}
+\hypertarget{_partida_test_8java_source}{}\label{_partida_test_8java_source}\index{test/PartidaTest.java@{test/PartidaTest.java}}
+\mbox{\hyperlink{_partida_test_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00001}00001\ \textcolor{keyword}{package\ }test;}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00003}00003\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ org.junit.Assert.assertEquals;}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00004}00004\ \textcolor{keyword}{import}\ org.junit.Before;}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00005}00005\ \textcolor{keyword}{import}\ org.junit.Test;}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00006}00006\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes}{classes}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}};}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00008}\mbox{\hyperlink{classtest_1_1_partida_test}{00008}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtest_1_1_partida_test}{PartidaTest}}\ \{}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}\ partida;}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00017}00017\ \ \ \ \ @Before}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00018}\mbox{\hyperlink{classtest_1_1_partida_test_a1e131976c01e5d35b552233c214bdcd1}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtest_1_1_partida_test_a1e131976c01e5d35b552233c214bdcd1}{setUp}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00019}00019\ \ \ \ \ \ \ \ \ partida\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}(1,\ 3,\ \textcolor{stringliteral}{"{}CodeBreaker"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00029}00029\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00030}\mbox{\hyperlink{classtest_1_1_partida_test_a24540eb1b37d04bdb5ced4241cbd8b33}{00030}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtest_1_1_partida_test_a24540eb1b37d04bdb5ced4241cbd8b33}{testCreadoraAmbParametres}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}\ partida1\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}(1,\ 1,\ \textcolor{stringliteral}{"{}CodeMaker"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}\ partida2\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}(2,\ 2,\ \textcolor{stringliteral}{"{}CodeBreaker"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}\ partida3\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}}(3,\ 3,\ \textcolor{stringliteral}{"{}CodeMaker"{}},2);}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Ids}}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ assertEquals((Integer)1,\ partida1.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a8bb0aaa6dc44895e5ebcad1d5ae9c099}{getIdPartida}}());}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ assertEquals((Integer)2,\ partida2.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a8bb0aaa6dc44895e5ebcad1d5ae9c099}{getIdPartida}}());}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ assertEquals((Integer)3,\ partida3.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a8bb0aaa6dc44895e5ebcad1d5ae9c099}{getIdPartida}}());}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{comment}{//dificultats}}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ assertEquals((Integer)1,\ partida1.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_af94185d4a54d08a6e61a3f1a86f51bc1}{getDificultat}}());}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ assertEquals((Integer)2,\ partida2.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_af94185d4a54d08a6e61a3f1a86f51bc1}{getDificultat}}());}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ assertEquals((Integer)3,\ partida3.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_af94185d4a54d08a6e61a3f1a86f51bc1}{getDificultat}}());}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{comment}{//rols}}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}CodeMaker"{}},\ partida1.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7e91faf02c258058a34456c8c09cd7ba}{getRol}}());}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}CodeBreaker"{}},\ partida2.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7e91faf02c258058a34456c8c09cd7ba}{getRol}}());}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{//algorismes}}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ assertEquals((Integer)1,\ partida1.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a2df2e7874b170a13b78835619da132e3}{getAlgorisme}}());}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ assertEquals((Integer)2,\ partida3.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a2df2e7874b170a13b78835619da132e3}{getAlgorisme}}());}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Taulers}}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ assertEquals((Integer)4,\ partida1.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7053b31658248430cd8ca701aa80620b}{getTauler}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a73e213b3116a24296479e9425433bd4a}{getNBolas}}());}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ assertEquals((Integer)5,\ partida2.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7053b31658248430cd8ca701aa80620b}{getTauler}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a73e213b3116a24296479e9425433bd4a}{getNBolas}}());}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ assertEquals((Integer)6,\ partida3.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a7053b31658248430cd8ca701aa80620b}{getTauler}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_tauler_a73e213b3116a24296479e9425433bd4a}{getNBolas}}());}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00064}00064\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00065}\mbox{\hyperlink{classtest_1_1_partida_test_a8c6bcd531e1598c8af84ecd8a1965952}{00065}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtest_1_1_partida_test_a8c6bcd531e1598c8af84ecd8a1965952}{testSetIdPartida}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00066}00066\ \ \ \ \ \ \ \ \ partida.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_ab2a2c27ddd7478fb4cb695116a245cb5}{setIdPartida}}(2);}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00067}00067\ \ \ \ \ \ \ \ \ assertEquals((Integer)\ 2,\ partida.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a8bb0aaa6dc44895e5ebcad1d5ae9c099}{getIdPartida}}());}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00068}00068\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00075}00075\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00076}\mbox{\hyperlink{classtest_1_1_partida_test_a417212d5c007680702e7afdb5bbc3edf}{00076}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtest_1_1_partida_test_a417212d5c007680702e7afdb5bbc3edf}{testSetPuntuacioCM}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00077}00077\ \ \ \ \ \ \ \ \ partida.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a3a783f978046f2c8f729814e9e10c8c2}{setPuntuacioCM}}(100);}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00078}00078\ \ \ \ \ \ \ \ \ assertEquals((Integer)\ 100,\ partida.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a981caee82d9169da06a13cfacddf6172}{getPuntuacioCM}}());}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00079}00079\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00086}00086\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00087}\mbox{\hyperlink{classtest_1_1_partida_test_af85a495f56ce3880fa3fc8152b85814a}{00087}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtest_1_1_partida_test_af85a495f56ce3880fa3fc8152b85814a}{testSetPuntuacioCB}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00088}00088\ \ \ \ \ \ \ \ \ partida.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a60180d42386bf10af31a7c5053979493}{setPuntuacioCB}}(50);}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00089}00089\ \ \ \ \ \ \ \ \ assertEquals((Integer)\ 50,\ partida.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida_a4e7592df591ac98235bf8434b8333d99}{getPuntuacioCB}}());}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00090}00090\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_partida_test_8java_source_l00091}00091\ \}}
+
+\end{DoxyCode}

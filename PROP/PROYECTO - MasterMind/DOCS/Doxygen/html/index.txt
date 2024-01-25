@@ -1,0 +1,6 @@
+# Directori html
+
+> Path absolut: /DOCS/Doxygen/html
+
+## Descripció del directori
+Aquest directori conté el codi del doxygen

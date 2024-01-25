@@ -1,0 +1,102 @@
+\doxysection{Ranking\+Test.\+java}
+\hypertarget{_ranking_test_8java_source}{}\label{_ranking_test_8java_source}\index{test/RankingTest.java@{test/RankingTest.java}}
+\mbox{\hyperlink{_ranking_test_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00001}00001\ \textcolor{keyword}{package\ }test;}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00003}00003\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes}{classes}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking}{Ranking}};}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00004}00004\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1classes}{classes}}.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari}{Usuari}};}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00005}00005\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1controllers}{controllers}}.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}};}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00007}00007\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ org.junit.Assert.*;}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00009}00009\ \textcolor{keyword}{import}\ java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00010}00010\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00012}00012\ \textcolor{keyword}{import}\ org.junit.Before;}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00013}00013\ \textcolor{keyword}{import}\ org.junit.Test;}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00015}\mbox{\hyperlink{classtest_1_1_ranking_test}{00015}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtest_1_1_ranking_test}{RankingTest}}\ \{}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking}{Ranking}}\ ranking;}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}\ domini;}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ List<Usuari>\ usuarisRegistrats\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00037}00037\ \ \ \ \ @Before}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00038}\mbox{\hyperlink{classtest_1_1_ranking_test_a6506e5a1eb8aa0e1339a327c66eded4b}{00038}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtest_1_1_ranking_test_a6506e5a1eb8aa0e1339a327c66eded4b}{setUp}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari}{Usuari}}\ usuari1\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari}{Usuari}}(\textcolor{stringliteral}{"{}usuari1"{}},\ \textcolor{stringliteral}{"{}contrasenya1"{}},\ 100,\ 50);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari}{Usuari}}\ usuari2\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari}{Usuari}}(\textcolor{stringliteral}{"{}usuari2"{}},\ \textcolor{stringliteral}{"{}contrasenya2"{}},\ 50,\ 90);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari}{Usuari}}\ usuari3\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari}{Usuari}}(\textcolor{stringliteral}{"{}usuari3"{}},\ \textcolor{stringliteral}{"{}contrasenya3"{}},\ 150,\ 30);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ usuarisRegistrats.add(usuari1);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ usuarisRegistrats.add(usuari2);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ usuarisRegistrats.add(usuari3);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ ranking\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking}{Ranking}}(domini);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00055}00055\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00056}\mbox{\hyperlink{classtest_1_1_ranking_test_ace9848d369ae21ad74fd7e9ee3779ffe}{00056}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtest_1_1_ranking_test_ace9848d369ae21ad74fd7e9ee3779ffe}{testOrdenaCodeMaker}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00058}00058\ \ \ \ \ \ \ \ \ ranking.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking_a31361b5a9c30658b43777d399ad3cdb7}{ordena}}(\textcolor{stringliteral}{"{}CodeMaker"{}});}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}usuari3"{}},\ usuarisRegistrats.get(0).getNom());}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}usuari1"{}},\ usuarisRegistrats.get(1).getNom());}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00062}00062\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}usuari2"{}},\ usuarisRegistrats.get(2).getNom());}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00063}00063\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00070}00070\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00071}\mbox{\hyperlink{classtest_1_1_ranking_test_a1e576c46b7c7fefb819cbb06579afaa3}{00071}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtest_1_1_ranking_test_a1e576c46b7c7fefb819cbb06579afaa3}{testOrdenaCodeBraker}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00073}00073\ \ \ \ \ \ \ \ \ ranking.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking_a31361b5a9c30658b43777d399ad3cdb7}{ordena}}(\textcolor{stringliteral}{"{}CodeBraker"{}});}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}usuari2"{}},\ usuarisRegistrats.get(0).getNom());}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}usuari1"{}},\ usuarisRegistrats.get(1).getNom());}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00077}00077\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}usuari3"{}},\ usuarisRegistrats.get(2).getNom());}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00078}00078\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00085}00085\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00086}\mbox{\hyperlink{classtest_1_1_ranking_test_a8b819a33db6e98d2b98c903a07660d2d}{00086}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtest_1_1_ranking_test_a8b819a33db6e98d2b98c903a07660d2d}{testGetListCodeMaker}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00088}00088\ \ \ \ \ \ \ \ \ String[][]\ result\ =\ ranking.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking_a130d11cb312e023d4604f04bcc1f0846}{getList}}(\textcolor{stringliteral}{"{}CodeMaker"{}});}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00089}00089\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00090}00090\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}1"{}},\ result[0][0]);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00091}00091\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}2"{}},\ result[1][0]);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00092}00092\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}3"{}},\ result[2][0]);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00094}00094\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}usuari3"{}},\ result[0][1]);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00095}00095\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}usuari1"{}},\ result[1][1]);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00096}00096\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}usuari2"{}},\ result[2][1]);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00098}00098\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}150"{}},\ result[0][2]);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00099}00099\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}100"{}},\ result[1][2]);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00100}00100\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}50"{}},\ result[2][2]);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00101}00101\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00108}00108\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00109}\mbox{\hyperlink{classtest_1_1_ranking_test_ae0a67df3a4769692a6d7adec791ff3e6}{00109}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtest_1_1_ranking_test_ae0a67df3a4769692a6d7adec791ff3e6}{testGetListCodeBraker}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00110}00110\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00111}00111\ \ \ \ \ \ \ \ \ String[][]\ result\ =\ ranking.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking_a130d11cb312e023d4604f04bcc1f0846}{getList}}(\textcolor{stringliteral}{"{}CodeBreaker"{}});}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00113}00113\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}1"{}},\ result[0][0]);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00114}00114\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}2"{}},\ result[1][0]);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00115}00115\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}3"{}},\ result[2][0]);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00116}00116\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00117}00117\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}usuari2"{}},\ result[0][1]);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00118}00118\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}usuari1"{}},\ result[1][1]);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00119}00119\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}usuari3"{}},\ result[2][1]);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00120}00120\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00121}00121\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}90"{}},\ result[0][2]);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00122}00122\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}50"{}},\ result[1][2]);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00123}00123\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}30"{}},\ result[2][2]);}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00124}00124\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ranking_test_8java_source_l00125}00125\ \}}
+
+\end{DoxyCode}

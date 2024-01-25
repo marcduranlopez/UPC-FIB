@@ -1,0 +1,391 @@
+\doxysection{main.\+domain.\+classes.\+Genetic Class Reference}
+\hypertarget{classmain_1_1domain_1_1classes_1_1_genetic}{}\label{classmain_1_1domain_1_1classes_1_1_genetic}\index{main.domain.classes.Genetic@{main.domain.classes.Genetic}}
+Inheritance diagram for main.\+domain.\+classes.\+Genetic\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmain_1_1domain_1_1classes_1_1_genetic}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ List$<$ Integer $>$ $>$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a22bfe12fb7f8510d10d9d5f89173219e}{solve}} (List$<$ Integer $>$ codi)
+\begin{DoxyCompactList}\small\item\em Funció que controla el procès d\textquotesingle{}endivinar el codi. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a1eeae14e4f14b66fdb06006d665ffdcd}{check\+Code}} (List$<$ Integer $>$ current, List$<$ Integer $>$ code)
+\begin{DoxyCompactList}\small\item\em Obtenció dels pegs resultant per l\textquotesingle{}últim guess. \end{DoxyCompactList}\item 
+List$<$ String $>$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_ab4a3404dd70134e1c4d25456368e6f09}{get\+Pegs\+Result}} ()
+\begin{DoxyCompactList}\small\item\em Getter del pegs\+Result. \end{DoxyCompactList}\item 
+List$<$ List$<$ Integer $>$ $>$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a7791d2f88ad104fa8beed510341610e1}{get\+Cods\+Result}} ()
+\begin{DoxyCompactList}\small\item\em Getter del codis resultants. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ List$<$ Integer $>$ $>$ \mbox{\hyperlink{interfacemain_1_1domain_1_1classes_1_1_maquina_a2d9d3de1930679d69151c335f2a38171}{solve}} (List$<$ Integer $>$ solution)
+\item 
+List$<$ String $>$ \mbox{\hyperlink{interfacemain_1_1domain_1_1classes_1_1_maquina_a2dc6dc50cb7590b64109d95e6ab352d8}{get\+Pegs\+Result}} ()
+\item 
+List$<$ List$<$ Integer $>$ $>$ \mbox{\hyperlink{interfacemain_1_1domain_1_1classes_1_1_maquina_aa295bed8a658ccb37cd619aad3379db9}{get\+Cods\+Result}} ()
+\item 
+String \mbox{\hyperlink{interfacemain_1_1domain_1_1classes_1_1_maquina_aa3e22ace30cdfe54521d183ea639003c}{check\+Code}} (List$<$ Integer $>$ codi\+Actual, List$<$ Integer $>$ Codi\+Resoldre)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static List$<$ Integer $>$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a139287ed68ff2723f07e69fcbe5e2b43}{get\+Best\+Puntuacio}} (List$<$ List$<$ Integer $>$ $>$ population)
+\begin{DoxyCompactList}\small\item\em Funció que obté la maxima puntuacio de la població \end{DoxyCompactList}\item 
+static List$<$ Integer $>$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a54a3502fdbc54ea3d9b96dbf85cba3cd}{get\+Child}} (List$<$ List$<$ Integer $>$ $>$ parents)
+\begin{DoxyCompactList}\small\item\em Funció que obté un fill a partir de dos pares. \end{DoxyCompactList}\item 
+static List$<$ Integer $>$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_aa19970e1ac502aaf0fbb6682cb164294}{mutate\+Child}} (List$<$ Integer $>$ child)
+\begin{DoxyCompactList}\small\item\em Funció que muta un fill. \end{DoxyCompactList}\item 
+static Integer \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a998180fcde284b72ea3fd4f46a325546}{evaluate\+Population}} (List$<$ Integer $>$ code, List$<$ Integer $>$ secret\+Code)
+\begin{DoxyCompactList}\small\item\em Funció que obté la puntuacio d\textquotesingle{}un codi concret. \end{DoxyCompactList}\item 
+static boolean \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_ae03b8b108711723b2c9e6b4de9d3779f}{troba\+Puntuacio\+Maxima}} (List$<$ Integer $>$ puntuacio, int punts\+Maxims)
+\begin{DoxyCompactList}\small\item\em Funció que troba la maxima puntuacio de tota la poblacio. \end{DoxyCompactList}\item 
+static List$<$ Integer $>$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a95d416dfe99ddb85757c233145920528}{add\+Combinations}} (Integer\mbox{[}$\,$\mbox{]} combination)
+\begin{DoxyCompactList}\small\item\em Afegir la combinació resultant de la iteració x. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_af0d6ef14626ac19a51d95a589eb2ae65}{backtracking\+Else}} (int i, Integer\mbox{[}$\,$\mbox{]} combination, boolean\mbox{[}$\,$\mbox{]} visited, int repetits)
+\begin{DoxyCompactList}\small\item\em Generació de les combinacions. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_aec293009e863ff5fdc4cd978d273ab64}{backtracking\+Combinations}} (int i, Integer\mbox{[}$\,$\mbox{]} combination, boolean\mbox{[}$\,$\mbox{]} visited, int repetits)
+\begin{DoxyCompactList}\small\item\em Generació de les combinacions. \end{DoxyCompactList}\item 
+static List$<$ Integer $>$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a7d8c91117d7d1be00442b3196c5477bd}{random\+Move}} ()
+\begin{DoxyCompactList}\small\item\em Generació d\textquotesingle{}un moviment aleatori. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static List$<$ List$<$ Integer $>$ $>$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_aa5ce0db137525af0da1a9a9814582ec1}{guesses\+Aux}} = new Array\+List$<$$>$()
+\item 
+static List$<$ String $>$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_genetic_a4dd894001c4d6373ea9e84f43498d1bb}{pegs\+Aux}} = new Array\+List$<$$>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_genetic_8java_source_l00005}{5}} of file \mbox{\hyperlink{_genetic_8java_source}{Genetic.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_genetic_a95d416dfe99ddb85757c233145920528}\label{classmain_1_1domain_1_1classes_1_1_genetic_a95d416dfe99ddb85757c233145920528} 
+\index{main.domain.classes.Genetic@{main.domain.classes.Genetic}!addCombinations@{addCombinations}}
+\index{addCombinations@{addCombinations}!main.domain.classes.Genetic@{main.domain.classes.Genetic}}
+\doxysubsubsection{\texorpdfstring{addCombinations()}{addCombinations()}}
+{\footnotesize\ttfamily static List$<$ Integer $>$ main.\+domain.\+classes.\+Genetic.\+add\+Combinations (\begin{DoxyParamCaption}\item[{Integer\mbox{[}$\,$\mbox{]}}]{combination }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Afegir la combinació resultant de la iteració x. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em combination} & llistat de combinacions \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_genetic_8java_source_l00295}{295}} of file \mbox{\hyperlink{_genetic_8java_source}{Genetic.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_genetic_aec293009e863ff5fdc4cd978d273ab64}\label{classmain_1_1domain_1_1classes_1_1_genetic_aec293009e863ff5fdc4cd978d273ab64} 
+\index{main.domain.classes.Genetic@{main.domain.classes.Genetic}!backtrackingCombinations@{backtrackingCombinations}}
+\index{backtrackingCombinations@{backtrackingCombinations}!main.domain.classes.Genetic@{main.domain.classes.Genetic}}
+\doxysubsubsection{\texorpdfstring{backtrackingCombinations()}{backtrackingCombinations()}}
+{\footnotesize\ttfamily static void main.\+domain.\+classes.\+Genetic.\+backtracking\+Combinations (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{Integer\mbox{[}$\,$\mbox{]}}]{combination,  }\item[{boolean\mbox{[}$\,$\mbox{]}}]{visited,  }\item[{int}]{repetits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Generació de les combinacions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & iterador del backtracking \\
+\hline
+{\em combination} & llistat de combinacions \\
+\hline
+{\em visited} & array de visitats del backtracking \\
+\hline
+{\em repetits} & indica si hi ha repetits o no a la combinació \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_genetic_8java_source_l00338}{338}} of file \mbox{\hyperlink{_genetic_8java_source}{Genetic.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_genetic_af0d6ef14626ac19a51d95a589eb2ae65}\label{classmain_1_1domain_1_1classes_1_1_genetic_af0d6ef14626ac19a51d95a589eb2ae65} 
+\index{main.domain.classes.Genetic@{main.domain.classes.Genetic}!backtrackingElse@{backtrackingElse}}
+\index{backtrackingElse@{backtrackingElse}!main.domain.classes.Genetic@{main.domain.classes.Genetic}}
+\doxysubsubsection{\texorpdfstring{backtrackingElse()}{backtrackingElse()}}
+{\footnotesize\ttfamily static void main.\+domain.\+classes.\+Genetic.\+backtracking\+Else (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{Integer\mbox{[}$\,$\mbox{]}}]{combination,  }\item[{boolean\mbox{[}$\,$\mbox{]}}]{visited,  }\item[{int}]{repetits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Generació de les combinacions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & iterador del backtracking \\
+\hline
+{\em combination} & llistat de combinacions \\
+\hline
+{\em visited} & array de visitats del backtracking \\
+\hline
+{\em repetits} & indica si hi ha repetits o no a la combinació \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_genetic_8java_source_l00311}{311}} of file \mbox{\hyperlink{_genetic_8java_source}{Genetic.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_genetic_a1eeae14e4f14b66fdb06006d665ffdcd}\label{classmain_1_1domain_1_1classes_1_1_genetic_a1eeae14e4f14b66fdb06006d665ffdcd} 
+\index{main.domain.classes.Genetic@{main.domain.classes.Genetic}!checkCode@{checkCode}}
+\index{checkCode@{checkCode}!main.domain.classes.Genetic@{main.domain.classes.Genetic}}
+\doxysubsubsection{\texorpdfstring{checkCode()}{checkCode()}}
+{\footnotesize\ttfamily String main.\+domain.\+classes.\+Genetic.\+check\+Code (\begin{DoxyParamCaption}\item[{List$<$ Integer $>$}]{current,  }\item[{List$<$ Integer $>$}]{code }\end{DoxyParamCaption})}
+
+
+
+Obtenció dels pegs resultant per l\textquotesingle{}últim guess. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current} & últim guess utilitzat \\
+\hline
+{\em code} & codi correcte per comparar l\textquotesingle{}últim guess\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacemain_1_1domain_1_1classes_1_1_maquina_aa3e22ace30cdfe54521d183ea639003c}{main.\+domain.\+classes.\+Maquina}}.
+
+
+
+Definition at line \mbox{\hyperlink{_genetic_8java_source_l00248}{248}} of file \mbox{\hyperlink{_genetic_8java_source}{Genetic.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_genetic_a998180fcde284b72ea3fd4f46a325546}\label{classmain_1_1domain_1_1classes_1_1_genetic_a998180fcde284b72ea3fd4f46a325546} 
+\index{main.domain.classes.Genetic@{main.domain.classes.Genetic}!evaluatePopulation@{evaluatePopulation}}
+\index{evaluatePopulation@{evaluatePopulation}!main.domain.classes.Genetic@{main.domain.classes.Genetic}}
+\doxysubsubsection{\texorpdfstring{evaluatePopulation()}{evaluatePopulation()}}
+{\footnotesize\ttfamily static Integer main.\+domain.\+classes.\+Genetic.\+evaluate\+Population (\begin{DoxyParamCaption}\item[{List$<$ Integer $>$}]{code,  }\item[{List$<$ Integer $>$}]{secret\+Code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Funció que obté la puntuacio d\textquotesingle{}un codi concret. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & codi a avaluar \\
+\hline
+{\em secret\+Code} & codi a adivinar\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+puntuació del codi 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_genetic_8java_source_l00204}{204}} of file \mbox{\hyperlink{_genetic_8java_source}{Genetic.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_genetic_a139287ed68ff2723f07e69fcbe5e2b43}\label{classmain_1_1domain_1_1classes_1_1_genetic_a139287ed68ff2723f07e69fcbe5e2b43} 
+\index{main.domain.classes.Genetic@{main.domain.classes.Genetic}!getBestPuntuacio@{getBestPuntuacio}}
+\index{getBestPuntuacio@{getBestPuntuacio}!main.domain.classes.Genetic@{main.domain.classes.Genetic}}
+\doxysubsubsection{\texorpdfstring{getBestPuntuacio()}{getBestPuntuacio()}}
+{\footnotesize\ttfamily static List$<$ Integer $>$ main.\+domain.\+classes.\+Genetic.\+get\+Best\+Puntuacio (\begin{DoxyParamCaption}\item[{List$<$ List$<$ Integer $>$ $>$}]{population }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Funció que obté la maxima puntuacio de la població 
+
+
+\begin{DoxyParams}{Parameters}
+{\em population} & poblacio actual del torn\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+maxima puntuacio de tota la poblacio 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_genetic_8java_source_l00148}{148}} of file \mbox{\hyperlink{_genetic_8java_source}{Genetic.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_genetic_a54a3502fdbc54ea3d9b96dbf85cba3cd}\label{classmain_1_1domain_1_1classes_1_1_genetic_a54a3502fdbc54ea3d9b96dbf85cba3cd} 
+\index{main.domain.classes.Genetic@{main.domain.classes.Genetic}!getChild@{getChild}}
+\index{getChild@{getChild}!main.domain.classes.Genetic@{main.domain.classes.Genetic}}
+\doxysubsubsection{\texorpdfstring{getChild()}{getChild()}}
+{\footnotesize\ttfamily static List$<$ Integer $>$ main.\+domain.\+classes.\+Genetic.\+get\+Child (\begin{DoxyParamCaption}\item[{List$<$ List$<$ Integer $>$ $>$}]{parents }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Funció que obté un fill a partir de dos pares. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parents} & els dos codis del pares\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un nou fill generat entre els pares 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_genetic_8java_source_l00168}{168}} of file \mbox{\hyperlink{_genetic_8java_source}{Genetic.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_genetic_a7791d2f88ad104fa8beed510341610e1}\label{classmain_1_1domain_1_1classes_1_1_genetic_a7791d2f88ad104fa8beed510341610e1} 
+\index{main.domain.classes.Genetic@{main.domain.classes.Genetic}!getCodsResult@{getCodsResult}}
+\index{getCodsResult@{getCodsResult}!main.domain.classes.Genetic@{main.domain.classes.Genetic}}
+\doxysubsubsection{\texorpdfstring{getCodsResult()}{getCodsResult()}}
+{\footnotesize\ttfamily List$<$ List$<$ Integer $>$ $>$ main.\+domain.\+classes.\+Genetic.\+get\+Cods\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter del codis resultants. 
+
+\begin{DoxyReturn}{Returns}
+guesses\+Aux 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacemain_1_1domain_1_1classes_1_1_maquina_aa295bed8a658ccb37cd619aad3379db9}{main.\+domain.\+classes.\+Maquina}}.
+
+
+
+Definition at line \mbox{\hyperlink{_genetic_8java_source_l00370}{370}} of file \mbox{\hyperlink{_genetic_8java_source}{Genetic.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_genetic_ab4a3404dd70134e1c4d25456368e6f09}\label{classmain_1_1domain_1_1classes_1_1_genetic_ab4a3404dd70134e1c4d25456368e6f09} 
+\index{main.domain.classes.Genetic@{main.domain.classes.Genetic}!getPegsResult@{getPegsResult}}
+\index{getPegsResult@{getPegsResult}!main.domain.classes.Genetic@{main.domain.classes.Genetic}}
+\doxysubsubsection{\texorpdfstring{getPegsResult()}{getPegsResult()}}
+{\footnotesize\ttfamily List$<$ String $>$ main.\+domain.\+classes.\+Genetic.\+get\+Pegs\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter del pegs\+Result. 
+
+\begin{DoxyReturn}{Returns}
+pegs\+Result 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacemain_1_1domain_1_1classes_1_1_maquina_a2dc6dc50cb7590b64109d95e6ab352d8}{main.\+domain.\+classes.\+Maquina}}.
+
+
+
+Definition at line \mbox{\hyperlink{_genetic_8java_source_l00361}{361}} of file \mbox{\hyperlink{_genetic_8java_source}{Genetic.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_genetic_aa19970e1ac502aaf0fbb6682cb164294}\label{classmain_1_1domain_1_1classes_1_1_genetic_aa19970e1ac502aaf0fbb6682cb164294} 
+\index{main.domain.classes.Genetic@{main.domain.classes.Genetic}!mutateChild@{mutateChild}}
+\index{mutateChild@{mutateChild}!main.domain.classes.Genetic@{main.domain.classes.Genetic}}
+\doxysubsubsection{\texorpdfstring{mutateChild()}{mutateChild()}}
+{\footnotesize\ttfamily static List$<$ Integer $>$ main.\+domain.\+classes.\+Genetic.\+mutate\+Child (\begin{DoxyParamCaption}\item[{List$<$ Integer $>$}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Funció que muta un fill. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & codi del fill a mutar\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un nou fill generat per la mutació 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_genetic_8java_source_l00186}{186}} of file \mbox{\hyperlink{_genetic_8java_source}{Genetic.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_genetic_a7d8c91117d7d1be00442b3196c5477bd}\label{classmain_1_1domain_1_1classes_1_1_genetic_a7d8c91117d7d1be00442b3196c5477bd} 
+\index{main.domain.classes.Genetic@{main.domain.classes.Genetic}!randomMove@{randomMove}}
+\index{randomMove@{randomMove}!main.domain.classes.Genetic@{main.domain.classes.Genetic}}
+\doxysubsubsection{\texorpdfstring{randomMove()}{randomMove()}}
+{\footnotesize\ttfamily static List$<$ Integer $>$ main.\+domain.\+classes.\+Genetic.\+random\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Generació d\textquotesingle{}un moviment aleatori. 
+
+\begin{DoxyReturn}{Returns}
+combinació random 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_genetic_8java_source_l00351}{351}} of file \mbox{\hyperlink{_genetic_8java_source}{Genetic.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_genetic_a22bfe12fb7f8510d10d9d5f89173219e}\label{classmain_1_1domain_1_1classes_1_1_genetic_a22bfe12fb7f8510d10d9d5f89173219e} 
+\index{main.domain.classes.Genetic@{main.domain.classes.Genetic}!solve@{solve}}
+\index{solve@{solve}!main.domain.classes.Genetic@{main.domain.classes.Genetic}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily List$<$ List$<$ Integer $>$ $>$ main.\+domain.\+classes.\+Genetic.\+solve (\begin{DoxyParamCaption}\item[{List$<$ Integer $>$}]{codi }\end{DoxyParamCaption})}
+
+
+
+Funció que controla el procès d\textquotesingle{}endivinar el codi. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em codi} & codi a adivinar\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+partida resultant 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacemain_1_1domain_1_1classes_1_1_maquina_a2d9d3de1930679d69151c335f2a38171}{main.\+domain.\+classes.\+Maquina}}.
+
+
+
+Definition at line \mbox{\hyperlink{_genetic_8java_source_l00069}{69}} of file \mbox{\hyperlink{_genetic_8java_source}{Genetic.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_genetic_ae03b8b108711723b2c9e6b4de9d3779f}\label{classmain_1_1domain_1_1classes_1_1_genetic_ae03b8b108711723b2c9e6b4de9d3779f} 
+\index{main.domain.classes.Genetic@{main.domain.classes.Genetic}!trobaPuntuacioMaxima@{trobaPuntuacioMaxima}}
+\index{trobaPuntuacioMaxima@{trobaPuntuacioMaxima}!main.domain.classes.Genetic@{main.domain.classes.Genetic}}
+\doxysubsubsection{\texorpdfstring{trobaPuntuacioMaxima()}{trobaPuntuacioMaxima()}}
+{\footnotesize\ttfamily static boolean main.\+domain.\+classes.\+Genetic.\+troba\+Puntuacio\+Maxima (\begin{DoxyParamCaption}\item[{List$<$ Integer $>$}]{puntuacio,  }\item[{int}]{punts\+Maxims }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Funció que troba la maxima puntuacio de tota la poblacio. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em puntuacio} & llista de puntuacions \\
+\hline
+{\em punts\+Maxims} & maxima puntuacio\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+puntuació del codi 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_genetic_8java_source_l00231}{231}} of file \mbox{\hyperlink{_genetic_8java_source}{Genetic.\+java}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_genetic_aa5ce0db137525af0da1a9a9814582ec1}\label{classmain_1_1domain_1_1classes_1_1_genetic_aa5ce0db137525af0da1a9a9814582ec1} 
+\index{main.domain.classes.Genetic@{main.domain.classes.Genetic}!guessesAux@{guessesAux}}
+\index{guessesAux@{guessesAux}!main.domain.classes.Genetic@{main.domain.classes.Genetic}}
+\doxysubsubsection{\texorpdfstring{guessesAux}{guessesAux}}
+{\footnotesize\ttfamily List$<$List$<$Integer$>$ $>$ main.\+domain.\+classes.\+Genetic.\+guesses\+Aux = new Array\+List$<$$>$()\hspace{0.3cm}{\ttfamily [static]}}
+
+Conté les combinacions utilitzades per endevinar el codi 
+
+Definition at line \mbox{\hyperlink{_genetic_8java_source_l00055}{55}} of file \mbox{\hyperlink{_genetic_8java_source}{Genetic.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1classes_1_1_genetic_a4dd894001c4d6373ea9e84f43498d1bb}\label{classmain_1_1domain_1_1classes_1_1_genetic_a4dd894001c4d6373ea9e84f43498d1bb} 
+\index{main.domain.classes.Genetic@{main.domain.classes.Genetic}!pegsAux@{pegsAux}}
+\index{pegsAux@{pegsAux}!main.domain.classes.Genetic@{main.domain.classes.Genetic}}
+\doxysubsubsection{\texorpdfstring{pegsAux}{pegsAux}}
+{\footnotesize\ttfamily List$<$String$>$ main.\+domain.\+classes.\+Genetic.\+pegs\+Aux = new Array\+List$<$$>$()\hspace{0.3cm}{\ttfamily [static]}}
+
+Conté els pegs resultants de les combinacions guesses\+Result 
+
+Definition at line \mbox{\hyperlink{_genetic_8java_source_l00060}{60}} of file \mbox{\hyperlink{_genetic_8java_source}{Genetic.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/domain/classes/\mbox{\hyperlink{_genetic_8java}{Genetic.\+java}}\end{DoxyCompactItemize}

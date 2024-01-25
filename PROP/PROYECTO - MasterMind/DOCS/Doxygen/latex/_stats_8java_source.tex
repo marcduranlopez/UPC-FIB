@@ -1,0 +1,106 @@
+\doxysection{Stats.\+java}
+\hypertarget{_stats_8java_source}{}\label{_stats_8java_source}\index{main/domain/classes/Stats.java@{main/domain/classes/Stats.java}}
+\mbox{\hyperlink{_stats_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00001}00001\ \textcolor{keyword}{package\ }main.domain.classes;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00003}00003\ \textcolor{keyword}{import}\ com.google.gson.annotations.Expose;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00004}00004\ \textcolor{keyword}{import}\ com.google.gson.annotations.SerializedName;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00006}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats}{00006}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats}{Stats}}\ \{}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00011}00011\ \ \ \ \ @SerializedName(\textcolor{stringliteral}{"{}PuntuacioTotalCM"{}})}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00012}00012\ \ \ \ \ @Expose}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{private}\ Integer\ puntuacioCodeMaker;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00018}00018\ \ \ \ \ @SerializedName(\textcolor{stringliteral}{"{}puntuacioTotalCB"{}})}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00019}00019\ \ \ \ \ @Expose}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{private}\ Integer\ puntuacioCodeBreaker;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00025}00025\ \ \ \ \ @SerializedName(\textcolor{stringliteral}{"{}acabades"{}})}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00026}00026\ \ \ \ \ @Expose}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00027}00027\ \ \ \ \ \textcolor{keyword}{private}\ Integer\ acabades;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00032}00032\ \ \ \ \ @SerializedName(\textcolor{stringliteral}{"{}iniciades"{}})}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00033}00033\ \ \ \ \ @Expose}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00034}00034\ \ \ \ \ \textcolor{keyword}{private}\ Integer\ iniciades;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00039}00039\ \ \ \ \ @SerializedName(\textcolor{stringliteral}{"{}ajudesTotals"{}})}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00040}00040\ \ \ \ \ @Expose}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00041}00041\ \ \ \ \ \textcolor{keyword}{private}\ Integer\ ajudes;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00048}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a52ae24376b41249263603551ee1eb7df}{00048}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a52ae24376b41249263603551ee1eb7df}{Stats}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ this.puntuacioCodeMaker\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ this.puntuacioCodeBreaker\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ this.acabades\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ this.iniciades\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ this.ajudes\ =\ 0;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00054}00054\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00061}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a7d34b145f273a286404e395291910c3f}{00061}}\ \ \ \ \ \textcolor{keyword}{public}\ Integer\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a7d34b145f273a286404e395291910c3f}{getPuntuacioCodeMaker}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ puntuacioCodeMaker;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00063}00063\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00070}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a1eb7a913106b0a6b25e8f4d7ba0f0ffa}{00070}}\ \ \ \ \ \textcolor{keyword}{public}\ Integer\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a1eb7a913106b0a6b25e8f4d7ba0f0ffa}{getPuntuacioCodeBreaker}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ puntuacioCodeBreaker;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00072}00072\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00079}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a12e8c4cf300e94c5359778fa65f7e66b}{00079}}\ \ \ \ \ \textcolor{keyword}{public}\ Integer\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a12e8c4cf300e94c5359778fa65f7e66b}{getIniciades}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ iniciades;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00081}00081\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00088}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_af526c59868dfab38e754025e6c8d310d}{00088}}\ \ \ \ \ \textcolor{keyword}{public}\ Integer\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_af526c59868dfab38e754025e6c8d310d}{getAcabades}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ acabades;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00090}00090\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00097}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a12c0b69581fc3cb452d782752c7880cb}{00097}}\ \ \ \ \ \textcolor{keyword}{public}\ Integer\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a12c0b69581fc3cb452d782752c7880cb}{getAjudes}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ajudes;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00099}00099\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00104}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a0243068f7184a61f985fcc3bc3c2bb00}{00104}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a0243068f7184a61f985fcc3bc3c2bb00}{afegirIniciadesStats}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00106}00106\ \ \ \ \ \ \ \ \ ++iniciades;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00107}00107\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00112}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a0e5ec26df85c5ad9219ca7eab43ea174}{00112}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a0e5ec26df85c5ad9219ca7eab43ea174}{afegirAcabadesStats}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00113}00113\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00114}00114\ \ \ \ \ \ \ \ \ ++acabades;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00115}00115\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00122}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a84c5406a9ec3d9664423667ff8d5e271}{00122}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a84c5406a9ec3d9664423667ff8d5e271}{setPuntuacioCodeMaker}}(Integer\ puntuacioCodeMaker)\ \{}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00123}00123\ \ \ \ \ \ \ \ \ this.puntuacioCodeMaker\ +=\ puntuacioCodeMaker;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00124}00124\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00131}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a3dbb077dfa0d462bc2eca16de0025905}{00131}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a3dbb077dfa0d462bc2eca16de0025905}{setPuntuacioCodeBreaker}}(Integer\ puntuacioCodeBreaker)\ \{}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00132}00132\ \ \ \ \ \ \ \ \ this.puntuacioCodeBreaker\ +=\ puntuacioCodeBreaker;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00133}00133\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00140}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_abe49491b669d53f531ba0f19d3f87ecd}{00140}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_abe49491b669d53f531ba0f19d3f87ecd}{setIniciades}}(Integer\ iniciades)\ \{}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00141}00141\ \ \ \ \ \ \ \ \ this.iniciades\ +=\ iniciades;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00142}00142\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00143}00143\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00149}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a006172e745759a4f28f5103c5682c7b7}{00149}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a006172e745759a4f28f5103c5682c7b7}{setAcabades}}(Integer\ acabades)\ \{}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00150}00150\ \ \ \ \ \ \ \ \ this.acabades\ +=\ acabades;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00151}00151\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00156}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a0c1239a9e0b9c320caba093f5fa4472a}{00156}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_stats_a0c1239a9e0b9c320caba093f5fa4472a}{setAjudes}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00157}00157\ \ \ \ \ \ \ \ \ this.ajudes\ +=\ 1;}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00158}00158\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00160}00160\ \}}
+\DoxyCodeLine{\Hypertarget{_stats_8java_source_l00161}00161\ }
+
+\end{DoxyCode}

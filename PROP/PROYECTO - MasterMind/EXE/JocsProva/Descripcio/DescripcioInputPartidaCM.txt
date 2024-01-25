@@ -1,0 +1,11 @@
+Objecte de la prova: Jugar Partida com a CodeMaker.
+
+Altres elements integrats a la prova: S'ha hagut de crear un usuari i registrar-lo.
+
+Drivers construïts per aquesta prova: driverDomain.
+
+Valors estudiats: Es proven diferents valors coneixent la interfície del joc, no l'estructura interna (caixa negra). Es cobreixen casos extrems i es comprova el seu correcte funcionament.
+
+Operativa: Es crea una partida de dificultat fàcil i es selecciona el rol de "CodeMaker". Per últim, abans de crear la partida, s'introdueix el codi o combinació que la màquina ha de resoldre. Es juga la partida responent amb el feedback correcte (en cas de que no s'introdueixi la resposta correcta, el sistema ho comunica i es repeteix el procès). S'acaba la partida. Es repeteix la mateixa logística amb les dificultats restants (mitjana i difícil).
+
+*Els inputs i outputs en el transcurs d'una partida, canvien en cada partida ja que són codis generats de forma random.  

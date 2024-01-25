@@ -1,0 +1,65 @@
+\doxysection{Ranking.\+java}
+\hypertarget{_ranking_8java_source}{}\label{_ranking_8java_source}\index{main/domain/classes/Ranking.java@{main/domain/classes/Ranking.java}}
+\mbox{\hyperlink{_ranking_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00001}00001\ \textcolor{keyword}{package\ }main.domain.classes;}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00003}00003\ \textcolor{keyword}{import}\ com.google.gson.Gson;}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00004}00004\ \textcolor{keyword}{import}\ com.google.gson.stream.JsonReader;}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00005}00005\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{namespacemain_1_1domain}{domain}}.\mbox{\hyperlink{namespacemain_1_1domain_1_1controllers}{controllers}}.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}};}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00007}00007\ \textcolor{keyword}{import}\ java.util.*;}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00009}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking}{00009}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking}{Ranking}}\ \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00010}00010\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00014}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking_aef2067e28264828d7f76c40f3aa71a85}{00014}}\ \ \ \ \ \textcolor{keyword}{public}\ List<Usuari>\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking_aef2067e28264828d7f76c40f3aa71a85}{usuarisRegistrats}};}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ Gson\ usuarisJSON;}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00024}00024\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}\ domini;}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00031}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking_a5b72caf33fe7ad9a64943134fc65f3ae}{00031}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking_a5b72caf33fe7ad9a64943134fc65f3ae}{Ranking}}(\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}\ ctrlDomain)\ \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ domini\ =\ ctrlDomain;}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ usuarisJSON\ =\ \textcolor{keyword}{new}\ Gson();}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking_aa150054d016ae793d413f7a1b78f3a9b}{llistaUsuaris}}();}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00041}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking_aa150054d016ae793d413f7a1b78f3a9b}{00041}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking_aa150054d016ae793d413f7a1b78f3a9b}{llistaUsuaris}}()\ \ \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ JsonReader[]\ read\ =\ domini.\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a7c4e2b8935c996919932ce76e527df20}{getLlistaUsuarisJSON}}();}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking_aef2067e28264828d7f76c40f3aa71a85}{usuarisRegistrats}}\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (JsonReader\ jsonReader\ :\ read)\ \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking_aef2067e28264828d7f76c40f3aa71a85}{usuarisRegistrats}}.add(usuarisJSON.fromJson(jsonReader,\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari}{Usuari}}.class));}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00055}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking_a31361b5a9c30658b43777d399ad3cdb7}{00055}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking_a31361b5a9c30658b43777d399ad3cdb7}{ordena}}(String\ rol)\ \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking_aef2067e28264828d7f76c40f3aa71a85}{usuarisRegistrats}}.sort((u1,\ u2)\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rol.equals(\textcolor{stringliteral}{"{}CodeMaker"{}}))\ \textcolor{keywordflow}{return}\ u2.getRecord().getPuntuacioMaxCM()\ -\/\ u1.getRecord().getPuntuacioMaxCM();}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}\ u2.getRecord().getPuntuacioMaxCB()\ -\/\ u1.getRecord().getPuntuacioMaxCB();}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00068}\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking_a130d11cb312e023d4604f04bcc1f0846}{00068}}\ \ \ \ \ \textcolor{keyword}{public}\ String[][]\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking_a130d11cb312e023d4604f04bcc1f0846}{getList}}(String\ rol)\ \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00069}00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking_a31361b5a9c30658b43777d399ad3cdb7}{ordena}}(rol);}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ n\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking_aef2067e28264828d7f76c40f3aa71a85}{usuarisRegistrats}}.size();}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ String[][]\ rank\ =\ \textcolor{keyword}{new}\ String[n][3];}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ String\ num\ =\ String.valueOf(i\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari}{Usuari}}\ u\ =\ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_ranking_aef2067e28264828d7f76c40f3aa71a85}{usuarisRegistrats}}.get(i);}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ rank[i][0]\ =\ num;}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ rank[i][1]\ =\ u.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_a15b1b17059ff805f70d32adcd059540f}{getNom}}();}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ String\ p\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(rol.equals(\textcolor{stringliteral}{"{}CodeMaker"{}}))\ p\ =\ String.valueOf(u.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_ac3873b21b645b214ea44e6cc5c8fba25}{getRecord}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_record_a25d845bbfc6e26a7f06873dca78d1826}{getPuntuacioMaxCM}}());}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(rol.equals(\textcolor{stringliteral}{"{}CodeBreaker"{}}))\ p\ =\ String.valueOf(u.\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari_ac3873b21b645b214ea44e6cc5c8fba25}{getRecord}}().\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_record_a55e00ee802bcb4f7326653a582ab1db2}{getPuntuacioMaxCB}}());}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ rank[i][2]\ =\ p;}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ rank;}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00083}00083\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_ranking_8java_source_l00085}00085\ \}}
+
+\end{DoxyCode}

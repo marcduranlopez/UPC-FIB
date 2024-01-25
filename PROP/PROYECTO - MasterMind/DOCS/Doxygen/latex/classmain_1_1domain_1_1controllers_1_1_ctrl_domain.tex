@@ -1,0 +1,1078 @@
+\doxysection{main.\+domain.\+controllers.\+Ctrl\+Domain Class Reference}
+\hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5d047d98c72a5bee854cb6c881a95b39}{Ctrl\+Domain}} ()
+\begin{DoxyCompactList}\small\item\em Creadora per defecte. \end{DoxyCompactList}\item 
+Json\+Reader \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a1bd4ae214f716bf44109a07a50afa285}{get\+Usuari}} (String nomusuari)  throws File\+Not\+Found\+Exception 
+\begin{DoxyCompactList}\small\item\em Funcio que permet obtenir un usuari guardat al sistema. \end{DoxyCompactList}\item 
+Boolean \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a2b0a70437437dafd3dc178526d7cf6ce}{existeix\+Usuari}} (String username)
+\begin{DoxyCompactList}\small\item\em Aquesta funció ens indica si existeix un usuari amb el nom d\textquotesingle{}usuari passat per paràmetre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a7e57e450851271b3055efd526e748808}{actualitza\+Ranking}} ()
+\begin{DoxyCompactList}\small\item\em Aquesta funció fa actualitzar el ranking per tal d\textquotesingle{}actualitzar-\/lo al final de cada partida. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a10a7419fa8af037be59c8bcec68f9376}{carregar\+Usuari}} (String nomusuari, String password)  throws File\+Not\+Found\+Exception, \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_contrasenya_incorrecte}{Contrasenya\+Incorrecte}} 
+\begin{DoxyCompactList}\small\item\em Funció que permet carregar l\textquotesingle{}usuari (inicia sessio) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5866cb26750958e2a9814c831d326c74}{tancar\+Sesio\+Usuari}} ()
+\begin{DoxyCompactList}\small\item\em Funció que permet a l\textquotesingle{}usuari tancar sessio. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a1d5dd1e064ef38713779d4a6a18105fe}{registrar\+Usuari}} (String nomusuari, String password)  throws \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_usuari_ja_existeix}{Usuari\+Ja\+Existeix}}, \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_contrasenya_incorrecte}{Contrasenya\+Incorrecte}} 
+\begin{DoxyCompactList}\small\item\em Funció que permet a l\textquotesingle{}usuari registrarse. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}} $>$ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a1159bddb9f55491bc85757505ccb9cdc}{get\+Partides\+Guardades}} ()
+\begin{DoxyCompactList}\small\item\em Funció que permet obtenir la llista de partides guardades d\textquotesingle{}un usuari. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ad53d7aa267aea2b944972a7bfd8980b6}{guardar\+Partida}} ()
+\begin{DoxyCompactList}\small\item\em Guarda la partida. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a340d2e13e424e5d65028996851036987}{guardar\+Usuari}} ()
+\begin{DoxyCompactList}\small\item\em Guarda l\textquotesingle{}usuari. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ab79a986455c97b696ff8ea969d83a329}{guardar\+Nou\+Usuari}} (String nomusuari, String usuari\+JSON)  throws \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_usuari_ja_existeix}{Usuari\+Ja\+Existeix}} 
+\begin{DoxyCompactList}\small\item\em Crea i guarda un nou usuari. \end{DoxyCompactList}\item 
+List$<$ Integer $>$ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a50856e4946114801a8a2c2e6d799c7bf}{generador\+Codi\+Resoldre}} (Integer min, Integer max)
+\begin{DoxyCompactList}\small\item\em Funció que permet generar la sequencia a resoldre pel Code\+Breaker de manera random. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5f334a106ee1bbb235ae416a5c510349}{crea\+Nova\+Partida}} (Integer dificultat, String rol, Integer algorisme)  throws \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_dificultat_no_existeix}{Dificultat\+No\+Existeix}} 
+\begin{DoxyCompactList}\small\item\em Funció que permet crear una nova partida. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a34b846f4abcfdca237b2cfda7202fc39}{continua\+Partida}} (Integer id\+Partida)
+\begin{DoxyCompactList}\small\item\em Continua una partida existent. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_add00241b2b1dd42fda9572a5bfc8f8a2}{asigna\+Codi\+Code\+Maker}} (List$<$ Integer $>$ codi)
+\begin{DoxyCompactList}\small\item\em Assigna una sequencia a la sequencia a resoldre a la partida actual del sistema. \end{DoxyCompactList}\item 
+List$<$ Integer $>$ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a29c0b7c7f933350a1122264543797279}{get\+Codi\+Resoldre}} ()
+\begin{DoxyCompactList}\small\item\em Obté la seqüència a resoldre. \end{DoxyCompactList}\item 
+List$<$ List$<$ Integer $>$ $>$ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a6e2df77608520f2ecea2982e6c185b35}{Sequencia\+Maq}} ()
+\begin{DoxyCompactList}\small\item\em Funció que obté totes les seqüències que fa l\textquotesingle{}algorisme fins a arribar al codi a resoldre de la partida. \end{DoxyCompactList}\item 
+List$<$ String $>$ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa111a24442b876deb6f3c7f976c2c7d5}{get\+Pegs\+Maq}} ()
+\begin{DoxyCompactList}\small\item\em Funció que obté una llista amb el feedback de totes les seqüències de la partida jugada per l\textquotesingle{}algorisme. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a32b5c47d5fc7c1375e783a3d851d5f57}{check\+Valida}} (List$<$ Integer $>$ codi)
+\begin{DoxyCompactList}\small\item\em funcio que permet comprovar que la sequencia introduida utilitza colors valids. \end{DoxyCompactList}\item 
+Integer \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a789897ea17344db207db55030297589f}{mostra\+Color\+Existent}} ()
+\begin{DoxyCompactList}\small\item\em Mostra un color de la sequencia a resoldre que no te la seqüència introduida pel Code\+Breaker. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a78f51c8ab6ff2d1e83ad20d16e18e1c4}{ajut\+Usuari}} ()
+\begin{DoxyCompactList}\small\item\em Imprimeix un color de la sequencia a resoldre que no te la sequencia introduida pel Code\+Breaker. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ad8f311e37a4b48463b85e8adc3ac8068}{partida\+Guanyada}} (String rol)
+\begin{DoxyCompactList}\small\item\em Comprova si el Code\+Breaker ha resolt la sequencia proposada pel Code\+Maker. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ad6ddc2a0ad127593c6ef98a4b8006289}{actualitza\+Puntuacio}} (Integer puntuacio\+CM, Integer puntuacio\+CB)
+\begin{DoxyCompactList}\small\item\em Funció que actualitza la puntuacio del Code\+Maker i Code\+Breaker de la partida actual del sistema. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_afdd0de1c45d5c6591f5f1b2f6f4f7f2f}{get\+Puntuacio\+CM}} ()
+\begin{DoxyCompactList}\small\item\em Funció que obté la puntuació total feta com a Code\+Maker per l\textquotesingle{}usuari actual. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac866574e73120444fa220d9737250ca5}{get\+Puntuacio\+CB}} ()
+\begin{DoxyCompactList}\small\item\em Funció que obté la puntuació total feta com a Code\+Breaker per l\textquotesingle{}usuari actual. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ab5c3ed3766951b271bb0955a8860b604}{get\+Partides\+Acabades}} ()
+\begin{DoxyCompactList}\small\item\em Funció que obté les partides totals acabades per l\textquotesingle{}usuari actual. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a4d762795c93104d30136edf8fdd7e55f}{get\+Partides\+Iniciades}} ()
+\begin{DoxyCompactList}\small\item\em Funció que obté les partides totals iniciades per l\textquotesingle{}usuari actual. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ae0cb6170df8b0c97e60a76f6ece0e08c}{get\+Ajuts}} ()
+\begin{DoxyCompactList}\small\item\em Funció que obté les ajudes totals demanades per l\textquotesingle{}usuari actual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa8483c3c51f252dac9b96aaec6c68db2}{afegir\+Acabades\+Stats}} ()
+\begin{DoxyCompactList}\small\item\em Funció que suma en un les partides acabades de l\textquotesingle{}usuari actual. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a63fe7d03d4199054ca78b0710272f6b5}{get\+Rol}} ()
+\begin{DoxyCompactList}\small\item\em Funcio que obte el rol de la partida actual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a7105a60a463456ee5335835df6355b60}{procediments\+Final\+Partida}} ()
+\begin{DoxyCompactList}\small\item\em Funció que fa uns procediments a l\textquotesingle{}hora d\textquotesingle{}acabar la partida actual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a564d5fffaa020fc5ff54a0d0d70d1de4}{procediments\+Final\+Close}} ()
+\begin{DoxyCompactList}\small\item\em Funció que fa uns procediments a l\textquotesingle{}hora d\textquotesingle{}acabar la partida actual de forma manual (botó close) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a6bab069915056ee27a21f62c3d7addc0}{acabar\+Partida}} (String ignored\+Rol)
+\begin{DoxyCompactList}\small\item\em Acaba la partida actual del sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a8f34a1542a3db38603b156fc9b01918b}{acabar\+Close\+Partida}} ()
+\begin{DoxyCompactList}\small\item\em Surt de la partida sense acabar i es borra del sistema. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5fee5aee1eb31c8f9343f523fc09287f}{check\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Funció que compara la seqüència introduïda amb la seqüència a resoldre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a988cb1c49546b8044ff4e29d8a8d15bf}{tauler\+Set\+Codi\+Actual}} (List$<$ Integer $>$ codi)
+\begin{DoxyCompactList}\small\item\em Funció que assigna la seqüència passada per paràmetre amb el codi actual del tauler. \end{DoxyCompactList}\item 
+String\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa05f87b34d4690d62f262ec4ff273066}{consultar\+Ranking}} (String rol)
+\begin{DoxyCompactList}\small\item\em Funció que obte el ranking segons el rol. \end{DoxyCompactList}\item 
+List$<$ List$<$ Integer $>$ $>$ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ae4bfcda19cddecb20a223d0dfb958a95}{get\+Board\+Partida}} ()
+\begin{DoxyCompactList}\small\item\em Funció que obte el board de la partida. \end{DoxyCompactList}\item 
+Integer \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a471884ad384a03df6ea0b063ee86c0c9}{get\+Dificultat\+Partida}} ()
+\begin{DoxyCompactList}\small\item\em Funció que obte la dificultat de la partida actual. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aedc09833c317039b0e06576f0ca5cef7}{get\+Temps\+Partida}} ()
+\begin{DoxyCompactList}\small\item\em Funció que obte el temps de la partida actual. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}} \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a3c676be15eafb8a739025afabf792b11}{get\+Partida\+Actual}} ()
+\begin{DoxyCompactList}\small\item\em Getter de partida\+Actual. \end{DoxyCompactList}\item 
+Integer \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aaa0becaaa42b12b9e28c6dd0fe9feb39}{get\+Ronda\+Partida}} ()
+\begin{DoxyCompactList}\small\item\em Getter de ronda de partida\+Actual. \end{DoxyCompactList}\item 
+Array\+List$<$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari}{Usuari}} $>$ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_af6c84078dc278875d24c37731a77643f}{get\+Llista\+Usuaris}} ()  throws Null\+Pointer\+Exception 
+\begin{DoxyCompactList}\small\item\em Getter d\textquotesingle{}usuaris. \end{DoxyCompactList}\item 
+Json\+Reader\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a7c4e2b8935c996919932ce76e527df20}{get\+Llista\+Usuaris\+JSON}} ()  throws Null\+Pointer\+Exception 
+\begin{DoxyCompactList}\small\item\em Getter d\textquotesingle{}usuaris format JSON. \end{DoxyCompactList}\item 
+List$<$ String $>$ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aed337a0f44c88f4a0855ebb504469e4c}{get\+Pegs\+Partida}} ()
+\begin{DoxyCompactList}\small\item\em Funció que obté una llista amb el feedback de totes les seqüències de la partida jugada per l\textquotesingle{}usuari. \end{DoxyCompactList}\item 
+List$<$ String $>$ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a3420408890f12012d516dc8056f7e2d5}{get\+Pegs\+Partida\+Maq}} ()
+\begin{DoxyCompactList}\small\item\em Getter del feedback del procés d\textquotesingle{}endevinar la seqüència per part de l\textquotesingle{}algorisme. \end{DoxyCompactList}\item 
+List$<$ List$<$ Integer $>$ $>$ \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aac4f3a155c3c3531e542a62951509034}{get\+Cods\+Maq}} ()
+\begin{DoxyCompactList}\small\item\em Getter de les seqüències obtingudes per l\textquotesingle{}algorisme fins a arribar a la seqüència a resoldre. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_jugador_i_a}{Jugador\+IA}} \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a07525180a4f4e1f591120261ba24d5a2}{get\+Jugador\+IA}} ()
+\begin{DoxyCompactList}\small\item\em Getter de jugador\+IA (la maquina) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_abc343088da05f80bf6796b429d9a53ea}{set\+Ronda\+Partida}} (Integer ronda)
+\begin{DoxyCompactList}\small\item\em Setter de ronda de partida\+Actual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa92d72b50d1095f2eb5725124d6543b5}{set\+Temps\+Partida}} (String temps)
+\begin{DoxyCompactList}\small\item\em Setter de temps de partida\+Actual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{Ctrl\+Domain}} \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a25d610faa4da74c654e15fe50ab015b4}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Obté una instància de Ctrl\+Domain. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari}{Usuari}} \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}{usuari\+Actual}}
+\item 
+\mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}} \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}{partida\+Actual}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Marc Duran López 
+\end{DoxyAuthor}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00027}{27}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5d047d98c72a5bee854cb6c881a95b39}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5d047d98c72a5bee854cb6c881a95b39} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!CtrlDomain@{CtrlDomain}}
+\index{CtrlDomain@{CtrlDomain}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{CtrlDomain()}{CtrlDomain()}}
+{\footnotesize\ttfamily main.\+domain.\+controllers.\+Ctrl\+Domain.\+Ctrl\+Domain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora per defecte. 
+
+S\textquotesingle{}inicialitza el contrlador de domini. S\textquotesingle{}obte la instància singleton del controlador de persistencia 
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00069}{69}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a8f34a1542a3db38603b156fc9b01918b}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a8f34a1542a3db38603b156fc9b01918b} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!acabarClosePartida@{acabarClosePartida}}
+\index{acabarClosePartida@{acabarClosePartida}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{acabarClosePartida()}{acabarClosePartida()}}
+{\footnotesize\ttfamily void main.\+domain.\+controllers.\+Ctrl\+Domain.\+acabar\+Close\+Partida (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Surt de la partida sense acabar i es borra del sistema. 
+
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00534}{534}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a6bab069915056ee27a21f62c3d7addc0}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a6bab069915056ee27a21f62c3d7addc0} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!acabarPartida@{acabarPartida}}
+\index{acabarPartida@{acabarPartida}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{acabarPartida()}{acabarPartida()}}
+{\footnotesize\ttfamily void main.\+domain.\+controllers.\+Ctrl\+Domain.\+acabar\+Partida (\begin{DoxyParamCaption}\item[{String}]{ignored\+Rol }\end{DoxyParamCaption})}
+
+
+
+Acaba la partida actual del sistema. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ignored\+Rol} & representa el rol assignat a la partida \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00498}{498}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ad6ddc2a0ad127593c6ef98a4b8006289}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ad6ddc2a0ad127593c6ef98a4b8006289} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!actualitzaPuntuacio@{actualitzaPuntuacio}}
+\index{actualitzaPuntuacio@{actualitzaPuntuacio}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{actualitzaPuntuacio()}{actualitzaPuntuacio()}}
+{\footnotesize\ttfamily void main.\+domain.\+controllers.\+Ctrl\+Domain.\+actualitza\+Puntuacio (\begin{DoxyParamCaption}\item[{Integer}]{puntuacio\+CM,  }\item[{Integer}]{puntuacio\+CB }\end{DoxyParamCaption})}
+
+
+
+Funció que actualitza la puntuacio del Code\+Maker i Code\+Breaker de la partida actual del sistema. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em puntuacio\+CM} & representa la puntuacio feta pel Code\+Maker a la partida actual \\
+\hline
+{\em puntuacio\+CB} & representa la puntuacio feta pel Code\+Breaker a la partida actual\\
+\hline
+\end{DoxyParams}
+
+
+Assigna les puntuacions pasades per parametre a les puntuacions del Code\+Maker i Code\+Breaker. A més s\textquotesingle{}aplica la penalitzacio a la puntuacio del Code\+Breaker segons el nombre d\textquotesingle{}ajudes que ha utilitzat 
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00392}{392}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a7e57e450851271b3055efd526e748808}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a7e57e450851271b3055efd526e748808} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!actualitzaRanking@{actualitzaRanking}}
+\index{actualitzaRanking@{actualitzaRanking}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{actualitzaRanking()}{actualitzaRanking()}}
+{\footnotesize\ttfamily void main.\+domain.\+controllers.\+Ctrl\+Domain.\+actualitza\+Ranking (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Aquesta funció fa actualitzar el ranking per tal d\textquotesingle{}actualitzar-\/lo al final de cada partida. 
+
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00115}{115}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa8483c3c51f252dac9b96aaec6c68db2}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa8483c3c51f252dac9b96aaec6c68db2} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!afegirAcabadesStats@{afegirAcabadesStats}}
+\index{afegirAcabadesStats@{afegirAcabadesStats}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{afegirAcabadesStats()}{afegirAcabadesStats()}}
+{\footnotesize\ttfamily void main.\+domain.\+controllers.\+Ctrl\+Domain.\+afegir\+Acabades\+Stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funció que suma en un les partides acabades de l\textquotesingle{}usuari actual. 
+
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00449}{449}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a78f51c8ab6ff2d1e83ad20d16e18e1c4}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a78f51c8ab6ff2d1e83ad20d16e18e1c4} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!ajutUsuari@{ajutUsuari}}
+\index{ajutUsuari@{ajutUsuari}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{ajutUsuari()}{ajutUsuari()}}
+{\footnotesize\ttfamily void main.\+domain.\+controllers.\+Ctrl\+Domain.\+ajut\+Usuari (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprimeix un color de la sequencia a resoldre que no te la sequencia introduida pel Code\+Breaker. 
+
+Imprimeix el color que no es troba a la sequencia proposada i contabilitza les ajudes fetes a la partida. 
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00349}{349}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_add00241b2b1dd42fda9572a5bfc8f8a2}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_add00241b2b1dd42fda9572a5bfc8f8a2} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!asignaCodiCodeMaker@{asignaCodiCodeMaker}}
+\index{asignaCodiCodeMaker@{asignaCodiCodeMaker}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{asignaCodiCodeMaker()}{asignaCodiCodeMaker()}}
+{\footnotesize\ttfamily void main.\+domain.\+controllers.\+Ctrl\+Domain.\+asigna\+Codi\+Code\+Maker (\begin{DoxyParamCaption}\item[{List$<$ Integer $>$}]{codi }\end{DoxyParamCaption})}
+
+
+
+Assigna una sequencia a la sequencia a resoldre a la partida actual del sistema. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em codi} & representa la llista amb la sequencia a resoldre pel code\+Breaker \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00271}{271}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a10a7419fa8af037be59c8bcec68f9376}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a10a7419fa8af037be59c8bcec68f9376} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!carregarUsuari@{carregarUsuari}}
+\index{carregarUsuari@{carregarUsuari}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{carregarUsuari()}{carregarUsuari()}}
+{\footnotesize\ttfamily void main.\+domain.\+controllers.\+Ctrl\+Domain.\+carregar\+Usuari (\begin{DoxyParamCaption}\item[{String}]{nomusuari,  }\item[{String}]{password }\end{DoxyParamCaption}) throws File\+Not\+Found\+Exception, \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_contrasenya_incorrecte}{Contrasenya\+Incorrecte}}}
+
+
+
+Funció que permet carregar l\textquotesingle{}usuari (inicia sessio) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nomusuari} & representa el nom d\textquotesingle{}usuari \\
+\hline
+{\em password} & representa la contraseña del usuari \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Contrasenya\+Incorrecte} & en cas que la contraseña no sigui correcte \\
+\hline
+{\em File\+Not\+Found\+Exception} & en cas que l\textquotesingle{}usuari no existeixi \\
+\hline
+\end{DoxyExceptions}
+Actualiza l\textquotesingle{}usuari actual del sistema amb l\textquotesingle{}usuari que correspon al nom d\textquotesingle{}usuari i contraseña, en cas que existeixi i l\textquotesingle{}usuari i contrasenya siguin correctes. 
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00129}{129}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5fee5aee1eb31c8f9343f523fc09287f}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5fee5aee1eb31c8f9343f523fc09287f} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!checkCode@{checkCode}}
+\index{checkCode@{checkCode}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{checkCode()}{checkCode()}}
+{\footnotesize\ttfamily String main.\+domain.\+controllers.\+Ctrl\+Domain.\+check\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funció que compara la seqüència introduïda amb la seqüència a resoldre. 
+
+\begin{DoxyReturn}{Returns}
+la situació actual de la seqüència introduïda (feedback) 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00556}{556}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a32b5c47d5fc7c1375e783a3d851d5f57}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a32b5c47d5fc7c1375e783a3d851d5f57} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!checkValida@{checkValida}}
+\index{checkValida@{checkValida}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{checkValida()}{checkValida()}}
+{\footnotesize\ttfamily boolean main.\+domain.\+controllers.\+Ctrl\+Domain.\+check\+Valida (\begin{DoxyParamCaption}\item[{List$<$ Integer $>$}]{codi }\end{DoxyParamCaption})}
+
+
+
+funcio que permet comprovar que la sequencia introduida utilitza colors valids. 
+
+\begin{DoxyReturn}{Returns}
+True si la sequencia introduida utilitza colors valida. En cas contrari, retorna false 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00304}{304}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa05f87b34d4690d62f262ec4ff273066}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa05f87b34d4690d62f262ec4ff273066} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!consultarRanking@{consultarRanking}}
+\index{consultarRanking@{consultarRanking}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{consultarRanking()}{consultarRanking()}}
+{\footnotesize\ttfamily String\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} main.\+domain.\+controllers.\+Ctrl\+Domain.\+consultar\+Ranking (\begin{DoxyParamCaption}\item[{String}]{rol }\end{DoxyParamCaption})}
+
+
+
+Funció que obte el ranking segons el rol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rol} & representa el ranking que es vol mostrar, ranking Code\+Maker o Code\+Breaker \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una matriu amb el núm. de ranking, nom d\textquotesingle{}usuari i puntuacio. És ordenada per puntuació. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00580}{580}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a34b846f4abcfdca237b2cfda7202fc39}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a34b846f4abcfdca237b2cfda7202fc39} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!continuaPartida@{continuaPartida}}
+\index{continuaPartida@{continuaPartida}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{continuaPartida()}{continuaPartida()}}
+{\footnotesize\ttfamily void main.\+domain.\+controllers.\+Ctrl\+Domain.\+continua\+Partida (\begin{DoxyParamCaption}\item[{Integer}]{id\+Partida }\end{DoxyParamCaption})}
+
+
+
+Continua una partida existent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Partida} & identificador de la partida que es vol continuar \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00258}{258}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5f334a106ee1bbb235ae416a5c510349}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5f334a106ee1bbb235ae416a5c510349} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!creaNovaPartida@{creaNovaPartida}}
+\index{creaNovaPartida@{creaNovaPartida}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{creaNovaPartida()}{creaNovaPartida()}}
+{\footnotesize\ttfamily void main.\+domain.\+controllers.\+Ctrl\+Domain.\+crea\+Nova\+Partida (\begin{DoxyParamCaption}\item[{Integer}]{dificultat,  }\item[{String}]{rol,  }\item[{Integer}]{algorisme }\end{DoxyParamCaption}) throws \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_dificultat_no_existeix}{Dificultat\+No\+Existeix}}}
+
+
+
+Funció que permet crear una nova partida. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dificultat} & representa la dificultat asignada a la partida (determina el numero de bolas a jugar) \\
+\hline
+{\em rol} & representa el rol assignat a la partida \\
+\hline
+{\em algorisme} & representa l\textquotesingle{}algorisme triat per a la partida \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Dificultat\+No\+Existeix} & en el cas que la dificultat no sigui cap de les donades \\
+\hline
+\end{DoxyExceptions}
+Es crea una nova partida per l\textquotesingle{}usuari actual del sistema. A més es crea un tauler buit 
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00231}{231}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a2b0a70437437dafd3dc178526d7cf6ce}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a2b0a70437437dafd3dc178526d7cf6ce} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!existeixUsuari@{existeixUsuari}}
+\index{existeixUsuari@{existeixUsuari}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{existeixUsuari()}{existeixUsuari()}}
+{\footnotesize\ttfamily Boolean main.\+domain.\+controllers.\+Ctrl\+Domain.\+existeix\+Usuari (\begin{DoxyParamCaption}\item[{String}]{username }\end{DoxyParamCaption})}
+
+
+
+Aquesta funció ens indica si existeix un usuari amb el nom d\textquotesingle{}usuari passat per paràmetre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & representa el nom d\textquotesingle{}usuari a comprovar si existeix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cert en cas que ja existeixi un usuari amb nom d\textquotesingle{}usuari username. En cas contrari retorna fals 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00106}{106}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a50856e4946114801a8a2c2e6d799c7bf}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a50856e4946114801a8a2c2e6d799c7bf} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!generadorCodiResoldre@{generadorCodiResoldre}}
+\index{generadorCodiResoldre@{generadorCodiResoldre}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{generadorCodiResoldre()}{generadorCodiResoldre()}}
+{\footnotesize\ttfamily List$<$ Integer $>$ main.\+domain.\+controllers.\+Ctrl\+Domain.\+generador\+Codi\+Resoldre (\begin{DoxyParamCaption}\item[{Integer}]{min,  }\item[{Integer}]{max }\end{DoxyParamCaption})}
+
+
+
+Funció que permet generar la sequencia a resoldre pel Code\+Breaker de manera random. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & representa el número més petit que pot surtir a la sequencia \\
+\hline
+{\em max} & representa el numero mes gran que pot surtir a la sequencia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una llista de Integer amb la sequencia generada (cada numero s\textquotesingle{}assoicia a un color) 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00211}{211}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ae0cb6170df8b0c97e60a76f6ece0e08c}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ae0cb6170df8b0c97e60a76f6ece0e08c} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!getAjuts@{getAjuts}}
+\index{getAjuts@{getAjuts}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{getAjuts()}{getAjuts()}}
+{\footnotesize\ttfamily int main.\+domain.\+controllers.\+Ctrl\+Domain.\+get\+Ajuts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funció que obté les ajudes totals demanades per l\textquotesingle{}usuari actual. 
+
+\begin{DoxyReturn}{Returns}
+les ajudes totals 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00441}{441}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ae4bfcda19cddecb20a223d0dfb958a95}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ae4bfcda19cddecb20a223d0dfb958a95} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!getBoardPartida@{getBoardPartida}}
+\index{getBoardPartida@{getBoardPartida}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{getBoardPartida()}{getBoardPartida()}}
+{\footnotesize\ttfamily List$<$ List$<$ Integer $>$ $>$ main.\+domain.\+controllers.\+Ctrl\+Domain.\+get\+Board\+Partida (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funció que obte el board de la partida. 
+
+\begin{DoxyReturn}{Returns}
+Una llista de llistes d\textquotesingle{}enters que representen el board actual 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00590}{590}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a29c0b7c7f933350a1122264543797279}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a29c0b7c7f933350a1122264543797279} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!getCodiResoldre@{getCodiResoldre}}
+\index{getCodiResoldre@{getCodiResoldre}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{getCodiResoldre()}{getCodiResoldre()}}
+{\footnotesize\ttfamily List$<$ Integer $>$ main.\+domain.\+controllers.\+Ctrl\+Domain.\+get\+Codi\+Resoldre (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obté la seqüència a resoldre. 
+
+\begin{DoxyReturn}{Returns}
+una llista d\textquotesingle{}enters amb la seqüència a resoldre a la partida 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00280}{280}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aac4f3a155c3c3531e542a62951509034}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aac4f3a155c3c3531e542a62951509034} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!getCodsMaq@{getCodsMaq}}
+\index{getCodsMaq@{getCodsMaq}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{getCodsMaq()}{getCodsMaq()}}
+{\footnotesize\ttfamily List$<$ List$<$ Integer $>$ $>$ main.\+domain.\+controllers.\+Ctrl\+Domain.\+get\+Cods\+Maq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter de les seqüències obtingudes per l\textquotesingle{}algorisme fins a arribar a la seqüència a resoldre. 
+
+\begin{DoxyReturn}{Returns}
+llista de seqüències obtingudes per l\textquotesingle{}algorisme 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00683}{683}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a471884ad384a03df6ea0b063ee86c0c9}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a471884ad384a03df6ea0b063ee86c0c9} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!getDificultatPartida@{getDificultatPartida}}
+\index{getDificultatPartida@{getDificultatPartida}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{getDificultatPartida()}{getDificultatPartida()}}
+{\footnotesize\ttfamily Integer main.\+domain.\+controllers.\+Ctrl\+Domain.\+get\+Dificultat\+Partida (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funció que obte la dificultat de la partida actual. 
+
+\begin{DoxyReturn}{Returns}
+la dificultat 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00599}{599}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a25d610faa4da74c654e15fe50ab015b4}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a25d610faa4da74c654e15fe50ab015b4} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classmain_1_1domain_1_1controllers_1_1_ctrl_domain}{Ctrl\+Domain}} main.\+domain.\+controllers.\+Ctrl\+Domain.\+get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Obté una instància de Ctrl\+Domain. 
+
+\begin{DoxyReturn}{Returns}
+la instància Ctrl\+Domain 
+\end{DoxyReturn}
+Si no existeix cap instància singleton d\textquotesingle{}aquesta classe, crea una i la retorna. En cas contrari retorna l\textquotesingle{}existent 
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00082}{82}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a07525180a4f4e1f591120261ba24d5a2}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a07525180a4f4e1f591120261ba24d5a2} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!getJugadorIA@{getJugadorIA}}
+\index{getJugadorIA@{getJugadorIA}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{getJugadorIA()}{getJugadorIA()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_jugador_i_a}{Jugador\+IA}} main.\+domain.\+controllers.\+Ctrl\+Domain.\+get\+Jugador\+IA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter de jugador\+IA (la maquina) 
+
+\begin{DoxyReturn}{Returns}
+jugador\+IA 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00693}{693}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_af6c84078dc278875d24c37731a77643f}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_af6c84078dc278875d24c37731a77643f} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!getLlistaUsuaris@{getLlistaUsuaris}}
+\index{getLlistaUsuaris@{getLlistaUsuaris}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{getLlistaUsuaris()}{getLlistaUsuaris()}}
+{\footnotesize\ttfamily Array\+List$<$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari}{Usuari}} $>$ main.\+domain.\+controllers.\+Ctrl\+Domain.\+get\+Llista\+Usuaris (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Null\+Pointer\+Exception}
+
+
+
+Getter d\textquotesingle{}usuaris. 
+
+\begin{DoxyReturn}{Returns}
+La llista d\textquotesingle{}usuaris registrats al sistema 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00638}{638}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a7c4e2b8935c996919932ce76e527df20}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a7c4e2b8935c996919932ce76e527df20} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!getLlistaUsuarisJSON@{getLlistaUsuarisJSON}}
+\index{getLlistaUsuarisJSON@{getLlistaUsuarisJSON}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{getLlistaUsuarisJSON()}{getLlistaUsuarisJSON()}}
+{\footnotesize\ttfamily Json\+Reader\mbox{[}$\,$\mbox{]} main.\+domain.\+controllers.\+Ctrl\+Domain.\+get\+Llista\+Usuaris\+JSON (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Null\+Pointer\+Exception}
+
+
+
+Getter d\textquotesingle{}usuaris format JSON. 
+
+\begin{DoxyReturn}{Returns}
+La llista d\textquotesingle{}usuaris registrats al sistema 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00654}{654}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a3c676be15eafb8a739025afabf792b11}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a3c676be15eafb8a739025afabf792b11} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!getPartidaActual@{getPartidaActual}}
+\index{getPartidaActual@{getPartidaActual}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{getPartidaActual()}{getPartidaActual()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}} main.\+domain.\+controllers.\+Ctrl\+Domain.\+get\+Partida\+Actual (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter de partida\+Actual. 
+
+\begin{DoxyReturn}{Returns}
+partida actual 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00618}{618}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ab5c3ed3766951b271bb0955a8860b604}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ab5c3ed3766951b271bb0955a8860b604} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!getPartidesAcabades@{getPartidesAcabades}}
+\index{getPartidesAcabades@{getPartidesAcabades}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{getPartidesAcabades()}{getPartidesAcabades()}}
+{\footnotesize\ttfamily int main.\+domain.\+controllers.\+Ctrl\+Domain.\+get\+Partides\+Acabades (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funció que obté les partides totals acabades per l\textquotesingle{}usuari actual. 
+
+\begin{DoxyReturn}{Returns}
+les partides totals acabades 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00423}{423}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a1159bddb9f55491bc85757505ccb9cdc}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a1159bddb9f55491bc85757505ccb9cdc} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!getPartidesGuardades@{getPartidesGuardades}}
+\index{getPartidesGuardades@{getPartidesGuardades}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{getPartidesGuardades()}{getPartidesGuardades()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}} $>$ main.\+domain.\+controllers.\+Ctrl\+Domain.\+get\+Partides\+Guardades (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funció que permet obtenir la llista de partides guardades d\textquotesingle{}un usuari. 
+
+\begin{DoxyReturn}{Returns}
+La llista de partides guardades de l\textquotesingle{}usuari actual del sistema 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00173}{173}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a4d762795c93104d30136edf8fdd7e55f}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a4d762795c93104d30136edf8fdd7e55f} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!getPartidesIniciades@{getPartidesIniciades}}
+\index{getPartidesIniciades@{getPartidesIniciades}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{getPartidesIniciades()}{getPartidesIniciades()}}
+{\footnotesize\ttfamily int main.\+domain.\+controllers.\+Ctrl\+Domain.\+get\+Partides\+Iniciades (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funció que obté les partides totals iniciades per l\textquotesingle{}usuari actual. 
+
+\begin{DoxyReturn}{Returns}
+les partides totals iniciades 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00432}{432}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa111a24442b876deb6f3c7f976c2c7d5}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa111a24442b876deb6f3c7f976c2c7d5} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!getPegsMaq@{getPegsMaq}}
+\index{getPegsMaq@{getPegsMaq}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{getPegsMaq()}{getPegsMaq()}}
+{\footnotesize\ttfamily List$<$ String $>$ main.\+domain.\+controllers.\+Ctrl\+Domain.\+get\+Pegs\+Maq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funció que obté una llista amb el feedback de totes les seqüències de la partida jugada per l\textquotesingle{}algorisme. 
+
+\begin{DoxyReturn}{Returns}
+una llista de String que representa el feedback obtingut 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00296}{296}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aed337a0f44c88f4a0855ebb504469e4c}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aed337a0f44c88f4a0855ebb504469e4c} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!getPegsPartida@{getPegsPartida}}
+\index{getPegsPartida@{getPegsPartida}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{getPegsPartida()}{getPegsPartida()}}
+{\footnotesize\ttfamily List$<$ String $>$ main.\+domain.\+controllers.\+Ctrl\+Domain.\+get\+Pegs\+Partida (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funció que obté una llista amb el feedback de totes les seqüències de la partida jugada per l\textquotesingle{}usuari. 
+
+\begin{DoxyReturn}{Returns}
+una llista de String que representa el feedback obtingut 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00665}{665}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a3420408890f12012d516dc8056f7e2d5}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a3420408890f12012d516dc8056f7e2d5} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!getPegsPartidaMaq@{getPegsPartidaMaq}}
+\index{getPegsPartidaMaq@{getPegsPartidaMaq}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{getPegsPartidaMaq()}{getPegsPartidaMaq()}}
+{\footnotesize\ttfamily List$<$ String $>$ main.\+domain.\+controllers.\+Ctrl\+Domain.\+get\+Pegs\+Partida\+Maq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter del feedback del procés d\textquotesingle{}endevinar la seqüència per part de l\textquotesingle{}algorisme. 
+
+\begin{DoxyReturn}{Returns}
+feedback del procés d\textquotesingle{}endevinar la seqüència 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00674}{674}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac866574e73120444fa220d9737250ca5}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac866574e73120444fa220d9737250ca5} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!getPuntuacioCB@{getPuntuacioCB}}
+\index{getPuntuacioCB@{getPuntuacioCB}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{getPuntuacioCB()}{getPuntuacioCB()}}
+{\footnotesize\ttfamily int main.\+domain.\+controllers.\+Ctrl\+Domain.\+get\+Puntuacio\+CB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funció que obté la puntuació total feta com a Code\+Breaker per l\textquotesingle{}usuari actual. 
+
+\begin{DoxyReturn}{Returns}
+la puntuacio total com a Code\+Breaker 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00414}{414}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_afdd0de1c45d5c6591f5f1b2f6f4f7f2f}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_afdd0de1c45d5c6591f5f1b2f6f4f7f2f} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!getPuntuacioCM@{getPuntuacioCM}}
+\index{getPuntuacioCM@{getPuntuacioCM}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{getPuntuacioCM()}{getPuntuacioCM()}}
+{\footnotesize\ttfamily int main.\+domain.\+controllers.\+Ctrl\+Domain.\+get\+Puntuacio\+CM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funció que obté la puntuació total feta com a Code\+Maker per l\textquotesingle{}usuari actual. 
+
+\begin{DoxyReturn}{Returns}
+la puntuació total com a Code\+Maker 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00405}{405}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a63fe7d03d4199054ca78b0710272f6b5}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a63fe7d03d4199054ca78b0710272f6b5} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!getRol@{getRol}}
+\index{getRol@{getRol}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{getRol()}{getRol()}}
+{\footnotesize\ttfamily String main.\+domain.\+controllers.\+Ctrl\+Domain.\+get\+Rol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funcio que obte el rol de la partida actual. 
+
+\begin{DoxyReturn}{Returns}
+el rol 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00459}{459}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aaa0becaaa42b12b9e28c6dd0fe9feb39}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aaa0becaaa42b12b9e28c6dd0fe9feb39} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!getRondaPartida@{getRondaPartida}}
+\index{getRondaPartida@{getRondaPartida}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{getRondaPartida()}{getRondaPartida()}}
+{\footnotesize\ttfamily Integer main.\+domain.\+controllers.\+Ctrl\+Domain.\+get\+Ronda\+Partida (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter de ronda de partida\+Actual. 
+
+\begin{DoxyReturn}{Returns}
+la ronda de la partida 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00628}{628}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aedc09833c317039b0e06576f0ca5cef7}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aedc09833c317039b0e06576f0ca5cef7} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!getTempsPartida@{getTempsPartida}}
+\index{getTempsPartida@{getTempsPartida}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{getTempsPartida()}{getTempsPartida()}}
+{\footnotesize\ttfamily String main.\+domain.\+controllers.\+Ctrl\+Domain.\+get\+Temps\+Partida (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funció que obte el temps de la partida actual. 
+
+\begin{DoxyReturn}{Returns}
+el temps 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00609}{609}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a1bd4ae214f716bf44109a07a50afa285}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a1bd4ae214f716bf44109a07a50afa285} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!getUsuari@{getUsuari}}
+\index{getUsuari@{getUsuari}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{getUsuari()}{getUsuari()}}
+{\footnotesize\ttfamily Json\+Reader main.\+domain.\+controllers.\+Ctrl\+Domain.\+get\+Usuari (\begin{DoxyParamCaption}\item[{String}]{nomusuari }\end{DoxyParamCaption}) throws File\+Not\+Found\+Exception}
+
+
+
+Funcio que permet obtenir un usuari guardat al sistema. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nomusuari} & representa el nom d\textquotesingle{}usuari d\textquotesingle{}un usuari existent del sistema \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em File\+Not\+Found\+Exception} & en cas que no existeixi cap usuari amb aquest nomusuari \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}usuari que correspon al nom d\textquotesingle{}usuari pasat com a parametre 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00096}{96}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ab79a986455c97b696ff8ea969d83a329}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ab79a986455c97b696ff8ea969d83a329} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!guardarNouUsuari@{guardarNouUsuari}}
+\index{guardarNouUsuari@{guardarNouUsuari}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{guardarNouUsuari()}{guardarNouUsuari()}}
+{\footnotesize\ttfamily void main.\+domain.\+controllers.\+Ctrl\+Domain.\+guardar\+Nou\+Usuari (\begin{DoxyParamCaption}\item[{String}]{nomusuari,  }\item[{String}]{usuari\+JSON }\end{DoxyParamCaption}) throws \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_usuari_ja_existeix}{Usuari\+Ja\+Existeix}}}
+
+
+
+Crea i guarda un nou usuari. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Usuari\+Ja\+Existeix} & en cas que ja existeixi un usuari amb el mateix nom usuari \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00198}{198}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ad53d7aa267aea2b944972a7bfd8980b6}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ad53d7aa267aea2b944972a7bfd8980b6} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!guardarPartida@{guardarPartida}}
+\index{guardarPartida@{guardarPartida}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{guardarPartida()}{guardarPartida()}}
+{\footnotesize\ttfamily void main.\+domain.\+controllers.\+Ctrl\+Domain.\+guardar\+Partida (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Guarda la partida. 
+
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00180}{180}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a340d2e13e424e5d65028996851036987}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a340d2e13e424e5d65028996851036987} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!guardarUsuari@{guardarUsuari}}
+\index{guardarUsuari@{guardarUsuari}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{guardarUsuari()}{guardarUsuari()}}
+{\footnotesize\ttfamily void main.\+domain.\+controllers.\+Ctrl\+Domain.\+guardar\+Usuari (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Guarda l\textquotesingle{}usuari. 
+
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00188}{188}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a789897ea17344db207db55030297589f}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a789897ea17344db207db55030297589f} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!mostraColorExistent@{mostraColorExistent}}
+\index{mostraColorExistent@{mostraColorExistent}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{mostraColorExistent()}{mostraColorExistent()}}
+{\footnotesize\ttfamily Integer main.\+domain.\+controllers.\+Ctrl\+Domain.\+mostra\+Color\+Existent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Mostra un color de la sequencia a resoldre que no te la seqüència introduida pel Code\+Breaker. 
+
+\begin{DoxyReturn}{Returns}
+Un Integer que representa un color de la seqüència a resoldre que no esta present a la sequencia introduida pel Code\+Breaker. En el cas que hi siguin tots els colors a la sequencia retorna -\/1 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00320}{320}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ad8f311e37a4b48463b85e8adc3ac8068}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ad8f311e37a4b48463b85e8adc3ac8068} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!partidaGuanyada@{partidaGuanyada}}
+\index{partidaGuanyada@{partidaGuanyada}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{partidaGuanyada()}{partidaGuanyada()}}
+{\footnotesize\ttfamily boolean main.\+domain.\+controllers.\+Ctrl\+Domain.\+partida\+Guanyada (\begin{DoxyParamCaption}\item[{String}]{rol }\end{DoxyParamCaption})}
+
+
+
+Comprova si el Code\+Breaker ha resolt la sequencia proposada pel Code\+Maker. 
+
+\begin{DoxyReturn}{Returns}
+True si ha guanyat la partida. En cas contrari, retorna fals 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em rol} & representa el rol assignat a la partida \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00365}{365}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a564d5fffaa020fc5ff54a0d0d70d1de4}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a564d5fffaa020fc5ff54a0d0d70d1de4} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!procedimentsFinalClose@{procedimentsFinalClose}}
+\index{procedimentsFinalClose@{procedimentsFinalClose}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{procedimentsFinalClose()}{procedimentsFinalClose()}}
+{\footnotesize\ttfamily void main.\+domain.\+controllers.\+Ctrl\+Domain.\+procediments\+Final\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funció que fa uns procediments a l\textquotesingle{}hora d\textquotesingle{}acabar la partida actual de forma manual (botó close) 
+
+Si era una partida que estaba guardada a la llista de partides guardades s\textquotesingle{}esborra, també s\textquotesingle{}actualitza partides acabades els stats de l\textquotesingle{}usuari 
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00485}{485}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a7105a60a463456ee5335835df6355b60}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a7105a60a463456ee5335835df6355b60} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!procedimentsFinalPartida@{procedimentsFinalPartida}}
+\index{procedimentsFinalPartida@{procedimentsFinalPartida}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{procedimentsFinalPartida()}{procedimentsFinalPartida()}}
+{\footnotesize\ttfamily void main.\+domain.\+controllers.\+Ctrl\+Domain.\+procediments\+Final\+Partida (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funció que fa uns procediments a l\textquotesingle{}hora d\textquotesingle{}acabar la partida actual. 
+
+Si era una partida que estaba guardada a la llista de partides guardades s\textquotesingle{}esborra, també s\textquotesingle{}actualitza partides acabades els stats de l\textquotesingle{}usuari 
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00470}{470}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a1d5dd1e064ef38713779d4a6a18105fe}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a1d5dd1e064ef38713779d4a6a18105fe} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!registrarUsuari@{registrarUsuari}}
+\index{registrarUsuari@{registrarUsuari}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{registrarUsuari()}{registrarUsuari()}}
+{\footnotesize\ttfamily void main.\+domain.\+controllers.\+Ctrl\+Domain.\+registrar\+Usuari (\begin{DoxyParamCaption}\item[{String}]{nomusuari,  }\item[{String}]{password }\end{DoxyParamCaption}) throws \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_usuari_ja_existeix}{Usuari\+Ja\+Existeix}}, \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_exceptions_1_1_contrasenya_incorrecte}{Contrasenya\+Incorrecte}}}
+
+
+
+Funció que permet a l\textquotesingle{}usuari registrarse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nomusuari} & representa el nom d\textquotesingle{}usuari \\
+\hline
+{\em password} & representa la contraseña del usuari \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Usuari\+Ja\+Existeix} & en cas que ja existeixi un usuari amb el mateix nom usuari \\
+\hline
+{\em Contrasenya\+Incorrecte} & en cas que la contraseña no sigui correcte \\
+\hline
+\end{DoxyExceptions}
+En cas que l\textquotesingle{}usuari es pugui registrar, crea un usuari amb el nom i contraseña i carrega sessio 
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00160}{160}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a6e2df77608520f2ecea2982e6c185b35}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a6e2df77608520f2ecea2982e6c185b35} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!SequenciaMaq@{SequenciaMaq}}
+\index{SequenciaMaq@{SequenciaMaq}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{SequenciaMaq()}{SequenciaMaq()}}
+{\footnotesize\ttfamily List$<$ List$<$ Integer $>$ $>$ main.\+domain.\+controllers.\+Ctrl\+Domain.\+Sequencia\+Maq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funció que obté totes les seqüències que fa l\textquotesingle{}algorisme fins a arribar al codi a resoldre de la partida. 
+
+\begin{DoxyReturn}{Returns}
+una llista de llistes d\textquotesingle{}enters que representa el board amb les seqüències donades 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00288}{288}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_abc343088da05f80bf6796b429d9a53ea}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_abc343088da05f80bf6796b429d9a53ea} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!setRondaPartida@{setRondaPartida}}
+\index{setRondaPartida@{setRondaPartida}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{setRondaPartida()}{setRondaPartida()}}
+{\footnotesize\ttfamily void main.\+domain.\+controllers.\+Ctrl\+Domain.\+set\+Ronda\+Partida (\begin{DoxyParamCaption}\item[{Integer}]{ronda }\end{DoxyParamCaption})}
+
+
+
+Setter de ronda de partida\+Actual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ronda} & representa una ronda de la partida \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00702}{702}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa92d72b50d1095f2eb5725124d6543b5}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aa92d72b50d1095f2eb5725124d6543b5} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!setTempsPartida@{setTempsPartida}}
+\index{setTempsPartida@{setTempsPartida}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{setTempsPartida()}{setTempsPartida()}}
+{\footnotesize\ttfamily void main.\+domain.\+controllers.\+Ctrl\+Domain.\+set\+Temps\+Partida (\begin{DoxyParamCaption}\item[{String}]{temps }\end{DoxyParamCaption})}
+
+
+
+Setter de temps de partida\+Actual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temps} & representa el temps de partida \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00710}{710}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5866cb26750958e2a9814c831d326c74}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a5866cb26750958e2a9814c831d326c74} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!tancarSesioUsuari@{tancarSesioUsuari}}
+\index{tancarSesioUsuari@{tancarSesioUsuari}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{tancarSesioUsuari()}{tancarSesioUsuari()}}
+{\footnotesize\ttfamily void main.\+domain.\+controllers.\+Ctrl\+Domain.\+tancar\+Sesio\+Usuari (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funció que permet a l\textquotesingle{}usuari tancar sessio. 
+
+Actualiza los parámetros asociados al jugador a nulo 
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00145}{145}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a988cb1c49546b8044ff4e29d8a8d15bf}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_a988cb1c49546b8044ff4e29d8a8d15bf} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!taulerSetCodiActual@{taulerSetCodiActual}}
+\index{taulerSetCodiActual@{taulerSetCodiActual}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{taulerSetCodiActual()}{taulerSetCodiActual()}}
+{\footnotesize\ttfamily void main.\+domain.\+controllers.\+Ctrl\+Domain.\+tauler\+Set\+Codi\+Actual (\begin{DoxyParamCaption}\item[{List$<$ Integer $>$}]{codi }\end{DoxyParamCaption})}
+
+
+
+Funció que assigna la seqüència passada per paràmetre amb el codi actual del tauler. 
+
+
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00569}{569}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_aefa0d2d81256ac83e1e3652db0b03ed0} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!partidaActual@{partidaActual}}
+\index{partidaActual@{partidaActual}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{partidaActual}{partidaActual}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_partida}{Partida}} main.\+domain.\+controllers.\+Ctrl\+Domain.\+partida\+Actual}
+
+Instància de la partida actual 
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00036}{36}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+\Hypertarget{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74}\label{classmain_1_1domain_1_1controllers_1_1_ctrl_domain_ac12ba7e873b1dd96868f28ed31623a74} 
+\index{main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}!usuariActual@{usuariActual}}
+\index{usuariActual@{usuariActual}!main.domain.controllers.CtrlDomain@{main.domain.controllers.CtrlDomain}}
+\doxysubsubsection{\texorpdfstring{usuariActual}{usuariActual}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmain_1_1domain_1_1classes_1_1_usuari}{Usuari}} main.\+domain.\+controllers.\+Ctrl\+Domain.\+usuari\+Actual}
+
+Instància de l\textquotesingle{}usuari actual 
+
+Definition at line \mbox{\hyperlink{_ctrl_domain_8java_source_l00032}{32}} of file \mbox{\hyperlink{_ctrl_domain_8java_source}{Ctrl\+Domain.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/domain/controllers/\mbox{\hyperlink{_ctrl_domain_8java}{Ctrl\+Domain.\+java}}\end{DoxyCompactItemize}
