@@ -1,0 +1,16 @@
+(c) FIBerHub, https://fiberhub.tk
+
+alarm1:
+	1: No pasa nada ya que el temporizador de la alarma es de 10 segundos y solo dejamos que pase la mitad de ese tiempo.
+	2: Al matar el programa usaqndo el comando kill, en vez de aparecer el mensaje "Alarm clock" al finalizar la ejecución, el programa nos muestra el mensaje "Killed".
+	3: El proceso del shell es el que se encarga de mostrar los mensajes correspondientes a la muerte de nuestro proceso. Este recoge la información de la finalización del proceso mediante waitpid()
+	4: No es necesario ya que nunca llega a ejecutarse; justo antes del exit tenemos el comando sigsuspend(), que nos suspende el proceso
+	
+alarm2:
+	1: Al ejecutar el comando kill el programa "salta" automáticamente a la siguiente instrucción, sin tener en cuenta el tiempo.
+	2: No, hay ciertas señales que no se pueden tocar como el SIGKILL
+	3: El valor de retorno de alarm son los segundos restantes para la supuesta siguiente alarma. Para solucionar el problema deberíamos restar a la variable segundos el valor que retorna la función de la alarma.
+
+alarm3:
+	1: Tanto el padre como el hijo reciben el SIGALRM. Para comprobar solo debemos mirar la salida del programa, donde vemos el PID de los procesos en los cuales salta la alarma, que son dos.
+	

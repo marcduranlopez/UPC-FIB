@@ -1,0 +1,1 @@
+cmd_/home/marc/Escritorio/PRACTICAS/S7/deviceDrivers/Module.symvers := sed 's/ko$$/o/' /home/marc/Escritorio/PRACTICAS/S7/deviceDrivers/modules.order | scripts/mod/modpost -m -a   -o /home/marc/Escritorio/PRACTICAS/S7/deviceDrivers/Module.symvers -e -i Module.symvers   -T -

@@ -1,0 +1,5 @@
+all: numeros
+numeros:
+ gcc numeros.c
+clean:
+	rm numeros

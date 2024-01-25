@@ -1,0 +1,99 @@
+1819Q2
+
+a) Explica brevemente por qué, si ejecutamos “#>cat file.dat” aparecen caracteres extraños en
+lugar del valor de los números por pantalla.
+
+    El formato por defecto de lectura de cat es  string, por lo tanto cuando se encuentra con un fichero que se han escrito enteros, no sabe interpretarlo.
+
+b) Si “file.dat” fuera una named pipe, ¿cuál sería el comportamiento del programa?
+    El proceso lector deberia leer los datos como enteros, y haciendolo de ese modo podria capturar los datos de forma correcta
+    
+c) Además, indica en el fichero respuestas.txt qué línea/s de comandos has de ejecutar para mostrar la traza de llamadas al sistema “read” que hace el programa.
+    Es fa amb la comanda strace, no se ben be com funciona but es fa aixi
+
+A) (0,5 puntos) Indica qué líneas de comando has de ejecutar y qué campo indica el número de
+hardlinks que tiene el inodo correspondiente al directorio $HOME de tu cuenta.
+    cd /home
+    ls -lai
+    vemos la linea siguente:
+    1179649 drwxr-xr-x  3 root  root  4096 jun  4  2019 .
+    que muestra la informacion del directorio actual y vemos que tiene 3 hardlinks
+    
+    
+B) (0,5 puntos) Dispón de dos terminales. Indica qué líneas de comando has de ejecutar para
+crear un soft-link en el directorio $HOME de tu cuenta que apunte al dispositivo “terminal”
+que utiliza una de las dos ventanas de terminal. Luego, indica la línea de comandos necesaria
+para redirigir la salida de un comando (el que quieras) a esa otra terminal.
+    ni idea
+    
+C) (0,5 puntos) Indica qué pasos has de seguir y líneas de comando a ejecutar para comprobar si
+el major number del driver que quieres instalar, de un dispositivo a nivel de carácter, está
+actualmente en uso o no.
+    ni idea
+    
+    
+1819Q1
+
+1. ¿Qué dirección de memoria devuelve la llamada a sbrk(0)? ¿Qué pasa si intentamos acceder
+a esta dirección?
+    Devuelve la ultima posicion del heap "+1", asi que si accedemos a ella haremos un acceso a memoria invalido(accedemos a una posicion que se situaria entre el heap y el stack)
+
+2. Crea un soft-link a numeros.txt y llámalo numeros.txt.sl. ¿Están ambos ficheros
+relacionados con el mismo inodo? ¿Por qué? ¿Qué comando/s has usado para comprobarlo?
+    no estan relacionados con el mismo inodo, lo veo por el comando stat sobre cada uno de los ficheros y el inodo es diferente.
+    ln -s numeros.txt numeros.txt.sl
+    stat numeros.txt
+    stat numeros.txt.sl
+
+1718Q2:
+
+Comanda strace:
+    strace -e read ./mux_buff 15  20< test_fd20 21< test_fd21
+    strace -e "crida a sistema" ./executable parametres
+    
+D) [0,5 puntos] Indicad cómo averiguaríais cuántos inodes libres hay en la
+partición donde se almacena vuestro directorio actual.
+    comando: df -i muestra informacion sobre el sistema de ficheros, muestra tambien los inodos libres de cada particion del sistema
+
+E) [1 punto] Escribid una rutina int write_directo(int fd, char c, int
+pos) tal que, dado un canal correspondiente a un fichero ordinario, escriba
+el carácter c en la posición pos. Al finalizar la ejecución de la rutina, el
+puntero de lectura/escritura debe apuntar a la misma posición a la que
+apuntaba al iniciarse la ejecución de la rutina. En caso de error, la rutina
+devolverá -1; en cualquier otro caso, retornará 0.
+
+int write_directo(int fd, char c, int pos){
+    int aux = lseek(fd, 0, SEEK_CUR);
+    //aux pot ser -1 en cas que fd no sigui un fitxer obert, etc.
+    if(aux > 0){
+        lseek(fd, pos, SEEK_SET);
+        write(fd, &c, 1);
+        lseek(fd, aux, SEEK_SET);
+        return 0;
+    }
+    return -1;
+}
+
+
+
+1718Q1
+
+• Escribe en el fichero respuestas.txt la línea de comandos para crear un hard-link al fichero
+nums_0_99 y llámalo hl_nums_0_99. Escribe también el comando para crear un soft-link al
+fichero hl_nums_0_99 y llámalo sl_nums_0_99.
+
+    ln num_0_99 hl_nums_0_99
+    ln -s hl_nums_0_99 sl_nums_0_99
+    
+• Escribe en el fichero respuestas.txt la línea de comandos para obtener el número de inodo y
+el número de links de los dos ficheros creados en el apartado anterior.
+    
+    stat hl_nums_0_99
+    stat sl_nums_0_99
+    
+• Escribe en el fichero respuestas.txt la línea de comandos para obtener la lista de sistemas de
+ficheros que hay instalados en el fichero y cuantos inodos hay en cada uno, así como
+cuantos hay libres y utilizados. Copia el resultado del comando en respuestas.txt.
+    
+
+    

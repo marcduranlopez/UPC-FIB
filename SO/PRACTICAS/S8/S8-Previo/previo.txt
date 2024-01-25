@@ -1,0 +1,32 @@
+PREGUNTA 1: Crea una pipe con nombre mediante el comando mknod. A continuación lanza un proceso que ejecute el programa ‘cat’ redireccionando su salida estándar hacia la pipe que acabas de crear. En una shell diferente lanza otro proceso que ejecute también el programa 'cat', pero ahora redireccionando su entrada estándar hacia la pipe que acabas de crear. Introduce datos por teclado, en la primera Shell, y pulsa ^D para indicar el fin. Anota en el fichero “previo.txt” los comandos que has ejecutado.
+
+    Para crear la pipe: #mknod pipe1 pipe
+    Para redireccionar la salida estándar de cat con #cat < pipe1 
+    Para la entrada estandar hemos usado #cat > pipe1
+
+
+PREGUNTA 2: ¿Es posible comunicar los dos comandos ‘cat’ desde dos terminales diferentes a través de una pipe sin nombre (por ejemplo, utilizando un pipeline de la shell visto en la sesión anterior)? ¿y desde el mismo terminal? Razona la respuesta en el fichero “previo.txt”.
+    
+    No se puede crear una pipe sin nombre en dos terminales distintos ya que las pipes sin nombre estan relacionadas a un proceso. En cambio, desde un terminal sí que se puede hacer porque se trata del mismo proceso, crea una pipe y usa un fork para mutar a otro proceso.
+
+
+PREGUNTA 3: Escribe en el fichero “previo.txt” el fragmento de código que deberíamos añadir a un programa cualquiera para redireccionar su entrada estándar al extremo de escritura de una pipe sin nombre utilizando las llamadas al sistema close y dup. Imagina que el descriptor de fichero asociado al extremo de escritura de la pipe es el 4. 
+    
+    El fragmento de codigo necesario para redireccionar la entrada estandar a la entrada de la pipe sería el siguiente:
+    dup2(0, 4);
+    close(4);
+
+
+PREGUNTA 4: El fichero “socketMng.c” contiene unas funciones de gestión básica de sockets (creación, solicitud de conexión, aceptación de conexión y cierre de dispositivos virtuales). Analiza en detalle el código de la función createSocket y serverConnection, y busca en el man el significado de las llamadas a sistema socket, bind, listen y accept. Explica en el fichero “previo.txt” paso a paso lo que hacen estas dos funciones
+ 
+    En la función "createSocket()" creamos una dirección con "strcpy()" y se usa la llamada a sistema "socket()" que crea un socket nuevo y comprueba que no haya ningun error.
+    
+    Con la llamada a sistema "bind()" se le asigna la dirección del socket creado.
+   
+   "listen()" deja el socket en modo pasivo esperando a conexiones, si hay un error saldrá de la función.
+    
+    La función "serverConnection()" comprueba que no haya habido ningun error en el proceso de creación del socket. Si no ha fallado acepta la conexion al socket y devuelve el descriptor. Si hay algun error devuelve -1.
+    
+    En la función "clientConnection()" comprueba que no haya ningun error y inicia la conexion a un socket aceptado. Si hay algun error saldra de la función.
+    
+    Y por ultimo las funciones "deleteSocket()" y "closeConnection()" que en ambas cierra el descriptor de fichero, es decir, sale de la funcion, pero ademas en "deleteSocket()" tambien desvincula el socket.

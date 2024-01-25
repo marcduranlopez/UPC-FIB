@@ -1,0 +1,15 @@
+Pregunta 1: He utilizado el comando "mkdir" junto al nombre que te pedian para cada directorio.
+
+Pregunta 2: Para listar el contenido de un directorio se utiliza el comando "ls". La opcion que hay que utilizar para ver los ficheros ocultos es -a. Es decir el comando seria "ls -a".
+
+Pregunta 3: La opcion que hay que agregar a ls es -all. Los campos que se ven por defecto son el tipo de directorio y sus permisos (escritura, ejecucion...), el nombre del propietario, el nombre del grupo de usuarios, el tamaño y la fecha y hora de ultima modificacion.
+
+Pregunta 4: La opcion de menu que he tenido que utlizar ha sido la de monstrar informacion adicional y he marcado todas las casillas correspondientes (tamaño, permisos, propietario y grupo de usuarios).
+
+Pregunta 5: La secuencia de comandos que he utilizado han sido el comando 'rmdir' para borar el directorio, a continuacion he utilizado el comando 'ls' para comprobar que no esta y finalmente he utilizado el comando 'mkdir' para volver a crear el directorio.
+
+Pregunta 6: La diferencia es que el comando 'cat' visualiza el archivo y tal cual lo pone en el terminal y continua para recibir nuevos comandos, en cambio en el comando 'less' solo ves el texto del archivo sin nada mas y para salir de visualizar el archivo tienes que pulsar la tecla 'q'.
+
+Pregunta 7: La opcion -i del comando 'cp' sirve para que te pregunte si sobreescribe o no el archivo si su nombre coincide con otro archivo del mismo directorio. La orden es la siguiente: alias cp='cp -i'.
+
+Pregunta 8:  La opcion -i del comando 'rm' sirve para que te pregunte si borra el archivo o no, Es decir, la confirmacion de la accion. Lo mismo para el comando 'mv'. La orden es la siguiente: alias rm='rm -i'.

@@ -1,0 +1,1 @@
+cmd_/home/marc/Escritorio/PRACTICAS/S7/deviceDrivers/myDriver2.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id=sha1  -T ./scripts/module-common.lds -o /home/marc/Escritorio/PRACTICAS/S7/deviceDrivers/myDriver2.ko /home/marc/Escritorio/PRACTICAS/S7/deviceDrivers/myDriver2.o /home/marc/Escritorio/PRACTICAS/S7/deviceDrivers/myDriver2.mod.o;  true

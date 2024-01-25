@@ -1,0 +1,158 @@
+PREGUNTA 55: Apunta en el fichero “entrega.txt” los comandos que has utilizado en cada apartado. Además entrega el fichero “es1_v2.c” ¿Qué diferencias observas en las dos ejecuciones de strace? ¿Cuántas llamadas a sistema read ejecuta cada versión? ¿Qué influencia puede tener sobre el rendimiento de ambas versiones de código? ¿Por qué?
+
+    2. #./es1 > /dev/pts/5
+    3. #./es1 | ./es1
+    5. #strace –o salida_v2 –e read ./es1_v2 < es2.c
+       #strace –o salida_v1 –e read ./es1 < es2.c
+    
+    La salida_v2, que correspondiente a es1_v.c, es mas corta que salida_v1, correspondiente a es1.c. es1 ejecuta un read por cada carácter, por lo tanto es mucho mas ineficiente que es1_v2.c que que hace un read cada 256 carácteres.
+
+
+PREGUNTA 56: Explica las diferencias observadas en la salida del programa cuando el primer parámetro vale 0 o 1. ¿Para qué crees que sirve este parámetro?
+
+    Cuando el parámetro es 1, escribe los valores en formato interno (int). En cambio, cuando el parametro es 0 escribe los números en ASCII.
+
+
+PREGUNTA 57: Explica el motivo de los resultados observados dependiendo del formato fichero de entrada.
+    
+    Si usamos la opción 0 la salida no será buena, ya que en Linux los que se encargan de interpretar los datos que se reciben son los programas. En este caso no reciben los datos en el formato adecuado así que los interpreta de forma incorrecta. El programa funcionaria de forma correcta si se usa la opción 1
+
+
+PREGUNTA 58: Explica las diferencias observadas entre la salida del programa es3 y es4. ¿Por qué la salida es inteligible para uno de los ficheros de entrada y no para el otro?
+    
+    es4 necesita un fichero generado por el programa es2 con una opcion especificamente (la opcion 0). Si le envias archivos en otro formato no los interpretara bien, los interpretara como si fueran ASCII.
+
+
+PREGUNTA 59: Escribe los valores que ha mostrado el script showCpuTime.sh para cada uno de los procesos y comenta las diferencias entre ellos en cuanto al consumo de cpu. ¿A qué se deben? Identifica las líneas de código de marcan la diferencia entre ellos
+
+    ./es5                       99.8 00:03:28
+    ./es1                        0.0 00:00:00
+    ./es5                       99.8 00:03:30
+    ./es1                        0.0 00:00:00
+    ./es5                       99.8 00:03:32
+    ./es1                        0.0 00:00:00
+    ./es5                       99.8 00:03:34
+    ./es1                        0.0 00:00:00
+    ./es5                       99.8 00:03:36
+    ./es1                        0.0 00:00:00
+    ./es5                       99.8 00:03:38
+    ./es1                        0.0 00:00:00
+
+
+    La diferencia se debe a que el es1 realiza una espera pasiva ya que espera a que esribas algo. En cambio el es5 realiza una espera activa mediante un while que consume tiempo de CPU.
+
+    
+PREGUNTA 60: Anota en el fichero entrega.txt el resultado de ambas ejecuciones. Entrega el código programado en el fichero es6_v2.c
+    
+    a) read correcto
+    b) recibido 
+       read interrumpido por signal
+       
+       
+PREGUNTA 61: ¿Qué pasaría si usáramos el flag SA_RESTART en el sigaction? Repite las ejecuciones anteriores activando el flag SA_RESTART y anota el resultado en el fichero entrega.txt.
+
+    a) read correcto
+    b) recibido 
+
+
+PREGUNTA 62: ¿Estaba ya en uso el major especificado en el código? En caso afirmativo, ¿qué driver lo estaba utilizando?
+
+    Si, ya estaba en uso. Lo estaba utilizando "dma_heap" (249) y "dax" (250).
+    
+    
+PREGUNTA 63: Apunta la línea de la salida de lsmod correspondiente a myDriver1 y myDriver2. 
+
+    Module                  Size  Used by
+    myDriver2              16384  0
+    myDriver1              16384  0
+    nvidia_uvm           1019904  0
+    nvidia_drm             57344  8
+    nvidia_modeset       1228800  17 nvidia_drm
+    snd_hda_codec_hdmi     61440  1
+    snd_hda_codec_realtek   131072  1
+    snd_hda_codec_generic    81920  1 snd_hda_codec_realtek
+    ledtrig_audio          16384  1 snd_hda_codec_generic
+    nvidia              34127872  1085 nvidia_uvm,nvidia_modeset
+    snd_hda_intel          53248  3
+    snd_intel_dspcfg       24576  1 snd_hda_intel
+    snd_usb_audio         282624  2
+    snd_hda_codec         139264  4 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec_realtek
+    mei_hdcp               24576  0
+    snd_usbmidi_lib        36864  1 snd_usb_audio
+    snd_hda_core           94208  5 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek
+    intel_rapl_msr         20480  0
+    mc                     57344  1 snd_usb_audio
+    snd_hwdep              20480  2 snd_usb_audio,snd_hda_codec
+    snd_pcm               114688  5 snd_hda_codec_hdmi,snd_hda_intel,snd_usb_audio,snd_hda_codec,snd_hda_core
+    intel_rapl_common      28672  1 intel_rapl_msr
+    x86_pkg_temp_thermal    20480  0
+    snd_seq_midi           20480  0
+    intel_powerclamp       20480  0
+    snd_seq_midi_event     16384  1 snd_seq_midi
+    drm_kms_helper        217088  1 nvidia_drm
+    snd_rawmidi            36864  2 snd_seq_midi,snd_usbmidi_lib
+    coretemp               20480  0
+    cec                    53248  1 drm_kms_helper
+    snd_seq                69632  2 snd_seq_midi,snd_seq_midi_event
+    rc_core                57344  1 cec
+    kvm_intel             286720  0
+    snd_seq_device         16384  3 snd_seq,snd_seq_midi,snd_rawmidi
+    drm                   552960  11 drm_kms_helper,nvidia_drm
+    snd_timer              40960  2 snd_seq,snd_pcm
+    kvm                   712704  1 kvm_intel
+    snd                    94208  23 snd_hda_codec_generic,snd_seq,snd_seq_device,snd_hda_codec_hdmi,snd_hwdep,snd_hda_intel,snd_usb_audio,snd_usbmidi_lib,snd_hda_codec,snd_hda_codec_realtek,snd_timer,snd_pcm,snd_rawmidi
+    fb_sys_fops            16384  1 drm_kms_helper
+    syscopyarea            16384  1 drm_kms_helper
+    rapl                   20480  0
+    input_leds             16384  0
+    joydev                 24576  0
+    sysfillrect            16384  1 drm_kms_helper
+    intel_cstate           20480  0
+    sysimgblt              16384  1 drm_kms_helper
+    mei_me                 40960  1
+    soundcore              16384  1 snd
+    intel_wmi_thunderbolt    20480  0
+    ee1004                 20480  0
+    mei                   106496  3 mei_hdcp,mei_me
+    mxm_wmi                16384  0
+    mac_hid                16384  0
+    acpi_pad              184320  0
+    sch_fq_codel           20480  2
+    parport_pc             45056  1
+    ppdev                  24576  0
+    lp                     20480  0
+    parport                65536  3 parport_pc,lp,ppdev
+    ip_tables              32768  0
+    x_tables               49152  1 ip_tables
+    autofs4                45056  2
+    hid_generic            16384  0
+    usbhid                 57344  0
+    hid                   135168  2 usbhid,hid_generic
+    crct10dif_pclmul       16384  1
+    crc32_pclmul           16384  0
+    ghash_clmulni_intel    16384  0
+    aesni_intel           372736  0
+    crypto_simd            16384  1 aesni_intel
+    cryptd                 24576  2 crypto_simd,ghash_clmulni_intel
+    glue_helper            16384  1 aesni_intel
+    e1000e                262144  0
+    i2c_i801               32768  0
+    ahci                   40960  3
+    xhci_pci               20480  0
+    i2c_smbus              20480  1 i2c_i801
+    libahci                36864  1 ahci
+    xhci_pci_renesas       20480  1 xhci_pci
+    wmi                    32768  2 intel_wmi_thunderbolt,mxm_wmi
+    video                  49152  0
+
+
+PREGUNTA 64: Apunta la línea de comandos que has utilizado para crear el dispositivo.
+
+    #sudo mknod myDevice c 102 0
+    
+PREGUNTA 65: Anota en el fichero “entrega.txt” el resultado de la ejecución y explica el resultado obtenido.
+
+
+
+
+

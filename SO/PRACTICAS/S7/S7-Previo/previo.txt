@@ -1,0 +1,54 @@
+
+PREGUNTA 1: ¿Qué valor devuelve la llamada read después de pulsar el ^D?
+    
+    Devuelve 0, ya que el ^D se utiliza para indicar que no quedan datos y cuando se acaban la entrada de datos el read devuelve 0.
+
+
+PREGUNTA 2: Crea un fichero con un editor de texto cualquiera y lanza el programa ./es1 asociando mediante la shell su entrada estándar a ese fichero. Apunta el comando utilizado en el fichero “previo.txt”.
+
+    ./es1 < fichero.txt
+
+
+PREGUNTA 3: ¿Cuál es el resultado? ¿Qué operación realiza el comando ‘grep es’?
+
+    -rwxrwxr-x 1 marc marc 16880 nov 21 17:47 es1
+    -rw-r--r-- 1 marc marc  1132 nov 21 17:46 es1.c
+    -rwxrwxr-x 1 marc marc 17032 nov 21 17:46 es2
+    -rw-r--r-- 1 marc marc  1418 abr 19  2013 es2.c
+    -rwxrwxr-x 1 marc marc 16880 nov 21 17:46 es3
+    -rw-r--r-- 1 marc marc   880 nov 13  2013 es3.c
+    -rwxrwxr-x 1 marc marc 16792 nov 21 17:46 es4
+    -rw-r--r-- 1 marc marc  1089 abr 19  2013 es4.c
+    -rwxrwxr-x 1 marc marc 16464 nov 21 17:46 es5
+    -rw-r--r-- 1 marc marc    22 ene 27  2012 es5.c
+    -rwxrwxr-x 1 marc marc 16792 nov 21 17:46 es6
+    -rw-r--r-- 1 marc marc    99 ene 27  2012 es6.c
+    -rwxrwxr-x 1 marc marc 16744 nov 21 17:46 es7
+    -rw-r--r-- 1 marc marc    93 ene 30  2012 es7.c
+    -rwxrwxr-x 1 marc marc 16840 nov 21 17:46 es8
+    -rw-r--r-- 1 marc marc   552 ene 30  2012 es8.c
+
+
+    grep muestra las líneas de texto que contienen "es" de la salida generada por el comando "ls -l".
+
+
+PREGUNTA 4: Ejecuta un pipeline que muestre en la salida estándar el PID, el usuario y el nombre de todos los procesos bash que se están ejecutando en el sistema. Para ello utiliza los comandos ps y grep combinados con una pipe. Anota el comando en el fichero “previo.txt”.
+    
+    ps -A | grep bash
+
+
+PREGUNTA 5: En el caso del dispositivo lógico terminal (o consola), el device driver que lo gestiona interpreta todos los bytes que se quieren escribir como códigos ASCII, mostrando el carácter correspondiente. El fichero es8.c contiene un programa que escribe dos veces un número por salida estándar: una usando la representación interna de la máquina y otra convirtiendo antes el número a string. Compílalo y ejecútalo. ¿Cuántos bytes se escriben en cada caso? ¿Qué diferencias observas en lo que aparece en pantalla?
+    
+    Se escriben en el primer caso 4 bytes y en el segundo 5 bytes. En el primer caso se interpreta el entero en hexadecimal como un string (no saca bien el resultado). En cambio, en el segundo se convierte el entero a string.
+
+
+ PREGUNTA 6: ¿Qué función sirve para implementar el read específico del dispositivo gestionado por cada device driver?
+    
+    En myDriver1 usamos la función read_driver_1. En myDriver2 se usa read_driver_2.
+
+
+PREGUNTA 7: ¿Qué son el major y el minor? ¿Para qué sirven? ¿Qué major y minor utilizan los dos device drivers?
+    El major identifica el tipo de driver y el minor identifica la instancia concreta.
+    En este caso, myDriver1 y myDriver2 usan los siguientes valores:
+        myDriver1: Major 249, Minor 0
+        myDriver2: Major 250, Minor 0

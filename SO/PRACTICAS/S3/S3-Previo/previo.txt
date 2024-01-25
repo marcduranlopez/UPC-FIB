@@ -1,0 +1,84 @@
+- ejemplo_fork1: El programa escribe en pantalla:
+
+    Soy el proceso 3917
+    Soy el proceso 3918
+
+    El segundo proceso es el hijo del primer proceso, ya que es un fork del primero, por lo tanto es una copia.
+
+
+- ejemplo_fork2: El programa escribe en pantalla:
+
+    Antes del fork: Soy el proceso 4156
+    PADRE: Soy el proceso 4156
+    HIJO: Soy el proceso 4157
+    Los DOS: Soy el proceso 4156
+    Los DOS: Soy el proceso 4157
+
+    En la primera línea nos da el identificador (PID) del proceso que se ha creado cuando se ha ejecutado el programa.
+    Las dos siguientes líneas se escriben una vez ya se ha hecho un fork del proceso que teníamos, es decir, cuando ya se ha creado el hijo. Éste nos muestra el PID del proceso padre (el primero que hemos creado) y el del hijo (que es una copia de nuestro proceso padre). Cada proceso escribe una de las dos líneas en función de si es el padre o en hijo.
+    En cuanto a las ultimas 2 líneas, como ya no hay ninguna condicion cada proceso escribe una de ellas, tanto el padre como el hijo. 
+
+
+- ejemplo_fork3: El programa escribe en pantalla:
+
+    Antes del fork: Soy el proceso 4782
+    PADRE: Soy el proceso 4782
+    HIJO: Soy el proceso 4783
+    Solo lo ejecuta el padre: Soy el proceso 4782
+
+    El ejemplo_fork3 hace practicamente lo mismo que el ejemplo_fork2 excepto por la última línia: Esta vez solo la ejecutará el padre (en el ejemplo anterior también lo ejecutaba el hijo).
+
+
+- ejemplo_fork4: El programa escribe en pantalla:
+
+    Antes del fork: Soy el proceso 4847
+    PADRE: Soy el proceso 4847
+    Solo lo ejecuta el padre: Soy el proceso 4847
+    HIJO: Soy el proceso 4848
+    HIJO acaba: Soy el proceso 4848
+
+    El proceso que acaba antes la ejecución es el padre ya que su ejecución se termina una vez haya escrito la últime línea.
+
+
+- ejemplo_fork5: El programa escribe en pantalla:
+
+    Antes del fork: Soy el proceso 4978
+    PADRE: Soy el proceso 4978
+    HIJO: Soy el proceso 4979
+    HIJO:La variable_global vale A y la local a
+    PADRE:La variable_global vale A y la local a
+    Solo lo ejecuta el padre: Soy el proceso 4978
+
+    En la primera línea nos da el identificador (PID) del proceso que se ha creado cuando se ha ejecutado el programa.
+    
+    Las dos siguientes líneas se escriben una vez ya se ha hecho un fork del proceso que teníamos, es decir, cuando ya se ha creado el hijo. Éste nos muestra el PID del proceso padre (el primero que hemos creado) y el del hijo (que es una copia de nuestro proceso padre). Cada proceso escribe una de las dos líneas en función de si es el padre o en hijo.
+    En las dos siguientes vemos el valor de la variable global y la local en el proceso padre y en el hijo. Estos son los mismos en ambos procesos ya que como hacemos el fork después de declarar esas variables, todos los datos del proceso padre serán copiados para el proceso hijo.
+    La última línea solo la ejecuta el padre y nos muestra su PID.
+
+
+- ejemplo_fork6:
+    
+    El contenido que se visualiza en el archivo de salida es el siguiente:
+    En la primera línea nos da el identificador (PID) del proceso que se ha creado cuando se ha ejecutado el programa. después muestra tanto el identificador del padre como el del hijo y sigue con los bucles del padre e hijo que muestra la variable global en ese momento (cambia la variable global cada 10000 iteraciones en cada proceso).
+    No podemos asegurarlo ya que no controlamos la velocidad a la que van los procesos, por lo tanto puede que uno se adelante más que otro en función de los recursos que el ordenador tenga disponibles.
+
+
+- ejemplo_fork7:
+
+    El programa no compila ya que en una función estamos usando una variable local que no hemos pasado como parámetro (solo las globales pueden usarse en todo el código sin tener que pasarlas como parámetro). Por lo tanto, no tiene nada que ver con el hecho de crear procesos.
+    Añadiendo el parámetro "char variable_local" y usando la librería "#include <stdlib.h>" (ya que sino no se puede usar la función "exit()". El programa compila sin problemas.
+
+
+- ejemplo_exec1:
+
+    El programa lo que hace es ejecutar el comando "ls -l", de modo que escribe todos los ficheros y directorios que hay en la carpeta donde nos encontramos ahora mismo.
+    El mensaje con el PID del proceso no aparece ya que todo lo que haya después de "execlp" nunca se ejecuta. Ya que una vez ejecutas el comando "execlp" el proceso creado por esta llamada sobreescribe el proceso anterior. 
+
+
+- ejemplo_exec2: El programa escribe en pantalla:
+
+    Soy el proceso: 5371
+    Soy el proceso 5371
+    Soy el proceso 5372
+
+    La primera línea pertenece al programa, las otras 2 son escritas por "ejemplo_fork1" cuando lo ejecutamos con una llamada "execlp". Como hemos dicho en la explicación del anterior programa, todas las funciones que haya después de un comando "execlp" no se ejecutarán ya que el proceso actual se va a reemplazar por el que ejecutamos con la llamada.

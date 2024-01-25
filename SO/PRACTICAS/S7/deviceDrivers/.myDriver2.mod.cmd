@@ -1,0 +1,1 @@
+cmd_/home/marc/Escritorio/PRACTICAS/S7/deviceDrivers/myDriver2.mod := { echo  /home/marc/Escritorio/PRACTICAS/S7/deviceDrivers/myDriver2.o;  echo; } > /home/marc/Escritorio/PRACTICAS/S7/deviceDrivers/myDriver2.mod

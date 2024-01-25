@@ -1,0 +1,94 @@
+PREGUNTA 1: ¿Cómo podéis saber los sistemas de ficheros montados en vuestro sistema y de qué tipo son? Indica, además, en qué directorios están montados.
+    
+    Lo podemos saber con el siguiente comando: "df -T".
+
+
+PREGUNTA 2: ¿Cómo se puede saber el número de inodos libres de un sistema de ficheros? ¿Qué comando has utilizado y con qué opciones?
+
+    Hemos utilizado el siguiente comando: "df -i".
+
+
+PREGUNTA 3: ¿Cómo se puede saber el espacio libre de un sistema de ficheros? ¿Qué comando has utilizado y con qué opciones?
+
+    Con el comando "df -h" se puede ver mas claro (GB, MB,...).
+
+
+PREGUNTA 4: ¿De qué tipo es cada uno de links creados, sl_pr y hl_pr? Ejecuta el comando stat sobre pr.txt, sobre sl_pr y sobre hl_pr. Busca en la salida de stat la información sobre el inodo, el tipo de fichero y el número de links y anótala en el fichero previo.txt. ¿Cuál es el número de links que tiene cada fichero? ¿Qué significa ese valor? ¿Qué inodo tiene cada fichero? ¿Alguno de los links, sl_pr o hl_pr, tiene el mismo inodo que pr.txt? ¿Si es así, qué significa eso?
+    
+    sl_pr: soft-link, Inodo 658465, enlace simbólico, 1 link
+    hl_pr: hard_link, Inodo 658463, fichero regular, 2 links
+    pr.txt: Inodo 658463, fichero regular, 2 links
+
+    hl_pr y pr.txt tienen 2 links, es decir, apuntan al mismo inodo. Como sl_pr apunta a un inodo que contiene el path a pr.txt, solo tiene un link. Si dos archivos tienen el mismo inodo significa que apuntan al mismo archivo.
+
+PREGUNTA 5: Ejecuta los comandos cat, namei y readlink sobre sl_pr y sobre hl_pr. Apunta el resultado en el fichero previo.txt. ¿Observas alguna diferencia en el resultado de alguno de los comandos cuando se ejecutan sobre sl_pr y cuando se ejecutan sobre hl_pr? Si hay alguna diferencia, explica el motivo.
+
+    cat sl_pr:
+    esto es una prueba
+
+    cat hl_pr:
+    esto es una prueba
+
+    namei sl_pr:
+    f: sl_pr
+     l sl_pr -> pr.txt
+       - pr.txt
+
+    namei hl_pr:
+    f: hl_pr
+     - hl_pr
+
+    readlink sl_pr:
+    pr.txt
+
+    readlink hl_pr: 
+    nada (Ya que no es un link simbolico)
+
+    En readlink y en namei, el fichero hl_pr no muestra nada porque no es un enlace simbólico mientras que con el fichero sl_pr vemos a qué apunta.
+
+
+PREGUNTA 6: Elimina ahora el fichero pr.txt y vuelve a ejecutar los comandos stat, cat, namei y readlink tanto sobre sl_pr como hl_pr. Apunta los resultados en el fichero previo.txt ¿Observas alguna diferencia en el resultado de alguno de los comandos cuando se ejecutan sobre sl_pr y cuando se ejecutan sobre hl_pr? Si hay alguna diferencia, explica el motivo. ¿Observas alguna diferencia respecto a la ejecución de estos comandos antes y después de borrar el fichero pr.txt? Si hay alguna diferencia, explica el motivo.
+
+     stat sl_pr:
+        Fichero: sl_pr -> pr.txt
+        Tamaño: 6             Bloques: 0          Bloque E/S: 4096   enlace simbólico
+    Dispositivo: 807h/2055d Nodo-i: 658465      Enlaces: 1
+    Acceso: (0777/lrwxrwxrwx)  Uid: ( 1000/    marc)   Gid: ( 1000/    marc)
+    Acceso: 2021-12-18 13:35:33.447227501 +0100
+    Modificación: 2021-12-18 13:35:32.779238296 +0100
+        Cambio: 2021-12-18 13:35:32.779238296 +0100
+        Creación: -
+
+     
+    stat hl_pr:
+      Fichero: hl_pr
+      Tamaño: 19            Bloques: 8          Bloque E/S: 4096   fichero regular
+    Dispositivo: 807h/2055d Nodo-i: 658463      Enlaces: 1 (Ya que pr.txt que apuntaba al mismo inodo ha sido borrado)
+    Acceso: (0664/-rw-rw-r--)  Uid: ( 1000/    marc)   Gid: ( 1000/    marc)
+    Acceso: 2021-12-18 13:35:50.002960120 +0100
+    Modificación: 2021-12-18 13:35:12.591564553 +0100
+        Cambio: 2021-12-18 13:54:24.320602914 +0100
+        Creación: -
+     
+     cat sl_pr:
+     cat: sl_pr: No such file or directory
+
+     cat hl_pr:
+     esto es una prueba
+
+     namei sl_pr:
+     f: sl_pr
+      l sl_pr -> pr.txt
+          pr.txt - No such file or directory
+
+     namei hl_pr:
+     f: hl_pr
+      - hl_pr
+
+     readlink sl_pr:
+     pr.txt
+
+     readlink hl_pr: 
+     nada (Ya que no es un link simbolico)
+
+     Como hemos borrado el fichero pr.txt al ejecutar los comandos usando el fichero sl_pr vemos que no encuentra pr.txt y por eso da error. En cambio, como hl_pr es un hard link sigue funcionando sin problemas.

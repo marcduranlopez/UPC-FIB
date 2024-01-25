@@ -1,0 +1,156 @@
+(c) FIBerHub, https://fiberhub.tk
+
+ - ¿Cómo puede saber un proceso el pid de sus hijos? ¿Qué llamada pueden utilizar los procesos para consultar su propio PID?
+	Un padre puede conocer un pid de su hijo ya que este es el int que devuelve la llamada fork(), para saber su propio pid un proceso utiliza la llamada getpid().
+
+
+ - ¿En qué casos se ejecutará cualquier código que aparezca justo después de la llamada execlp (En cualquier caso/ En caso que el execlp se ejecute de forma correcta/ En caso que el exclp falle)?
+	Solo en caso de que el execlp falle.
+
+
+ - ¿Qué directorios hay dentro de /proc/PID_PADRE? ¿Qué opción de ls has usado?
+	dr-xr-xr-x 2 so1 so1 0 oct  2 09:13 attr
+	dr-x------ 2 so1 so1 0 oct  2 09:13 fd
+	dr-x------ 2 so1 so1 0 oct  2 09:13 fdinfo
+	dr-x------ 2 so1 so1 0 oct  2 09:13 map_files
+	dr-xr-xr-x 5 so1 so1 0 oct  2 09:13 net
+	dr-x--x--x 2 so1 so1 0 oct  2 09:13 ns
+	dr-xr-xr-x 3 so1 so1 0 oct  2 09:13 task
+
+	comando usado: # ls -l | grep dr-
+
+
+ - Apunta el contenido de los ficheros status y cmdline. Compara el contenido del fichero environ con el resultado del comando env (fíjate por ejemplo en la variable PATH y la variable PWD) ¿Qué relación hay? Busca en el contenido del fichero status el estado en el que se encuentra el proceso y apúntalo en el fichero de respuestas. 
+	cmdline: ./myPS_v0 alumne
+
+	status: 
+
+	Name:	myPS_v0
+	Umask:	0022
+	State:	R (running)
+	Tgid:	5690
+	Ngid:	0
+	Pid:	5690
+	PPid:	4588
+	TracerPid:	0
+	Uid:	1002	1002	1002	1002
+	Gid:	1002	1002	1002	1002
+	FDSize:	256
+	Groups:	1002 
+	NStgid:	5690
+	NSpid:	5690
+	NSpgid:	5690
+	NSsid:	4588
+	VmPeak:	    4472 kB
+	VmSize:	    4376 kB
+	VmLck:	       0 kB
+	VmPin:	       0 kB
+	VmHWM:	     716 kB
+	VmRSS:	     716 kB
+	RssAnon:	      64 kB
+	RssFile:	     652 kB
+	RssShmem:	       0 kB
+	VmData:	      44 kB
+	VmStk:	     132 kB
+	VmExe:	       4 kB
+	VmLib:	    2112 kB
+	VmPTE:	      52 kB
+	VmSwap:	       0 kB
+	HugetlbPages:	       0 kB
+	CoreDumping:	0
+	Threads:	1
+	SigQ:	0/31295
+	SigPnd:	0000000000000000
+	ShdPnd:	0000000000000000
+	SigBlk:	0000000000000000
+	SigIgn:	0000000000000000
+	SigCgt:	0000000000000000
+	CapInh:	0000000000000000
+	CapPrm:	0000000000000000
+	CapEff:	0000000000000000
+	CapBnd:	0000003fffffffff
+	CapAmb:	0000000000000000
+	NoNewPrivs:	0
+	Seccomp:	0
+	Speculation_Store_Bypass:	thread vulnerable
+	Cpus_allowed:	ff
+	Cpus_allowed_list:	0-7
+	Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001
+	Mems_allowed_list:	0
+	voluntary_ctxt_switches:	0
+	nonvoluntary_ctxt_switches:	439
+
+	En el fichero environ y el comando env coinciden tanto el PATH como el PWD
+
+	Estado del proceso: State:	R (running)
+
+
+ - En el caso del proceso hijo, ¿a qué ficheros “apuntan” los ficheros cwd y exe? ¿Cuál crees que es el significado de cwd y exe?
+	cwd -> /home/so1/Desktop/labs3
+	exe -> /home/so1/Desktop/labs3/myPS_v0
+
+	cwd señala a la carpeta donde se encuentra el ejecutable, y exe la localización exacta del ejecutable.
+
+
+ - En  el  caso  del  proceso  hijo, ¿puedes mostrar el contenido  de  los  ficheros environ, status y cmdline del proceso hijo? ¿En qué estado se encuentra?
+	No podemos ver el contenido de environ y el de cmdline está vacío ya que no hemos escrito ningún comando en el terminal para ejecutar el proceso.
+
+	status:
+
+	Name:	myPS_v0
+	State:	Z (zombie)
+	Tgid:	5691
+	Ngid:	0
+	Pid:	5691
+	PPid:	5690
+	TracerPid:	0
+	Uid:	1002	1002	1002	1002
+	Gid:	1002	1002	1002	1002
+	FDSize:	0
+	Groups:	1002 
+	NStgid:	5691
+	NSpid:	5691
+	NSpgid:	5690
+	NSsid:	4588
+	Threads:	1
+	SigQ:	0/31295
+	SigPnd:	0000000000000000
+	ShdPnd:	0000000000000000
+	SigBlk:	0000000000000000
+	SigIgn:	0000000000000000
+	SigCgt:	0000000000000000
+	CapInh:	0000000000000000
+	CapPrm:	0000000000000000
+	CapEff:	0000000000000000
+	CapBnd:	0000003fffffffff
+	CapAmb:	0000000000000000
+	NoNewPrivs:	0
+	Seccomp:	0
+	Speculation_Store_Bypass:	thread vulnerable
+	Cpus_allowed:	ff
+	Cpus_allowed_list:	0-7
+	Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001
+	Mems_allowed_list:	0
+	voluntary_ctxt_switches:	1
+	nonvoluntary_ctxt_switches:	0
+
+	el hijo se encuentra en el estado Z (zombie)
+	el padre se encuentra em el estado R (running)
+
+
+ - En el caso del proceso hijo, ¿a qué ficheros “apuntan” los ficheros cwd y exe? ¿Cuál crees que es el significado de cwd y exe? ¿Qué diferencias hay con la versión anterior? ¿A qué se deben? 
+	cwd -> /home/so1/Desktop/labs3
+	exe -> /home/so1/Desktop/labs3/myPS
+
+	Exactamente igual que el padre. En la versión de Myps_v0 no podíamos ver donde apuntaban debido que el hijo estaba en estado zombie.
+
+
+ - En  el  caso  del  proceso  hijo,  ¿puedes  mostrar  el  contenido  de  los  ficheros environ, status y cmdline del proceso hijo? ¿En qué estado se encuentra? ¿Qué diferencias hay con la versión anterior? ¿A qué se deben?
+	Sí, sí que puedo, ya que en myPS el hijo está en estado R (running) y podemos ver el contenido de environ, status y cmdline, en myps_v0, al estar el hijo en estado zombie no nos permitían ver el contenido.
+
+ - Comprueba el fichero status de /proc/PID_PADRE. ¿En qué estado está el proceso padre?
+	 El padre se encuentra en estado S (sleeping)
+
+ - ¿Qué has hecho para guardar la salida de las ejecuciones de myPS3?
+	Hemos usado el símbolo '>' para redirigir la salida a un archivo de texto.
+	./myPS3 > salida.txt

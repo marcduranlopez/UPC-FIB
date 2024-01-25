@@ -1,0 +1,33 @@
+(c) FIBerHub, https://fiberhub.tk
+
+ - ¿Qué le pasa al padre ahora cuando le llega el evento SIGALRM?
+	El padre muere y el hijo continúa su ejecución.
+
+ - ¿Qué pasa con la tabla de tratamientos de signals si hacemos un execlp (y cambiamos el código)? ¿Se mantiene la reprogramación de signals? ¿Se pone por defecto? 
+	Al hacer execlp el tratamiento de los signasls se restablece, pero los signals por tratar se mantienen, haciendo que el hijo muera.
+
+ - El programa ejemplo_waitpid, ¿Es secuencial o concurrente?
+	Concurrente ya que crea los hijos y al final del código espera a que todos acaben.
+ 
+ - ¿El usuario so1 puede enviar al signals al proceso lanzado por el usuario alumne?, ¿qué error da?
+	No, aparece el error "bash: kill: (5435) - Operation not permitted"
+
+ - ¿Qué mensaje muestra el Shell cuando se envía por segunda vez el mismo signal?
+	Depende de qué signal se haya repetido. En este caso el resultado es el mismo para las tres signals, el programa termina.
+
+ - Explica a qué se debe el resultado de las ejecuciones de signal_perdido con parámetro 1 y con parámetro 0
+ 	- Ejecución con parámetro 0:
+		Padre manda signal SIGUSR1
+		Hijo entrando al pause
+		Hijo: SIGUSR1 recibido
+		
+	- Ejecución con parámetro 1:
+		Hijo entrando al pause
+		Padre: voy a mandar SIGUSR1
+		Padre manda signal SIGUSR1
+		Hijo: SIGUSR1 recibido
+		Hijo sale del pause
+		Padre sale del waitpid
+
+	Cuando se manda parámetro 1 el padre se espera a que el hijo entre en pause. De esta manera se asegura que el signal que le enviará lo tratará y seguirá su ejecución hasta morir.
+	En el caso parámetro 0 el padre envía el signal antes de que el hijo entre en pause. Esto provoca que trate el signal y se quede clavado en el pause, impidiendo que termine su ejecución.

@@ -1,0 +1,6 @@
+Pregunta 17:
+
+    Hemos añadido como ficheros necesarios los ficheros mis_funciones.h y mis_funciones.c:
+        suma: suma.c mis_funciones.c mis_funciones.h
+        
+    Hemos utilizado las opciones -c para compilar los archivos por separado. Con el comando "gcc -c mis_funciones.c -o mis_funciones.o" hemos generado el fichero .o que nos sirve para compilar el "main" con el siguiente comando "gcc -o suma.exe suma.c mis_funciones.o".
