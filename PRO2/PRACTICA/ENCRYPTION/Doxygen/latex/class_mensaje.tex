@@ -1,0 +1,216 @@
+\hypertarget{class_mensaje}{}\doxysection{Referencia de la Clase Mensaje}
+\label{class_mensaje}\index{Mensaje@{Mensaje}}
+
+
+Representa un mensaje de la plataforma.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mensaje_a7b8b4ca08f400fef32eaffeec00f65b3}{Mensaje}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mensaje_aa514483f5da6c9669f6f014037e991cf}{Mensaje}} (string \mbox{\hyperlink{class_mensaje_a47148948169031f7c121b9dc4272ab7f}{idm}})
+\begin{DoxyCompactList}\small\item\em Creadora por nombre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mensaje_a49c9a429d8199b7b782402e9390f1934}{rellenar\+\_\+parametros}} (string \mbox{\hyperlink{class_mensaje_a47148948169031f7c121b9dc4272ab7f}{idm}}, string \mbox{\hyperlink{class_mensaje_a2274f79e62490a0d65c2c60f115ea842}{mensaje}})
+\begin{DoxyCompactList}\small\item\em Añade los parametros como el identificador {\itshape idm} y su mensaje correpondiente. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_mensaje_ae57d41599bd7ef4456d912ca9bc20f74}{obtener\+\_\+mensaje}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el mensaje. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mensaje_aee1ae149f2f36a4b8b80e1b7739cbaba}{escribir}} () const
+\begin{DoxyCompactList}\small\item\em Escribe el identificador del mensaje y el mensaje de dicho identificador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_mensaje_a47148948169031f7c121b9dc4272ab7f}{idm}}
+\begin{DoxyCompactList}\small\item\em Identificador del mensaje. ~\newline
+ \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_mensaje_a2274f79e62490a0d65c2c60f115ea842}{mensaje}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_mensaje}{Mensaje}} a codificar/decodificar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa un mensaje de la plataforma. 
+
+El mensaje se representa con un identificador {\itshape idm}. 
+
+Definición en la línea 21 del archivo Mensaje.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_mensaje_a7b8b4ca08f400fef32eaffeec00f65b3}\label{class_mensaje_a7b8b4ca08f400fef32eaffeec00f65b3}} 
+\index{Mensaje@{Mensaje}!Mensaje@{Mensaje}}
+\index{Mensaje@{Mensaje}!Mensaje@{Mensaje}}
+\doxysubsubsection{\texorpdfstring{Mensaje()}{Mensaje()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Mensaje\+::\+Mensaje (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+Se ejecuta automáticamente al declarar un \mbox{\hyperlink{class_mensaje}{Mensaje}}. \begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es una estructura de un mensaje vacío. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 5 del archivo Mensaje.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5                  \{}
+\DoxyCodeLine{6     \mbox{\hyperlink{class_mensaje_a47148948169031f7c121b9dc4272ab7f}{idm}} = \textcolor{stringliteral}{""};}
+\DoxyCodeLine{7 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_mensaje_aa514483f5da6c9669f6f014037e991cf}\label{class_mensaje_aa514483f5da6c9669f6f014037e991cf}} 
+\index{Mensaje@{Mensaje}!Mensaje@{Mensaje}}
+\index{Mensaje@{Mensaje}!Mensaje@{Mensaje}}
+\doxysubsubsection{\texorpdfstring{Mensaje()}{Mensaje()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Mensaje\+::\+Mensaje (\begin{DoxyParamCaption}\item[{string}]{idm }\end{DoxyParamCaption})}
+
+
+
+Creadora por nombre. 
+
+Se ejecuta automáticamente al declarar un \mbox{\hyperlink{class_mensaje}{Mensaje}}. \begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es una estructura con el identificador {\itshape idm}. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_mensaje_a49c9a429d8199b7b782402e9390f1934}\label{class_mensaje_a49c9a429d8199b7b782402e9390f1934}} 
+\index{Mensaje@{Mensaje}!rellenar\_parametros@{rellenar\_parametros}}
+\index{rellenar\_parametros@{rellenar\_parametros}!Mensaje@{Mensaje}}
+\doxysubsubsection{\texorpdfstring{rellenar\_parametros()}{rellenar\_parametros()}}
+{\footnotesize\ttfamily void Mensaje\+::rellenar\+\_\+parametros (\begin{DoxyParamCaption}\item[{string}]{idm,  }\item[{string}]{mensaje }\end{DoxyParamCaption})}
+
+
+
+Añade los parametros como el identificador {\itshape idm} y su mensaje correpondiente. 
+
+\begin{DoxyPrecond}{Precondición}
+La clase {\itshape \mbox{\hyperlink{class_mensaje}{Mensaje}}} está inicializado. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se obtiene el mensaje con los siguientes parametros ya inicializados\+: identificador {\itshape idm} y mensaje de dicho identificador. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 10 del archivo Mensaje.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10                                                              \{}
+\DoxyCodeLine{11     \mbox{\hyperlink{class_mensaje_a47148948169031f7c121b9dc4272ab7f}{idm}} = id\_msj;}
+\DoxyCodeLine{12     \mbox{\hyperlink{class_mensaje_a2274f79e62490a0d65c2c60f115ea842}{mensaje}} = words;}
+\DoxyCodeLine{13 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_mensaje_ae57d41599bd7ef4456d912ca9bc20f74}\label{class_mensaje_ae57d41599bd7ef4456d912ca9bc20f74}} 
+\index{Mensaje@{Mensaje}!obtener\_mensaje@{obtener\_mensaje}}
+\index{obtener\_mensaje@{obtener\_mensaje}!Mensaje@{Mensaje}}
+\doxysubsubsection{\texorpdfstring{obtener\_mensaje()}{obtener\_mensaje()}}
+{\footnotesize\ttfamily string Mensaje\+::obtener\+\_\+mensaje (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve el mensaje. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve el mensaje implicito. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 16 del archivo Mensaje.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16                                 \{}
+\DoxyCodeLine{17     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_mensaje_a2274f79e62490a0d65c2c60f115ea842}{mensaje}};}
+\DoxyCodeLine{18 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_mensaje_aee1ae149f2f36a4b8b80e1b7739cbaba}\label{class_mensaje_aee1ae149f2f36a4b8b80e1b7739cbaba}} 
+\index{Mensaje@{Mensaje}!escribir@{escribir}}
+\index{escribir@{escribir}!Mensaje@{Mensaje}}
+\doxysubsubsection{\texorpdfstring{escribir()}{escribir()}}
+{\footnotesize\ttfamily void Mensaje\+::escribir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Escribe el identificador del mensaje y el mensaje de dicho identificador. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se imprime el string identificador del mensaje, y el mensaje de dicho identificador. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 20 del archivo Mensaje.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20                             \{}
+\DoxyCodeLine{21     }
+\DoxyCodeLine{22     cout << \mbox{\hyperlink{class_mensaje_a47148948169031f7c121b9dc4272ab7f}{idm}} << endl;}
+\DoxyCodeLine{23     }
+\DoxyCodeLine{24     \textcolor{keywordtype}{int} n = \mbox{\hyperlink{class_mensaje_a2274f79e62490a0d65c2c60f115ea842}{mensaje}}.length();}
+\DoxyCodeLine{25     }
+\DoxyCodeLine{26     cout << \textcolor{charliteral}{'"'};}
+\DoxyCodeLine{27     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i < n; ++i) \{}
+\DoxyCodeLine{28         cout << \mbox{\hyperlink{class_mensaje_a2274f79e62490a0d65c2c60f115ea842}{mensaje}}[i];}
+\DoxyCodeLine{29     \}}
+\DoxyCodeLine{30         cout << \textcolor{charliteral}{'"'} << endl;}
+\DoxyCodeLine{31         }
+\DoxyCodeLine{32 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_mensaje_a47148948169031f7c121b9dc4272ab7f}\label{class_mensaje_a47148948169031f7c121b9dc4272ab7f}} 
+\index{Mensaje@{Mensaje}!idm@{idm}}
+\index{idm@{idm}!Mensaje@{Mensaje}}
+\doxysubsubsection{\texorpdfstring{idm}{idm}}
+{\footnotesize\ttfamily string Mensaje\+::idm\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Identificador del mensaje. ~\newline
+ 
+
+
+
+Definición en la línea 26 del archivo Mensaje.\+hh.
+
+\mbox{\Hypertarget{class_mensaje_a2274f79e62490a0d65c2c60f115ea842}\label{class_mensaje_a2274f79e62490a0d65c2c60f115ea842}} 
+\index{Mensaje@{Mensaje}!mensaje@{mensaje}}
+\index{mensaje@{mensaje}!Mensaje@{Mensaje}}
+\doxysubsubsection{\texorpdfstring{mensaje}{mensaje}}
+{\footnotesize\ttfamily string Mensaje\+::mensaje\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{class_mensaje}{Mensaje}} a codificar/decodificar. 
+
+
+
+Definición en la línea 29 del archivo Mensaje.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_mensaje_8hh}{Mensaje.\+hh}}\item 
+\mbox{\hyperlink{_mensaje_8cc}{Mensaje.\+cc}}\end{DoxyCompactItemize}

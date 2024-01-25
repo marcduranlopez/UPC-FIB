@@ -1,0 +1,384 @@
+\hypertarget{class_cjt__rejillas}{}\doxysection{Referencia de la Clase Cjt\+\_\+rejillas}
+\label{class_cjt__rejillas}\index{Cjt\_rejillas@{Cjt\_rejillas}}
+
+
+Representa un conjunto de rejillas inrtroducidas en la plataforma.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cjt__rejillas_adad13a62f5448b994b766eba12d4a09c}{Cjt\+\_\+rejillas}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__rejillas_a2210c3692667608e434d027c2dc9cecc}{leer}} ()
+\begin{DoxyCompactList}\small\item\em Añade las rejillas {\itshape idr} introducidas en la entrada del programa a un vector {\itshape V\+E\+C\+\_\+rejillas} de clases \mbox{\hyperlink{class_rejilla}{Rejilla}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__rejillas_a6faaa3114a25bc133fb2ff32a40b5cb2}{nueva\+\_\+rejilla}} (int \&dim, int \&tam)
+\begin{DoxyCompactList}\small\item\em Añade una nueva rejilla con identificador {\itshape idr} al conjunto de rejillas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__rejillas_a5c9a3fa170b037a7429a52387861ad16}{codificar\+\_\+rejilla}} (int idr)
+\begin{DoxyCompactList}\small\item\em Lee y codifica un mensaje mediante la rejilla con identificador {\itshape idr}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__rejillas_a73bea369cb2e6c4f1ac5e4cc32adad16}{codificar\+\_\+guardado\+\_\+rejilla}} (string idm, int idr, \mbox{\hyperlink{class_cjt__mensajes}{Cjt\+\_\+mensajes}} \&cm)
+\begin{DoxyCompactList}\small\item\em Codifica el mensaje con identificador {\itshape idm} mediante la rejilla con identificador {\itshape idr}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__rejillas_ae9e2bd65fe2ff22811458acee2444114}{decodificar\+\_\+rejilla}} (int idr)
+\begin{DoxyCompactList}\small\item\em Lee y decodifica un mensaje mediante la rejilla con identificador {\itshape idr}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cjt__rejillas_ab3344ce2b840a60b4a3c5d7516e04a03}{existe}} (int \&idr) const
+\begin{DoxyCompactList}\small\item\em Comprueba que la rejilla {\itshape idr} se encuentre en el conjunto de rejillas de la plataforma. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cjt__rejillas_ae6cc5a9f18ead9d364b660a36071bafe}{consistencia}} (int dim, int tam) const
+\begin{DoxyCompactList}\small\item\em Comprueba que la dimension y tamaño introducidos sean consistentes para formar una rejilla valida. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cjt__rejillas_aaa05e92b74f77094f768edbf8c8bbc1a}{validacion}} (int dim, int tam, int pos) const
+\begin{DoxyCompactList}\small\item\em Comprueba que los datos introducidos puedan formar una rejilla valida. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__rejillas_a97ab99afd34b8ff515f311ec411a010a}{listar\+\_\+rejillas}} ()
+\begin{DoxyCompactList}\small\item\em Se listan las rejillas de la colección por orden creciente de identificador. Indicando para cada rejilla sus huecos originales y los producidos en los tres giros. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{class_rejilla}{Rejilla}} $>$ \mbox{\hyperlink{class_cjt__rejillas_a18d5723ee7b6aea59d8b0d7020ac84bb}{V\+E\+C\+\_\+rejillas}}
+\begin{DoxyCompactList}\small\item\em Vector que contiene las clases \mbox{\hyperlink{class_rejilla}{Rejilla}} de todos las rejillas de la plataforma. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa un conjunto de rejillas inrtroducidas en la plataforma. 
+
+Cada rejilla del conjunto es representado con un identificador (idr). Las rejillas deben cumplir prerrequisitos de dimension y longitud para que sean validas para encriptar mensajes. 
+
+Definición en la línea 26 del archivo Cjt\+\_\+rejillas.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_cjt__rejillas_adad13a62f5448b994b766eba12d4a09c}\label{class_cjt__rejillas_adad13a62f5448b994b766eba12d4a09c}} 
+\index{Cjt\_rejillas@{Cjt\_rejillas}!Cjt\_rejillas@{Cjt\_rejillas}}
+\index{Cjt\_rejillas@{Cjt\_rejillas}!Cjt\_rejillas@{Cjt\_rejillas}}
+\doxysubsubsection{\texorpdfstring{Cjt\_rejillas()}{Cjt\_rejillas()}}
+{\footnotesize\ttfamily Cjt\+\_\+rejillas\+::\+Cjt\+\_\+rejillas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+Se ejecuta automáticamente al declarar un conjunto de rejillas. \begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un conjunto de rejillas vacío. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 4 del archivo Cjt\+\_\+rejillas.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4                            \{}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_cjt__rejillas_a2210c3692667608e434d027c2dc9cecc}\label{class_cjt__rejillas_a2210c3692667608e434d027c2dc9cecc}} 
+\index{Cjt\_rejillas@{Cjt\_rejillas}!leer@{leer}}
+\index{leer@{leer}!Cjt\_rejillas@{Cjt\_rejillas}}
+\doxysubsubsection{\texorpdfstring{leer()}{leer()}}
+{\footnotesize\ttfamily void Cjt\+\_\+rejillas\+::leer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Añade las rejillas {\itshape idr} introducidas en la entrada del programa a un vector {\itshape V\+E\+C\+\_\+rejillas} de clases \mbox{\hyperlink{class_rejilla}{Rejilla}}. 
+
+\begin{DoxyPrecond}{Precondición}
+La clase {\itshape \mbox{\hyperlink{class_cjt__rejillas}{Cjt\+\_\+rejillas}}} esta inicializada. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se obtiene el vector {\itshape V\+E\+C\+\_\+rejillas} con todas las clases \mbox{\hyperlink{class_rejilla}{Rejilla}} como parametro implicito del \mbox{\hyperlink{class_cjt__rejillas}{Cjt\+\_\+rejillas}}. Para cada rejilla se leera su dimension {\itshape n}, su tamaño {\itshape k} y sus {\itshape k} posiciones. Las rejillas añadidas al vector son validas para encriptar mensajes. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 9 del archivo Cjt\+\_\+rejillas.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9                         \{}
+\DoxyCodeLine{10     \textcolor{keywordtype}{int} num\_rej;}
+\DoxyCodeLine{11     \textcolor{keywordtype}{int} dim, tam;}
+\DoxyCodeLine{12     \textcolor{keywordtype}{int} pos1, pos2;}
+\DoxyCodeLine{13     cin >> num\_rej;}
+\DoxyCodeLine{14         }
+\DoxyCodeLine{15     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i <= num\_rej; ++i) \{}
+\DoxyCodeLine{16         \mbox{\hyperlink{class_rejilla}{Rejilla}} rej;}
+\DoxyCodeLine{17         vector< pair<int,int> > vec\_rejilla; \textcolor{comment}{//Vector que contiene los pares correspondientes a las posiciones.}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19         cin >> dim >> tam;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j < tam; ++j) \{ }
+\DoxyCodeLine{22             cin >> pos1 >> pos2;}
+\DoxyCodeLine{23             vec\_rejilla.push\_back(make\_pair(pos1,pos2));}
+\DoxyCodeLine{24         \}}
+\DoxyCodeLine{25         rej.\mbox{\hyperlink{class_rejilla_aed14f0373e4e1b26050e0ec925e4d9c5}{rellenar\_parametros}}(i,dim, vec\_rejilla);}
+\DoxyCodeLine{26         rej.\mbox{\hyperlink{class_rejilla_ac74b1ff94f512692e3d9acc42ff98432}{crear\_plantilla}}();}
+\DoxyCodeLine{27         \mbox{\hyperlink{class_cjt__rejillas_a18d5723ee7b6aea59d8b0d7020ac84bb}{VEC\_rejillas}}.push\_back(rej);}
+\DoxyCodeLine{28     \}}
+\DoxyCodeLine{29 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__rejillas_a6faaa3114a25bc133fb2ff32a40b5cb2}\label{class_cjt__rejillas_a6faaa3114a25bc133fb2ff32a40b5cb2}} 
+\index{Cjt\_rejillas@{Cjt\_rejillas}!nueva\_rejilla@{nueva\_rejilla}}
+\index{nueva\_rejilla@{nueva\_rejilla}!Cjt\_rejillas@{Cjt\_rejillas}}
+\doxysubsubsection{\texorpdfstring{nueva\_rejilla()}{nueva\_rejilla()}}
+{\footnotesize\ttfamily void Cjt\+\_\+rejillas\+::nueva\+\_\+rejilla (\begin{DoxyParamCaption}\item[{int \&}]{dim,  }\item[{int \&}]{tam }\end{DoxyParamCaption})}
+
+
+
+Añade una nueva rejilla con identificador {\itshape idr} al conjunto de rejillas. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parámetro implícito pasa a contener el conjunto de rejillas original más uno y imprime el número de rejillas totales despues de añadirlo. La nueva rejilla añadida es consistente en dimension y longitud y es valida para encriptar. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 32 del archivo Cjt\+\_\+rejillas.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32                                                    \{}
+\DoxyCodeLine{33     \mbox{\hyperlink{class_rejilla}{Rejilla}} rej;}
+\DoxyCodeLine{34     \textcolor{keywordtype}{int} pos1, pos2;}
+\DoxyCodeLine{35     vector<pair<int, int>> vec\_rejilla;}
+\DoxyCodeLine{36     \textcolor{keywordtype}{int} i = \mbox{\hyperlink{class_cjt__rejillas_a18d5723ee7b6aea59d8b0d7020ac84bb}{VEC\_rejillas}}.size()+1;}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j < tam; ++j) \{ }
+\DoxyCodeLine{39         cin >> pos1 >> pos2;}
+\DoxyCodeLine{40         vec\_rejilla.push\_back(make\_pair(pos1,pos2));}
+\DoxyCodeLine{41         \}}
+\DoxyCodeLine{42     rej.\mbox{\hyperlink{class_rejilla_aed14f0373e4e1b26050e0ec925e4d9c5}{rellenar\_parametros}}(i,dim, vec\_rejilla);}
+\DoxyCodeLine{43     rej.\mbox{\hyperlink{class_rejilla_ac74b1ff94f512692e3d9acc42ff98432}{crear\_plantilla}}();}
+\DoxyCodeLine{44     }
+\DoxyCodeLine{45    \textcolor{keywordflow}{if} (rej.\mbox{\hyperlink{class_rejilla_ac5b238fb87f2dbcf39796d048d6b92ab}{validacion}}()) \{}
+\DoxyCodeLine{46         \mbox{\hyperlink{class_cjt__rejillas_a18d5723ee7b6aea59d8b0d7020ac84bb}{VEC\_rejillas}}.push\_back(rej);}
+\DoxyCodeLine{47         cout << \mbox{\hyperlink{class_cjt__rejillas_a18d5723ee7b6aea59d8b0d7020ac84bb}{VEC\_rejillas}}.size() << endl;}
+\DoxyCodeLine{48     \}}
+\DoxyCodeLine{49     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"error: la rejilla con sus giros no cubre todas las posiciones N x N"} << endl;}
+\DoxyCodeLine{50 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__rejillas_a5c9a3fa170b037a7429a52387861ad16}\label{class_cjt__rejillas_a5c9a3fa170b037a7429a52387861ad16}} 
+\index{Cjt\_rejillas@{Cjt\_rejillas}!codificar\_rejilla@{codificar\_rejilla}}
+\index{codificar\_rejilla@{codificar\_rejilla}!Cjt\_rejillas@{Cjt\_rejillas}}
+\doxysubsubsection{\texorpdfstring{codificar\_rejilla()}{codificar\_rejilla()}}
+{\footnotesize\ttfamily void Cjt\+\_\+rejillas\+::codificar\+\_\+rejilla (\begin{DoxyParamCaption}\item[{int}]{idr }\end{DoxyParamCaption})}
+
+
+
+Lee y codifica un mensaje mediante la rejilla con identificador {\itshape idr}. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe la rejilla con identificador {\itshape idr}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Imprime el mensaje codificado por el metodo de permutacion utilizando la rejilla {\itshape idr}. Si el ultimo bloque del mensaje no se llena, se completa con caracteres blancos (\textquotesingle{} \textquotesingle{}) antes de codificarlo. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 53 del archivo Cjt\+\_\+rejillas.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53                                             \{}
+\DoxyCodeLine{54     \textcolor{keywordtype}{string} mensaje;}
+\DoxyCodeLine{55     \textcolor{keywordtype}{string} s;}
+\DoxyCodeLine{56     }
+\DoxyCodeLine{57     getline(cin,s);}
+\DoxyCodeLine{58     getline(cin,mensaje);}
+\DoxyCodeLine{59     }
+\DoxyCodeLine{60     \mbox{\hyperlink{class_cjt__rejillas_a18d5723ee7b6aea59d8b0d7020ac84bb}{VEC\_rejillas}}[idr-\/1].codificar(mensaje);}
+\DoxyCodeLine{61 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__rejillas_a73bea369cb2e6c4f1ac5e4cc32adad16}\label{class_cjt__rejillas_a73bea369cb2e6c4f1ac5e4cc32adad16}} 
+\index{Cjt\_rejillas@{Cjt\_rejillas}!codificar\_guardado\_rejilla@{codificar\_guardado\_rejilla}}
+\index{codificar\_guardado\_rejilla@{codificar\_guardado\_rejilla}!Cjt\_rejillas@{Cjt\_rejillas}}
+\doxysubsubsection{\texorpdfstring{codificar\_guardado\_rejilla()}{codificar\_guardado\_rejilla()}}
+{\footnotesize\ttfamily void Cjt\+\_\+rejillas\+::codificar\+\_\+guardado\+\_\+rejilla (\begin{DoxyParamCaption}\item[{string}]{idm,  }\item[{int}]{idr,  }\item[{\mbox{\hyperlink{class_cjt__mensajes}{Cjt\+\_\+mensajes}} \&}]{cm }\end{DoxyParamCaption})}
+
+
+
+Codifica el mensaje con identificador {\itshape idm} mediante la rejilla con identificador {\itshape idr}. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el mensaje con identificador {\itshape idm} y la rejilla con identificador {\itshape idr}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Imprime el mensaje con identificador {\itshape idm} codificado por el metodo de permutacion utilizando la rejilla {\itshape idr}. Si el ultimo bloque del mensaje no se llena, se completa con caracteres blancos (\textquotesingle{} \textquotesingle{}) antes de codificarlo. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 64 del archivo Cjt\+\_\+rejillas.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64                                                                                    \{}
+\DoxyCodeLine{65     \textcolor{keywordtype}{string} mensaje;}
+\DoxyCodeLine{66     mensaje = cm.\mbox{\hyperlink{class_cjt__mensajes_a7152f1ea034c5ec07ef86d83efe29195}{obtener\_mensaje}}(idm); }
+\DoxyCodeLine{67     }
+\DoxyCodeLine{68     \mbox{\hyperlink{class_cjt__rejillas_a18d5723ee7b6aea59d8b0d7020ac84bb}{VEC\_rejillas}}[idr-\/1].codificar(mensaje);}
+\DoxyCodeLine{69 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__rejillas_ae9e2bd65fe2ff22811458acee2444114}\label{class_cjt__rejillas_ae9e2bd65fe2ff22811458acee2444114}} 
+\index{Cjt\_rejillas@{Cjt\_rejillas}!decodificar\_rejilla@{decodificar\_rejilla}}
+\index{decodificar\_rejilla@{decodificar\_rejilla}!Cjt\_rejillas@{Cjt\_rejillas}}
+\doxysubsubsection{\texorpdfstring{decodificar\_rejilla()}{decodificar\_rejilla()}}
+{\footnotesize\ttfamily void Cjt\+\_\+rejillas\+::decodificar\+\_\+rejilla (\begin{DoxyParamCaption}\item[{int}]{idr }\end{DoxyParamCaption})}
+
+
+
+Lee y decodifica un mensaje mediante la rejilla con identificador {\itshape idr}. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe la rejilla con identificador {\itshape idr} y la longitud del mensaje a decodificar es multiplo del cuadrado de la dimension de la rejilla. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Imprime el mensaje decodificado por el metodo de permutacion utilizando la rejilla {\itshape idr}. Este tendra siempre la misma longitud que el mensaje codificado. No obstate, puede no coincidir con la del original, ya que durante el la codificacion se han podido añadir caracteres blancos al final del mensaje, que han de consevarse al decodificar. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 72 del archivo Cjt\+\_\+rejillas.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{72                                               \{}
+\DoxyCodeLine{73     \textcolor{keywordtype}{string} mensaje\_codificado;}
+\DoxyCodeLine{74     \textcolor{keywordtype}{string} s;}
+\DoxyCodeLine{75     }
+\DoxyCodeLine{76     getline(cin,s);}
+\DoxyCodeLine{77     getline(cin,mensaje\_codificado);}
+\DoxyCodeLine{78     }
+\DoxyCodeLine{79     \textcolor{keywordtype}{bool} mensaje\_valido = \mbox{\hyperlink{class_cjt__rejillas_a18d5723ee7b6aea59d8b0d7020ac84bb}{VEC\_rejillas}}[idr-\/1].mensaje\_valido(mensaje\_codificado);}
+\DoxyCodeLine{80     }
+\DoxyCodeLine{81     \textcolor{keywordflow}{if} (mensaje\_valido) \{}
+\DoxyCodeLine{82     \mbox{\hyperlink{class_cjt__rejillas_a18d5723ee7b6aea59d8b0d7020ac84bb}{VEC\_rejillas}}[idr-\/1].decodificar(mensaje\_codificado);}
+\DoxyCodeLine{83     \}}
+\DoxyCodeLine{84     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{85         cout << \textcolor{stringliteral}{"error: la dimension del mensaje es inadecuada para la rejilla"} << endl;}
+\DoxyCodeLine{86 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__rejillas_ab3344ce2b840a60b4a3c5d7516e04a03}\label{class_cjt__rejillas_ab3344ce2b840a60b4a3c5d7516e04a03}} 
+\index{Cjt\_rejillas@{Cjt\_rejillas}!existe@{existe}}
+\index{existe@{existe}!Cjt\_rejillas@{Cjt\_rejillas}}
+\doxysubsubsection{\texorpdfstring{existe()}{existe()}}
+{\footnotesize\ttfamily bool Cjt\+\_\+rejillas\+::existe (\begin{DoxyParamCaption}\item[{int \&}]{idr }\end{DoxyParamCaption}) const}
+
+
+
+Comprueba que la rejilla {\itshape idr} se encuentre en el conjunto de rejillas de la plataforma. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve 1 (cierto) si la rejilla {\itshape idr} existe en el conjunto de rejillas de la plataforma. En caso contrario devuelve 0 (falso). 
+\end{DoxyPostcond}
+
+
+Definición en la línea 89 del archivo Cjt\+\_\+rejillas.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{89                                        \{}
+\DoxyCodeLine{90     \textcolor{keywordtype}{int} size = \mbox{\hyperlink{class_cjt__rejillas_a18d5723ee7b6aea59d8b0d7020ac84bb}{VEC\_rejillas}}.size();}
+\DoxyCodeLine{91     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=1; i <= size; ++i) \{}
+\DoxyCodeLine{92         \textcolor{keywordflow}{if} (i == idr) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{93     \}}
+\DoxyCodeLine{94     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{95 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__rejillas_ae6cc5a9f18ead9d364b660a36071bafe}\label{class_cjt__rejillas_ae6cc5a9f18ead9d364b660a36071bafe}} 
+\index{Cjt\_rejillas@{Cjt\_rejillas}!consistencia@{consistencia}}
+\index{consistencia@{consistencia}!Cjt\_rejillas@{Cjt\_rejillas}}
+\doxysubsubsection{\texorpdfstring{consistencia()}{consistencia()}}
+{\footnotesize\ttfamily bool Cjt\+\_\+rejillas\+::consistencia (\begin{DoxyParamCaption}\item[{int}]{dim,  }\item[{int}]{tam }\end{DoxyParamCaption}) const}
+
+
+
+Comprueba que la dimension y tamaño introducidos sean consistentes para formar una rejilla valida. 
+
+\begin{DoxyPrecond}{Precondición}
+La dimension y tamaño introducidos seran enteros mayores que 1 y 0 respectivamente. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve 1 (cierto) si la dimension y el tamaño son consistentes para formar una rejilla. En caso contrario devuelve 0 (falso). 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cjt__rejillas_aaa05e92b74f77094f768edbf8c8bbc1a}\label{class_cjt__rejillas_aaa05e92b74f77094f768edbf8c8bbc1a}} 
+\index{Cjt\_rejillas@{Cjt\_rejillas}!validacion@{validacion}}
+\index{validacion@{validacion}!Cjt\_rejillas@{Cjt\_rejillas}}
+\doxysubsubsection{\texorpdfstring{validacion()}{validacion()}}
+{\footnotesize\ttfamily bool Cjt\+\_\+rejillas\+::validacion (\begin{DoxyParamCaption}\item[{int}]{dim,  }\item[{int}]{tam,  }\item[{int}]{pos }\end{DoxyParamCaption}) const}
+
+
+
+Comprueba que los datos introducidos puedan formar una rejilla valida. 
+
+\begin{DoxyPrecond}{Precondición}
+La dimension y tamaño son consistentes. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve 1 (cierto) si los datos introducidos pueden formar una rejilla valida. En caso contrario devuelve 0 (falso). 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cjt__rejillas_a97ab99afd34b8ff515f311ec411a010a}\label{class_cjt__rejillas_a97ab99afd34b8ff515f311ec411a010a}} 
+\index{Cjt\_rejillas@{Cjt\_rejillas}!listar\_rejillas@{listar\_rejillas}}
+\index{listar\_rejillas@{listar\_rejillas}!Cjt\_rejillas@{Cjt\_rejillas}}
+\doxysubsubsection{\texorpdfstring{listar\_rejillas()}{listar\_rejillas()}}
+{\footnotesize\ttfamily void Cjt\+\_\+rejillas\+::listar\+\_\+rejillas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Se listan las rejillas de la colección por orden creciente de identificador. Indicando para cada rejilla sus huecos originales y los producidos en los tres giros. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se escribe las rejillas de la plataforma por orden creciente de identificador y mostrando sus huecos iniciales y despues de los giros. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 98 del archivo Cjt\+\_\+rejillas.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{98                                    \{}
+\DoxyCodeLine{99     \textcolor{keywordtype}{int} n = \mbox{\hyperlink{class_cjt__rejillas_a18d5723ee7b6aea59d8b0d7020ac84bb}{VEC\_rejillas}}.size();}
+\DoxyCodeLine{100     }
+\DoxyCodeLine{101     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{102         \mbox{\hyperlink{class_cjt__rejillas_a18d5723ee7b6aea59d8b0d7020ac84bb}{VEC\_rejillas}}[i].escribir();}
+\DoxyCodeLine{103     \}}
+\DoxyCodeLine{104 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_cjt__rejillas_a18d5723ee7b6aea59d8b0d7020ac84bb}\label{class_cjt__rejillas_a18d5723ee7b6aea59d8b0d7020ac84bb}} 
+\index{Cjt\_rejillas@{Cjt\_rejillas}!VEC\_rejillas@{VEC\_rejillas}}
+\index{VEC\_rejillas@{VEC\_rejillas}!Cjt\_rejillas@{Cjt\_rejillas}}
+\doxysubsubsection{\texorpdfstring{VEC\_rejillas}{VEC\_rejillas}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_rejilla}{Rejilla}}$>$ Cjt\+\_\+rejillas\+::\+V\+E\+C\+\_\+rejillas\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Vector que contiene las clases \mbox{\hyperlink{class_rejilla}{Rejilla}} de todos las rejillas de la plataforma. 
+
+
+
+Definición en la línea 31 del archivo Cjt\+\_\+rejillas.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_cjt__rejillas_8hh}{Cjt\+\_\+rejillas.\+hh}}\item 
+\mbox{\hyperlink{_cjt__rejillas_8cc}{Cjt\+\_\+rejillas.\+cc}}\end{DoxyCompactItemize}

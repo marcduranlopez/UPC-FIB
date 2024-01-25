@@ -1,0 +1,614 @@
+\hypertarget{class_patron}{}\doxysection{Referencia de la Clase Patron}
+\label{class_patron}\index{Patron@{Patron}}
+
+
+Representa un patron de la plataforma.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_patron_a8664d13f6847795f5e480b758d66ff88}{Patron}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_patron_a3a599b8dff198a28904a02ced2c296c9}{rellenar\+\_\+parametros}} (int \&i)
+\begin{DoxyCompactList}\small\item\em Añade los parametros como el identificador {\itshape idp} del patron y la secuencia que formara el arbol binario con el patron. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_patron_a86a3b4f919d7de8c3d6ce2ad2a371a9d}{codificar}} (string \&mensaje, int \&\mbox{\hyperlink{class_patron_a107898743e635a2162721a74083f7313}{b}})
+\begin{DoxyCompactList}\small\item\em Codifica el mensaje que tiene como parametro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_patron_ad3ea736ee0f9c200178b58b915232efe}{decodificar}} (string \&mensaje\+\_\+codificado, int \&\mbox{\hyperlink{class_patron_a107898743e635a2162721a74083f7313}{b}})
+\begin{DoxyCompactList}\small\item\em Decodifica el mensaje que tiene como parametro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_patron_a719887b410e79cd28df8f28387cb72b5}{escribir}} () const
+\begin{DoxyCompactList}\small\item\em Escribe el identificador del patron implicito y su patron correspondiente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_patron_a47a88b97cd1dd42685d80faa4f24313f}{crear\+\_\+mosaico}} (const Bin\+Tree$<$ char $>$ \&\mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{B\+T\+\_\+msj}}, Bin\+Tree$<$ int $>$ \&\mbox{\hyperlink{class_patron_a1f53d53ccc103b928de638622043fc88}{B\+T\+\_\+mosaico}}, Bin\+Tree$<$ int $>$ B\+T\+\_\+ptr\+\_\+aux)
+\begin{DoxyCompactList}\small\item\em Se obtiene un arbol de enteros no negativos, con la misma forma que el arbol que contiene el mensaje, construido a base de replicar el patron implicito total o parcialmente cuantas veces sea necesario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_patron_a8f5f698ec0346326a5e153a80db45694}{leer\+\_\+patron}} (Bin\+Tree$<$ int $>$ \&\mbox{\hyperlink{class_patron_a94c419f771bcf0d03325bf8f161b2843}{B\+T\+\_\+patron}})
+\begin{DoxyCompactList}\small\item\em Añade en preorden los enteros positivos que forman el patron implicito (con marca -\/1). \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_patron_ab516233fb0753f916616872e1a0ccf2a}{llenar\+\_\+\+Bin\+Tree\+\_\+mensaje}} (string \&msj, int i, Bin\+Tree$<$ char $>$ \&Bin\+Tree\+\_\+mensaje)
+\begin{DoxyCompactList}\small\item\em Añade el mensaje pasado por parametro explicito a un Bin\+Tree ordenado por niveles. \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_patron_a0d8e115be3a7bc79a2090079ea3c93e0}{llenar\+\_\+string\+\_\+bloque}} (Bin\+Tree$<$ char $>$ \&\mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{B\+T\+\_\+msj}})
+\begin{DoxyCompactList}\small\item\em Se obtiene un string del tamaño del bloque introducido con el mensaje total o parcialmente codificado/decodificado (depende del mensaje). \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_patron_a591154379e87ff0320de0fe1e39d809c}{sumar\+\_\+mosaico}} (Bin\+Tree$<$ char $>$ \&\mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{B\+T\+\_\+msj}}, const Bin\+Tree$<$ int $>$ \&\mbox{\hyperlink{class_patron_a1f53d53ccc103b928de638622043fc88}{B\+T\+\_\+mosaico}})
+\begin{DoxyCompactList}\small\item\em Se suman los valores de cada uno de los nodos del Bin\+Tree {\itshape B\+T\+\_\+mosaico} con su nodo correspondiente del Bin\+Tree {\itshape B\+T\+\_\+msj} para asi codificar el mensaje segun el patron implicito. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_patron_ab6154d47e3b42acb4e98fadd2e92b174}{restar\+\_\+mosaico}} (Bin\+Tree$<$ char $>$ \&\mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{B\+T\+\_\+msj}}, Bin\+Tree$<$ int $>$ \mbox{\hyperlink{class_patron_a1f53d53ccc103b928de638622043fc88}{B\+T\+\_\+mosaico}})
+\begin{DoxyCompactList}\small\item\em Se restan los valores de cada uno de los nodos del Bin\+Tree {\itshape B\+T\+\_\+mosaico} con su nodo correspondiente del Bin\+Tree {\itshape B\+T\+\_\+msj} para asi decodificar el mensaje segun el patron implicito. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_patron_a37965e5db0b27231e7b38a02cfffda9d}{escribir\+\_\+patron}} (const Bin\+Tree$<$ int $>$ \&\mbox{\hyperlink{class_patron_a94c419f771bcf0d03325bf8f161b2843}{B\+T\+\_\+patron}})
+\begin{DoxyCompactList}\small\item\em Escribe por el canal estandar de salida los enteros no negativos que forman el patron. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_patron_a8d3521f060e2646cd349aead26825665}{idp}}
+\begin{DoxyCompactList}\small\item\em Identificador del patron. ~\newline
+ \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_patron_a107898743e635a2162721a74083f7313}{b}}
+\begin{DoxyCompactList}\small\item\em Tamaño de bloque. ~\newline
+ \end{DoxyCompactList}\item 
+Bin\+Tree$<$ int $>$ \mbox{\hyperlink{class_patron_a94c419f771bcf0d03325bf8f161b2843}{B\+T\+\_\+patron}}
+\begin{DoxyCompactList}\small\item\em Arbol binario correspondiente al patron implicito. ~\newline
+ \end{DoxyCompactList}\item 
+Bin\+Tree$<$ char $>$ \mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{B\+T\+\_\+msj}}
+\begin{DoxyCompactList}\small\item\em Arbol binario con el mensaje introducido (ordenado por niveles). ~\newline
+ \end{DoxyCompactList}\item 
+Bin\+Tree$<$ int $>$ \mbox{\hyperlink{class_patron_a1f53d53ccc103b928de638622043fc88}{B\+T\+\_\+mosaico}}
+\begin{DoxyCompactList}\small\item\em Arbol binario de enteros, construido a base del patron implicito. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa un patron de la plataforma. 
+
+El patron se representa con un identificador {\itshape idp}. 
+
+Definición en la línea 24 del archivo Patron.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_patron_a8664d13f6847795f5e480b758d66ff88}\label{class_patron_a8664d13f6847795f5e480b758d66ff88}} 
+\index{Patron@{Patron}!Patron@{Patron}}
+\index{Patron@{Patron}!Patron@{Patron}}
+\doxysubsubsection{\texorpdfstring{Patron()}{Patron()}}
+{\footnotesize\ttfamily Patron\+::\+Patron (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+Se ejecuta automáticamente al declarar un \mbox{\hyperlink{class_patron}{Patron}}. \begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es una estructura de un patron vacío. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 6 del archivo Patron.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6                \{}
+\DoxyCodeLine{7     \mbox{\hyperlink{class_patron_a8d3521f060e2646cd349aead26825665}{idp}} = \textcolor{charliteral}{' '};}
+\DoxyCodeLine{8     \mbox{\hyperlink{class_patron_a107898743e635a2162721a74083f7313}{b}} = \textcolor{charliteral}{' '};}
+\DoxyCodeLine{9 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_patron_a8f5f698ec0346326a5e153a80db45694}\label{class_patron_a8f5f698ec0346326a5e153a80db45694}} 
+\index{Patron@{Patron}!leer\_patron@{leer\_patron}}
+\index{leer\_patron@{leer\_patron}!Patron@{Patron}}
+\doxysubsubsection{\texorpdfstring{leer\_patron()}{leer\_patron()}}
+{\footnotesize\ttfamily void Patron\+::leer\+\_\+patron (\begin{DoxyParamCaption}\item[{Bin\+Tree$<$ int $>$ \&}]{B\+T\+\_\+patron }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Añade en preorden los enteros positivos que forman el patron implicito (con marca -\/1). 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Utilizando recursividad se obtiene el arbol binario con los enteros positivos que forman el patron implicito (con marca -\/1) en preorden. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 12 del archivo Patron.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12                                         \{}
+\DoxyCodeLine{13     \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{14     cin >> n;}
+\DoxyCodeLine{15     \textcolor{keywordflow}{if} (n != -\/1)\{}
+\DoxyCodeLine{16         BinTree<int> l;}
+\DoxyCodeLine{17         \mbox{\hyperlink{class_patron_a8f5f698ec0346326a5e153a80db45694}{leer\_patron}}(l);}
+\DoxyCodeLine{18         BinTree<int> r;}
+\DoxyCodeLine{19         \mbox{\hyperlink{class_patron_a8f5f698ec0346326a5e153a80db45694}{leer\_patron}}(r);}
+\DoxyCodeLine{20         p = BinTree<int>(n,l,r);}
+\DoxyCodeLine{21   \}}
+\DoxyCodeLine{22 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_patron_ab516233fb0753f916616872e1a0ccf2a}\label{class_patron_ab516233fb0753f916616872e1a0ccf2a}} 
+\index{Patron@{Patron}!llenar\_BinTree\_mensaje@{llenar\_BinTree\_mensaje}}
+\index{llenar\_BinTree\_mensaje@{llenar\_BinTree\_mensaje}!Patron@{Patron}}
+\doxysubsubsection{\texorpdfstring{llenar\_BinTree\_mensaje()}{llenar\_BinTree\_mensaje()}}
+{\footnotesize\ttfamily void Patron\+::llenar\+\_\+\+Bin\+Tree\+\_\+mensaje (\begin{DoxyParamCaption}\item[{string \&}]{msj,  }\item[{int}]{i,  }\item[{Bin\+Tree$<$ char $>$ \&}]{Bin\+Tree\+\_\+mensaje }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Añade el mensaje pasado por parametro explicito a un Bin\+Tree ordenado por niveles. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el mensaje pasado por parametro y el Bin\+Tree {\itshape Bin\+Tree\+\_\+mensaje} esta inicializado. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Utilizando recursividad se obtiene el arbol binario con el mensaje parametro ordenado por niveles. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 33 del archivo Patron.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33                                                                              \{}
+\DoxyCodeLine{34     \textcolor{keywordflow}{if} (i <= msj.size()) \{}
+\DoxyCodeLine{35         BinTree<char> l;}
+\DoxyCodeLine{36         BinTree<char> r;}
+\DoxyCodeLine{37         }
+\DoxyCodeLine{38         \mbox{\hyperlink{class_patron_ab516233fb0753f916616872e1a0ccf2a}{llenar\_BinTree\_mensaje}}(msj, 2*i, l);}
+\DoxyCodeLine{39         \mbox{\hyperlink{class_patron_ab516233fb0753f916616872e1a0ccf2a}{llenar\_BinTree\_mensaje}}(msj, 2*i+1, r);}
+\DoxyCodeLine{40         }
+\DoxyCodeLine{41         \mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}} = BinTree<char>(msj[i-\/1], l, r);}
+\DoxyCodeLine{42     \}}
+\DoxyCodeLine{43     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{44         \mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}} = BinTree<char>();}
+\DoxyCodeLine{45     \}}
+\DoxyCodeLine{46 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_patron_a47a88b97cd1dd42685d80faa4f24313f}\label{class_patron_a47a88b97cd1dd42685d80faa4f24313f}} 
+\index{Patron@{Patron}!crear\_mosaico@{crear\_mosaico}}
+\index{crear\_mosaico@{crear\_mosaico}!Patron@{Patron}}
+\doxysubsubsection{\texorpdfstring{crear\_mosaico()}{crear\_mosaico()}}
+{\footnotesize\ttfamily void Patron\+::crear\+\_\+mosaico (\begin{DoxyParamCaption}\item[{const Bin\+Tree$<$ char $>$ \&}]{B\+T\+\_\+msj,  }\item[{Bin\+Tree$<$ int $>$ \&}]{B\+T\+\_\+mosaico,  }\item[{Bin\+Tree$<$ int $>$}]{B\+T\+\_\+ptr\+\_\+aux }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Se obtiene un arbol de enteros no negativos, con la misma forma que el arbol que contiene el mensaje, construido a base de replicar el patron implicito total o parcialmente cuantas veces sea necesario. 
+
+\begin{DoxyPrecond}{Precondición}
+El Bin\+Tree {\itshape B\+T\+\_\+msj} esta inicializado con el mensaje seleccionado. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Utilizando recursividad se llena el arbol binario con enteros a base de replicar el patron total o parcialmente. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 49 del archivo Patron.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49                                                                                                          \{  \textcolor{comment}{//BT\_ptr\_aux es el BinTree patron que se va descomponiendo}}
+\DoxyCodeLine{50     \textcolor{keywordflow}{if} (not \mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}}.empty()) \{}
+\DoxyCodeLine{51         }
+\DoxyCodeLine{52         \textcolor{keywordflow}{if} (not BT\_ptr\_aux.empty()) \{}
+\DoxyCodeLine{53             BinTree<int> mosaico\_left;}
+\DoxyCodeLine{54             BinTree<int> mosaico\_right;}
+\DoxyCodeLine{55             }
+\DoxyCodeLine{56             \mbox{\hyperlink{class_patron_a47a88b97cd1dd42685d80faa4f24313f}{crear\_mosaico}}(\mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}}.left(), mosaico\_left, BT\_ptr\_aux.left());}
+\DoxyCodeLine{57             \mbox{\hyperlink{class_patron_a47a88b97cd1dd42685d80faa4f24313f}{crear\_mosaico}}(\mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}}.right(), mosaico\_right, BT\_ptr\_aux.right());}
+\DoxyCodeLine{58             }
+\DoxyCodeLine{59             \mbox{\hyperlink{class_patron_a1f53d53ccc103b928de638622043fc88}{BT\_mosaico}} = BinTree<int> (BT\_ptr\_aux.value(),mosaico\_left, mosaico\_right);}
+\DoxyCodeLine{60         \}}
+\DoxyCodeLine{61         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{62             BT\_ptr\_aux = \mbox{\hyperlink{class_patron_a94c419f771bcf0d03325bf8f161b2843}{BT\_patron}};}
+\DoxyCodeLine{63             \mbox{\hyperlink{class_patron_a47a88b97cd1dd42685d80faa4f24313f}{crear\_mosaico}}(\mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}},\mbox{\hyperlink{class_patron_a1f53d53ccc103b928de638622043fc88}{BT\_mosaico}},BT\_ptr\_aux);}
+\DoxyCodeLine{64         \}}
+\DoxyCodeLine{65     \}}
+\DoxyCodeLine{66     \textcolor{keywordflow}{else} \mbox{\hyperlink{class_patron_a1f53d53ccc103b928de638622043fc88}{BT\_mosaico}} = BinTree<int>();}
+\DoxyCodeLine{67 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_patron_a0d8e115be3a7bc79a2090079ea3c93e0}\label{class_patron_a0d8e115be3a7bc79a2090079ea3c93e0}} 
+\index{Patron@{Patron}!llenar\_string\_bloque@{llenar\_string\_bloque}}
+\index{llenar\_string\_bloque@{llenar\_string\_bloque}!Patron@{Patron}}
+\doxysubsubsection{\texorpdfstring{llenar\_string\_bloque()}{llenar\_string\_bloque()}}
+{\footnotesize\ttfamily string Patron\+::llenar\+\_\+string\+\_\+bloque (\begin{DoxyParamCaption}\item[{Bin\+Tree$<$ char $>$ \&}]{B\+T\+\_\+msj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Se obtiene un string del tamaño del bloque introducido con el mensaje total o parcialmente codificado/decodificado (depende del mensaje). 
+
+\begin{DoxyPrecond}{Precondición}
+El Bin\+Tree {\itshape B\+T\+\_\+msj} contiene el mensaje codificado/decodificado ordenado por niveles (bfs). 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve un string con el mensaje total o parcialmente codificado/decodificado extraido del Bin\+Tree {\itshape B\+T\+\_\+msj}. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 106 del archivo Patron.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{106                                                          \{}
+\DoxyCodeLine{107     \textcolor{keywordtype}{string} msj\_bloque;}
+\DoxyCodeLine{108     \textcolor{keywordflow}{if} (not \mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}}.empty()) \{}
+\DoxyCodeLine{109         queue<BinTree<char>> c;}
+\DoxyCodeLine{110         c.push(\mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}});}
+\DoxyCodeLine{111         \textcolor{keywordflow}{while} (not c.empty()) \{}
+\DoxyCodeLine{112             BinTree<char> aux = c.front();}
+\DoxyCodeLine{113             c.pop();}
+\DoxyCodeLine{114             msj\_bloque += aux.value();}
+\DoxyCodeLine{115             \textcolor{keywordflow}{if} (not aux.left().empty()) c.push(aux.left());}
+\DoxyCodeLine{116             \textcolor{keywordflow}{if} (not aux.right().empty()) c.push(aux.right());}
+\DoxyCodeLine{117         \}}
+\DoxyCodeLine{118     \}}
+\DoxyCodeLine{119     \textcolor{keywordflow}{return} msj\_bloque;}
+\DoxyCodeLine{120 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_patron_a591154379e87ff0320de0fe1e39d809c}\label{class_patron_a591154379e87ff0320de0fe1e39d809c}} 
+\index{Patron@{Patron}!sumar\_mosaico@{sumar\_mosaico}}
+\index{sumar\_mosaico@{sumar\_mosaico}!Patron@{Patron}}
+\doxysubsubsection{\texorpdfstring{sumar\_mosaico()}{sumar\_mosaico()}}
+{\footnotesize\ttfamily void Patron\+::sumar\+\_\+mosaico (\begin{DoxyParamCaption}\item[{Bin\+Tree$<$ char $>$ \&}]{B\+T\+\_\+msj,  }\item[{const Bin\+Tree$<$ int $>$ \&}]{B\+T\+\_\+mosaico }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Se suman los valores de cada uno de los nodos del Bin\+Tree {\itshape B\+T\+\_\+mosaico} con su nodo correspondiente del Bin\+Tree {\itshape B\+T\+\_\+msj} para asi codificar el mensaje segun el patron implicito. 
+
+\begin{DoxyPrecond}{Precondición}
+El Bin\+Tree {\itshape B\+T\+\_\+msj} contiene el mensaje a codificar y el Bin\+Tree {\itshape B\+T\+\_\+mosaico} contiene los valores del patron a sumar para codificar. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Utilizando recursividad se suman los valores de cada uno de los nodos del Bin\+Tree {\itshape B\+T\+\_\+mosaico} con su nodo correspondiente del Bin\+Tree {\itshape B\+T\+\_\+msj} obteniendo de esta manera el mensaje codificado en el Bin\+Tree {\itshape B\+T\+\_\+msj}. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 70 del archivo Patron.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{70                                                                                 \{}
+\DoxyCodeLine{71     \textcolor{keywordflow}{if} (not \mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}}.empty() and not \mbox{\hyperlink{class_patron_a1f53d53ccc103b928de638622043fc88}{BT\_mosaico}}.empty()) \{}
+\DoxyCodeLine{72         BinTree<char> l = \mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}}.left();}
+\DoxyCodeLine{73         BinTree<char> r = \mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}}.right();}
+\DoxyCodeLine{74         }
+\DoxyCodeLine{75         \mbox{\hyperlink{class_patron_a591154379e87ff0320de0fe1e39d809c}{sumar\_mosaico}}(l, \mbox{\hyperlink{class_patron_a1f53d53ccc103b928de638622043fc88}{BT\_mosaico}}.left());}
+\DoxyCodeLine{76         \mbox{\hyperlink{class_patron_a591154379e87ff0320de0fe1e39d809c}{sumar\_mosaico}}(r, \mbox{\hyperlink{class_patron_a1f53d53ccc103b928de638622043fc88}{BT\_mosaico}}.right());}
+\DoxyCodeLine{77         }
+\DoxyCodeLine{78         \textcolor{keywordtype}{int} d = \mbox{\hyperlink{class_patron_a1f53d53ccc103b928de638622043fc88}{BT\_mosaico}}.value();}
+\DoxyCodeLine{79         \textcolor{keywordtype}{char} c = \mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}}.value();}
+\DoxyCodeLine{80         \textcolor{keywordtype}{char} cod = 32 + (c + d -\/ 32) \% 95; }
+\DoxyCodeLine{81         }
+\DoxyCodeLine{82         \mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}} = BinTree<char>(cod, l, r);}
+\DoxyCodeLine{83     \}}
+\DoxyCodeLine{84 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_patron_ab6154d47e3b42acb4e98fadd2e92b174}\label{class_patron_ab6154d47e3b42acb4e98fadd2e92b174}} 
+\index{Patron@{Patron}!restar\_mosaico@{restar\_mosaico}}
+\index{restar\_mosaico@{restar\_mosaico}!Patron@{Patron}}
+\doxysubsubsection{\texorpdfstring{restar\_mosaico()}{restar\_mosaico()}}
+{\footnotesize\ttfamily void Patron\+::restar\+\_\+mosaico (\begin{DoxyParamCaption}\item[{Bin\+Tree$<$ char $>$ \&}]{B\+T\+\_\+msj,  }\item[{Bin\+Tree$<$ int $>$}]{B\+T\+\_\+mosaico }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Se restan los valores de cada uno de los nodos del Bin\+Tree {\itshape B\+T\+\_\+mosaico} con su nodo correspondiente del Bin\+Tree {\itshape B\+T\+\_\+msj} para asi decodificar el mensaje segun el patron implicito. 
+
+\begin{DoxyPrecond}{Precondición}
+El Bin\+Tree {\itshape B\+T\+\_\+msj} contiene el mensaje a decodificar y el Bin\+Tree {\itshape B\+T\+\_\+mosaico} contiene los valores del patron a restar para decodificar. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Utilizando recursividad se restan los valores de cada uno de los nodos del Bin\+Tree {\itshape B\+T\+\_\+mosaico} con su nodo correspondiente del Bin\+Tree {\itshape B\+T\+\_\+msj} obteniendo de esta manera el mensaje decodificado en el Bin\+Tree {\itshape B\+T\+\_\+msj}. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 87 del archivo Patron.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{87                                                                           \{}
+\DoxyCodeLine{88     \textcolor{keywordflow}{if} (not \mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}}.empty()) \{ }
+\DoxyCodeLine{89         \textcolor{keywordtype}{char} c = \mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}}.value();}
+\DoxyCodeLine{90         BinTree<char> l = \mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}}.left();}
+\DoxyCodeLine{91         BinTree<char> r = \mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}}.right();}
+\DoxyCodeLine{92         }
+\DoxyCodeLine{93         \textcolor{keywordflow}{if} (not \mbox{\hyperlink{class_patron_a1f53d53ccc103b928de638622043fc88}{BT\_mosaico}}.empty()) \{}
+\DoxyCodeLine{94             \textcolor{keywordtype}{int} d = \mbox{\hyperlink{class_patron_a1f53d53ccc103b928de638622043fc88}{BT\_mosaico}}.value();}
+\DoxyCodeLine{95             \textcolor{keywordtype}{char} cod = 32 + (c + (95-\/d) -\/ 32) \% 95; }
+\DoxyCodeLine{96             }
+\DoxyCodeLine{97             \mbox{\hyperlink{class_patron_ab6154d47e3b42acb4e98fadd2e92b174}{restar\_mosaico}}(l, \mbox{\hyperlink{class_patron_a1f53d53ccc103b928de638622043fc88}{BT\_mosaico}}.left());}
+\DoxyCodeLine{98             \mbox{\hyperlink{class_patron_ab6154d47e3b42acb4e98fadd2e92b174}{restar\_mosaico}}(r, \mbox{\hyperlink{class_patron_a1f53d53ccc103b928de638622043fc88}{BT\_mosaico}}.right());}
+\DoxyCodeLine{99         }
+\DoxyCodeLine{100             \mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}} = BinTree<char>(cod,l,r);}
+\DoxyCodeLine{101         \}}
+\DoxyCodeLine{102     \}}
+\DoxyCodeLine{103 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_patron_a37965e5db0b27231e7b38a02cfffda9d}\label{class_patron_a37965e5db0b27231e7b38a02cfffda9d}} 
+\index{Patron@{Patron}!escribir\_patron@{escribir\_patron}}
+\index{escribir\_patron@{escribir\_patron}!Patron@{Patron}}
+\doxysubsubsection{\texorpdfstring{escribir\_patron()}{escribir\_patron()}}
+{\footnotesize\ttfamily void Patron\+::escribir\+\_\+patron (\begin{DoxyParamCaption}\item[{const Bin\+Tree$<$ int $>$ \&}]{B\+T\+\_\+patron }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Escribe por el canal estandar de salida los enteros no negativos que forman el patron. 
+
+\begin{DoxyPrecond}{Precondición}
+El arbol binario del patron implicito esta inicializado. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se escribe el identificador del patron implicito y utilizando recursividad se imprimen los enteros no negativos que forman al mismo. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 179 del archivo Patron.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{179                                                   \{}
+\DoxyCodeLine{180 cout << \textcolor{stringliteral}{"("};}
+\DoxyCodeLine{181     \textcolor{keywordflow}{if} (not p.empty()) \{}
+\DoxyCodeLine{182         \textcolor{keywordtype}{int} n = p.value();}
+\DoxyCodeLine{183         cout << n;}
+\DoxyCodeLine{184         BinTree<int> l = p.left();}
+\DoxyCodeLine{185         \mbox{\hyperlink{class_patron_a37965e5db0b27231e7b38a02cfffda9d}{escribir\_patron}}(l);}
+\DoxyCodeLine{186         BinTree<int> r = p.right(); }
+\DoxyCodeLine{187         \mbox{\hyperlink{class_patron_a37965e5db0b27231e7b38a02cfffda9d}{escribir\_patron}}(r);}
+\DoxyCodeLine{188     \}}
+\DoxyCodeLine{189     cout << \textcolor{stringliteral}{")"};}
+\DoxyCodeLine{190 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_patron_a3a599b8dff198a28904a02ced2c296c9}\label{class_patron_a3a599b8dff198a28904a02ced2c296c9}} 
+\index{Patron@{Patron}!rellenar\_parametros@{rellenar\_parametros}}
+\index{rellenar\_parametros@{rellenar\_parametros}!Patron@{Patron}}
+\doxysubsubsection{\texorpdfstring{rellenar\_parametros()}{rellenar\_parametros()}}
+{\footnotesize\ttfamily void Patron\+::rellenar\+\_\+parametros (\begin{DoxyParamCaption}\item[{int \&}]{i }\end{DoxyParamCaption})}
+
+
+
+Añade los parametros como el identificador {\itshape idp} del patron y la secuencia que formara el arbol binario con el patron. 
+
+\begin{DoxyPrecond}{Precondición}
+La clase {\itshape \mbox{\hyperlink{class_patron}{Patron}}} está inicializada. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se obtiene el patron con los siguientes parametros ya inicializados\+: identificador {\itshape idp} y el arbol binario con el patron correspondiente a la entrada. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 25 del archivo Patron.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                                        \{}
+\DoxyCodeLine{26     \mbox{\hyperlink{class_patron_a8d3521f060e2646cd349aead26825665}{idp}} = i;}
+\DoxyCodeLine{27     \mbox{\hyperlink{class_patron_a107898743e635a2162721a74083f7313}{b}} = \textcolor{charliteral}{' '};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \mbox{\hyperlink{class_patron_a8f5f698ec0346326a5e153a80db45694}{leer\_patron}}(\mbox{\hyperlink{class_patron_a94c419f771bcf0d03325bf8f161b2843}{BT\_patron}});}
+\DoxyCodeLine{30 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_patron_a86a3b4f919d7de8c3d6ce2ad2a371a9d}\label{class_patron_a86a3b4f919d7de8c3d6ce2ad2a371a9d}} 
+\index{Patron@{Patron}!codificar@{codificar}}
+\index{codificar@{codificar}!Patron@{Patron}}
+\doxysubsubsection{\texorpdfstring{codificar()}{codificar()}}
+{\footnotesize\ttfamily void Patron\+::codificar (\begin{DoxyParamCaption}\item[{string \&}]{mensaje,  }\item[{int \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Codifica el mensaje que tiene como parametro. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Imprime el mensaje que tiene como parametro explicito codificado por el metodo de sustitucion utilizando el patron implicito. El mensaje se divide en bloques de tamaño {\itshape b}. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 124 del archivo Patron.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{124                                               \{}
+\DoxyCodeLine{125     \textcolor{keywordtype}{int} n = mensaje.length();}
+\DoxyCodeLine{126     \textcolor{keywordtype}{int} cont = 0;}
+\DoxyCodeLine{127     \textcolor{keywordtype}{int} pos = 0;}
+\DoxyCodeLine{128     \textcolor{keywordtype}{int} i = 1;}
+\DoxyCodeLine{129     \textcolor{keywordtype}{string} mensaje\_completo;}
+\DoxyCodeLine{130     }
+\DoxyCodeLine{131     }
+\DoxyCodeLine{132     cout << \textcolor{charliteral}{'"'};                                                      \textcolor{comment}{//comillas iniciales de la salida del mensaje.        }}
+\DoxyCodeLine{133     \textcolor{keywordflow}{while} ((cont*\mbox{\hyperlink{class_patron_a107898743e635a2162721a74083f7313}{b}}) < n) \{                                            \textcolor{comment}{//Primera iteracion para crear el mosaico.}}
+\DoxyCodeLine{134         \textcolor{keywordtype}{string} mensaje\_bloque;}
+\DoxyCodeLine{135         \textcolor{keywordtype}{string} aux = \textcolor{stringliteral}{""};}
+\DoxyCodeLine{136         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = 0; (k<\mbox{\hyperlink{class_patron_a107898743e635a2162721a74083f7313}{b}}) and (pos<n); ++k) \{                     \textcolor{comment}{//El mensaje se introduce a los BinTree por bloques de tamaño b.}}
+\DoxyCodeLine{137             aux += mensaje[pos];}
+\DoxyCodeLine{138             ++pos;}
+\DoxyCodeLine{139         \}}
+\DoxyCodeLine{140         \mbox{\hyperlink{class_patron_ab516233fb0753f916616872e1a0ccf2a}{llenar\_BinTree\_mensaje}}(aux, i, \mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}});}
+\DoxyCodeLine{141         \textcolor{keywordflow}{if} (cont == 0) \mbox{\hyperlink{class_patron_a47a88b97cd1dd42685d80faa4f24313f}{crear\_mosaico}}(\mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}}, \mbox{\hyperlink{class_patron_a1f53d53ccc103b928de638622043fc88}{BT\_mosaico}}, \mbox{\hyperlink{class_patron_a94c419f771bcf0d03325bf8f161b2843}{BT\_patron}});}
+\DoxyCodeLine{142         \mbox{\hyperlink{class_patron_a591154379e87ff0320de0fe1e39d809c}{sumar\_mosaico}}(\mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}}, \mbox{\hyperlink{class_patron_a1f53d53ccc103b928de638622043fc88}{BT\_mosaico}});}
+\DoxyCodeLine{143         }
+\DoxyCodeLine{144         mensaje\_bloque = \mbox{\hyperlink{class_patron_a0d8e115be3a7bc79a2090079ea3c93e0}{llenar\_string\_bloque}}(\mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}});}
+\DoxyCodeLine{145         mensaje\_completo += mensaje\_bloque;}
+\DoxyCodeLine{146         ++cont;}
+\DoxyCodeLine{147     \}}
+\DoxyCodeLine{148     cout << mensaje\_completo << \textcolor{charliteral}{'"'} << endl;                           \textcolor{comment}{//comillas finales de la salida del mensaje.}}
+\DoxyCodeLine{149 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_patron_ad3ea736ee0f9c200178b58b915232efe}\label{class_patron_ad3ea736ee0f9c200178b58b915232efe}} 
+\index{Patron@{Patron}!decodificar@{decodificar}}
+\index{decodificar@{decodificar}!Patron@{Patron}}
+\doxysubsubsection{\texorpdfstring{decodificar()}{decodificar()}}
+{\footnotesize\ttfamily void Patron\+::decodificar (\begin{DoxyParamCaption}\item[{string \&}]{mensaje\+\_\+codificado,  }\item[{int \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Decodifica el mensaje que tiene como parametro. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Imprime el mensaje que tiene como parametro explicito decodificado por el metodo de sustitucion utilizando la patron implicito. Este tendra siempre la misma longitud que el mensaje codificado. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 152 del archivo Patron.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{152                                                 \{}
+\DoxyCodeLine{153     \textcolor{keywordtype}{int} n = mensaje.length();}
+\DoxyCodeLine{154     \textcolor{keywordtype}{int} cont = 0;}
+\DoxyCodeLine{155     \textcolor{keywordtype}{int} pos = 0;}
+\DoxyCodeLine{156     \textcolor{keywordtype}{int} i = 1;}
+\DoxyCodeLine{157     \textcolor{keywordtype}{string} mensaje\_completo;}
+\DoxyCodeLine{158     }
+\DoxyCodeLine{159     cout << \textcolor{charliteral}{'"'};                                                        \textcolor{comment}{//comillas iniciales de la salida del mensaje.    }}
+\DoxyCodeLine{160     \textcolor{keywordflow}{while} ((cont*\mbox{\hyperlink{class_patron_a107898743e635a2162721a74083f7313}{b}}) < n) \{                                              \textcolor{comment}{//Primera iteracion para crear el mosaico.}}
+\DoxyCodeLine{161         \textcolor{keywordtype}{string} mensaje\_bloque;}
+\DoxyCodeLine{162         \textcolor{keywordtype}{string} aux = \textcolor{stringliteral}{""};}
+\DoxyCodeLine{163         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = 0; (k<\mbox{\hyperlink{class_patron_a107898743e635a2162721a74083f7313}{b}}) and (pos<n); ++k) \{                       \textcolor{comment}{//El mensaje se introduce a los BinTree por bloques de tamaño b.}}
+\DoxyCodeLine{164             aux += mensaje[pos];}
+\DoxyCodeLine{165             ++pos;}
+\DoxyCodeLine{166         \}}
+\DoxyCodeLine{167         \mbox{\hyperlink{class_patron_ab516233fb0753f916616872e1a0ccf2a}{llenar\_BinTree\_mensaje}}(aux, i, \mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}});}
+\DoxyCodeLine{168         \textcolor{keywordflow}{if} (cont == 0) \mbox{\hyperlink{class_patron_a47a88b97cd1dd42685d80faa4f24313f}{crear\_mosaico}}(\mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}}, \mbox{\hyperlink{class_patron_a1f53d53ccc103b928de638622043fc88}{BT\_mosaico}}, \mbox{\hyperlink{class_patron_a94c419f771bcf0d03325bf8f161b2843}{BT\_patron}});}
+\DoxyCodeLine{169         \mbox{\hyperlink{class_patron_ab6154d47e3b42acb4e98fadd2e92b174}{restar\_mosaico}}(\mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}}, \mbox{\hyperlink{class_patron_a1f53d53ccc103b928de638622043fc88}{BT\_mosaico}});}
+\DoxyCodeLine{170         }
+\DoxyCodeLine{171         mensaje\_bloque = \mbox{\hyperlink{class_patron_a0d8e115be3a7bc79a2090079ea3c93e0}{llenar\_string\_bloque}}(\mbox{\hyperlink{class_patron_aa408cb01ccc08f44093f8edab140e600}{BT\_msj}});}
+\DoxyCodeLine{172         mensaje\_completo += mensaje\_bloque;}
+\DoxyCodeLine{173         ++cont;}
+\DoxyCodeLine{174     \}}
+\DoxyCodeLine{175     cout << mensaje\_completo << \textcolor{charliteral}{'"'} << endl;                            \textcolor{comment}{//comillas finales de la salida del mensaje.}}
+\DoxyCodeLine{176 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_patron_a719887b410e79cd28df8f28387cb72b5}\label{class_patron_a719887b410e79cd28df8f28387cb72b5}} 
+\index{Patron@{Patron}!escribir@{escribir}}
+\index{escribir@{escribir}!Patron@{Patron}}
+\doxysubsubsection{\texorpdfstring{escribir()}{escribir()}}
+{\footnotesize\ttfamily void Patron\+::escribir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Escribe el identificador del patron implicito y su patron correspondiente. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se imprime el identificador del patron implicito y su patron correspondiente. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 193 del archivo Patron.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{193                            \{}
+\DoxyCodeLine{194     }
+\DoxyCodeLine{195     cout << \textcolor{stringliteral}{"Patron "} << \mbox{\hyperlink{class_patron_a8d3521f060e2646cd349aead26825665}{idp}} << \textcolor{charliteral}{':'}<< endl;}
+\DoxyCodeLine{196     \mbox{\hyperlink{class_patron_a37965e5db0b27231e7b38a02cfffda9d}{escribir\_patron}}(\mbox{\hyperlink{class_patron_a94c419f771bcf0d03325bf8f161b2843}{BT\_patron}});}
+\DoxyCodeLine{197     cout << endl;}
+\DoxyCodeLine{198    }
+\DoxyCodeLine{199 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_patron_a8d3521f060e2646cd349aead26825665}\label{class_patron_a8d3521f060e2646cd349aead26825665}} 
+\index{Patron@{Patron}!idp@{idp}}
+\index{idp@{idp}!Patron@{Patron}}
+\doxysubsubsection{\texorpdfstring{idp}{idp}}
+{\footnotesize\ttfamily int Patron\+::idp\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Identificador del patron. ~\newline
+ 
+
+
+
+Definición en la línea 29 del archivo Patron.\+hh.
+
+\mbox{\Hypertarget{class_patron_a107898743e635a2162721a74083f7313}\label{class_patron_a107898743e635a2162721a74083f7313}} 
+\index{Patron@{Patron}!b@{b}}
+\index{b@{b}!Patron@{Patron}}
+\doxysubsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily int Patron\+::b\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tamaño de bloque. ~\newline
+ 
+
+
+
+Definición en la línea 32 del archivo Patron.\+hh.
+
+\mbox{\Hypertarget{class_patron_a94c419f771bcf0d03325bf8f161b2843}\label{class_patron_a94c419f771bcf0d03325bf8f161b2843}} 
+\index{Patron@{Patron}!BT\_patron@{BT\_patron}}
+\index{BT\_patron@{BT\_patron}!Patron@{Patron}}
+\doxysubsubsection{\texorpdfstring{BT\_patron}{BT\_patron}}
+{\footnotesize\ttfamily Bin\+Tree$<$int$>$ Patron\+::\+B\+T\+\_\+patron\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Arbol binario correspondiente al patron implicito. ~\newline
+ 
+
+
+
+Definición en la línea 35 del archivo Patron.\+hh.
+
+\mbox{\Hypertarget{class_patron_aa408cb01ccc08f44093f8edab140e600}\label{class_patron_aa408cb01ccc08f44093f8edab140e600}} 
+\index{Patron@{Patron}!BT\_msj@{BT\_msj}}
+\index{BT\_msj@{BT\_msj}!Patron@{Patron}}
+\doxysubsubsection{\texorpdfstring{BT\_msj}{BT\_msj}}
+{\footnotesize\ttfamily Bin\+Tree$<$char$>$ Patron\+::\+B\+T\+\_\+msj\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Arbol binario con el mensaje introducido (ordenado por niveles). ~\newline
+ 
+
+
+
+Definición en la línea 38 del archivo Patron.\+hh.
+
+\mbox{\Hypertarget{class_patron_a1f53d53ccc103b928de638622043fc88}\label{class_patron_a1f53d53ccc103b928de638622043fc88}} 
+\index{Patron@{Patron}!BT\_mosaico@{BT\_mosaico}}
+\index{BT\_mosaico@{BT\_mosaico}!Patron@{Patron}}
+\doxysubsubsection{\texorpdfstring{BT\_mosaico}{BT\_mosaico}}
+{\footnotesize\ttfamily Bin\+Tree$<$int$>$ Patron\+::\+B\+T\+\_\+mosaico\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Arbol binario de enteros, construido a base del patron implicito. 
+
+
+
+Definición en la línea 41 del archivo Patron.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_patron_8hh}{Patron.\+hh}}\item 
+\mbox{\hyperlink{_patron_8cc}{Patron.\+cc}}\end{DoxyCompactItemize}

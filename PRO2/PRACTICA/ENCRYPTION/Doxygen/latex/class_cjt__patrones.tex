@@ -1,0 +1,321 @@
+\hypertarget{class_cjt__patrones}{}\doxysection{Referencia de la Clase Cjt\+\_\+patrones}
+\label{class_cjt__patrones}\index{Cjt\_patrones@{Cjt\_patrones}}
+
+
+Representa un conjunto de patrones inrtroducidos en la plataforma.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cjt__patrones_ac169314f2961663c592f353a27c6bbf2}{Cjt\+\_\+patrones}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__patrones_aece0698f5e192f3d108f894aae8f178a}{leer}} ()
+\begin{DoxyCompactList}\small\item\em Añade los patrones {\itshape idp} introducidos en la entrada del programa a un vector {\itshape V\+E\+C\+\_\+patrones} de clases \mbox{\hyperlink{class_patron}{Patron}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__patrones_ab9efedd70f12de2e2e4f5302874221d9}{nuevo\+\_\+patron}} ()
+\begin{DoxyCompactList}\small\item\em Añade una nuevo patron con identificador {\itshape idp} al conjunto de patrones. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__patrones_a69727a831d7b91f98ec403c5e7d254bb}{codificar\+\_\+patron}} (int idp, int b)
+\begin{DoxyCompactList}\small\item\em Lee y codifica un mensaje mediante el patron con identificador {\itshape idp}, dividiendo el mensaje en bloques de tamaño {\itshape b}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__patrones_aa306e6819883d7d30270c02bd6494212}{codificar\+\_\+guardado\+\_\+patron}} (string idm, int idp, int b, \mbox{\hyperlink{class_cjt__mensajes}{Cjt\+\_\+mensajes}} \&cm)
+\begin{DoxyCompactList}\small\item\em Codifica el mensaje con identificador {\itshape idm} mediante lel patron con identificador {\itshape idp}, dividiendo el mensaje en bloques de tamaño {\itshape b}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__patrones_a3567443e5f0da1145c3ae58600b0bd7f}{decodificar\+\_\+patron}} (int idp, int b)
+\begin{DoxyCompactList}\small\item\em Lee y decodifica un mensaje mediante el patron con identificador {\itshape idp}, dividiendo el mensaje en bloques de tamaño {\itshape b}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cjt__patrones_a8260ef553b542ff44f63107e8dc5e977}{existe}} (int \&idp) const
+\begin{DoxyCompactList}\small\item\em Comprueba que el patron {\itshape idp} se encuentre en el conjunto de patrones de la plataforma. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__patrones_a0d371a7b647964023174cd172fe83791}{listar\+\_\+patrones}} ()
+\begin{DoxyCompactList}\small\item\em Se listan los patrones de la colección por orden creciente de identificador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{class_patron}{Patron}} $>$ \mbox{\hyperlink{class_cjt__patrones_a605e14866237f745c10631d64df42c4b}{V\+E\+C\+\_\+patrones}}
+\begin{DoxyCompactList}\small\item\em Vector que contiene las clases \mbox{\hyperlink{class_patron}{Patron}} de todos los patrones la plataforma. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa un conjunto de patrones inrtroducidos en la plataforma. 
+
+Cada patron del conjunto es representado con un identificador (idp). 
+
+Definición en la línea 26 del archivo Cjt\+\_\+patrones.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_cjt__patrones_ac169314f2961663c592f353a27c6bbf2}\label{class_cjt__patrones_ac169314f2961663c592f353a27c6bbf2}} 
+\index{Cjt\_patrones@{Cjt\_patrones}!Cjt\_patrones@{Cjt\_patrones}}
+\index{Cjt\_patrones@{Cjt\_patrones}!Cjt\_patrones@{Cjt\_patrones}}
+\doxysubsubsection{\texorpdfstring{Cjt\_patrones()}{Cjt\_patrones()}}
+{\footnotesize\ttfamily Cjt\+\_\+patrones\+::\+Cjt\+\_\+patrones (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+Se ejecuta automáticamente al declarar un conjunto de patrones. \begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un conjunto de patrones vacío. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 4 del archivo Cjt\+\_\+patrones.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4                            \{}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_cjt__patrones_aece0698f5e192f3d108f894aae8f178a}\label{class_cjt__patrones_aece0698f5e192f3d108f894aae8f178a}} 
+\index{Cjt\_patrones@{Cjt\_patrones}!leer@{leer}}
+\index{leer@{leer}!Cjt\_patrones@{Cjt\_patrones}}
+\doxysubsubsection{\texorpdfstring{leer()}{leer()}}
+{\footnotesize\ttfamily void Cjt\+\_\+patrones\+::leer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Añade los patrones {\itshape idp} introducidos en la entrada del programa a un vector {\itshape V\+E\+C\+\_\+patrones} de clases \mbox{\hyperlink{class_patron}{Patron}}. 
+
+\begin{DoxyPrecond}{Precondición}
+La clase {\itshape \mbox{\hyperlink{class_cjt__patrones}{Cjt\+\_\+patrones}}} esta inicializada. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se obtiene el vector {\itshape V\+E\+C\+\_\+patrones} con todas las clases \mbox{\hyperlink{class_patron}{Patron}} como parametro implicito del \mbox{\hyperlink{class_cjt__patrones}{Cjt\+\_\+patrones}}. Para cada patron añadido se leen sus valores en preorden con marca -\/1. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 9 del archivo Cjt\+\_\+patrones.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9                         \{}
+\DoxyCodeLine{10     \textcolor{keywordtype}{int} num\_ptr;}
+\DoxyCodeLine{11     cin >> num\_ptr;}
+\DoxyCodeLine{12         }
+\DoxyCodeLine{13     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i <= num\_ptr; ++i) \{}
+\DoxyCodeLine{14         \mbox{\hyperlink{class_patron}{Patron}} ptr;}
+\DoxyCodeLine{15         ptr.\mbox{\hyperlink{class_patron_a3a599b8dff198a28904a02ced2c296c9}{rellenar\_parametros}}(i);}
+\DoxyCodeLine{16         \mbox{\hyperlink{class_cjt__patrones_a605e14866237f745c10631d64df42c4b}{VEC\_patrones}}.push\_back(ptr);}
+\DoxyCodeLine{17     \}}
+\DoxyCodeLine{18 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__patrones_ab9efedd70f12de2e2e4f5302874221d9}\label{class_cjt__patrones_ab9efedd70f12de2e2e4f5302874221d9}} 
+\index{Cjt\_patrones@{Cjt\_patrones}!nuevo\_patron@{nuevo\_patron}}
+\index{nuevo\_patron@{nuevo\_patron}!Cjt\_patrones@{Cjt\_patrones}}
+\doxysubsubsection{\texorpdfstring{nuevo\_patron()}{nuevo\_patron()}}
+{\footnotesize\ttfamily void Cjt\+\_\+patrones\+::nuevo\+\_\+patron (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Añade una nuevo patron con identificador {\itshape idp} al conjunto de patrones. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parámetro implícito pasa a contener el conjunto de patrones original más uno y imprime el número de patrones totales despues de añadirlo. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 21 del archivo Cjt\+\_\+patrones.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21                                 \{}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_patron}{Patron}} ptr;}
+\DoxyCodeLine{23     \textcolor{keywordtype}{int} i = \mbox{\hyperlink{class_cjt__patrones_a605e14866237f745c10631d64df42c4b}{VEC\_patrones}}.size()+1;}
+\DoxyCodeLine{24     ptr.\mbox{\hyperlink{class_patron_a3a599b8dff198a28904a02ced2c296c9}{rellenar\_parametros}}(i);}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_cjt__patrones_a605e14866237f745c10631d64df42c4b}{VEC\_patrones}}.push\_back(ptr);}
+\DoxyCodeLine{26     }
+\DoxyCodeLine{27     cout << \mbox{\hyperlink{class_cjt__patrones_a605e14866237f745c10631d64df42c4b}{VEC\_patrones}}.size() << endl; }
+\DoxyCodeLine{28 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__patrones_a69727a831d7b91f98ec403c5e7d254bb}\label{class_cjt__patrones_a69727a831d7b91f98ec403c5e7d254bb}} 
+\index{Cjt\_patrones@{Cjt\_patrones}!codificar\_patron@{codificar\_patron}}
+\index{codificar\_patron@{codificar\_patron}!Cjt\_patrones@{Cjt\_patrones}}
+\doxysubsubsection{\texorpdfstring{codificar\_patron()}{codificar\_patron()}}
+{\footnotesize\ttfamily void Cjt\+\_\+patrones\+::codificar\+\_\+patron (\begin{DoxyParamCaption}\item[{int}]{idp,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+Lee y codifica un mensaje mediante el patron con identificador {\itshape idp}, dividiendo el mensaje en bloques de tamaño {\itshape b}. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el patron con identificador {\itshape idp}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Imprime el mensaje codificado por el metodo de sustitucion utilizando el patron {\itshape idp}. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 32 del archivo Cjt\+\_\+patrones.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32                                                   \{}
+\DoxyCodeLine{33     \textcolor{keywordtype}{string} mensaje;}
+\DoxyCodeLine{34     \textcolor{keywordtype}{string} s;}
+\DoxyCodeLine{35     }
+\DoxyCodeLine{36     getline(cin,s);}
+\DoxyCodeLine{37     getline(cin,mensaje);}
+\DoxyCodeLine{38     }
+\DoxyCodeLine{39     \mbox{\hyperlink{class_cjt__patrones_a605e14866237f745c10631d64df42c4b}{VEC\_patrones}}[idp-\/1].codificar(mensaje,b);}
+\DoxyCodeLine{40     }
+\DoxyCodeLine{41 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__patrones_aa306e6819883d7d30270c02bd6494212}\label{class_cjt__patrones_aa306e6819883d7d30270c02bd6494212}} 
+\index{Cjt\_patrones@{Cjt\_patrones}!codificar\_guardado\_patron@{codificar\_guardado\_patron}}
+\index{codificar\_guardado\_patron@{codificar\_guardado\_patron}!Cjt\_patrones@{Cjt\_patrones}}
+\doxysubsubsection{\texorpdfstring{codificar\_guardado\_patron()}{codificar\_guardado\_patron()}}
+{\footnotesize\ttfamily void Cjt\+\_\+patrones\+::codificar\+\_\+guardado\+\_\+patron (\begin{DoxyParamCaption}\item[{string}]{idm,  }\item[{int}]{idp,  }\item[{int}]{b,  }\item[{\mbox{\hyperlink{class_cjt__mensajes}{Cjt\+\_\+mensajes}} \&}]{cm }\end{DoxyParamCaption})}
+
+
+
+Codifica el mensaje con identificador {\itshape idm} mediante lel patron con identificador {\itshape idp}, dividiendo el mensaje en bloques de tamaño {\itshape b}. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el mensaje con identificador {\itshape idm} y el patron con identificador {\itshape idp}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Imprime el mensaje con identificador {\itshape idm} codificado por el metodo de sustitucion utilizando el patron {\itshape idp}. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 44 del archivo Cjt\+\_\+patrones.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44                                                                                          \{}
+\DoxyCodeLine{45     \textcolor{keywordtype}{string} mensaje;}
+\DoxyCodeLine{46     mensaje = cm.\mbox{\hyperlink{class_cjt__mensajes_a7152f1ea034c5ec07ef86d83efe29195}{obtener\_mensaje}}(idm); }
+\DoxyCodeLine{47     }
+\DoxyCodeLine{48     \mbox{\hyperlink{class_cjt__patrones_a605e14866237f745c10631d64df42c4b}{VEC\_patrones}}[idp-\/1].codificar(mensaje,b);}
+\DoxyCodeLine{49 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__patrones_a3567443e5f0da1145c3ae58600b0bd7f}\label{class_cjt__patrones_a3567443e5f0da1145c3ae58600b0bd7f}} 
+\index{Cjt\_patrones@{Cjt\_patrones}!decodificar\_patron@{decodificar\_patron}}
+\index{decodificar\_patron@{decodificar\_patron}!Cjt\_patrones@{Cjt\_patrones}}
+\doxysubsubsection{\texorpdfstring{decodificar\_patron()}{decodificar\_patron()}}
+{\footnotesize\ttfamily void Cjt\+\_\+patrones\+::decodificar\+\_\+patron (\begin{DoxyParamCaption}\item[{int}]{idp,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+Lee y decodifica un mensaje mediante el patron con identificador {\itshape idp}, dividiendo el mensaje en bloques de tamaño {\itshape b}. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el patron con identificador {\itshape idp}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Imprime el mensaje decodificado por el metodo de sustitucion utilizando el patron {\itshape idp}. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 52 del archivo Cjt\+\_\+patrones.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52                                                     \{}
+\DoxyCodeLine{53     \textcolor{keywordtype}{string} mensaje\_codificado;}
+\DoxyCodeLine{54     \textcolor{keywordtype}{string} s;}
+\DoxyCodeLine{55     }
+\DoxyCodeLine{56     getline(cin,s);}
+\DoxyCodeLine{57     getline(cin,mensaje\_codificado);}
+\DoxyCodeLine{58     }
+\DoxyCodeLine{59     \mbox{\hyperlink{class_cjt__patrones_a605e14866237f745c10631d64df42c4b}{VEC\_patrones}}[idp-\/1].decodificar(mensaje\_codificado, b);}
+\DoxyCodeLine{60 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__patrones_a8260ef553b542ff44f63107e8dc5e977}\label{class_cjt__patrones_a8260ef553b542ff44f63107e8dc5e977}} 
+\index{Cjt\_patrones@{Cjt\_patrones}!existe@{existe}}
+\index{existe@{existe}!Cjt\_patrones@{Cjt\_patrones}}
+\doxysubsubsection{\texorpdfstring{existe()}{existe()}}
+{\footnotesize\ttfamily bool Cjt\+\_\+patrones\+::existe (\begin{DoxyParamCaption}\item[{int \&}]{idp }\end{DoxyParamCaption}) const}
+
+
+
+Comprueba que el patron {\itshape idp} se encuentre en el conjunto de patrones de la plataforma. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve 1 (cierto) si el patron {\itshape idp} existe en el conjunto de patrones de la plataforma. En caso contrario devuelve 0 (falso). 
+\end{DoxyPostcond}
+
+
+Definición en la línea 63 del archivo Cjt\+\_\+patrones.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63                                        \{}
+\DoxyCodeLine{64     \textcolor{keywordtype}{int} size = \mbox{\hyperlink{class_cjt__patrones_a605e14866237f745c10631d64df42c4b}{VEC\_patrones}}.size();}
+\DoxyCodeLine{65     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=1; i <= size; ++i) \{}
+\DoxyCodeLine{66         \textcolor{keywordflow}{if} (i == idp) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{67     \}}
+\DoxyCodeLine{68     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{69 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__patrones_a0d371a7b647964023174cd172fe83791}\label{class_cjt__patrones_a0d371a7b647964023174cd172fe83791}} 
+\index{Cjt\_patrones@{Cjt\_patrones}!listar\_patrones@{listar\_patrones}}
+\index{listar\_patrones@{listar\_patrones}!Cjt\_patrones@{Cjt\_patrones}}
+\doxysubsubsection{\texorpdfstring{listar\_patrones()}{listar\_patrones()}}
+{\footnotesize\ttfamily void Cjt\+\_\+patrones\+::listar\+\_\+patrones (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Se listan los patrones de la colección por orden creciente de identificador. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se escribe los patrones de la plataforma por orden creciente de identificador. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 72 del archivo Cjt\+\_\+patrones.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{72                                    \{}
+\DoxyCodeLine{73     \textcolor{keywordtype}{int} n = \mbox{\hyperlink{class_cjt__patrones_a605e14866237f745c10631d64df42c4b}{VEC\_patrones}}.size();}
+\DoxyCodeLine{74     }
+\DoxyCodeLine{75     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{76         \mbox{\hyperlink{class_cjt__patrones_a605e14866237f745c10631d64df42c4b}{VEC\_patrones}}[i].escribir();}
+\DoxyCodeLine{77     \}}
+\DoxyCodeLine{78 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_cjt__patrones_a605e14866237f745c10631d64df42c4b}\label{class_cjt__patrones_a605e14866237f745c10631d64df42c4b}} 
+\index{Cjt\_patrones@{Cjt\_patrones}!VEC\_patrones@{VEC\_patrones}}
+\index{VEC\_patrones@{VEC\_patrones}!Cjt\_patrones@{Cjt\_patrones}}
+\doxysubsubsection{\texorpdfstring{VEC\_patrones}{VEC\_patrones}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_patron}{Patron}}$>$ Cjt\+\_\+patrones\+::\+V\+E\+C\+\_\+patrones\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Vector que contiene las clases \mbox{\hyperlink{class_patron}{Patron}} de todos los patrones la plataforma. 
+
+
+
+Definición en la línea 31 del archivo Cjt\+\_\+patrones.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_cjt__patrones_8hh}{Cjt\+\_\+patrones.\+hh}}\item 
+\mbox{\hyperlink{_cjt__patrones_8cc}{Cjt\+\_\+patrones.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,635 @@
+ENTRADA COMENTADA:
+
+12                                                                                                               //Numero de mensajes que se leen
+Antonio_machado_1                                                                                                //Cada mensaje tiene un identificador
+Si es bueno vivir, todavia es mejor son~ar, y lo mejor de todo, despertar                                        //El mensaje
+Albert_einstein_1
+El mundo no está en peligro por las malas personas sino por aquellas que permiten la maldad
+Arthur_schnitzler_1
+Estar preparado es importante, saber esperarlo es aun mas, pero aprovechar el momento adecuado es la clave de la vida
+Aristoteles_1
+El sabio no dice nunca todo lo que piensa, pero siempre piensa todo lo que dice
+Albert_einstein_2
+Hay dos cosas que son infinitas: el universo y la estupidez humana; de la primera no estoy muy seguro
+Aerosmith_1
+I don’t wanna miss a thing
+John_lennon_1
+Imagine all that people, living life in peace
+Billie_jean_1
+Billie Jean is not my lover. She’s just a girl who claims that I am the one. But this kid is not my son
+Black_is_black_1
+What I can do? ‘Cause I-I-I-I-I, I’m feeling blue
+Estopa_1
+Si duele un recuerdo, te cura el olvido 
+Estopa_2
+Esta noche es de esas noches en que andas por andar, en que bailas solo y en que ríes por no llorar
+The_Beatles_1
+Y al final el amor que recibes es igual al amor que entregas
+2                                                                                                                 //Numero de rejillas que se leen (validas)
+4 4                                                                                                               //Dimension y huecos de la rejilla respectivamente
+1 2 3 3 2 4 4 1                                                                                                   //posicion del hueco en la rejilla
+6 9
+1 3 1 5 2 4 3 1 4 2 4 4 5 1 5 5 6 6                                                                               //Rejilla grande
+2                                                                                                                 //Numero de patrones que se leen
+3 13 -1 34 -1 -1 -1                                                                                               //patron estandard
+82 -1 55 61 -1 -1 -1                                                                                              //patron estandard
+listar_mensajes
+listar_rejillas
+listar_patrones
+nuevo_mensaje                                                                                                     //Se registra un nuevo mensaje
+Estopa_3                                                                                                          //identificador
+No se que tiene en la boca, cuando me besar el alma me roza, con el corazón                                       //mensaje
+nuevo_mensaje
+Melendi_1
+Cierra los ojos, piensa en los demás, tú no sufres solo, quiérete algo más
+nm
+Albert_einstein_2
+Hay dos cosas que son infinitas: el universo y la estupidez humana; de la primera no estoy muy seguro
+nm
+Estopa_4
+Todo sigue igual que ayer, las mismas caras de siempre, el mismo llanto que me hizo llorar tanto tiempo, el mismo tiempo que perder
+nueva_rejilla                                                                                                      //An~ade una nueva rejilla
+8 16                                                                                                               //Rejilla grande
+1 2 1 4 2 2 2 5 3 1 3 8 4 1 4 5 5 7 6 3 6 8 7 4 7 1 7 7 8 2 8 5
+nueva_rejilla
+3 3                                                                                                                //Dimension incorrecta
+1 2 2 2 3 1
+nr                                                                                                                 //la rejilla con sus giros no cubre las NxN posiciones
+4 4
+1 2 2 2 3 4 4 3
+nuevo_patron                                                                                                       //An~ade un nuevo patron
+20 43 11 -1 -1 33 -1 76 88 -1 -1 21 -1 -1 -1                                                                       //Patron grande
+np
+60 -1 -1                                                                                                           //patron con solo raiz
+borra_mensaje Estopa_1                                                                                             //Borra el mensaje con el identificador marcado
+borra_mensaje The_Beatles_1
+bm Melendi_1
+bm Estopa_5                                                                                                        //El mensaje no existe
+lm                                                                                                                 //listar mensajes
+lr                                                                                                                 //listar rejillas
+lp                                                                                                                 //listar patrones
+codificar_rejilla 1                                                                                                //Codifica el siguiente mensaje con la rejilla con identificador marcado
+Hola, me puedes decir la hora?
+codificar_rejilla 2                                                                                                //Rejilla grande para mensaje de una sola palabra
+Hola 
+codificar_rejilla 1                                                                                                //Rejilla pequen~a con mensaje grande
+Cada equipo entregara una carpeta zip con tantos ficheros como juegos de pruebas haya preparado. Cada fichero ha de tener un juego de pruebas con la siguiente estructura:
+codificar_guardado_rejilla Aerosmith_1 3                                                                           //codifica el mensaje con el identificador marcado con la rejilla marcada
+cgr Aerosmith_1 1
+cgr Aerosmith_1 2
+cgr Aristoteles_1 0                                                                                                //No existe la rejilla
+codificar_guardado_rejilla Arthur_schnitzler_1 5                                                                   //No existe la rejilla
+codificar_guardado_rejilla Platon_1 1                                                                              //No existe el mensaje
+decodificar_rejilla 1                                                                                              //Decodificar mensaje grande con rejilla pequen~a
+lBvdoi Hen enoaiitCfoea,alrl  niauu enntgan lacrad  co eunar,nrascaa.apado ntcEr iebroen sa d soieo Clfotea Hrllqn cuiuienaa,el arode n~calepo  e, de ncpusloo e nruit   a.ra  q
+decodificar_rejilla 2                                                                                              //mensaje pequen~o con rejilla grande
+  S omi  ng  o s   m i  s          a
+decodificar_rejilla 1
+eS baaraminco d  nan eca clgrlao aa  v  .. er  .
+dr 0                                                                                                               //Rejilla que no existe
+imoonin ra  ctsz i az sicoominnr  .  t  .  i.
+dr 4                                                                                                               //Rejilla que no existe
+Si s  noy   z   ti   fnoe     li    
+dr 3
+Mis drsse  oan  amAlilgoley Ajamlbaner    t                             
+codificar_patron 1 10                                                                                              //codifica con el patron con identificador marcado y lo hace en bloques de 10
+Cuando amanece el dia...
+codificar_patron 2 100                                                                                             //Bloque grande
+La evaluaci´on de la competencia transversal “Treball en equip”se basa en la elaboraci´on de juegos de pruebas para la pr´actica. Los elementos b´asicos de esta evaluaci´on son los siguientes:
+codificar_patron 3 5                                                                                               //patron grande en bloques pequen~os
+Seguir la trayectoria que llevan las nubes y volver por la mañana igual que sale el sol, verás qué calentito retorcer las horas dando patadas al reloj
+cp 3 10                                                                                                            //Patron mas grande que el mensaje
+Adios
+codificar_guardado_patron Black_is_black_1 2 50                                                                    //codifica el mensaje con el identificador marcado con el patron marcado
+codificar_guardado_patron John_lennon_1 1 30
+cgp Melendi_2 3 10                                                                                                 //No existe el mensaje con el identificador marcado
+cgp Antonio_machado_1 4 67                                                                                         //Patron con solo raiz
+decodificar_patron 1 10                                                                                            //Decodifica el mensaje siguiente con el patron con el identificador marcado y bloques de taman~o 10
+F|q#0vo-urvnv#3nun#pl
+decodificar_patron 2 30
+4hFdMCrc9PXmVTW`=Lg\eTWdMXWf=]Xf;THCr`A]i\WT
+decodificar_patron 3 15
+m;4~18$4w$[z</$41!+%5y!$4QpA@*4.$n#K.4"ylp0By#1#zOYB
+dp 3 20                                                                                                            //Decodifica con patron grande
+d-'lA1!4+}R}01(K)1#1";(+SK)'uvNu1?4E4^41--"p01(
+dp 5 30                                                                                                            //Intenta decodificar un mensaje con un patron que no existe
+AbW`=]VTFQXrWXWVMPTegXcrIh=rFMr[9UJ?rf=EhaWTWc9PgX
+dp 4 40                                                                                                            //Decodifica con patron de solo raiz
++L\MRBAL\MBAFOQB\NRB\QB\NRBABP\E>PQ>\J>K[K>h\NRB\QB\NRFBOL\AF?RG>Ojjj
+
+
+
+
+
+
+
+
+
+
+
+ENTRADA SIN COMENTAR:
+
+12 
+Antonio_machado_1 
+Si es bueno vivir, todavia es mejor son~ar, y lo mejor de todo, despertar 
+Albert_einstein_1
+El mundo no está en peligro por las malas personas sino por aquellas que permiten la maldad
+Arthur_schnitzler_1
+Estar preparado es importante, saber esperarlo es aun mas, pero aprovechar el momento adecuado es la clave de la vida
+Aristoteles_1
+El sabio no dice nunca todo lo que piensa, pero siempre piensa todo lo que dice
+Albert_einstein_2
+Hay dos cosas que son infinitas: el universo y la estupidez humana; de la primera no estoy muy seguro
+Aerosmith_1
+I dont wanna miss a thing
+John_lennon_1
+Imagine all that people, living life in peace
+Billie_jean_1
+Billie Jean is not my lover. Shes just a girl who claims that I am the one. But this kid is not my son
+Black_is_black_1
+What I can do? Cause I-I-I-I-I, Im feeling blue
+Estopa_1
+Si duele un recuerdo, te cura el olvido 
+Estopa_2
+Esta noche es de esas noches en que andas por andar, en que bailas solo y en que ries por no llorar
+The_Beatles_1
+Y al final el amor que recibes es igual al amor que entregas
+2 
+4 4 
+1 2 3 4 2 2 4 1 
+6 9
+1 3 1 5 2 4 3 1 4 2 4 4 5 1 5 5 6 6
+2 
+3 13 -1 34 -1 -1 -1 
+82 -1 55 61 -1 -1 -1 
+listar_mensajes
+listar_rejillas
+listar_patrones
+nuevo_mensaje 
+Estopa_3 
+No se que tiene en la boca, cuando me besar el alma me roza, con el corazón 
+nuevo_mensaje
+Melendi_1
+Cierra los ojos, piensa en los demás, tú no sufres solo, quiérete algo más
+nm
+Albert_einstein_2
+Hay dos cosas que son infinitas: el universo y la estupidez humana; de la primera no estoy muy seguro
+nm
+Estopa_4
+Todo sigue igual que ayer, las mismas caras de siempre, el mismo llanto que me hizo llorar tanto tiempo, el mismo tiempo que perder
+nueva_rejilla
+6 9 
+2 1 3 5 4 3 4 6 1 1 2 5 4 5 1 2 3 6
+nueva_rejilla
+3 3 
+1 2 2 2 3 1
+nr 
+4 4
+1 2 2 2 3 4 4 3
+nuevo_patron
+20 43 11 -1 -1 33 -1 76 88 -1 -1 21 -1 -1 -1 
+np
+60 -1 -1 
+borra_mensaje Estopa_1 
+borra_mensaje The_Beatles_1
+bm Melendi_1
+bm Estopa_5
+lm 
+lr 
+lp
+codificar_rejilla 1
+Hola, me puedes decir la hora?
+codificar_rejilla 2 
+Hola 
+codificar_rejilla 1 
+Cada equipo entregara una carpeta zip con tantos ficheros como juegos de pruebas haya preparado. Cada fichero ha de tener un juego de pruebas con la siguiente estructura:
+codificar_guardado_rejilla Aerosmith_1 3 
+cgr Aerosmith_1 1
+cgr Aerosmith_1 2
+cgr Aristoteles_1 0 
+codificar_guardado_rejilla Arthur_schnitzler_1 5 
+codificar_guardado_rejilla Platon_1 1 
+decodificar_rejilla 1
+lBvdoi Hen enoaiitCfoea,alrl  niauu enntgan lacrad  co eunar,nrascaa.apado ntcEr iebroen sa d soieo Clfotea Hrllqn cuiuienaa,el arode n~calepo  e, de ncpusloo e nruit   a.ra  q
+decodificar_rejilla 2
+  S omi  ng  o s   m i  s          a
+decodificar_rejilla 1
+eS baaraminco d  nan eca clgrlao aa  v  .. er  .
+dr 0
+imoonin ra  ctsz i az sicoominnr  .  t  .  i.   
+dr 4
+Si s  noy   z   ti   fnoe     li    
+dr 3
+Mis drsse  oan  amAlilgoley Ajamlbaner    t                             
+codificar_patron 1 10 
+Cuando amanece el dia...
+codificar_patron 2 100 
+La evaluacion de la competencia transversal Treball en equip se basa en la elaboracion de juegos de pruebas para la practica. Los elementos basicos de esta evaluacion son los siguientes:
+codificar_patron 3 5 
+Seguir la trayectoria que llevan las nubes y volver por la man~ana igual que sale el sol, veras que calentito retorcer las horas dando patadas al reloj
+cp 3 10 
+Adios
+codificar_guardado_patron Black_is_black_1 2 50 
+codificar_guardado_patron John_lennon_1 1 30
+cgp Melendi_2 3 10 
+cgp Antonio_machado_1 4 67
+decodificar_patron 1 10
+F|q#0vo-urvnv#3nun#pl
+decodificar_patron 2 30
+4hFdMCrc9PXmVTW`=Lg\eTWdMXWf=]Xf;THCr`A]i\WT
+decodificar_patron 3 15
+m;4~18$4w$[z</$41!+%5y!$4QpA@*4.$n#K.4"ylp0By#1#zOYB
+dp 3 20
+d-'lA1!4+}R}01(K)1#1";(+SK)'uvNu1?4E4^41--"p01(
+dp 5 30
+AbW`=]VTFQXrWXWVMPTegXcrIh=rFMr[9UJ?rf=EhaWTWc9PgX
+dp 4 40
++L\MRBAL\MBAFOQB\NRB\QB\NRBABP\E>PQ>\J>K[K>h\NRB\QB\NRFBOL\AF?RG>Ojjj
+
+
+
+
+
+
+
+
+
+
+
+
+SALIDA COMENTADA:
+
+#listar_mensajes                                                                                        //Lista los mensajes por orden alfabetico de identificador
+Aerosmith_1
+"I dont wanna miss a thing"
+Albert_einstein_1
+"El mundo no está en peligro por las malas personas sino por aquellas que permiten la maldad"
+Albert_einstein_2
+"Hay dos cosas que son infinitas: el universo y la estupidez humana; de la primera no estoy muy seguro"
+Antonio_machado_1
+"Si es bueno vivir, todavia es mejor son~ar, y lo mejor de todo, despertar "
+Aristoteles_1
+"El sabio no dice nunca todo lo que piensa, pero siempre piensa todo lo que dice"
+Arthur_schnitzler_1
+"Estar preparado es importante, saber esperarlo es aun mas, pero aprovechar el momento adecuado es la clave de la vida"
+Billie_jean_1
+"Billie Jean is not my lover. Shes just a girl who claims that I am the one. But this kid is not my son"
+Black_is_black_1
+"What I can do? Cause I-I-I-I-I, Im feeling blue"
+Estopa_1
+"Si duele un recuerdo, te cura el olvido "
+Estopa_2
+"Esta noche es de esas noches en que andas por andar, en que bailas solo y en que ries por no llorar"
+John_lennon_1
+"Imagine all that people, living life in peace"
+The_Beatles_1
+"Y al final el amor que recibes es igual al amor que entregas"
+#listar_rejillas                                                                                     //Lista las rejillas por orden de inclusion
+Rejilla 1:                                                                                           //Numero de rejilla (identificador)
+4 4                                                                                                  //Dimension y numero de huecos
+(1,2) (2,2) (3,4) (4,1)
+(1,3) (3,1) (3,2) (4,4)
+(1,4) (2,1) (3,3) (4,3)
+(1,1) (2,3) (2,4) (4,2)
+Rejilla 2:
+6 9
+(1,3) (1,5) (2,4) (3,1) (4,2) (4,4) (5,1) (5,5) (6,6)
+(1,6) (2,1) (2,5) (3,2) (3,4) (4,1) (5,4) (6,3) (6,5)
+(1,1) (2,2) (2,6) (3,3) (3,5) (4,6) (5,3) (6,2) (6,4)
+(1,2) (1,4) (2,3) (3,6) (4,3) (4,5) (5,2) (5,6) (6,1)
+#listar_patrones                                                                                    //Lista los patrones por orden de inclusion
+Patron 1:                                                                                           //Numero de patron (identificador)
+(3(13()(34()()))())                                                                                 //Valores del patron
+Patron 2:
+(82()(55(61()())()))
+#nuevo_mensaje Estopa_3                                                                             //Se an~ade el mensaje con identificador marcado
+13
+#nuevo_mensaje Melendi_1
+14
+#nm Albert_einstein_2                                                                               //An~adimos unmensaje ya existente
+error: ya existe un mensaje con ese identificador
+#nm Estopa_4
+15
+#nueva_rejilla                                                                                      //Se an~ade una rejilla con identificador del resultado-1
+3
+#nueva_rejilla                                                                                      //No se an~ade la rejilla porque la dimension es incorrecta
+error: dimensiones incorrectas de la rejilla
+#nr                                                                                                 //No se an~ade porque cuando hacemos los giros repetimos posiciones en la rejilla
+error: la rejilla con sus giros no cubre todas las posiciones N x N
+#nuevo_patron                                                                                       //Se an~ade un patron con identificador del resultado-1
+3
+#np
+4
+#borra_mensaje Estopa_1                                                                             //Se borra el mensaje con el identificador marcado
+14
+#borra_mensaje The_Beatles_1
+13
+#bm Melendi_1
+12
+#bm Estopa_5                                                                                        //Intentamos borrar un mensaje que no existe
+error: el mensaje no existe
+#lm                                                                                                 //Se listan de nuevo los mensajes con los cambios hechos
+Aerosmith_1
+"I dont wanna miss a thing"
+Albert_einstein_1
+"El mundo no está en peligro por las malas personas sino por aquellas que permiten la maldad"
+Albert_einstein_2
+"Hay dos cosas que son infinitas: el universo y la estupidez humana; de la primera no estoy muy seguro"
+Antonio_machado_1
+"Si es bueno vivir, todavia es mejor son~ar, y lo mejor de todo, despertar "
+Aristoteles_1
+"El sabio no dice nunca todo lo que piensa, pero siempre piensa todo lo que dice"
+Arthur_schnitzler_1
+"Estar preparado es importante, saber esperarlo es aun mas, pero aprovechar el momento adecuado es la clave de la vida"
+Billie_jean_1
+"Billie Jean is not my lover. Shes just a girl who claims that I am the one. But this kid is not my son"
+Black_is_black_1
+"What I can do? Cause I-I-I-I-I, Im feeling blue"
+Estopa_2
+"Esta noche es de esas noches en que andas por andar, en que bailas solo y en que ries por no llorar"
+Estopa_3
+"No se que tiene en la boca, cuando me besar el alma me roza, con el corazón "
+Estopa_4
+"Todo sigue igual que ayer, las mismas caras de siempre, el mismo llanto que me hizo llorar tanto tiempo, el mismo tiempo que perder"
+John_lennon_1
+"Imagine all that people, living life in peace"
+#lr                                                                                             //Se listan de nuevo el conjunto de rejillas despues de an~adir alguna
+Rejilla 1:
+4 4
+(1,2) (2,2) (3,4) (4,1)
+(1,3) (3,1) (3,2) (4,4)
+(1,4) (2,1) (3,3) (4,3)
+(1,1) (2,3) (2,4) (4,2)
+Rejilla 2:
+6 9
+(1,3) (1,5) (2,4) (3,1) (4,2) (4,4) (5,1) (5,5) (6,6)
+(1,6) (2,1) (2,5) (3,2) (3,4) (4,1) (5,4) (6,3) (6,5)
+(1,1) (2,2) (2,6) (3,3) (3,5) (4,6) (5,3) (6,2) (6,4)
+(1,2) (1,4) (2,3) (3,6) (4,3) (4,5) (5,2) (5,6) (6,1)
+Rejilla 3:
+6 9
+(1,1) (1,2) (2,1) (2,5) (3,5) (3,6) (4,3) (4,5) (4,6)
+(1,3) (1,4) (2,2) (2,3) (2,4) (4,4) (5,1) (6,1) (6,2)
+(3,1) (3,2) (3,4) (4,1) (4,2) (5,2) (5,6) (6,5) (6,6)
+(1,5) (1,6) (2,6) (3,3) (5,3) (5,4) (5,5) (6,3) (6,4)
+#lp                                                                                           //Se listan de nuevo los patrones despues de an~adir alguno
+Patron 1:
+(3(13()(34()()))())
+Patron 2:
+(82()(55(61()())()))
+Patron 3:
+(20(43(11()())(33()(76(88()())(21()()))))())
+Patron 4:
+(60()())
+#codificar_rejilla 1                                                                          //Codificamos el mensaje dado en la entrada con la rejilla con el identificador marcado
+"dH, poes mula eeadr he?  loci ra"
+#codificar_rejilla 2                                                                          //Podemos ver que cuando utilizamos un mensaje de una sola palabra co una rejilla grande casi todo son espacios en blanco
+"  H o    l  a                       "
+#codificar_rejilla 1                                                                          //De forma contraria podemos ver que cuando utilizamos una rejilla pequen~a con un mensaje grande no hay muchos mas espacios que en el mensaje original
+"eC ipanteqodar ureaa gpe ucartannapn  to ctzisaom hs fo ercicjooeus peba drgosuea aephdo paay.rro achC h feadari  tr djuenue enesgeueo c pb doartn ui e sielaeng sca:t  tu ru  r"
+#codificar_guardado_rejilla Aerosmith_1 3                                                     //Es el resultado de codificar el mensaje con identificador marcado con la rejilla de identificador marcado
+"I nn  da mo a  tnthi iwasn   gs     "
+#cgr Aerosmith_1 1
+" Inan mit ndosaw stg    hi a   n"
+#cgr Aerosmith_1 2
+"a I  nn  dato hmi in t n  gsw   s  a"
+#cgr Aristoteles_1 0                                                                          //Intentamos codificar un mensaje con una rejilla que no existe
+error: la rejilla no existe
+#codificar_guardado_rejilla Arthur_schnitzler_1 5                                             //Intentamos codificar un mensaje con una rejilla que no existe
+error: la rejilla no existe
+#codificar_guardado_rejilla Platon_1 1                                                        //Intentamos codificar un mensaje que no existe
+error: el mensaje no existe
+#decodificar_rejilla 1                                                                        //Es el resultado de decodificar el mensaje dado por la entrada con la rejilla con identificador marcado
+"Bienvenido al Hotel California, un lugar encantador, una cara encantadora. Espacio de sobras en el Hotel California, en cualquier epoca del an~o, lo puedes encontrar aqui.     "
+#decodificar_rejilla 2                                                                        //Cuando la rejilla que utilizamos es muy grande quedan muchos espacios en blanco al final
+"Son mis amigos                      "
+#decodificar_rejilla 1
+"Saco mi bandera negra con la calavera...        "
+#dr 0                                                                                         //Intentamos decodificar con una rejilla que no existe
+error: la rejilla no existe
+#dr 4                                                                                         //Intentamos decodificar con una rejilla que no existe
+error: la rejilla no existe
+#dr 3
+"Mis amigos se llaman Alejandro y Albert                                 "
+#codificar_patron 1 10                                                                        //Codificamos el mensaje dado en la entrada con el patron con identificador dado, lo hacemos en bloques de taman~o marcado (en este caso 10)
+"F#dq'|#npdqrfhBro-gld;11"
+#codificar_patron 2 100                                                                       //Vemos como no afecta en nada si lo hacemos en un bloque grande o pequen~o
+"?TWXN?_h9A\bar<XWJTrVbEc=g=a;GTrLPTafi=eKTDr,PXU9J_r=LrXIS\crf=r:?fTrXFrDTWXD?UbJ?V\GLrW=]]hXZGfWBXrceMX:?frH?eTr_9rHPTVg\;Ter$bK]X_=KXagbKr:TK\;Mfr<CrXKRTr=TT_hT;\GLrfbaW_GfWfAEh\=LgXKw"
+#codificar_patron 3 5                                                                         //Vemos como no afecta en nada si lo hacemos en un bloque grande o pequen~o
+"g1{!+'K!lA)>u%'w@$}+uK&!'48!p8u:4w#(K#!$y?4%A+;!"''K%z448u+/u:3l0uK}r7u84|7yK(l.yKywA(;!7A+1'l54=*pAw-!p0)5)zA'1)z4w1'+.u?4s1'-(+&u:xzA%-)l&u?4l.4>yw1~"
+#cp 3 10                                                                                      //Patron mas grande que el mensaje, solo utiliza los valores del patron que necesite
+"U0}z5"
+#codificar_guardado_patron Black_is_black_1 2 50                                              //Codifica el mensaje con identificador marcado con el patron con identificador marcado, lo hacemos en bloques de taman~o marcado (en este caso 50)
+"J[9gW'rV9LrWb2W69SfXr<d<d<d<d'~r!KrYXXD\FZWUDSX"
+#codificar_guardado_patron John_lennon_1 1 30
+"Lzdj,{h-doo#7udwB}h|syh9#oly,{j-ol)r#vq#sh$ph"
+#cgp Melendi_2 3 10                                                                           //Intentamos codificar un mensaje que no existe
+error: el mensaje no existe
+#cgp Antonio_machado_1 4 67                                                                   //Codificamos un mensaje con un patron de solo raiz, vemos que se repiten bastantes letras ya que estamos sumando siempre el mismo valor
+"0F\BP\?RBKL\SFSFOh\QLA>SF>\BP\JBGLO\PLK[>Oh\V\IL\JBGLO\AB\QLALh\ABPMBOQ>O\"
+#decodificar_patron 1 10                                                                      //Decodificamos el mensaje dado por la entrada con el patron con identificador marcado, lo hacemos en bloques de taman~o marcado (en este caso 10)
+"Con mil rosas para mi"
+#decodificar_patron 2 30                                                                      //Vemos que da igual como sea el patron que siempre va a sacar el mensaje decodificado de la misma forma
+"Aunque parezca mentira que se escape mi vida"
+#decodificar_patron 3 15
+"Yo solo conozco el cielo de tu boca y me enveneno..."
+#dp 3 20
+"Para el viernes tenemos 2 trabajos y 3 examenes"
+#dp 5 30                                                                                      //Intentamos decodificar un mensaje con un patron que no existe
+error: el patron no existe
+#dp 4 40
+"No puedo pedirte que te quedes hasta man~na, que te quiero dibujar..."
+
+
+
+
+
+
+
+
+
+
+
+SALIDA SIN COMENTAR:
+
+#listar_mensajes
+Aerosmith_1
+"I dont wanna miss a thing"
+Albert_einstein_1
+"El mundo no está en peligro por las malas personas sino por aquellas que permiten la maldad"
+Albert_einstein_2
+"Hay dos cosas que son infinitas: el universo y la estupidez humana; de la primera no estoy muy seguro"
+Antonio_machado_1
+"Si es bueno vivir, todavia es mejor son~ar, y lo mejor de todo, despertar "
+Aristoteles_1
+"El sabio no dice nunca todo lo que piensa, pero siempre piensa todo lo que dice"
+Arthur_schnitzler_1
+"Estar preparado es importante, saber esperarlo es aun mas, pero aprovechar el momento adecuado es la clave de la vida"
+Billie_jean_1
+"Billie Jean is not my lover. Shes just a girl who claims that I am the one. But this kid is not my son"
+Black_is_black_1
+"What I can do? Cause I-I-I-I-I, Im feeling blue"
+Estopa_1
+"Si duele un recuerdo, te cura el olvido "
+Estopa_2
+"Esta noche es de esas noches en que andas por andar, en que bailas solo y en que ries por no llorar"
+John_lennon_1
+"Imagine all that people, living life in peace"
+The_Beatles_1
+"Y al final el amor que recibes es igual al amor que entregas"
+#listar_rejillas
+Rejilla 1:
+4 4
+(1,2) (2,2) (3,4) (4,1)
+(1,3) (3,1) (3,2) (4,4)
+(1,4) (2,1) (3,3) (4,3)
+(1,1) (2,3) (2,4) (4,2)
+Rejilla 2:
+6 9
+(1,3) (1,5) (2,4) (3,1) (4,2) (4,4) (5,1) (5,5) (6,6)
+(1,6) (2,1) (2,5) (3,2) (3,4) (4,1) (5,4) (6,3) (6,5)
+(1,1) (2,2) (2,6) (3,3) (3,5) (4,6) (5,3) (6,2) (6,4)
+(1,2) (1,4) (2,3) (3,6) (4,3) (4,5) (5,2) (5,6) (6,1)
+#listar_patrones
+Patron 1:
+(3(13()(34()()))())
+Patron 2:
+(82()(55(61()())()))
+#nuevo_mensaje Estopa_3
+13
+#nuevo_mensaje Melendi_1
+14
+#nm Albert_einstein_2
+error: ya existe un mensaje con ese identificador
+#nm Estopa_4
+15
+#nueva_rejilla
+3
+#nueva_rejilla
+error: dimensiones incorrectas de la rejilla
+#nr
+error: la rejilla con sus giros no cubre todas las posiciones N x N
+#nuevo_patron
+3
+#np
+4
+#borra_mensaje Estopa_1
+14
+#borra_mensaje The_Beatles_1
+13
+#bm Melendi_1
+12
+#bm Estopa_5
+error: el mensaje no existe
+#lm
+Aerosmith_1
+"I dont wanna miss a thing"
+Albert_einstein_1
+"El mundo no está en peligro por las malas personas sino por aquellas que permiten la maldad"
+Albert_einstein_2
+"Hay dos cosas que son infinitas: el universo y la estupidez humana; de la primera no estoy muy seguro"
+Antonio_machado_1
+"Si es bueno vivir, todavia es mejor son~ar, y lo mejor de todo, despertar "
+Aristoteles_1
+"El sabio no dice nunca todo lo que piensa, pero siempre piensa todo lo que dice"
+Arthur_schnitzler_1
+"Estar preparado es importante, saber esperarlo es aun mas, pero aprovechar el momento adecuado es la clave de la vida"
+Billie_jean_1
+"Billie Jean is not my lover. Shes just a girl who claims that I am the one. But this kid is not my son"
+Black_is_black_1
+"What I can do? Cause I-I-I-I-I, Im feeling blue"
+Estopa_2
+"Esta noche es de esas noches en que andas por andar, en que bailas solo y en que ries por no llorar"
+Estopa_3
+"No se que tiene en la boca, cuando me besar el alma me roza, con el corazón "
+Estopa_4
+"Todo sigue igual que ayer, las mismas caras de siempre, el mismo llanto que me hizo llorar tanto tiempo, el mismo tiempo que perder"
+John_lennon_1
+"Imagine all that people, living life in peace"
+#lr
+Rejilla 1:
+4 4
+(1,2) (2,2) (3,4) (4,1)
+(1,3) (3,1) (3,2) (4,4)
+(1,4) (2,1) (3,3) (4,3)
+(1,1) (2,3) (2,4) (4,2)
+Rejilla 2:
+6 9
+(1,3) (1,5) (2,4) (3,1) (4,2) (4,4) (5,1) (5,5) (6,6)
+(1,6) (2,1) (2,5) (3,2) (3,4) (4,1) (5,4) (6,3) (6,5)
+(1,1) (2,2) (2,6) (3,3) (3,5) (4,6) (5,3) (6,2) (6,4)
+(1,2) (1,4) (2,3) (3,6) (4,3) (4,5) (5,2) (5,6) (6,1)
+Rejilla 3:
+6 9
+(1,1) (1,2) (2,1) (2,5) (3,5) (3,6) (4,3) (4,5) (4,6)
+(1,3) (1,4) (2,2) (2,3) (2,4) (4,4) (5,1) (6,1) (6,2)
+(3,1) (3,2) (3,4) (4,1) (4,2) (5,2) (5,6) (6,5) (6,6)
+(1,5) (1,6) (2,6) (3,3) (5,3) (5,4) (5,5) (6,3) (6,4)
+#lp
+Patron 1:
+(3(13()(34()()))())
+Patron 2:
+(82()(55(61()())()))
+Patron 3:
+(20(43(11()())(33()(76(88()())(21()()))))())
+Patron 4:
+(60()())
+#codificar_rejilla 1
+"dH, poes mula eeadr he?  loci ra"
+#codificar_rejilla 2
+"  H o    l  a                       "
+#codificar_rejilla 1
+"eC ipanteqodar ureaa gpe ucartannapn  to ctzisaom hs fo ercicjooeus peba drgosuea aephdo paay.rro achC h feadari  tr djuenue enesgeueo c pb doartn ui e sielaeng sca:t  tu ru  r"
+#codificar_guardado_rejilla Aerosmith_1 3
+"I nn  da mo a  tnthi iwasn   gs     "
+#cgr Aerosmith_1 1
+" Inan mit ndosaw stg    hi a   n"
+#cgr Aerosmith_1 2
+"a I  nn  dato hmi in t n  gsw   s  a"
+#cgr Aristoteles_1 0
+error: la rejilla no existe
+#codificar_guardado_rejilla Arthur_schnitzler_1 5
+error: la rejilla no existe
+#codificar_guardado_rejilla Platon_1 1
+error: el mensaje no existe
+#decodificar_rejilla 1
+"Bienvenido al Hotel California, un lugar encantador, una cara encantadora. Espacio de sobras en el Hotel California, en cualquier epoca del an~o, lo puedes encontrar aqui.     "
+#decodificar_rejilla 2
+"Son mis amigos                      "
+#decodificar_rejilla 1
+"Saco mi bandera negra con la calavera...        "
+#dr 0
+error: la rejilla no existe
+#dr 4
+error: la rejilla no existe
+#dr 3
+"Mis amigos se llaman Alejandro y Albert                                 "
+#codificar_patron 1 10
+"F#dq'|#npdqrfhBro-gld;11"
+#codificar_patron 2 100
+"?TWXN?_h9A\bar<XWJTrVbEc=g=a;GTrLPTafi=eKTDr,PXU9J_r=LrXIS\crf=r:?fTrXFrDTWXD?UbJ?V\GLrW=]]hXZGfWBXrceMX:?frH?eTr_9rHPTVg\;Ter$bK]X_=KXagbKr:TK\;Mfr<CrXKRTr=TT_hT;\GLrfbaW_GfWfAEh\=LgXKw"
+#codificar_patron 3 5
+"g1{!+'K!lA)>u%'w@$}+uK&!'48!p8u:4w#(K#!$y?4%A+;!"''K%z448u+/u:3l0uK}r7u84|7yK(l.yKywA(;!7A+1'l54=*pAw-!p0)5)zA'1)z4w1'+.u?4s1'-(+&u:xzA%-)l&u?4l.4>yw1~"
+#cp 3 10
+"U0}z5"
+#codificar_guardado_patron Black_is_black_1 2 50
+"J[9gW'rV9LrWb2W69SfXr<d<d<d<d'~r!KrYXXD\FZWUDSX"
+#codificar_guardado_patron John_lennon_1 1 30
+"Lzdj,{h-doo#7udwB}h|syh9#oly,{j-ol)r#vq#sh$ph"
+#cgp Melendi_2 3 10
+error: el mensaje no existe
+#cgp Antonio_machado_1 4 67
+"0F\BP\?RBKL\SFSFOh\QLA>SF>\BP\JBGLO\PLK[>Oh\V\IL\JBGLO\AB\QLALh\ABPMBOQ>O\"
+#decodificar_patron 1 10
+"Con mil rosas para mi"
+#decodificar_patron 2 30
+"Aunque parezca mentira que se escape mi vida"
+#decodificar_patron 3 15
+"Yo solo conozco el cielo de tu boca y me enveneno..."
+#dp 3 20
+"Para el viernes tenemos 2 trabajos y 3 examenes"
+#dp 5 30
+error: el patron no existe
+#dp 4 40
+"No puedo pedirte que te quedes hasta man~na, que te quiero dibujar..."
+

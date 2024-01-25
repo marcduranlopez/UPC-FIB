@@ -1,0 +1,346 @@
+\hypertarget{class_sesion}{}\doxysection{Referencia de la Clase Sesion}
+\label{class_sesion}\index{Sesion@{Sesion}}
+
+
+Representa una sesión de la plataforma.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sesion_adf5a84efa8e2629b30ad89df74cfc0a2}{Sesion}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sesion_ac0757217015b1f7902fbcf15fb1d02cd}{Sesion}} (string s)
+\begin{DoxyCompactList}\small\item\em Creadora por nombre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sesion_a4b42fc1dd8b76eb1a2559c49ed7148b4}{leer\+\_\+string\+\_\+\+Bin\+Tree}} ()
+\begin{DoxyCompactList}\small\item\em Añade los problemas {\itshape p} introducidos en la entrada del programa al arbol binario de la sesion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sesion_aeb17dc35aa3279f42dab649f0c80a208}{actualiza\+\_\+problem\+\_\+enviables}} (string \&p, map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&problem\+\_\+enviables, map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&problem\+\_\+resueltos)
+\begin{DoxyCompactList}\small\item\em Actualiza el map de los problemas enviables de la sesión a la que pertenece el problema con identificador {\itshape p} despues de hacer el envio de este. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sesion_afe57d80eeed1067043bdd7169b60feb3}{devolver\+\_\+problema}} (map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&problem\+\_\+enviables, map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&problem\+\_\+resueltos)
+\begin{DoxyCompactList}\small\item\em Actualiza el map de los problemas que son enviables a la sesión teniendo en cuenta los problemas que se han resuleto hasta el momento. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_sesion_a3e659167a06be45eddd16109adbe843a}{problemas\+\_\+sesion}} ()
+\begin{DoxyCompactList}\small\item\em Se leen los identificadores de los problemas de la sesión implicitra de forma recursiva y se van añadiendo a un vector. Cuando acaba la recursividad devuelve el vector. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sesion_aaea59a9ef24497d7bea939267fbef122}{buscar\+\_\+problema}} (string \&p)
+\begin{DoxyCompactList}\small\item\em Consulta si el problema con identificador {\itshape p} pertenece al parametro implícito. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sesion_afbd29ac549cb95c601c703eddc4f7f2e}{escribir}} () const
+\begin{DoxyCompactList}\small\item\em Se escribe el número de problemas que forman la sesión de la sesion implícita y los identificadores de esos problemas en preorden. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ string $>$ \mbox{\hyperlink{class_sesion_af4817952ac84b390f90eb96a83fa0021}{buscar\+\_\+problema\+\_\+bin}} (string \&p, \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ string $>$ \&s)
+\begin{DoxyCompactList}\small\item\em Busca de forma recursiva la raiz del arbol o subarbol binario con identificador igual a {\itshape p}. Cuando lo encuentra devuelve el subarbol binario que tiene como raiz el identificador {\itshape p}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sesion_af09fa9256d9cf1d53c1627bc634633d3}{actualiza\+\_\+problem\+\_\+enviables\+\_\+bin}} (\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ string $>$ \&s, map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&problem\+\_\+enviables, map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&problem\+\_\+resueltos)
+\begin{DoxyCompactList}\small\item\em Recorre el arbol binario {\itshape s} recursivamente en preorden actualizando los problemas que son enviables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_sesion_a86a8763aedd2cd8ce1f0f3844c67c32f}{leer\+\_\+string\+\_\+\+Bin\+Tree}} (\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ string $>$ \&ses)
+\begin{DoxyCompactList}\small\item\em Añade los identificadores de los problemas {\itshape p} introducidos en la entrada del programa al arbol binario de la sesion. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_sesion_a24170e1d5c9def3ad9419afaf1d67778}{escribir\+\_\+string\+\_\+\+Bin\+Tree}} (const \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ string $>$ \&ses)
+\begin{DoxyCompactList}\small\item\em Escribe por el canal estandar de salida los identificadores de los problemas {\itshape p} que contiene el arbol binario de la sesion. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_sesion_af0d200fad1ec368d74776396b98d24fa}{size}} (\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ string $>$ ses)
+\begin{DoxyCompactList}\small\item\em Devuelve el numero de problemas que contiene el arbol binario (medida del \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}). \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_sesion_a4a9376d86457afb35948ad7ddc700277}{buscar\+\_\+problema}} (string \&p, const \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ string $>$ \&s)
+\begin{DoxyCompactList}\small\item\em Consulta si el problema con identificador {\itshape p} esta en el arbol binario de la sesion referenciado en el parametro explicito de la funcion. \end{DoxyCompactList}\item 
+static vector$<$ string $>$ \mbox{\hyperlink{class_sesion_aec29a71502eed911976beda2ed452139}{problemas\+\_\+sesion}} (const \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ string $>$ \&s, vector$<$ string $>$ \&problemas)
+\begin{DoxyCompactList}\small\item\em Se leen los identificadores de los problemas del arbol binario de forma recursiva y se van añadiendo a un vector. Cuando acaba la recursividad devuelve el vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ string $>$ \mbox{\hyperlink{class_sesion_a49b3008463dbab40f2db04ea9fd3450a}{sesion}}
+\begin{DoxyCompactList}\small\item\em Arbol binario que contiene todos los problemas de la sesion. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_sesion_a37445804eb7ac4c046492770f61edc85}{identif\+\_\+sesion}}
+\begin{DoxyCompactList}\small\item\em identificador de la sesion. ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa una sesión de la plataforma. 
+
+La sesión se representa con un identificador. Cada sesión contiene un número de problemas representados cada uno de ellos con un identificador. 
+
+Definición en la línea 26 del archivo Sesion.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_sesion_adf5a84efa8e2629b30ad89df74cfc0a2}\label{class_sesion_adf5a84efa8e2629b30ad89df74cfc0a2}} 
+\index{Sesion@{Sesion}!Sesion@{Sesion}}
+\index{Sesion@{Sesion}!Sesion@{Sesion}}
+\doxysubsubsection{\texorpdfstring{Sesion()}{Sesion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sesion\+::\+Sesion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+Se ejecuta automáticamente al declarar una sesión. \begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es una estructura de una sesión vacía. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_ac0757217015b1f7902fbcf15fb1d02cd}\label{class_sesion_ac0757217015b1f7902fbcf15fb1d02cd}} 
+\index{Sesion@{Sesion}!Sesion@{Sesion}}
+\index{Sesion@{Sesion}!Sesion@{Sesion}}
+\doxysubsubsection{\texorpdfstring{Sesion()}{Sesion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sesion\+::\+Sesion (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+
+
+Creadora por nombre. 
+
+Se ejecuta automáticamente al declarar una sesión. \begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es una estructura con la sesión {\itshape s}. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_sesion_a86a8763aedd2cd8ce1f0f3844c67c32f}\label{class_sesion_a86a8763aedd2cd8ce1f0f3844c67c32f}} 
+\index{Sesion@{Sesion}!leer\_string\_BinTree@{leer\_string\_BinTree}}
+\index{leer\_string\_BinTree@{leer\_string\_BinTree}!Sesion@{Sesion}}
+\doxysubsubsection{\texorpdfstring{leer\_string\_BinTree()}{leer\_string\_BinTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static void Sesion\+::leer\+\_\+string\+\_\+\+Bin\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ string $>$ \&}]{ses }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Añade los identificadores de los problemas {\itshape p} introducidos en la entrada del programa al arbol binario de la sesion. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe la sesion definida en el parametro implicito. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Utilizando recursividad se obtiene el arbol binario de la sesion con todos los identificadores de los problemas introducidos en el canal de entrada. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_a24170e1d5c9def3ad9419afaf1d67778}\label{class_sesion_a24170e1d5c9def3ad9419afaf1d67778}} 
+\index{Sesion@{Sesion}!escribir\_string\_BinTree@{escribir\_string\_BinTree}}
+\index{escribir\_string\_BinTree@{escribir\_string\_BinTree}!Sesion@{Sesion}}
+\doxysubsubsection{\texorpdfstring{escribir\_string\_BinTree()}{escribir\_string\_BinTree()}}
+{\footnotesize\ttfamily static void Sesion\+::escribir\+\_\+string\+\_\+\+Bin\+Tree (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ string $>$ \&}]{ses }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Escribe por el canal estandar de salida los identificadores de los problemas {\itshape p} que contiene el arbol binario de la sesion. 
+
+\begin{DoxyPrecond}{Precondición}
+El arbol binario de la sesion esta inicializado. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Utilizando recursividad se escribe por el canal estandar de salida los identificadores de los problemas {\itshape p} que contiene el arbol binario de la sesion. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_af0d200fad1ec368d74776396b98d24fa}\label{class_sesion_af0d200fad1ec368d74776396b98d24fa}} 
+\index{Sesion@{Sesion}!size@{size}}
+\index{size@{size}!Sesion@{Sesion}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily static int Sesion\+::size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ string $>$}]{ses }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Devuelve el numero de problemas que contiene el arbol binario (medida del \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}). 
+
+\begin{DoxyPrecond}{Precondición}
+El arbol binario de la sesion esta inicializado. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve el numero de problemas que contiene el arbol binario referenciado en el parametro explicito de la funcion. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_a4a9376d86457afb35948ad7ddc700277}\label{class_sesion_a4a9376d86457afb35948ad7ddc700277}} 
+\index{Sesion@{Sesion}!buscar\_problema@{buscar\_problema}}
+\index{buscar\_problema@{buscar\_problema}!Sesion@{Sesion}}
+\doxysubsubsection{\texorpdfstring{buscar\_problema()}{buscar\_problema()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static bool Sesion\+::buscar\+\_\+problema (\begin{DoxyParamCaption}\item[{string \&}]{p,  }\item[{const \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ string $>$ \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Consulta si el problema con identificador {\itshape p} esta en el arbol binario de la sesion referenciado en el parametro explicito de la funcion. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el problema {\itshape p} y el arbol binario de la sesion esta inicializado. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve 1 (cierto) si el problema con identificador {\itshape p} esta en el arbol binario de la sesion referenciado en el parametro explicito de la funcion. En caso contrario devuelve 0 (falso). 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_aec29a71502eed911976beda2ed452139}\label{class_sesion_aec29a71502eed911976beda2ed452139}} 
+\index{Sesion@{Sesion}!problemas\_sesion@{problemas\_sesion}}
+\index{problemas\_sesion@{problemas\_sesion}!Sesion@{Sesion}}
+\doxysubsubsection{\texorpdfstring{problemas\_sesion()}{problemas\_sesion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static vector$<$string$>$ Sesion\+::problemas\+\_\+sesion (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ string $>$ \&}]{s,  }\item[{vector$<$ string $>$ \&}]{problemas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Se leen los identificadores de los problemas del arbol binario de forma recursiva y se van añadiendo a un vector. Cuando acaba la recursividad devuelve el vector. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe la sesión implicita en la plataforma y el arbol binario de la sesion esta inicializado. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve un vector con los identificadores de los problemas de la sesión. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_af4817952ac84b390f90eb96a83fa0021}\label{class_sesion_af4817952ac84b390f90eb96a83fa0021}} 
+\index{Sesion@{Sesion}!buscar\_problema\_bin@{buscar\_problema\_bin}}
+\index{buscar\_problema\_bin@{buscar\_problema\_bin}!Sesion@{Sesion}}
+\doxysubsubsection{\texorpdfstring{buscar\_problema\_bin()}{buscar\_problema\_bin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$string$>$ Sesion\+::buscar\+\_\+problema\+\_\+bin (\begin{DoxyParamCaption}\item[{string \&}]{p,  }\item[{\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ string $>$ \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Busca de forma recursiva la raiz del arbol o subarbol binario con identificador igual a {\itshape p}. Cuando lo encuentra devuelve el subarbol binario que tiene como raiz el identificador {\itshape p}. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el problema {\itshape p} y el arbol binario de la sesion esta inicializado. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve el subarbol binario que tiene como raiz el identificador {\itshape p}. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_af09fa9256d9cf1d53c1627bc634633d3}\label{class_sesion_af09fa9256d9cf1d53c1627bc634633d3}} 
+\index{Sesion@{Sesion}!actualiza\_problem\_enviables\_bin@{actualiza\_problem\_enviables\_bin}}
+\index{actualiza\_problem\_enviables\_bin@{actualiza\_problem\_enviables\_bin}!Sesion@{Sesion}}
+\doxysubsubsection{\texorpdfstring{actualiza\_problem\_enviables\_bin()}{actualiza\_problem\_enviables\_bin()}}
+{\footnotesize\ttfamily void Sesion\+::actualiza\+\_\+problem\+\_\+enviables\+\_\+bin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ string $>$ \&}]{s,  }\item[{map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&}]{problem\+\_\+enviables,  }\item[{map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&}]{problem\+\_\+resueltos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Recorre el arbol binario {\itshape s} recursivamente en preorden actualizando los problemas que son enviables. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Los problemas enviables listados cumplen todos los prerrequisitos para ser enviados. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_a4b42fc1dd8b76eb1a2559c49ed7148b4}\label{class_sesion_a4b42fc1dd8b76eb1a2559c49ed7148b4}} 
+\index{Sesion@{Sesion}!leer\_string\_BinTree@{leer\_string\_BinTree}}
+\index{leer\_string\_BinTree@{leer\_string\_BinTree}!Sesion@{Sesion}}
+\doxysubsubsection{\texorpdfstring{leer\_string\_BinTree()}{leer\_string\_BinTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Sesion\+::leer\+\_\+string\+\_\+\+Bin\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Añade los problemas {\itshape p} introducidos en la entrada del programa al arbol binario de la sesion. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe la sesion definida en el parametro implicito. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se obtiene el arbol binario de la sesion con todos los problemas introducidos en la entrada. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_aeb17dc35aa3279f42dab649f0c80a208}\label{class_sesion_aeb17dc35aa3279f42dab649f0c80a208}} 
+\index{Sesion@{Sesion}!actualiza\_problem\_enviables@{actualiza\_problem\_enviables}}
+\index{actualiza\_problem\_enviables@{actualiza\_problem\_enviables}!Sesion@{Sesion}}
+\doxysubsubsection{\texorpdfstring{actualiza\_problem\_enviables()}{actualiza\_problem\_enviables()}}
+{\footnotesize\ttfamily void Sesion\+::actualiza\+\_\+problem\+\_\+enviables (\begin{DoxyParamCaption}\item[{string \&}]{p,  }\item[{map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&}]{problem\+\_\+enviables,  }\item[{map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&}]{problem\+\_\+resueltos }\end{DoxyParamCaption})}
+
+
+
+Actualiza el map de los problemas enviables de la sesión a la que pertenece el problema con identificador {\itshape p} despues de hacer el envio de este. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el problema {\itshape p}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se actualiza el map de problemas enviables con los problemas que cumplen todos los prerrequisitos para ser enviados. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_afe57d80eeed1067043bdd7169b60feb3}\label{class_sesion_afe57d80eeed1067043bdd7169b60feb3}} 
+\index{Sesion@{Sesion}!devolver\_problema@{devolver\_problema}}
+\index{devolver\_problema@{devolver\_problema}!Sesion@{Sesion}}
+\doxysubsubsection{\texorpdfstring{devolver\_problema()}{devolver\_problema()}}
+{\footnotesize\ttfamily void Sesion\+::devolver\+\_\+problema (\begin{DoxyParamCaption}\item[{map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&}]{problem\+\_\+enviables,  }\item[{map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&}]{problem\+\_\+resueltos }\end{DoxyParamCaption})}
+
+
+
+Actualiza el map de los problemas que son enviables a la sesión teniendo en cuenta los problemas que se han resuleto hasta el momento. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se actualiza el map de problemas enviables con los problemas que cumplen todos los prerrequisitos para ser enviados. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_a3e659167a06be45eddd16109adbe843a}\label{class_sesion_a3e659167a06be45eddd16109adbe843a}} 
+\index{Sesion@{Sesion}!problemas\_sesion@{problemas\_sesion}}
+\index{problemas\_sesion@{problemas\_sesion}!Sesion@{Sesion}}
+\doxysubsubsection{\texorpdfstring{problemas\_sesion()}{problemas\_sesion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily vector$<$string$>$ Sesion\+::problemas\+\_\+sesion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Se leen los identificadores de los problemas de la sesión implicitra de forma recursiva y se van añadiendo a un vector. Cuando acaba la recursividad devuelve el vector. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe la sesión implicita. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve un vector con los identificadores de los problemas de la sesión implicita. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_aaea59a9ef24497d7bea939267fbef122}\label{class_sesion_aaea59a9ef24497d7bea939267fbef122}} 
+\index{Sesion@{Sesion}!buscar\_problema@{buscar\_problema}}
+\index{buscar\_problema@{buscar\_problema}!Sesion@{Sesion}}
+\doxysubsubsection{\texorpdfstring{buscar\_problema()}{buscar\_problema()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Sesion\+::buscar\+\_\+problema (\begin{DoxyParamCaption}\item[{string \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Consulta si el problema con identificador {\itshape p} pertenece al parametro implícito. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el problema {\itshape p}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se imprime 1 (cierto) si el problema con identificador {\itshape p} pertenece al parametro implícito. En caso contrario devuelve 0 (falso). 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_afbd29ac549cb95c601c703eddc4f7f2e}\label{class_sesion_afbd29ac549cb95c601c703eddc4f7f2e}} 
+\index{Sesion@{Sesion}!escribir@{escribir}}
+\index{escribir@{escribir}!Sesion@{Sesion}}
+\doxysubsubsection{\texorpdfstring{escribir()}{escribir()}}
+{\footnotesize\ttfamily void Sesion\+::escribir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Se escribe el número de problemas que forman la sesión de la sesion implícita y los identificadores de esos problemas en preorden. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe la sesión con identificador {\itshape s}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se escribe el identificador y el número de problemas de la sesion implícita con sus correspondientes identificadores. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_sesion_a49b3008463dbab40f2db04ea9fd3450a}\label{class_sesion_a49b3008463dbab40f2db04ea9fd3450a}} 
+\index{Sesion@{Sesion}!sesion@{sesion}}
+\index{sesion@{sesion}!Sesion@{Sesion}}
+\doxysubsubsection{\texorpdfstring{sesion}{sesion}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$string$>$ Sesion\+::sesion\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Arbol binario que contiene todos los problemas de la sesion. 
+
+
+
+Definición en la línea 31 del archivo Sesion.\+hh.
+
+\mbox{\Hypertarget{class_sesion_a37445804eb7ac4c046492770f61edc85}\label{class_sesion_a37445804eb7ac4c046492770f61edc85}} 
+\index{Sesion@{Sesion}!identif\_sesion@{identif\_sesion}}
+\index{identif\_sesion@{identif\_sesion}!Sesion@{Sesion}}
+\doxysubsubsection{\texorpdfstring{identif\_sesion}{identif\_sesion}}
+{\footnotesize\ttfamily string Sesion\+::identif\+\_\+sesion\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+identificador de la sesion. ~\newline
+ 
+
+
+
+Definición en la línea 34 del archivo Sesion.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_sesion_8hh}{Sesion.\+hh}}\end{DoxyCompactItemize}

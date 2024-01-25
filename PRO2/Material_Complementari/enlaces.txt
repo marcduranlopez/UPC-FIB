@@ -1,0 +1,5 @@
+ https://www.cs.upc.edu/~jordicf/Teaching/programming/index.html -Transparències i algorismes fonamentals de PRO1
+ 
+ https://conclase.net/c/curso/cap0 - C++ con clase
+ 
+ https://cplusplus.com/reference/stl/ - Contenidors de la Standard Template Library

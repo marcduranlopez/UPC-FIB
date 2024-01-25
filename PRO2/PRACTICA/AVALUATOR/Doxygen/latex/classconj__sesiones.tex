@@ -1,0 +1,232 @@
+\hypertarget{classconj__sesiones}{}\doxysection{Referencia de la Clase conj\+\_\+sesiones}
+\label{classconj__sesiones}\index{conj\_sesiones@{conj\_sesiones}}
+
+
+Representa un conjunto de sesiones de la plataforma.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classconj__sesiones_a4522c42b20866334b98a9b73d59af5db}{conj\+\_\+sesiones}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__sesiones_a60f1ffd5e6f8adb9dc736b2e3ce297e9}{leer}} ()
+\begin{DoxyCompactList}\small\item\em Añade las sesiones {\itshape s} introducidas en la entrada del programa a un map {\itshape sesiones} que tiene como parametro clave el string de la sesion y como parametro asociado la misma clase \mbox{\hyperlink{class_sesion}{Sesion}}. Es el parametro implicito de la funcion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__sesiones_a9635d3e99c59634e39a1f2d59d66df55}{nueva\+\_\+sesion}} (string \&s)
+\begin{DoxyCompactList}\small\item\em Añade una nueva sesión con identificador {\itshape s} al conjunto de sesiones. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__sesiones_a80d0668a5b9993e3f39fadca47211d7f}{actualiza\+\_\+problem\+\_\+enviables}} (string \&p, string \&s, map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&problem\+\_\+enviables, map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&problem\+\_\+resueltos)
+\begin{DoxyCompactList}\small\item\em Actualiza el map de los problemas que son enviables a la sesión {\itshape s} a la que pertenece el problema con identificador {\itshape p} despues de hacer el envio de este. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__sesiones_a54eed5f599e5166c396e71c4065177a5}{devolver\+\_\+problema}} (string \&s, map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&problem\+\_\+enviables, map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&problem\+\_\+resueltos)
+\begin{DoxyCompactList}\small\item\em Actualiza el map de los problemas que son enviables a la sesión {\itshape s} teniendo en cuenta los problemas que se han resuleto hasta el momento. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classconj__sesiones_aecad7faf7c92b622719edd9b9765e157}{buscar\+\_\+problema}} (string \&s, string \&p)
+\begin{DoxyCompactList}\small\item\em Consulta si la sesion con identificador {\itshape s} contiene el problema con identificador {\itshape p}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classconj__sesiones_a3478e6d8721a623fe1bbf1f2800cb577}{existe}} (string \&s) const
+\begin{DoxyCompactList}\small\item\em Comprueba que la sesión {\itshape s} se encuentre en el conjunto de sesiones de la plataforma. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \mbox{\hyperlink{classconj__sesiones_a8ed7e0bd1e4c184977536f7bda19d6ac}{problemas\+\_\+sesion}} (string s)
+\begin{DoxyCompactList}\small\item\em Se leen los identificadores de los problemas de la sesión {\itshape s} de forma recursiva y se van añadiendo a un vector. Cuando acaba la recursividad devuelve el vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__sesiones_a33206166c9d1e21a79efe15a25ca529a}{listar\+\_\+sesiones}} () const
+\begin{DoxyCompactList}\small\item\em Se listan las sesiones actuales de la plataforma, ordenadas crecientemente por su identificador y mostrando, para cada sesión, el número de problemas que la forman y los identificadores de dichos problemas, siguiendo su estructura de prerequisitos en postorden. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__sesiones_a5df9ef952bc73b967bd9da0821d5fadc}{escribir\+\_\+sesion}} (string \&s) const
+\begin{DoxyCompactList}\small\item\em Se indica, siguiendo la estructura de prerequisitos en postorden, el número de problemas que forman las sesión {\itshape s} y sus identificadores. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ string, \mbox{\hyperlink{class_sesion}{Sesion}} $>$ \mbox{\hyperlink{classconj__sesiones_a2b1e900d8393770fd27ad1467ad14055}{sesiones}}
+\begin{DoxyCompactList}\small\item\em Map (string -\/ \mbox{\hyperlink{class_sesion}{Sesion}}) que tiene como parametro clave los identificadores de las sesiones de la plataforma y como parametro asociado la clase \mbox{\hyperlink{class_sesion}{Sesion}} correspondiente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa un conjunto de sesiones de la plataforma. 
+
+Cada sesión del conjunto es representado con un nombre que ira seguida de una secuencia de identificadores de problemas, siguiendo un recorrido en preorden de su estructura de prerequisitos. 
+
+Definición en la línea 24 del archivo conj\+\_\+sesiones.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classconj__sesiones_a4522c42b20866334b98a9b73d59af5db}\label{classconj__sesiones_a4522c42b20866334b98a9b73d59af5db}} 
+\index{conj\_sesiones@{conj\_sesiones}!conj\_sesiones@{conj\_sesiones}}
+\index{conj\_sesiones@{conj\_sesiones}!conj\_sesiones@{conj\_sesiones}}
+\doxysubsubsection{\texorpdfstring{conj\_sesiones()}{conj\_sesiones()}}
+{\footnotesize\ttfamily conj\+\_\+sesiones\+::conj\+\_\+sesiones (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+Se ejecuta automáticamente al declarar un conjunto de sesiones. \begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es una estructura de conjunto de sesiones vacía. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classconj__sesiones_a60f1ffd5e6f8adb9dc736b2e3ce297e9}\label{classconj__sesiones_a60f1ffd5e6f8adb9dc736b2e3ce297e9}} 
+\index{conj\_sesiones@{conj\_sesiones}!leer@{leer}}
+\index{leer@{leer}!conj\_sesiones@{conj\_sesiones}}
+\doxysubsubsection{\texorpdfstring{leer()}{leer()}}
+{\footnotesize\ttfamily void conj\+\_\+sesiones\+::leer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Añade las sesiones {\itshape s} introducidas en la entrada del programa a un map {\itshape sesiones} que tiene como parametro clave el string de la sesion y como parametro asociado la misma clase \mbox{\hyperlink{class_sesion}{Sesion}}. Es el parametro implicito de la funcion. 
+
+\begin{DoxyPrecond}{Precondición}
+La clase {\itshape \mbox{\hyperlink{classconj__sesiones}{conj\+\_\+sesiones}}} esta inicializada. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se obtiene el map {\itshape sesiones} con todas las sesiones introducidas en el canal de entrada del programa y sus respectivas clases \mbox{\hyperlink{class_sesion}{Sesion}}. Estan ordenadas por orden alfabetico. Queda como parametro implicito del \mbox{\hyperlink{classconj__sesiones}{conj\+\_\+sesiones}}. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__sesiones_a9635d3e99c59634e39a1f2d59d66df55}\label{classconj__sesiones_a9635d3e99c59634e39a1f2d59d66df55}} 
+\index{conj\_sesiones@{conj\_sesiones}!nueva\_sesion@{nueva\_sesion}}
+\index{nueva\_sesion@{nueva\_sesion}!conj\_sesiones@{conj\_sesiones}}
+\doxysubsubsection{\texorpdfstring{nueva\_sesion()}{nueva\_sesion()}}
+{\footnotesize\ttfamily void conj\+\_\+sesiones\+::nueva\+\_\+sesion (\begin{DoxyParamCaption}\item[{string \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Añade una nueva sesión con identificador {\itshape s} al conjunto de sesiones. 
+
+\begin{DoxyPrecond}{Precondición}
+La sesión {\itshape s} no existe en el conjunto de sesiones. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parámetro implícito pasa a contener el conjunto de sesiones original más {\itshape s}. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__sesiones_a80d0668a5b9993e3f39fadca47211d7f}\label{classconj__sesiones_a80d0668a5b9993e3f39fadca47211d7f}} 
+\index{conj\_sesiones@{conj\_sesiones}!actualiza\_problem\_enviables@{actualiza\_problem\_enviables}}
+\index{actualiza\_problem\_enviables@{actualiza\_problem\_enviables}!conj\_sesiones@{conj\_sesiones}}
+\doxysubsubsection{\texorpdfstring{actualiza\_problem\_enviables()}{actualiza\_problem\_enviables()}}
+{\footnotesize\ttfamily void conj\+\_\+sesiones\+::actualiza\+\_\+problem\+\_\+enviables (\begin{DoxyParamCaption}\item[{string \&}]{p,  }\item[{string \&}]{s,  }\item[{map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&}]{problem\+\_\+enviables,  }\item[{map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&}]{problem\+\_\+resueltos }\end{DoxyParamCaption})}
+
+
+
+Actualiza el map de los problemas que son enviables a la sesión {\itshape s} a la que pertenece el problema con identificador {\itshape p} despues de hacer el envio de este. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el problema {\itshape p} y la sesión {\itshape s}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se actualiza el map de problemas enviables con los problemas que cumplen todos los prerrequisitos para ser enviados. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__sesiones_a54eed5f599e5166c396e71c4065177a5}\label{classconj__sesiones_a54eed5f599e5166c396e71c4065177a5}} 
+\index{conj\_sesiones@{conj\_sesiones}!devolver\_problema@{devolver\_problema}}
+\index{devolver\_problema@{devolver\_problema}!conj\_sesiones@{conj\_sesiones}}
+\doxysubsubsection{\texorpdfstring{devolver\_problema()}{devolver\_problema()}}
+{\footnotesize\ttfamily void conj\+\_\+sesiones\+::devolver\+\_\+problema (\begin{DoxyParamCaption}\item[{string \&}]{s,  }\item[{map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&}]{problem\+\_\+enviables,  }\item[{map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&}]{problem\+\_\+resueltos }\end{DoxyParamCaption})}
+
+
+
+Actualiza el map de los problemas que son enviables a la sesión {\itshape s} teniendo en cuenta los problemas que se han resuleto hasta el momento. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe la sesión {\itshape s}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se actualiza el map de problemas enviables con los problemas que cumplen todos los prerrequisitos para ser enviados. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__sesiones_aecad7faf7c92b622719edd9b9765e157}\label{classconj__sesiones_aecad7faf7c92b622719edd9b9765e157}} 
+\index{conj\_sesiones@{conj\_sesiones}!buscar\_problema@{buscar\_problema}}
+\index{buscar\_problema@{buscar\_problema}!conj\_sesiones@{conj\_sesiones}}
+\doxysubsubsection{\texorpdfstring{buscar\_problema()}{buscar\_problema()}}
+{\footnotesize\ttfamily bool conj\+\_\+sesiones\+::buscar\+\_\+problema (\begin{DoxyParamCaption}\item[{string \&}]{s,  }\item[{string \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Consulta si la sesion con identificador {\itshape s} contiene el problema con identificador {\itshape p}. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe la sesion {\itshape s} y el problema {\itshape p}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve 1 (cierto) si el problema {\itshape p} pertenece a la sesion {\itshape s}. En caso contrario devuelve 0 (falso). 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__sesiones_a3478e6d8721a623fe1bbf1f2800cb577}\label{classconj__sesiones_a3478e6d8721a623fe1bbf1f2800cb577}} 
+\index{conj\_sesiones@{conj\_sesiones}!existe@{existe}}
+\index{existe@{existe}!conj\_sesiones@{conj\_sesiones}}
+\doxysubsubsection{\texorpdfstring{existe()}{existe()}}
+{\footnotesize\ttfamily bool conj\+\_\+sesiones\+::existe (\begin{DoxyParamCaption}\item[{string \&}]{s }\end{DoxyParamCaption}) const}
+
+
+
+Comprueba que la sesión {\itshape s} se encuentre en el conjunto de sesiones de la plataforma. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve 1 (cierto) si la sesión {\itshape s} existe en el conjunto de sesiones de la plataforma. En caso contrario devuelve 0 (falso). 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__sesiones_a8ed7e0bd1e4c184977536f7bda19d6ac}\label{classconj__sesiones_a8ed7e0bd1e4c184977536f7bda19d6ac}} 
+\index{conj\_sesiones@{conj\_sesiones}!problemas\_sesion@{problemas\_sesion}}
+\index{problemas\_sesion@{problemas\_sesion}!conj\_sesiones@{conj\_sesiones}}
+\doxysubsubsection{\texorpdfstring{problemas\_sesion()}{problemas\_sesion()}}
+{\footnotesize\ttfamily vector$<$string$>$ conj\+\_\+sesiones\+::problemas\+\_\+sesion (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+
+
+Se leen los identificadores de los problemas de la sesión {\itshape s} de forma recursiva y se van añadiendo a un vector. Cuando acaba la recursividad devuelve el vector. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe la sesión {\itshape s} en la plataforma. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve un vector con los identificadores de los problemas de la sesión {\itshape s}. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__sesiones_a33206166c9d1e21a79efe15a25ca529a}\label{classconj__sesiones_a33206166c9d1e21a79efe15a25ca529a}} 
+\index{conj\_sesiones@{conj\_sesiones}!listar\_sesiones@{listar\_sesiones}}
+\index{listar\_sesiones@{listar\_sesiones}!conj\_sesiones@{conj\_sesiones}}
+\doxysubsubsection{\texorpdfstring{listar\_sesiones()}{listar\_sesiones()}}
+{\footnotesize\ttfamily void conj\+\_\+sesiones\+::listar\+\_\+sesiones (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Se listan las sesiones actuales de la plataforma, ordenadas crecientemente por su identificador y mostrando, para cada sesión, el número de problemas que la forman y los identificadores de dichos problemas, siguiendo su estructura de prerequisitos en postorden. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Imprime un listado con las sesiones actuales de la plataforma, ordenadas crecientemente por identificador y para cada sesión imprime el número de problemas y sus identificadores en postorden. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__sesiones_a5df9ef952bc73b967bd9da0821d5fadc}\label{classconj__sesiones_a5df9ef952bc73b967bd9da0821d5fadc}} 
+\index{conj\_sesiones@{conj\_sesiones}!escribir\_sesion@{escribir\_sesion}}
+\index{escribir\_sesion@{escribir\_sesion}!conj\_sesiones@{conj\_sesiones}}
+\doxysubsubsection{\texorpdfstring{escribir\_sesion()}{escribir\_sesion()}}
+{\footnotesize\ttfamily void conj\+\_\+sesiones\+::escribir\+\_\+sesion (\begin{DoxyParamCaption}\item[{string \&}]{s }\end{DoxyParamCaption}) const}
+
+
+
+Se indica, siguiendo la estructura de prerequisitos en postorden, el número de problemas que forman las sesión {\itshape s} y sus identificadores. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe la sesión {\itshape s} en la plataforma. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se imprime el número de problemas que forman la sesión {\itshape s} y sus identificadores. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classconj__sesiones_a2b1e900d8393770fd27ad1467ad14055}\label{classconj__sesiones_a2b1e900d8393770fd27ad1467ad14055}} 
+\index{conj\_sesiones@{conj\_sesiones}!sesiones@{sesiones}}
+\index{sesiones@{sesiones}!conj\_sesiones@{conj\_sesiones}}
+\doxysubsubsection{\texorpdfstring{sesiones}{sesiones}}
+{\footnotesize\ttfamily map$<$string, \mbox{\hyperlink{class_sesion}{Sesion}}$>$ conj\+\_\+sesiones\+::sesiones\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Map (string -\/ \mbox{\hyperlink{class_sesion}{Sesion}}) que tiene como parametro clave los identificadores de las sesiones de la plataforma y como parametro asociado la clase \mbox{\hyperlink{class_sesion}{Sesion}} correspondiente. 
+
+
+
+Definición en la línea 29 del archivo conj\+\_\+sesiones.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{conj__sesiones_8hh}{conj\+\_\+sesiones.\+hh}}\end{DoxyCompactItemize}

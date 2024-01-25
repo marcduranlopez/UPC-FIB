@@ -1,0 +1,333 @@
+\hypertarget{class_usuario}{}\doxysection{Referencia de la Clase Usuario}
+\label{class_usuario}\index{Usuario@{Usuario}}
+
+
+Representa un \mbox{\hyperlink{class_usuario}{Usuario}} de la plataforma.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_usuario_aa85a5371a098dfba5449140d9b8a472f}{Usuario}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_usuario_a43ca6e75cf431a455baaf8aec923021a}{Usuario}} (string u)
+\begin{DoxyCompactList}\small\item\em Creadora por nombre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_usuario_a19b58d1139f9d8dc5486607e18eb5cac}{inscribir}} (int \&c, \mbox{\hyperlink{classconj__cursos}{conj\+\_\+cursos}} \&curs, \mbox{\hyperlink{classconj__sesiones}{conj\+\_\+sesiones}} \&s)
+\begin{DoxyCompactList}\small\item\em Inscribe al usuario definido en el parametro implícito en el curso con identificador {\itshape c}. ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_usuario_a6f5b7ae16c56e455b85bd41d205a79e6}{decrementar\+\_\+inscritos}} (\mbox{\hyperlink{classconj__cursos}{conj\+\_\+cursos}} \&cc)
+\begin{DoxyCompactList}\small\item\em Disminuye en uno el numero de usuarios inscritos al curso al que está inscrito el usuario definido en el parámetro implícito. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_usuario_a00bc1a3af96add6c716fc2934e42dfef}{intentos\+\_\+problema}} (string \&p)
+\begin{DoxyCompactList}\small\item\em Se agrega a un map (string -\/ int) el problema con identificador {\itshape p} si no estaba ya previamente y se contabiliza cuantos envios ha hecho el usuario implicto a ese problema {\itshape p}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_usuario_ad8de77018dc9ba1cb4f6ea5d5ca2d539}{agregar\+\_\+problema\+\_\+resuelto}} (string \&p)
+\begin{DoxyCompactList}\small\item\em Se agrega el problema con identificador {\itshape p} a los problemas resueltos del usuario implícito mediante un map (string -\/ \mbox{\hyperlink{class_problema}{Problema}}). Como se utiliza un map, estan ordenados por identificador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_usuario_afe4e5c9ce5013da2a413652af9b4224a}{envio\+\_\+usuario}} (string \&p, int \&r, \mbox{\hyperlink{classconj__problemas}{conj\+\_\+problemas}} \&cp, \mbox{\hyperlink{classconj__sesiones}{conj\+\_\+sesiones}} \&cs, \mbox{\hyperlink{classconj__cursos}{conj\+\_\+cursos}} \&cc)
+\begin{DoxyCompactList}\small\item\em Se actualizan los parametros del usuario implicito dependiento del resultado del envio {\itshape r} (si es envio con exito {\itshape r} = 1, en caso contrario {\itshape r} = 0 ) de un nuevo envío al problema {\itshape p} del usuario implícito. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_usuario_aa8b3fb5f9ab3b36a2173b32b265f19c5}{curso\+\_\+usuario}} () const
+\begin{DoxyCompactList}\small\item\em Se indica el identificador del curso en el que está inscrito el usuario {\itshape u} o un 0 si no está inscrito en ninguno. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_usuario_a7750b3558f812a3e330009f04b262d60}{p\+\_\+resueltos}} () const
+\begin{DoxyCompactList}\small\item\em Se escriben los elementos del map problemas resueltos del usuario implicito y para cada uno de ellos se imprime el numero de envios. Como utiliza un map estos estan ordenados por identificador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_usuario_a49faca17d28c201c2d6a525479d85b39}{p\+\_\+enviables}} () const
+\begin{DoxyCompactList}\small\item\em Se escriben los elementos del map problemas enviables del usuario implicito y para cada uno de ellos se imprime el numero de envios. Como utiliza un map estos estan ordenados por identificador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_usuario_a2c5cad96439c216cf980664f85ef3dda}{escribir}} () const
+\begin{DoxyCompactList}\small\item\em Se escibe para el usuario implicito, su identificador, cuántos envíos en total ha realizado, cuántos problemas ha resuelto satisfactoriamente, cuántos problemas ha intentado resolver (al menos ha hecho un envío), y el identificador del curso en el que está inscrito o un 0 si no está inscrito en ninguno. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_usuario_a8465a6edaa016924b39c38724e56d304}{usuario}}
+\begin{DoxyCompactList}\small\item\em identificador del usuario. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_usuario_a9ca62e4de9060a5188ec50d748dec211}{env\+\_\+totales\+\_\+usuario}}
+\begin{DoxyCompactList}\small\item\em Número total de envíos que ha realizado el usuario. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_usuario_acf36f881520ad0e5f152622bf610abe1}{curso\+\_\+inscrito}}
+\begin{DoxyCompactList}\small\item\em Identificador del curso en el que esta inscrito el usuario. 0 si no esta inscrito a ningun curso. \end{DoxyCompactList}\item 
+map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \mbox{\hyperlink{class_usuario_a95306b55b90f407db111942e2d08edae}{problem\+\_\+resueltos}}
+\begin{DoxyCompactList}\small\item\em Map (string -\/ \mbox{\hyperlink{class_problema}{Problema}}) que tiene como parametro clave los identificadores de los problemas que ha resuelto el usuario y como parametro asociado la clase \mbox{\hyperlink{class_problema}{Problema}} correspondiente. \end{DoxyCompactList}\item 
+map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \mbox{\hyperlink{class_usuario_af1e97cb4aa76c03fe99524e08b9b17e3}{problem\+\_\+enviables}}
+\begin{DoxyCompactList}\small\item\em Map (string -\/ \mbox{\hyperlink{class_problema}{Problema}}) que tiene como parametro clave los identificadores de los problemas enviables para el usuario y como parametro asociado la clase \mbox{\hyperlink{class_problema}{Problema}} correspondiente. \end{DoxyCompactList}\item 
+map$<$ string, int $>$ \mbox{\hyperlink{class_usuario_af1748d44d8028ec8e813d4013b34c954}{intentos\+\_\+problema\+\_\+p}}
+\begin{DoxyCompactList}\small\item\em Map (string -\/ int) que tiene como parametro clave los identificadores de los problemas que ha intentado resolver (al menos ha hecho un envío) el usuario y como parametro asociado el contador de envios de cada uno de ellos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa un \mbox{\hyperlink{class_usuario}{Usuario}} de la plataforma. 
+
+El usuario se representa con un identificador. Algunas de las características de cada usuario son, por ejemplo, cuántos envíos en total ha realizado, cuántos problemas ha resuelto satisfactoriamente, cuántos problemas ha intentado resolver, y el curso donde está inscrito o no. 
+
+Definición en la línea 27 del archivo Usuario.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_usuario_aa85a5371a098dfba5449140d9b8a472f}\label{class_usuario_aa85a5371a098dfba5449140d9b8a472f}} 
+\index{Usuario@{Usuario}!Usuario@{Usuario}}
+\index{Usuario@{Usuario}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{Usuario()}{Usuario()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Usuario\+::\+Usuario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+Se ejecuta automáticamente al declarar un usuario. \begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es una estructura de un usuario vacía. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_usuario_a43ca6e75cf431a455baaf8aec923021a}\label{class_usuario_a43ca6e75cf431a455baaf8aec923021a}} 
+\index{Usuario@{Usuario}!Usuario@{Usuario}}
+\index{Usuario@{Usuario}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{Usuario()}{Usuario()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Usuario\+::\+Usuario (\begin{DoxyParamCaption}\item[{string}]{u }\end{DoxyParamCaption})}
+
+
+
+Creadora por nombre. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es una estructura del usuario. {\itshape u}. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_usuario_a19b58d1139f9d8dc5486607e18eb5cac}\label{class_usuario_a19b58d1139f9d8dc5486607e18eb5cac}} 
+\index{Usuario@{Usuario}!inscribir@{inscribir}}
+\index{inscribir@{inscribir}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{inscribir()}{inscribir()}}
+{\footnotesize\ttfamily void Usuario\+::inscribir (\begin{DoxyParamCaption}\item[{int \&}]{c,  }\item[{\mbox{\hyperlink{classconj__cursos}{conj\+\_\+cursos}} \&}]{curs,  }\item[{\mbox{\hyperlink{classconj__sesiones}{conj\+\_\+sesiones}} \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Inscribe al usuario definido en el parametro implícito en el curso con identificador {\itshape c}. ~\newline
+ 
+
+\begin{DoxyPrecond}{Precondición}
+El usuario implícito no está inscrito en otro curso que no ha sido completado y existe el curso {\itshape c}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se escribe el número de usuarios inscritos al curso {\itshape c} despues de inscribir al usuario implícito a este. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_usuario_a6f5b7ae16c56e455b85bd41d205a79e6}\label{class_usuario_a6f5b7ae16c56e455b85bd41d205a79e6}} 
+\index{Usuario@{Usuario}!decrementar\_inscritos@{decrementar\_inscritos}}
+\index{decrementar\_inscritos@{decrementar\_inscritos}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{decrementar\_inscritos()}{decrementar\_inscritos()}}
+{\footnotesize\ttfamily void Usuario\+::decrementar\+\_\+inscritos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classconj__cursos}{conj\+\_\+cursos}} \&}]{cc }\end{DoxyParamCaption})}
+
+
+
+Disminuye en uno el numero de usuarios inscritos al curso al que está inscrito el usuario definido en el parámetro implícito. 
+
+\begin{DoxyPrecond}{Precondición}
+El usuario implícito esta inscrito a un curso. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El numero de usuarios inscritos al curso en el que esta inscrito el usuario implícito es los inscritos previamente menos uno. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_usuario_a00bc1a3af96add6c716fc2934e42dfef}\label{class_usuario_a00bc1a3af96add6c716fc2934e42dfef}} 
+\index{Usuario@{Usuario}!intentos\_problema@{intentos\_problema}}
+\index{intentos\_problema@{intentos\_problema}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{intentos\_problema()}{intentos\_problema()}}
+{\footnotesize\ttfamily void Usuario\+::intentos\+\_\+problema (\begin{DoxyParamCaption}\item[{string \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Se agrega a un map (string -\/ int) el problema con identificador {\itshape p} si no estaba ya previamente y se contabiliza cuantos envios ha hecho el usuario implicto a ese problema {\itshape p}. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el problema con identificador {\itshape p}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se actualiza el map anterior (string -\/ int) con los identificadores de problemas que han sido enviados previamente al menos una vez por el usuario implicito (parametro clave del map) mas el identificador{\itshape p} si no habia sido enviado antes. Tambien se actualiza el parametro asociado del map, se suma uno al contador de envios de ese problema. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_usuario_ad8de77018dc9ba1cb4f6ea5d5ca2d539}\label{class_usuario_ad8de77018dc9ba1cb4f6ea5d5ca2d539}} 
+\index{Usuario@{Usuario}!agregar\_problema\_resuelto@{agregar\_problema\_resuelto}}
+\index{agregar\_problema\_resuelto@{agregar\_problema\_resuelto}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{agregar\_problema\_resuelto()}{agregar\_problema\_resuelto()}}
+{\footnotesize\ttfamily void Usuario\+::agregar\+\_\+problema\+\_\+resuelto (\begin{DoxyParamCaption}\item[{string \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Se agrega el problema con identificador {\itshape p} a los problemas resueltos del usuario implícito mediante un map (string -\/ \mbox{\hyperlink{class_problema}{Problema}}). Como se utiliza un map, estan ordenados por identificador. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el problema con identificador {\itshape p}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el map anterior de problemas resueltos del usuario implicto mas el problema con identificador {\itshape p}. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_usuario_afe4e5c9ce5013da2a413652af9b4224a}\label{class_usuario_afe4e5c9ce5013da2a413652af9b4224a}} 
+\index{Usuario@{Usuario}!envio\_usuario@{envio\_usuario}}
+\index{envio\_usuario@{envio\_usuario}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{envio\_usuario()}{envio\_usuario()}}
+{\footnotesize\ttfamily void Usuario\+::envio\+\_\+usuario (\begin{DoxyParamCaption}\item[{string \&}]{p,  }\item[{int \&}]{r,  }\item[{\mbox{\hyperlink{classconj__problemas}{conj\+\_\+problemas}} \&}]{cp,  }\item[{\mbox{\hyperlink{classconj__sesiones}{conj\+\_\+sesiones}} \&}]{cs,  }\item[{\mbox{\hyperlink{classconj__cursos}{conj\+\_\+cursos}} \&}]{cc }\end{DoxyParamCaption})}
+
+
+
+Se actualizan los parametros del usuario implicito dependiento del resultado del envio {\itshape r} (si es envio con exito {\itshape r} = 1, en caso contrario {\itshape r} = 0 ) de un nuevo envío al problema {\itshape p} del usuario implícito. 
+
+\begin{DoxyPrecond}{Precondición}
+El usuario implícito está registrado e inscrito en un curso donde aparece el problema con identificador {\itshape p} y que este pertenece al conjunto de problemas a los que el parámetro implícito puede enviar una solución por cumplir los prerrequisitos. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se actualiza las estadísticas del parámetro implícito del problema con identificador {\itshape p}. Si {\itshape r} = 1 también tambien se actualizadan los problemas enviables y resueltos del usuario implícito. En el caso de que se haya completado el curso al que pertenece {\itshape p} el usuario implícito deja de estar inscrito en él. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_usuario_aa8b3fb5f9ab3b36a2173b32b265f19c5}\label{class_usuario_aa8b3fb5f9ab3b36a2173b32b265f19c5}} 
+\index{Usuario@{Usuario}!curso\_usuario@{curso\_usuario}}
+\index{curso\_usuario@{curso\_usuario}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{curso\_usuario()}{curso\_usuario()}}
+{\footnotesize\ttfamily int Usuario\+::curso\+\_\+usuario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Se indica el identificador del curso en el que está inscrito el usuario {\itshape u} o un 0 si no está inscrito en ninguno. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el usuario {\itshape u} en la plataforma. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se imprime el identificador del curso en el que está inscrito el usuario {\itshape u} o un 0 si no está inscrito en ninguno. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_usuario_a7750b3558f812a3e330009f04b262d60}\label{class_usuario_a7750b3558f812a3e330009f04b262d60}} 
+\index{Usuario@{Usuario}!p\_resueltos@{p\_resueltos}}
+\index{p\_resueltos@{p\_resueltos}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{p\_resueltos()}{p\_resueltos()}}
+{\footnotesize\ttfamily void Usuario\+::p\+\_\+resueltos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Se escriben los elementos del map problemas resueltos del usuario implicito y para cada uno de ellos se imprime el numero de envios. Como utiliza un map estos estan ordenados por identificador. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se imprimen los identificadores del map problemas resueltos del usuario implicito y para cada uno de ellos se escribe el numero de envios (buscando en el map intentos\+\_\+problema\+\_\+p). 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_usuario_a49faca17d28c201c2d6a525479d85b39}\label{class_usuario_a49faca17d28c201c2d6a525479d85b39}} 
+\index{Usuario@{Usuario}!p\_enviables@{p\_enviables}}
+\index{p\_enviables@{p\_enviables}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{p\_enviables()}{p\_enviables()}}
+{\footnotesize\ttfamily void Usuario\+::p\+\_\+enviables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Se escriben los elementos del map problemas enviables del usuario implicito y para cada uno de ellos se imprime el numero de envios. Como utiliza un map estos estan ordenados por identificador. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se imprimen los identificadores del map problemas enviables del usuario implicito y para cada uno de ellos se escribe el numero de envios (buscando en el map intentos\+\_\+problema\+\_\+p). 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_usuario_a2c5cad96439c216cf980664f85ef3dda}\label{class_usuario_a2c5cad96439c216cf980664f85ef3dda}} 
+\index{Usuario@{Usuario}!escribir@{escribir}}
+\index{escribir@{escribir}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{escribir()}{escribir()}}
+{\footnotesize\ttfamily void Usuario\+::escribir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Se escibe para el usuario implicito, su identificador, cuántos envíos en total ha realizado, cuántos problemas ha resuelto satisfactoriamente, cuántos problemas ha intentado resolver (al menos ha hecho un envío), y el identificador del curso en el que está inscrito o un 0 si no está inscrito en ninguno. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Imprime para el usuario implicito, su identificador, sus envíos totales realizados, los problemas resueltos y los que ha intentado resolver y, por último, el identificador el curso donde está inscrito. Si no está inscrito en ninguno se imprime un 0. ~\newline
+ 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_usuario_a8465a6edaa016924b39c38724e56d304}\label{class_usuario_a8465a6edaa016924b39c38724e56d304}} 
+\index{Usuario@{Usuario}!usuario@{usuario}}
+\index{usuario@{usuario}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{usuario}{usuario}}
+{\footnotesize\ttfamily string Usuario\+::usuario\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+identificador del usuario. 
+
+
+
+Definición en la línea 32 del archivo Usuario.\+hh.
+
+\mbox{\Hypertarget{class_usuario_a9ca62e4de9060a5188ec50d748dec211}\label{class_usuario_a9ca62e4de9060a5188ec50d748dec211}} 
+\index{Usuario@{Usuario}!env\_totales\_usuario@{env\_totales\_usuario}}
+\index{env\_totales\_usuario@{env\_totales\_usuario}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{env\_totales\_usuario}{env\_totales\_usuario}}
+{\footnotesize\ttfamily int Usuario\+::env\+\_\+totales\+\_\+usuario\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Número total de envíos que ha realizado el usuario. 
+
+
+
+Definición en la línea 35 del archivo Usuario.\+hh.
+
+\mbox{\Hypertarget{class_usuario_acf36f881520ad0e5f152622bf610abe1}\label{class_usuario_acf36f881520ad0e5f152622bf610abe1}} 
+\index{Usuario@{Usuario}!curso\_inscrito@{curso\_inscrito}}
+\index{curso\_inscrito@{curso\_inscrito}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{curso\_inscrito}{curso\_inscrito}}
+{\footnotesize\ttfamily int Usuario\+::curso\+\_\+inscrito\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Identificador del curso en el que esta inscrito el usuario. 0 si no esta inscrito a ningun curso. 
+
+
+
+Definición en la línea 38 del archivo Usuario.\+hh.
+
+\mbox{\Hypertarget{class_usuario_a95306b55b90f407db111942e2d08edae}\label{class_usuario_a95306b55b90f407db111942e2d08edae}} 
+\index{Usuario@{Usuario}!problem\_resueltos@{problem\_resueltos}}
+\index{problem\_resueltos@{problem\_resueltos}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{problem\_resueltos}{problem\_resueltos}}
+{\footnotesize\ttfamily map$<$string, \mbox{\hyperlink{class_problema}{Problema}}$>$ Usuario\+::problem\+\_\+resueltos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Map (string -\/ \mbox{\hyperlink{class_problema}{Problema}}) que tiene como parametro clave los identificadores de los problemas que ha resuelto el usuario y como parametro asociado la clase \mbox{\hyperlink{class_problema}{Problema}} correspondiente. 
+
+
+
+Definición en la línea 41 del archivo Usuario.\+hh.
+
+\mbox{\Hypertarget{class_usuario_af1e97cb4aa76c03fe99524e08b9b17e3}\label{class_usuario_af1e97cb4aa76c03fe99524e08b9b17e3}} 
+\index{Usuario@{Usuario}!problem\_enviables@{problem\_enviables}}
+\index{problem\_enviables@{problem\_enviables}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{problem\_enviables}{problem\_enviables}}
+{\footnotesize\ttfamily map$<$string, \mbox{\hyperlink{class_problema}{Problema}}$>$ Usuario\+::problem\+\_\+enviables\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Map (string -\/ \mbox{\hyperlink{class_problema}{Problema}}) que tiene como parametro clave los identificadores de los problemas enviables para el usuario y como parametro asociado la clase \mbox{\hyperlink{class_problema}{Problema}} correspondiente. 
+
+
+
+Definición en la línea 44 del archivo Usuario.\+hh.
+
+\mbox{\Hypertarget{class_usuario_af1748d44d8028ec8e813d4013b34c954}\label{class_usuario_af1748d44d8028ec8e813d4013b34c954}} 
+\index{Usuario@{Usuario}!intentos\_problema\_p@{intentos\_problema\_p}}
+\index{intentos\_problema\_p@{intentos\_problema\_p}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{intentos\_problema\_p}{intentos\_problema\_p}}
+{\footnotesize\ttfamily map$<$string, int$>$ Usuario\+::intentos\+\_\+problema\+\_\+p\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Map (string -\/ int) que tiene como parametro clave los identificadores de los problemas que ha intentado resolver (al menos ha hecho un envío) el usuario y como parametro asociado el contador de envios de cada uno de ellos. 
+
+
+
+Definición en la línea 47 del archivo Usuario.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_usuario_8hh}{Usuario.\+hh}}\end{DoxyCompactItemize}

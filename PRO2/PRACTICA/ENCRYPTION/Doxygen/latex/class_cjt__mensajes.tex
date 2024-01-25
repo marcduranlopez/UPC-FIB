@@ -1,0 +1,292 @@
+\hypertarget{class_cjt__mensajes}{}\doxysection{Referencia de la Clase Cjt\+\_\+mensajes}
+\label{class_cjt__mensajes}\index{Cjt\_mensajes@{Cjt\_mensajes}}
+
+
+Representa un conjunto de mensajes inrtroducidas en la plataforma.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cjt__mensajes_ae41d6f14fc0292300c9f4ce1a0897abc}{Cjt\+\_\+mensajes}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__mensajes_a50f5598e798d7006d6c2805857090a3d}{leer}} ()
+\begin{DoxyCompactList}\small\item\em Añade los mensajes {\itshape idm} introducidos en la entrada del programa a un map {\itshape M\+A\+P\+\_\+mensajes} que tiene como parámetro clave el string identificador del mensaje y como parámetro asociado la misma clase \mbox{\hyperlink{class_mensaje}{Mensaje}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__mensajes_af50aac65d9c990ef3adfd9d6f6a92935}{nuevo\+\_\+mensaje}} (string \&idm)
+\begin{DoxyCompactList}\small\item\em Añade un nuevo mensaje con identificador {\itshape idm} al conjunto de mensajes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__mensajes_a6dfc23a9f32e1d53a3b1c9be95163a48}{borra\+\_\+mensaje}} (string \&idm)
+\begin{DoxyCompactList}\small\item\em Suprime el mensaje con identificador {\itshape idm} del conjunto de mensajes. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cjt__mensajes_ab386edaf857f4514003ee1e15cb77e43}{existe}} (string \&idm) const
+\begin{DoxyCompactList}\small\item\em Comprueba que el mensaje {\itshape idm} se encuentre en el conjunto de mensajes de la plataforma. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_cjt__mensajes_a7152f1ea034c5ec07ef86d83efe29195}{obtener\+\_\+mensaje}} (string \&idm)
+\begin{DoxyCompactList}\small\item\em Busca el mensaje con identificador {\itshape idm}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__mensajes_a3cf6baf19b331292052552edf1a411a2}{listar\+\_\+mensajes}} ()
+\begin{DoxyCompactList}\small\item\em Se listan los mensajes de la colección ordenados alfabeticamente por su identificador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ string, \mbox{\hyperlink{class_mensaje}{Mensaje}} $>$ \mbox{\hyperlink{class_cjt__mensajes_a2ff62968c3f5fa1afac5aa6bc52f2bf2}{M\+A\+P\+\_\+mensajes}}
+\begin{DoxyCompactList}\small\item\em Map (string -\/ \mbox{\hyperlink{class_mensaje}{Mensaje}}) que tiene como parámetro clave los identificadores de los mensajes {\itshape idm} del sistema y como parámetro asociado la clase \mbox{\hyperlink{class_mensaje}{Mensaje}} correspondiente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa un conjunto de mensajes inrtroducidas en la plataforma. 
+
+Cada mensajes del conjunto es representado con un identificador {\itshape idm}. Como prerrequisito no puede haber dos mensajes en el sistema con el mismo identificador. 
+
+Definición en la línea 25 del archivo Cjt\+\_\+mensajes.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_cjt__mensajes_ae41d6f14fc0292300c9f4ce1a0897abc}\label{class_cjt__mensajes_ae41d6f14fc0292300c9f4ce1a0897abc}} 
+\index{Cjt\_mensajes@{Cjt\_mensajes}!Cjt\_mensajes@{Cjt\_mensajes}}
+\index{Cjt\_mensajes@{Cjt\_mensajes}!Cjt\_mensajes@{Cjt\_mensajes}}
+\doxysubsubsection{\texorpdfstring{Cjt\_mensajes()}{Cjt\_mensajes()}}
+{\footnotesize\ttfamily Cjt\+\_\+mensajes\+::\+Cjt\+\_\+mensajes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+Se ejecuta automáticamente al declarar un conjunto de mensajes. \begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un conjunto de mensajes vacío. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 4 del archivo Cjt\+\_\+mensajes.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4                            \{}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_cjt__mensajes_a50f5598e798d7006d6c2805857090a3d}\label{class_cjt__mensajes_a50f5598e798d7006d6c2805857090a3d}} 
+\index{Cjt\_mensajes@{Cjt\_mensajes}!leer@{leer}}
+\index{leer@{leer}!Cjt\_mensajes@{Cjt\_mensajes}}
+\doxysubsubsection{\texorpdfstring{leer()}{leer()}}
+{\footnotesize\ttfamily void Cjt\+\_\+mensajes\+::leer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Añade los mensajes {\itshape idm} introducidos en la entrada del programa a un map {\itshape M\+A\+P\+\_\+mensajes} que tiene como parámetro clave el string identificador del mensaje y como parámetro asociado la misma clase \mbox{\hyperlink{class_mensaje}{Mensaje}}. 
+
+\begin{DoxyPrecond}{Precondición}
+La clase {\itshape \mbox{\hyperlink{class_cjt__mensajes}{Cjt\+\_\+mensajes}}} está inicializada. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se obtiene el map {\itshape M\+A\+P\+\_\+mensajes} con todos los identificadores introducidos en el canal de entrada del programa y sus respectivas clases \mbox{\hyperlink{class_mensaje}{Mensaje}}. Están ordenados por orden alfabético (propiedad del map). 
+\end{DoxyPostcond}
+
+
+Definición en la línea 9 del archivo Cjt\+\_\+mensajes.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9                         \{}
+\DoxyCodeLine{10     \textcolor{keywordtype}{int} num\_msj;}
+\DoxyCodeLine{11     cin >> num\_msj;}
+\DoxyCodeLine{12     \textcolor{keywordtype}{string} idm;}
+\DoxyCodeLine{13     \textcolor{keywordtype}{string} s;}
+\DoxyCodeLine{14     \textcolor{keywordtype}{string} words;}
+\DoxyCodeLine{15     }
+\DoxyCodeLine{16     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < num\_msj; ++i) \{}
+\DoxyCodeLine{17         \mbox{\hyperlink{class_mensaje}{Mensaje}} msj;}
+\DoxyCodeLine{18         cin >> idm;}
+\DoxyCodeLine{19 \textcolor{comment}{//         }}
+\DoxyCodeLine{20         getline(cin,s);}
+\DoxyCodeLine{21         getline(cin,words); }
+\DoxyCodeLine{22         }
+\DoxyCodeLine{23         msj.\mbox{\hyperlink{class_mensaje_a49c9a429d8199b7b782402e9390f1934}{rellenar\_parametros}}(idm,words);}
+\DoxyCodeLine{24         }
+\DoxyCodeLine{25         \mbox{\hyperlink{class_cjt__mensajes_a2ff62968c3f5fa1afac5aa6bc52f2bf2}{MAP\_mensajes}}.insert(make\_pair(idm, msj));}
+\DoxyCodeLine{26     \}}
+\DoxyCodeLine{27 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__mensajes_af50aac65d9c990ef3adfd9d6f6a92935}\label{class_cjt__mensajes_af50aac65d9c990ef3adfd9d6f6a92935}} 
+\index{Cjt\_mensajes@{Cjt\_mensajes}!nuevo\_mensaje@{nuevo\_mensaje}}
+\index{nuevo\_mensaje@{nuevo\_mensaje}!Cjt\_mensajes@{Cjt\_mensajes}}
+\doxysubsubsection{\texorpdfstring{nuevo\_mensaje()}{nuevo\_mensaje()}}
+{\footnotesize\ttfamily void Cjt\+\_\+mensajes\+::nuevo\+\_\+mensaje (\begin{DoxyParamCaption}\item[{string \&}]{idm }\end{DoxyParamCaption})}
+
+
+
+Añade un nuevo mensaje con identificador {\itshape idm} al conjunto de mensajes. 
+
+\begin{DoxyPrecond}{Precondición}
+El mensaje {\itshape idm} no existe en el conjunto de mensajes. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parámetro implícito pasa a contener el conjunto de mensajes original más {\itshape idm} e imprime el número de mensajes totales despues de añadirlo. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 30 del archivo Cjt\+\_\+mensajes.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                                             \{}
+\DoxyCodeLine{31     \mbox{\hyperlink{class_mensaje}{Mensaje}} msj;}
+\DoxyCodeLine{32     \textcolor{keywordtype}{string} words;}
+\DoxyCodeLine{33     \textcolor{keywordtype}{string} s;}
+\DoxyCodeLine{34     }
+\DoxyCodeLine{35     getline(cin,s);}
+\DoxyCodeLine{36     getline(cin,words);}
+\DoxyCodeLine{37     }
+\DoxyCodeLine{38     msj.\mbox{\hyperlink{class_mensaje_a49c9a429d8199b7b782402e9390f1934}{rellenar\_parametros}}(idm,words);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \mbox{\hyperlink{class_cjt__mensajes_a2ff62968c3f5fa1afac5aa6bc52f2bf2}{MAP\_mensajes}}.insert(make\_pair(idm,msj));}
+\DoxyCodeLine{41     cout << \mbox{\hyperlink{class_cjt__mensajes_a2ff62968c3f5fa1afac5aa6bc52f2bf2}{MAP\_mensajes}}.size() << endl;}
+\DoxyCodeLine{42 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__mensajes_a6dfc23a9f32e1d53a3b1c9be95163a48}\label{class_cjt__mensajes_a6dfc23a9f32e1d53a3b1c9be95163a48}} 
+\index{Cjt\_mensajes@{Cjt\_mensajes}!borra\_mensaje@{borra\_mensaje}}
+\index{borra\_mensaje@{borra\_mensaje}!Cjt\_mensajes@{Cjt\_mensajes}}
+\doxysubsubsection{\texorpdfstring{borra\_mensaje()}{borra\_mensaje()}}
+{\footnotesize\ttfamily void Cjt\+\_\+mensajes\+::borra\+\_\+mensaje (\begin{DoxyParamCaption}\item[{string \&}]{idm }\end{DoxyParamCaption})}
+
+
+
+Suprime el mensaje con identificador {\itshape idm} del conjunto de mensajes. 
+
+\begin{DoxyPrecond}{Precondición}
+El mensaje {\itshape idm} existe en el conjunto de mensajes. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parámetro implícito pasa a contener el conjunto de mensajes original menos {\itshape idm}. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 45 del archivo Cjt\+\_\+mensajes.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45                                             \{}
+\DoxyCodeLine{46     \mbox{\hyperlink{class_cjt__mensajes_a2ff62968c3f5fa1afac5aa6bc52f2bf2}{MAP\_mensajes}}.erase(idm);}
+\DoxyCodeLine{47     cout << \mbox{\hyperlink{class_cjt__mensajes_a2ff62968c3f5fa1afac5aa6bc52f2bf2}{MAP\_mensajes}}.size() << endl;}
+\DoxyCodeLine{48 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__mensajes_ab386edaf857f4514003ee1e15cb77e43}\label{class_cjt__mensajes_ab386edaf857f4514003ee1e15cb77e43}} 
+\index{Cjt\_mensajes@{Cjt\_mensajes}!existe@{existe}}
+\index{existe@{existe}!Cjt\_mensajes@{Cjt\_mensajes}}
+\doxysubsubsection{\texorpdfstring{existe()}{existe()}}
+{\footnotesize\ttfamily bool Cjt\+\_\+mensajes\+::existe (\begin{DoxyParamCaption}\item[{string \&}]{idm }\end{DoxyParamCaption}) const}
+
+
+
+Comprueba que el mensaje {\itshape idm} se encuentre en el conjunto de mensajes de la plataforma. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve 1 (cierto) si el mensaje {\itshape idm} existe en el conjunto de mensajes de la plataforma. En caso contrario devuelve 0 (falso). 
+\end{DoxyPostcond}
+
+
+Definición en la línea 51 del archivo Cjt\+\_\+mensajes.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{51                                           \{}
+\DoxyCodeLine{52     map<string,Mensaje>::const\_iterator it = \mbox{\hyperlink{class_cjt__mensajes_a2ff62968c3f5fa1afac5aa6bc52f2bf2}{MAP\_mensajes}}.find(idm);}
+\DoxyCodeLine{53     \textcolor{keywordflow}{if} (it == \mbox{\hyperlink{class_cjt__mensajes_a2ff62968c3f5fa1afac5aa6bc52f2bf2}{MAP\_mensajes}}.end()) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{54     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{55 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__mensajes_a7152f1ea034c5ec07ef86d83efe29195}\label{class_cjt__mensajes_a7152f1ea034c5ec07ef86d83efe29195}} 
+\index{Cjt\_mensajes@{Cjt\_mensajes}!obtener\_mensaje@{obtener\_mensaje}}
+\index{obtener\_mensaje@{obtener\_mensaje}!Cjt\_mensajes@{Cjt\_mensajes}}
+\doxysubsubsection{\texorpdfstring{obtener\_mensaje()}{obtener\_mensaje()}}
+{\footnotesize\ttfamily string Cjt\+\_\+mensajes\+::obtener\+\_\+mensaje (\begin{DoxyParamCaption}\item[{string \&}]{idm }\end{DoxyParamCaption})}
+
+
+
+Busca el mensaje con identificador {\itshape idm}. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el mensaje con identificador {\itshape idm}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve el mensaje con identificador {\itshape idm}. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 57 del archivo Cjt\+\_\+mensajes.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57                                                 \{}
+\DoxyCodeLine{58      map<string,Mensaje>::iterator it = \mbox{\hyperlink{class_cjt__mensajes_a2ff62968c3f5fa1afac5aa6bc52f2bf2}{MAP\_mensajes}}.find(idm);}
+\DoxyCodeLine{59      \textcolor{keywordflow}{return} it-\/>second.obtener\_mensaje();}
+\DoxyCodeLine{60 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__mensajes_a3cf6baf19b331292052552edf1a411a2}\label{class_cjt__mensajes_a3cf6baf19b331292052552edf1a411a2}} 
+\index{Cjt\_mensajes@{Cjt\_mensajes}!listar\_mensajes@{listar\_mensajes}}
+\index{listar\_mensajes@{listar\_mensajes}!Cjt\_mensajes@{Cjt\_mensajes}}
+\doxysubsubsection{\texorpdfstring{listar\_mensajes()}{listar\_mensajes()}}
+{\footnotesize\ttfamily void Cjt\+\_\+mensajes\+::listar\+\_\+mensajes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Se listan los mensajes de la colección ordenados alfabeticamente por su identificador. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se escribe los mensajes de la plataforma ordenados alfabeticamente por su identificador. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 63 del archivo Cjt\+\_\+mensajes.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63                                    \{}
+\DoxyCodeLine{64     map<string, Mensaje>::iterator it = \mbox{\hyperlink{class_cjt__mensajes_a2ff62968c3f5fa1afac5aa6bc52f2bf2}{MAP\_mensajes}}.begin();}
+\DoxyCodeLine{65     \textcolor{keywordtype}{int} n = \mbox{\hyperlink{class_cjt__mensajes_a2ff62968c3f5fa1afac5aa6bc52f2bf2}{MAP\_mensajes}}.size();}
+\DoxyCodeLine{66     }
+\DoxyCodeLine{67     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{68         it-\/>second.escribir();}
+\DoxyCodeLine{69         ++it;}
+\DoxyCodeLine{70     \}}
+\DoxyCodeLine{71 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_cjt__mensajes_a2ff62968c3f5fa1afac5aa6bc52f2bf2}\label{class_cjt__mensajes_a2ff62968c3f5fa1afac5aa6bc52f2bf2}} 
+\index{Cjt\_mensajes@{Cjt\_mensajes}!MAP\_mensajes@{MAP\_mensajes}}
+\index{MAP\_mensajes@{MAP\_mensajes}!Cjt\_mensajes@{Cjt\_mensajes}}
+\doxysubsubsection{\texorpdfstring{MAP\_mensajes}{MAP\_mensajes}}
+{\footnotesize\ttfamily map$<$string, \mbox{\hyperlink{class_mensaje}{Mensaje}}$>$ Cjt\+\_\+mensajes\+::\+M\+A\+P\+\_\+mensajes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Map (string -\/ \mbox{\hyperlink{class_mensaje}{Mensaje}}) que tiene como parámetro clave los identificadores de los mensajes {\itshape idm} del sistema y como parámetro asociado la clase \mbox{\hyperlink{class_mensaje}{Mensaje}} correspondiente. 
+
+
+
+Definición en la línea 30 del archivo Cjt\+\_\+mensajes.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_cjt__mensajes_8hh}{Cjt\+\_\+mensajes.\+hh}}\item 
+\mbox{\hyperlink{_cjt__mensajes_8cc}{Cjt\+\_\+mensajes.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,670 @@
+ENTRADA COMENTADA:
+
+14                                                                                                          //mensajes de lectura
+Oscar_Wilde
+El trabajo es el refugio de los que no tienen nada que hacer.
+Paracelso
+Que no sea de otro quien puede ser dueno de si mismo.
+Ciceron
+La sola idea de que una cosa cruel pueda ser util es ya de por si inmoral.
+George_Orwell
+La libertad de expresion es decir lo que la gente no quiere oir.
+Shakespeare
+La lealtad tiene un corazon tranquilo.
+Huxley_1
+Pero yo no quiero la comodidad. Yo quiero a Dios, quiero la poesia,
+Huxley_2
+quiero el verdadero riesgo, quiero la libertad, quiero la bondad. Quiero el pecado.
+Jacques_Rousseau_1
+No hay tan completa sujecion como la que conserva las apariencias de la libertad,
+Jacques_Rousseau_2
+porque ase esta la libertad misma cautiva.
+Einstein_1
+¿Por que esta magnifica tecnologia cientifica, que ahorra trabajo y nos hace la vida mas facil, nos aporta tan poca felicidad?
+Einstein_2
+La repuesta es esta, simplemente: porque aun no hemos aprendido a usarla con tino.
+Max_Planck
+Para las personas creyentes, Dios esta al principio. Para los científicos esta el final de todas sus reflexiones.
+Claude_Bernard
+El experimentador que no sabe lo que esta buscando no comprendera lo que encuentra.
+Marie_Curie
+Soy de las que piensan que la ciencia tiene una gran belleza. Un cientifico en su laboratorio no es solo un tecnico: es tambien un nino colocado ante fenomenos naturales que le impresionan como un cuento de hadas.
+2                                                                                                           //rejillas de lectura
+6 9                                                                                                         //Dimension y tamaño de la rejilla
+5 5 1 5 6 6 1 3 5 1 3 1 4 4 4 2 2 4                                                                         //posiciones de los huecos de la rejilla (rejilla medianamente grande)
+4 4
+3 2 1 4 3 4 1 2
+3                                                                                                           //patrones de lectura
+1 43 7 -1 -1 -1 5 -1 68 -1 -1                                                           
+47 2 -1 -1 0 -1 -1
+8 4 -1 76 -1 -1 -1
+listar_mensajes                                                                                             //listamos todos los mensajes introducidos
+listar_rejillas                                                                                             //listamos todas las rejillas introducidas
+listar_patrones                                                                                             //listamos todos los patrones introducidos
+nm                                                                                                          //nuevo mensaje valido
+Socrates
+Las almas ruines solo se dejan conquistar con presentes.
+nuevo_mensaje                                                                                               //mensaje que coincide con un identificador anterior.
+Einstein_2 
+El mundo no esta en peligro por las malas personas sino por aquellas que permiten la maldad.
+nm                                                                                                          //nuevo mensaje valido
+Karl_Kraus
+El diablo es optimista si cree que puede hacer mas malo al hombre.
+nm                                                                                                          //mensaje que coincide con un identificador anterior.
+Oscar_Wilde
+Como mala persona soy un completo desastre. Hay montones de gente que afirman que no he hecho nada malo en toda mi vida. Por supuesto sólo se atreven a decirlo a mis espaldas.
+nueva_rejilla                                                                                               //rejilla de dimensiones incorrectas
+6 6
+3 4 3 4 3 4 3 4 3 4 3 4
+nueva_rejilla                                                                                               //rejilla que no cubre todas las posiciones N x N
+4 4
+3 1 4 2 1 2 1 1
+nr                                                                                                          //nueva rejilla valida
+6 9
+1 1 2 1 3 5 4 3 4 6 1 2 2 5 3 6 4 5
+nueva_rejilla                                                                                               //nueva rejilla valida
+4 4
+3 2 1 4 1 2 3 4
+np                                                                                                          //nuevo patron valido
+3 9 8 0 -1 -1 -1 -1 -1
+nuevo_patron                                                                                                //nuevo patron valido
+78 -1 -1
+bm Huxley_1
+borra_mensaje Huxley_2
+lm                                                                                                          //listamos todos los mensajes introducidos
+lr                                                                                                          //listamos todas las rejillas introducidas
+lp                                                                                                          //listamos todos los patrones introducidos
+cr 8                                                                                                        //rejilla no existente
+Hola, que estas haciendo?
+cr 3                                                                                                        //rejilla grande existente con mensaje relativamente pequeño
+Hola, que estas haciendo?
+codificar_rejilla 2                                                                                         //rejilla pequeña existente con mensaje grande
+Ningun hombre conoce lo malo que es hasta que no ha tratado de esforzarse por ser bueno. Solo podras conocer la fuerza de un viento tratando de caminar contra el, no dejandote llevar.
+cgr Socrates 4                                                                                              //rejilla y mensaje validos
+codificar_guardado_rejilla Max_Planck 0                                                                     //rejilla no existente
+codificar_guardado_rejilla Einstein_3 1                                                                     //mensaje no existente
+crg Paracelso 3                                                                                             //rejilla y mensaje validos
+codificar_guardado_rejilla Karl_Kraus 2                                                                     //rejilla y mensaje validos
+cgr Marie_Curie 1                                                                                           //rejilla (pequeña) y mensaje (grande) validos
+codificar_guardado_rejilla Claude_Bernard 5                                                                 //rejilla no existente
+cgr Huxley_1 1                                                                                              //mensaje no existente (borrado)
+dr 2                                                                                                        //mensaje valido a decodificar
+,H oet aqluaess ehna?   dcoi    
+decodificar_rejilla 1                                                                                       //dimension del mensaje no valida para la rejilla (faltan espacios en blanco)
+c H o ei lseatnad s, oq ? u   h ae
+decodificar_rejilla 8                                                                                       //rejilla no existente
+c H o ei lseatnad s,   oq ? u   h ae
+dr 3                                                                                                        //mensaje valido a decodificar con rejilla valida (grande)
+Laueve  noirtat dedea  qt irscrae onena ,  es pyma lala aubrnila da paeala nrtbo tri drea  cqrueaose ntaenve as . cunac a  pioaln  ema   bal  ra
+cp 3 20                                                                                                     //patron existente con el bloque mas grande que el mensaje introducido
+Hola, buenos dias.
+cp 0 1                                                                                                      //patron no existente
+codificar_patron 9 43                                                                                       //patron no existente
+cp 1 10                                                                                                     //patron existente
+Quien no castiga el mal, ordena que se haga.
+codificar_guardado_patron Huxley_2 1 10                                                                     //mensaje no existente (borrado)
+cgp Oscar_Wilde 2 10                                                                                        //patron y mensaje existentes
+cgp Oscar_Wilde 12 4                                                                                        //patron no existente
+codificar_guardado_patron Ciceron 5 20                                                                      //patron y mensaje existentes
+cgp Einstein_2 4 5                                                                                          //patron y mensaje existentes
+cgp George_Orwell 1 20                                                                                      //patron y mensaje existentes
+dp 6 9                                                                                                      //patron no existente
+{c 9B?>ka"5u E>1OvrkCveJ1OAwe">q @E54g n<qr1BOI"sq>ti5]
+dp 2 10                                                                                                     //patron existente
+{c 9B?>ka"5u E>1OvrkCveJ1OAwe">q @E54g n<qr1BOI"sq>ti5]
+dp 1 7                                                                                                      //patron existente grande
+M-%lyqJs5judjF!1x'vodn-jzusT!2jyp{p!<jyp!Jt@f'dmFs;%xvfdu1%obdJ!-uyfoIf>3
+dp 5 30                                                                                                     //patron existente pequeño con mensaje grande
+D]nQdT]neX]^nTbnR^\^nd]PnQdT]Pn_T[XRd[P)nSdaPnd]nX]bcP]cTnhncTnSTYPnT]n[PnQ^RPnd]nbPQ^anPnV[^aXP*nTbn]dTe^nT]nRPSPnb^aQ^nhnznR^\^n^RdaaTnR^]n[Pbn_T[XRd[Pbzn]PRTnhnaT]PRTnT]nRPSPnbPQ^aTPS^a|
+dp 3 3                                                                                                      //patron existente con bloque pequeño
+Te(qvwvmi(i{(yvi$|zm{|i#i$y}i(vs(xymli(tpwzez(}({svzmm6
+
+
+
+
+
+
+
+
+
+
+
+ENTRADA SIN COMENTAR:
+
+14
+Oscar_Wilde
+El trabajo es el refugio de los que no tienen nada que hacer.
+Paracelso
+Que no sea de otro quien puede ser dueno de si mismo.
+Ciceron
+La sola idea de que una cosa cruel pueda ser util es ya de por si inmoral.
+George_Orwell
+La libertad de expresion es decir lo que la gente no quiere oir.
+Shakespeare
+La lealtad tiene un corazon tranquilo.
+Huxley_1
+Pero yo no quiero la comodidad. Yo quiero a Dios, quiero la poesia,
+Huxley_2
+quiero el verdadero riesgo, quiero la libertad, quiero la bondad. Quiero el pecado.
+Jacques_Rousseau_1
+No hay tan completa sujecion como la que conserva las apariencias de la libertad,
+Jacques_Rousseau_2
+porque ase esta la libertad misma cautiva.
+Einstein_1
+¿Por que esta magnifica tecnologia cientifica, que ahorra trabajo y nos hace la vida mas facil, nos aporta tan poca felicidad?
+Einstein_2
+La repuesta es esta, simplemente: porque aun no hemos aprendido a usarla con tino.
+Max_Planck
+Para las personas creyentes, Dios esta al principio. Para los científicos esta el final de todas sus reflexiones.
+Claude_Bernard
+El experimentador que no sabe lo que esta buscando no comprendera lo que encuentra.
+Marie_Curie
+Soy de las que piensan que la ciencia tiene una gran belleza. Un cientifico en su laboratorio no es solo un tecnico: es tambien un nino colocado ante fenomenos naturales que le impresionan como un cuento de hadas.
+2
+6 9
+5 5 1 5 6 6 1 3 5 1 3 1 4 4 4 2 2 4
+4 4
+3 2 1 4 3 4 1 2
+3
+1 43 7 -1 -1 -1 5 -1 68 -1 -1
+47 2 -1 -1 0 -1 -1
+8 4 -1 76 -1 -1 -1
+listar_mensajes
+listar_rejillas
+listar_patrones
+nm
+Socrates
+Las almas ruines solo se dejan conquistar con presentes.
+nuevo_mensaje
+Einstein_2 
+El mundo no esta en peligro por las malas personas sino por aquellas que permiten la maldad.
+nm
+Karl_Kraus
+El diablo es optimista si cree que puede hacer mas malo al hombre.
+nm
+Oscar_Wilde
+Como mala persona soy un completo desastre. Hay montones de gente que afirman que no he hecho nada malo en toda mi vida. Por supuesto sólo se atreven a decirlo a mis espaldas.
+nueva_rejilla
+6 6
+3 4 3 4 3 4 3 4 3 4 3 4
+nueva_rejilla
+4 4
+3 1 4 2 1 2 1 1
+nr
+6 9
+1 1 2 1 3 5 4 3 4 6 1 2 2 5 3 6 4 5
+nueva_rejilla
+4 4
+3 2 1 4 1 2 3 4
+np
+3 9 8 0 -1 -1 -1 -1 -1
+nuevo_patron
+78 -1 -1
+bm Huxley_1
+borra_mensaje Huxley_2
+lm
+lr
+lp
+cr 8
+Hola, que estas haciendo?
+cr 3
+Hola, que estas haciendo?
+codificar_rejilla 2
+Ningun hombre conoce lo malo que es hasta que no ha tratado de esforzarse por ser bueno. Solo podras conocer la fuerza de un viento tratando de caminar contra el, no dejandote llevar.
+cgr Socrates 4
+codificar_guardado_rejilla Max_Planck 0
+codificar_guardado_rejilla Einstein_3 1
+crg Paracelso 3
+codificar_guardado_rejilla Karl_Kraus 2
+cgr Marie_Curie 1
+codificar_guardado_rejilla Claude_Bernard 5
+cgr Huxley_1 1
+dr 2
+,H oet aqluaess ehna?   dcoi    
+decodificar_rejilla 1
+c H o ei lseatnad s, oq ? u   h ae
+decodificar_rejilla 8
+c H o ei lseatnad s,   oq ? u   h ae
+dr 3
+Laueve  noirtat dedea  qt irscrae onena ,  es pyma lala aubrnila da paeala nrtbo tri drea  cqrueaose ntaenve as . cunac a  pioaln  ema   bal  ra
+cp 3 20
+Hola, buenos dias.
+cp 0 1
+codificar_patron 9 43
+cp 1 10
+Quien no castiga el mal, ordena que se haga.
+codificar_guardado_patron Huxley_2 1 10
+cgp Oscar_Wilde 2 10
+cgp Oscar_Wilde 12 4
+codificar_guardado_patron Ciceron 5 20
+cgp Einstein_2 4 5
+cgp George_Orwell 1 20
+dp 6 9
+{c 9B?>ka"5u E>1OvrkCveJ1OAwe">q @E54g n<qr1BOI"sq>ti5]
+dp 2 10
+{c 9B?>ka"5u E>1OvrkCveJ1OAwe">q @E54g n<qr1BOI"sq>ti5]
+dp 1 7
+M-%lyqJs5judjF!1x'vodn-jzusT!2jyp{p!<jyp!Jt@f'dmFs;%xvfdu1%obdJ!-uyfoIf>3
+dp 5 30
+D]nQdT]neX]^nTbnR^\^nd]PnQdT]Pn_T[XRd[P)nSdaPnd]nX]bcP]cTnhncTnSTYPnT]n[PnQ^RPnd]nbPQ^anPnV[^aXP*nTbn]dTe^nT]nRPSPnb^aQ^nhnznR^\^n^RdaaTnR^]n[Pbn_T[XRd[Pbzn]PRTnhnaT]PRTnT]nRPSPnbPQ^aTPS^a|
+dp 3 3
+Te(qvwvmi(i{(yvi$|zm{|i#i$y}i(vs(xymli(tpwzez(}({svzmm6
+
+
+
+
+
+
+
+
+
+
+
+SALIDA COMENTADA:
+
+#listar_mensajes                                                                                             //lista todos los mensajes introducidos en la entrada ordenados alfabeticamente por identificador
+Ciceron
+"La sola idea de que una cosa cruel pueda ser util es ya de por si inmoral."
+Claude_Bernard
+"El experimentador que no sabe lo que esta buscando no comprendera lo que encuentra."
+Einstein_1
+"¿Por que esta magnifica tecnologia cientifica, que ahorra trabajo y nos hace la vida mas facil, nos aporta tan poca felicidad?"
+Einstein_2
+"La repuesta es esta, simplemente: porque aun no hemos aprendido a usarla con tino."
+George_Orwell
+"La libertad de expresion es decir lo que la gente no quiere oir."
+Huxley_1
+"Pero yo no quiero la comodidad. Yo quiero a Dios, quiero la poesia,"
+Huxley_2
+"quiero el verdadero riesgo, quiero la libertad, quiero la bondad. Quiero el pecado."
+Jacques_Rousseau_1
+"No hay tan completa sujecion como la que conserva las apariencias de la libertad,"
+Jacques_Rousseau_2
+"porque ase esta la libertad misma cautiva."
+Marie_Curie
+"Soy de las que piensan que la ciencia tiene una gran belleza. Un cientifico en su laboratorio no es solo un tecnico: es tambien un nino colocado ante fenomenos naturales que le impresionan como un cuento de hadas."
+Max_Planck
+"Para las personas creyentes, Dios esta al principio. Para los científicos esta el final de todas sus reflexiones."
+Oscar_Wilde
+"El trabajo es el refugio de los que no tienen nada que hacer."
+Paracelso
+"Que no sea de otro quien puede ser dueno de si mismo."
+Shakespeare
+"La lealtad tiene un corazon tranquilo."
+#listar_rejillas                                                                                            //lista todas las rejillas introducidas en la entrada las cuales son correctas obligatoriamente.
+Rejilla 1:
+6 9
+(1,3) (1,5) (2,4) (3,1) (4,2) (4,4) (5,1) (5,5) (6,6)
+(1,6) (2,1) (2,5) (3,2) (3,4) (4,1) (5,4) (6,3) (6,5)
+(1,1) (2,2) (2,6) (3,3) (3,5) (4,6) (5,3) (6,2) (6,4)
+(1,2) (1,4) (2,3) (3,6) (4,3) (4,5) (5,2) (5,6) (6,1)
+Rejilla 2:
+4 4
+(1,2) (1,4) (3,2) (3,4)
+(1,1) (1,3) (3,1) (3,3)
+(2,1) (2,3) (4,1) (4,3)
+(2,2) (2,4) (4,2) (4,4)
+#listar_patrones                                                                                            //lista todos los patrones introducidos en la entrada con la sequencia de parentesis correcta
+Patron 1:
+(1(43(7()())())(5()(68()())))
+Patron 2:
+(47(2()())(0()()))
+Patron 3:
+(8(4()(76()()))())
+#nm Socrates                                                                                                //Suma un nuevo mensaje al Cjt_mensajes y escribe el numero total de ellos
+15
+#nuevo_mensaje Einstein_2                                                                                   //identificador repetido por lo que escribe el error
+error: ya existe un mensaje con ese identificador
+#nm Karl_Kraus                                                                                              //Suma un nuevo mensaje al Cjt_mensajes y escribe el numero total de estos
+16
+#nm Oscar_Wilde                                                                                             //identificador repetido por lo que escribe el error
+error: ya existe un mensaje con ese identificador
+#nueva_rejilla                                                                                              //rejilla introducida con dimension incorrecta por lo que escribe el error
+error: dimensiones incorrectas de la rejilla
+#nueva_rejilla                                                                                              //rejilla introducida con los parametros incorrector, por tanto, escribe el error
+error: la rejilla con sus giros no cubre todas las posiciones N x N
+#nr                                                                                                         //rejilla valida por lo que la rejilla se suma al Cjt_rejillas y escribe el numero total de estas
+3
+#nueva_rejilla                                                                                              //rejilla valida por lo que la rejilla se suma al Cjt_rejillas y escribe el numero total de estas
+4
+#np                                                                                                         //patron valido por lo que el patron se suma al Cjt_patrones y escribe el total de estos
+4
+#nuevo_patron                                                                                               //patron valido por lo que el patron se suma al Cjt_patrones y escribe el total de estos
+5
+#bm Huxley_1                                                                                                //borra el mensaje con ese identificador y decrementa el numero total de mensajes
+15
+#borra_mensaje Huxley_2                                                                                     //borra el mensaje con ese identificador y decrementa el numero total de mensajes
+14
+#lm                                                                                                         //lista de nuevos los mensajes despues de las modificaciones
+Ciceron
+"La sola idea de que una cosa cruel pueda ser util es ya de por si inmoral."
+Claude_Bernard
+"El experimentador que no sabe lo que esta buscando no comprendera lo que encuentra."
+Einstein_1
+"¿Por que esta magnifica tecnologia cientifica, que ahorra trabajo y nos hace la vida mas facil, nos aporta tan poca felicidad?"
+Einstein_2
+"La repuesta es esta, simplemente: porque aun no hemos aprendido a usarla con tino."
+George_Orwell
+"La libertad de expresion es decir lo que la gente no quiere oir."
+Jacques_Rousseau_1
+"No hay tan completa sujecion como la que conserva las apariencias de la libertad,"
+Jacques_Rousseau_2
+"porque ase esta la libertad misma cautiva."
+Karl_Kraus
+"El diablo es optimista si cree que puede hacer mas malo al hombre."
+Marie_Curie
+"Soy de las que piensan que la ciencia tiene una gran belleza. Un cientifico en su laboratorio no es solo un tecnico: es tambien un nino colocado ante fenomenos naturales que le impresionan como un cuento de hadas."
+Max_Planck
+"Para las personas creyentes, Dios esta al principio. Para los científicos esta el final de todas sus reflexiones."
+Oscar_Wilde
+"El trabajo es el refugio de los que no tienen nada que hacer."
+Paracelso
+"Que no sea de otro quien puede ser dueno de si mismo."
+Shakespeare
+"La lealtad tiene un corazon tranquilo."
+Socrates
+"Las almas ruines solo se dejan conquistar con presentes."
+#lr                                                                                                         //lista de nuevo las rejillas despues de las modificaciones
+Rejilla 1:
+6 9
+(1,3) (1,5) (2,4) (3,1) (4,2) (4,4) (5,1) (5,5) (6,6)
+(1,6) (2,1) (2,5) (3,2) (3,4) (4,1) (5,4) (6,3) (6,5)
+(1,1) (2,2) (2,6) (3,3) (3,5) (4,6) (5,3) (6,2) (6,4)
+(1,2) (1,4) (2,3) (3,6) (4,3) (4,5) (5,2) (5,6) (6,1)
+Rejilla 2:
+4 4
+(1,2) (1,4) (3,2) (3,4)
+(1,1) (1,3) (3,1) (3,3)
+(2,1) (2,3) (4,1) (4,3)
+(2,2) (2,4) (4,2) (4,4)
+Rejilla 3:
+6 9
+(1,1) (1,2) (2,1) (2,5) (3,5) (3,6) (4,3) (4,5) (4,6)
+(1,3) (1,4) (2,2) (2,3) (2,4) (4,4) (5,1) (6,1) (6,2)
+(3,1) (3,2) (3,4) (4,1) (4,2) (5,2) (5,6) (6,5) (6,6)
+(1,5) (1,6) (2,6) (3,3) (5,3) (5,4) (5,5) (6,3) (6,4)
+Rejilla 4:
+4 4
+(1,2) (1,4) (3,2) (3,4)
+(1,1) (1,3) (3,1) (3,3)
+(2,1) (2,3) (4,1) (4,3)
+(2,2) (2,4) (4,2) (4,4)
+#lp                                                                                                         //lista de nuevo los patrones despues de las modificaciones
+Patron 1:
+(1(43(7()())())(5()(68()())))
+Patron 2:
+(47(2()())(0()()))
+Patron 3:
+(8(4()(76()()))())
+Patron 4:
+(3(9(8(0()())())())())
+Patron 5:
+(78()())
+#cr 8                                                                                                       //la rejilla no existe por lo que escribe el error
+error: la rejilla no existe
+#cr 3                                                                                                       //codifica el mensaje introducido con la rejilla seleccionada
+"Ho e  lstaa ci e, ndqsue o   ?ha    "
+#codificar_rejilla 2                                                                                        //codifica el mensaje introducido con la rejilla seleccionada
+"uNnioem  nhgbcro nlom aqoc eluoeh aeae  sst qnuot rhaddeaat o  ezsafer  rosrpsoeern  oS ob.uoplo dcro cloansear zfaue  v edruinetnrta ndaot deo ncaacroarm in teol ,joatd enned alrl    .e v    "
+#cgr Socrates 4                                                                                             //codifica el mensaje ya introducido con la rejilla seleccionada
+"aLlasi nmsa reuso  s adnsoele jciosnrn  tqaucportees    se.n    "
+#codificar_guardado_rejilla Max_Planck 0                                                                    //la rejilla seleccionada no existe por lo que escribe el error
+error: la rejilla no existe
+#codificar_guardado_rejilla Einstein_3 1                                                                    //el identificador del mensaje introducido no coincide con ninguno ya guardado por lo que escribe el error
+error: el mensaje no existe
+#codificar_guardado_rejilla Karl_Kraus 2                                                                    //codifica el mensaje ya introducido con la rejilla seleccionada
+"iEalo  ob ldepsttiamie e issc rquuee ehrd epa cmaalsaolmo  m bhr e .            "
+#cgr Marie_Curie 1                                                                                          //codifica el mensaje ya introducido con la rejilla seleccionada
+"nlSaos s yqa une c dieeq nuplciei eaena  nalct ligerziaeennaet.n if  Ubur isc liooao b onlreon o u asn etsoun tcees oc untna lmioccnoaib:donioe tu eaomu nertnaollsee  efis emp nqanuhraecoedsmniot oauosn. a dnn  e  c "
+#codificar_guardado_rejilla Claude_Bernard 5                                                                //la rejilla seleccionada no existe por lo que escribe el error
+error: la rejilla no existe
+#cgr Huxley_1 1                                                                                             //el identificador del mensaje introducido no coincide con ninguno ya guardado por lo que escribe el error
+error: el mensaje no existe
+#dr 2                                                                                                       //mensaje introducido correcto para decodificar y rejilla existente por lo que escribe el mensaje decodificado
+"Hola, que estas haciendo?       "
+#decodificar_rejilla 1                                                                                      //mensaje introducido incorrecto para decodificar por lo que escribe el error
+error: la dimension del mensaje es inadecuada para la rejilla
+#decodificar_rejilla 8                                                                                      //la rejilla seleccionada no existe por lo que se escribe el error
+error: la rejilla no existe
+#dr 3                                                                                                       //mensaje introducido correcto para decodificar y rejilla existente por lo que escribe el mensaje decodificado
+"La idea que no trata de convertirse en palabra es una mala idea, y la palabra que no trata de convertirse en accion es una mala palabra.        "
+#cp 3 20                                                                                                    //codifica el mensaje introducido con el patron seleccionado
+"Pstix$jymvw{lhqi`2"
+#cp 0 1                                                                                                     //no existe el patron seleccionado por lo que escribe el error
+error: el patron no existe 
+#codificar_patron 9 43                                                                                      //no existe el patron seleccionado por lo que escribe el error
+error: el patron no existe
+#cp 1 10                                                                                                    //codifica el mensaje introducido con el patron seleccionado
+"RAnlo!Sp!/b?yphbdfmKn-q3!pWef:bKv|f!Xf!4b3f5"
+#codificar_guardado_patron Huxley_2 1 10                                                                    //el identificador del mensaje introducido no coincide con ninguno ya guardado por lo que escribe el error
+error: el mensaje no existe
+#cgp Oscar_Wilde 2 10                                                                                       //codifica el mensaje ya introducido con el patron seleccionado
+"tn DB12cjqOgsO5<OtehEii?O45"lqC"qE5O>q v9gn5>O>cdcOsu5O81eet]"
+#cgp Oscar_Wilde 12 4                                                                                       //no existe el patron seleccionado por lo que escribe el error
+error: el patron no existe
+#codificar_guardado_patron Ciceron 5 20                                                                     //codifica el mensaje ya introducido con el patron seleccionado
+";Pnb^[PnXSTPnSTn`dTnd]PnR^bPnRadT[n_dTSPnbTandcX[nTbnhPnSTn_^anbXnX]\^aP[|"
+#cgp Einstein_2 4 5                                                                                         //codifica el mensaje ya introducido con el patron seleccionado
+"Oj#zhs~h{wd)h{#h|wi/#|lusonpmqwn=(sr{t}h#jxv#qx#phpxv(ds{hvglmr(d#~viuoj#krq)wqqr7"
+#cgp George_Orwell 1 20                                                                                     //codifica el mensaje ya introducido con el patron seleccionado
+"M-%sjcJsu-iKif!1}<wlt5tu!fX!e1h5w!m;%=zl!8f'hfSufKs;%rv5j>j'p5w5"
+#dp 6 9                                                                                                     //el patron seleccionado no existe por lo que se escribe el error
+error: el patron no existe
+#dp 2 10                                                                                                    //mensaje introducido correcto para decodificar y patron existente por lo que escribe el mensaje decodificado
+"La ironia es una tristeza que no puede llorar y sonrie."
+#dp 1 7                                                                                                     //mensaje introducido correcto para decodificar y patron existente por lo que escribe el mensaje decodificado
+"La experiencia es un maestro feroz, pero esta claro que te hace aprender."
+#dp 5 30                                                                                                    //mensaje introducido correcto para decodificar y patron existente por lo que escribe el mensaje decodificado
+"Un buen vino es como una buena pelicula: dura un instante y te deja en la boca un sabor a gloria; es nuevo en cada sorbo y , como ocurre con las peliculas, nace y renace en cada saboreador."
+#dp 3 3                                                                                                     //mensaje introducido correcto para decodificar y patron existente por lo que escribe el mensaje decodificado
+"La ironia es una tristeza que no puede llorar y sonrie."
+
+
+
+
+
+
+
+
+
+
+
+SALIDA SIN COMENTAR:
+
+#listar_mensajes
+Ciceron
+"La sola idea de que una cosa cruel pueda ser util es ya de por si inmoral."
+Claude_Bernard
+"El experimentador que no sabe lo que esta buscando no comprendera lo que encuentra."
+Einstein_1
+"¿Por que esta magnifica tecnologia cientifica, que ahorra trabajo y nos hace la vida mas facil, nos aporta tan poca felicidad?"
+Einstein_2
+"La repuesta es esta, simplemente: porque aun no hemos aprendido a usarla con tino."
+George_Orwell
+"La libertad de expresion es decir lo que la gente no quiere oir."
+Huxley_1
+"Pero yo no quiero la comodidad. Yo quiero a Dios, quiero la poesia,"
+Huxley_2
+"quiero el verdadero riesgo, quiero la libertad, quiero la bondad. Quiero el pecado."
+Jacques_Rousseau_1
+"No hay tan completa sujecion como la que conserva las apariencias de la libertad,"
+Jacques_Rousseau_2
+"porque ase esta la libertad misma cautiva."
+Marie_Curie
+"Soy de las que piensan que la ciencia tiene una gran belleza. Un cientifico en su laboratorio no es solo un tecnico: es tambien un nino colocado ante fenomenos naturales que le impresionan como un cuento de hadas."
+Max_Planck
+"Para las personas creyentes, Dios esta al principio. Para los científicos esta el final de todas sus reflexiones."
+Oscar_Wilde
+"El trabajo es el refugio de los que no tienen nada que hacer."
+Paracelso
+"Que no sea de otro quien puede ser dueno de si mismo."
+Shakespeare
+"La lealtad tiene un corazon tranquilo."
+#listar_rejillas
+Rejilla 1:
+6 9
+(1,3) (1,5) (2,4) (3,1) (4,2) (4,4) (5,1) (5,5) (6,6)
+(1,6) (2,1) (2,5) (3,2) (3,4) (4,1) (5,4) (6,3) (6,5)
+(1,1) (2,2) (2,6) (3,3) (3,5) (4,6) (5,3) (6,2) (6,4)
+(1,2) (1,4) (2,3) (3,6) (4,3) (4,5) (5,2) (5,6) (6,1)
+Rejilla 2:
+4 4
+(1,2) (1,4) (3,2) (3,4)
+(1,1) (1,3) (3,1) (3,3)
+(2,1) (2,3) (4,1) (4,3)
+(2,2) (2,4) (4,2) (4,4)
+#listar_patrones
+Patron 1:
+(1(43(7()())())(5()(68()())))
+Patron 2:
+(47(2()())(0()()))
+Patron 3:
+(8(4()(76()()))())
+#nm Socrates
+15
+#nuevo_mensaje Einstein_2
+error: ya existe un mensaje con ese identificador
+#nm Karl_Kraus
+16
+#nm Oscar_Wilde
+error: ya existe un mensaje con ese identificador
+#nueva_rejilla
+error: dimensiones incorrectas de la rejilla
+#nueva_rejilla
+error: la rejilla con sus giros no cubre todas las posiciones N x N
+#nr
+3
+#nueva_rejilla
+4
+#np 
+4
+#nuevo_patron 
+5
+#bm Huxley_1
+15
+#borra_mensaje Huxley_2
+14
+#lm
+Ciceron
+"La sola idea de que una cosa cruel pueda ser util es ya de por si inmoral."
+Claude_Bernard
+"El experimentador que no sabe lo que esta buscando no comprendera lo que encuentra."
+Einstein_1
+"¿Por que esta magnifica tecnologia cientifica, que ahorra trabajo y nos hace la vida mas facil, nos aporta tan poca felicidad?"
+Einstein_2
+"La repuesta es esta, simplemente: porque aun no hemos aprendido a usarla con tino."
+George_Orwell
+"La libertad de expresion es decir lo que la gente no quiere oir."
+Jacques_Rousseau_1
+"No hay tan completa sujecion como la que conserva las apariencias de la libertad,"
+Jacques_Rousseau_2
+"porque ase esta la libertad misma cautiva."
+Karl_Kraus
+"El diablo es optimista si cree que puede hacer mas malo al hombre."
+Marie_Curie
+"Soy de las que piensan que la ciencia tiene una gran belleza. Un cientifico en su laboratorio no es solo un tecnico: es tambien un nino colocado ante fenomenos naturales que le impresionan como un cuento de hadas."
+Max_Planck
+"Para las personas creyentes, Dios esta al principio. Para los científicos esta el final de todas sus reflexiones."
+Oscar_Wilde
+"El trabajo es el refugio de los que no tienen nada que hacer."
+Paracelso
+"Que no sea de otro quien puede ser dueno de si mismo."
+Shakespeare
+"La lealtad tiene un corazon tranquilo."
+Socrates
+"Las almas ruines solo se dejan conquistar con presentes."
+#lr
+Rejilla 1:
+6 9
+(1,3) (1,5) (2,4) (3,1) (4,2) (4,4) (5,1) (5,5) (6,6)
+(1,6) (2,1) (2,5) (3,2) (3,4) (4,1) (5,4) (6,3) (6,5)
+(1,1) (2,2) (2,6) (3,3) (3,5) (4,6) (5,3) (6,2) (6,4)
+(1,2) (1,4) (2,3) (3,6) (4,3) (4,5) (5,2) (5,6) (6,1)
+Rejilla 2:
+4 4
+(1,2) (1,4) (3,2) (3,4)
+(1,1) (1,3) (3,1) (3,3)
+(2,1) (2,3) (4,1) (4,3)
+(2,2) (2,4) (4,2) (4,4)
+Rejilla 3:
+6 9
+(1,1) (1,2) (2,1) (2,5) (3,5) (3,6) (4,3) (4,5) (4,6)
+(1,3) (1,4) (2,2) (2,3) (2,4) (4,4) (5,1) (6,1) (6,2)
+(3,1) (3,2) (3,4) (4,1) (4,2) (5,2) (5,6) (6,5) (6,6)
+(1,5) (1,6) (2,6) (3,3) (5,3) (5,4) (5,5) (6,3) (6,4)
+Rejilla 4:
+4 4
+(1,2) (1,4) (3,2) (3,4)
+(1,1) (1,3) (3,1) (3,3)
+(2,1) (2,3) (4,1) (4,3)
+(2,2) (2,4) (4,2) (4,4)
+#lp
+Patron 1:
+(1(43(7()())())(5()(68()())))
+Patron 2:
+(47(2()())(0()()))
+Patron 3:
+(8(4()(76()()))())
+Patron 4:
+(3(9(8(0()())())())())
+Patron 5:
+(78()())
+#cr 8
+error: la rejilla no existe
+#cr 3
+"Ho e  lstaa ci e, ndqsue o   ?ha    "
+#codificar_rejilla 2
+"uNnioem  nhgbcro nlom aqoc eluoeh aeae  sst qnuot rhaddeaat o  ezsafer  rosrpsoeern  oS ob.uoplo dcro cloansear zfaue  v edruinetnrta ndaot deo ncaacroarm in teol ,joatd enned alrl    .e v    "
+#cgr Socrates 4
+"aLlasi nmsa reuso  s adnsoele jciosnrn  tqaucportees    se.n    "
+#codificar_guardado_rejilla Max_Planck 0
+error: la rejilla no existe
+#codificar_guardado_rejilla Einstein_3 1
+error: el mensaje no existe
+#codificar_guardado_rejilla Karl_Kraus 2
+"iEalo  ob ldepsttiamie e issc rquuee ehrd epa cmaalsaolmo  m bhr e .            "
+#cgr Marie_Curie 1
+"nlSaos s yqa une c dieeq nuplciei eaena  nalct ligerziaeennaet.n if  Ubur isc liooao b onlreon o u asn etsoun tcees oc untna lmioccnoaib:donioe tu eaomu nertnaollsee  efis emp nqanuhraecoedsmniot oauosn. a dnn  e  c "
+#codificar_guardado_rejilla Claude_Bernard 5
+error: la rejilla no existe
+#cgr Huxley_1 1
+error: el mensaje no existe
+#dr 2
+"Hola, que estas haciendo?       "
+#decodificar_rejilla 1
+error: la dimension del mensaje es inadecuada para la rejilla
+#decodificar_rejilla 8
+error: la rejilla no existe
+#dr 3
+"La idea que no trata de convertirse en palabra es una mala idea, y la palabra que no trata de convertirse en accion es una mala palabra.        "
+#cp 3 20
+"Pstix$jymvw{lhqi`2"
+#cp 0 1
+error: el patron no existe
+#codificar_patron 9 43
+error: el patron no existe
+#cp 1 10
+"RAnlo!Sp!/b?yphbdfmKn-q3!pWef:bKv|f!Xf!4b3f5"
+#codificar_guardado_patron Huxley_2 1 10
+error: el mensaje no existe
+#cgp Oscar_Wilde 2 10
+"tn DB12cjqOgsO5<OtehEii?O45"lqC"qE5O>q v9gn5>O>cdcOsu5O81eet]"
+#cgp Oscar_Wilde 12 4
+error: el patron no existe
+#codificar_guardado_patron Ciceron 5 20
+";Pnb^[PnXSTPnSTn`dTnd]PnR^bPnRadT[n_dTSPnbTandcX[nTbnhPnSTn_^anbXnX]\^aP[|"
+#cgp Einstein_2 4 5
+"Oj#zhs~h{wd)h{#h|wi/#|lusonpmqwn=(sr{t}h#jxv#qx#phpxv(ds{hvglmr(d#~viuoj#krq)wqqr7"
+#cgp George_Orwell 1 20
+"M-%sjcJsu-iKif!1}<wlt5tu!fX!e1h5w!m;%=zl!8f'hfSufKs;%rv5j>j'p5w5"
+#dp 6 9
+error: el patron no existe
+#dp 2 10
+"La ironia es una tristeza que no puede llorar y sonrie."
+#dp 1 7
+"La experiencia es un maestro feroz, pero esta claro que te hace aprender."
+#dp 5 30
+"Un buen vino es como una buena pelicula: dura un instante y te deja en la boca un sabor a gloria; es nuevo en cada sorbo y , como ocurre con las peliculas, nace y renace en cada saboreador."
+#dp 3 3
+"La ironia es una tristeza que no puede llorar y sonrie."
+

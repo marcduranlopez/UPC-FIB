@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EVALUATOR: Plataforma de gestión de problemas y cursos de programación.: Fichero Fuente Curso.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">EVALUATOR: Plataforma de gestión de problemas y cursos de programación.
+   &#160;<span id="projectnumber">version 1 abril-2021</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Curso.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_curso_8hh.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef _CURSO_HH_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define _CURSO_HH_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="conj__problemas_8hh.html">conj_problemas.hh</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="conj__sesiones_8hh.html">conj_sesiones.hh</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_curso.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_curso.html">Curso</a> </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_curso.html#a61057ecb095b0657e52f6a3d2007b044">   31</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_curso.html#a61057ecb095b0657e52f6a3d2007b044">curso</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_curso.html#ac7758f78b49791ba493ee26e86fc4afc">   34</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_curso.html#ac7758f78b49791ba493ee26e86fc4afc">num_completados</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_curso.html#a22fcfd82a42fb7eeb48c5fddd966c64c">   37</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_curso.html#a22fcfd82a42fb7eeb48c5fddd966c64c">num_inscritos</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_curso.html#a7999baa3528b0226f88a7509eb49ab1a">   40</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_curso.html#a7999baa3528b0226f88a7509eb49ab1a">num_sesiones</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_curso.html#a03ee091f7d8a78e0c477a61223c07119">   43</a></span>&#160;    vector&lt;string&gt; <a class="code" href="class_curso.html#a03ee091f7d8a78e0c477a61223c07119">identif_sesiones</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_curso.html#a5403b7f1feaeb601b9a2b21c4b6221b6">   46</a></span>&#160;    map&lt;string, string&gt; <a class="code" href="class_curso.html#a5403b7f1feaeb601b9a2b21c4b6221b6">map_ses_prob</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">//Constructoras</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="class_curso.html">Curso</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">//Modificadoras    </span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">int</span> incrementar_usuario();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> decrementar_usuario();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> identificar_curso(<span class="keywordtype">int</span> c);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> leer_sesiones();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">void</span> suma_cursos_resueltos();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="comment">//Consultoras</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">bool</span> identificar_sesiones_bool(<span class="keywordtype">string</span>&amp; p, <a class="code" href="classconj__sesiones.html">conj_sesiones</a>&amp; cs)<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">string</span> identificar_sesiones_string(<span class="keywordtype">string</span>&amp; p, <a class="code" href="classconj__sesiones.html">conj_sesiones</a>&amp; cs)<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    vector&lt;string&gt; identificar_sesiones_vec()<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">bool</span> rep_problema_curso(<a class="code" href="classconj__sesiones.html">conj_sesiones</a>&amp; ses);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="comment">//Escritura de la sesiones del curso.</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;   </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">void</span> escribir_sesiones(); </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="comment">//Escritura de un curso</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordtype">void</span> escribir();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;};</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_curso_html_a22fcfd82a42fb7eeb48c5fddd966c64c"><div class="ttname"><a href="class_curso.html#a22fcfd82a42fb7eeb48c5fddd966c64c">Curso::num_inscritos</a></div><div class="ttdeci">int num_inscritos</div><div class="ttdoc">Número de usuarios inscritos actualmente al curso.</div><div class="ttdef"><b>Definition:</b> <a href="_curso_8hh_source.html#l00037">Curso.hh:37</a></div></div>
+<div class="ttc" id="aclass_curso_html_ac7758f78b49791ba493ee26e86fc4afc"><div class="ttname"><a href="class_curso.html#ac7758f78b49791ba493ee26e86fc4afc">Curso::num_completados</a></div><div class="ttdeci">int num_completados</div><div class="ttdoc">Número de usuarios actuales o pasados que han completado el curso.</div><div class="ttdef"><b>Definition:</b> <a href="_curso_8hh_source.html#l00034">Curso.hh:34</a></div></div>
+<div class="ttc" id="aclass_curso_html_a7999baa3528b0226f88a7509eb49ab1a"><div class="ttname"><a href="class_curso.html#a7999baa3528b0226f88a7509eb49ab1a">Curso::num_sesiones</a></div><div class="ttdeci">int num_sesiones</div><div class="ttdoc">Número de sesiones del curso.</div><div class="ttdef"><b>Definition:</b> <a href="_curso_8hh_source.html#l00040">Curso.hh:40</a></div></div>
+<div class="ttc" id="aconj__problemas_8hh_html"><div class="ttname"><a href="conj__problemas_8hh.html">conj_problemas.hh</a></div><div class="ttdoc">Especificación de la clase conj_problemas.</div></div>
+<div class="ttc" id="aconj__sesiones_8hh_html"><div class="ttname"><a href="conj__sesiones_8hh.html">conj_sesiones.hh</a></div><div class="ttdoc">Especificación de la clase conj_sesiones.</div></div>
+<div class="ttc" id="aclass_curso_html"><div class="ttname"><a href="class_curso.html">Curso</a></div><div class="ttdoc">Representa un curso de la plataforma.</div><div class="ttdef"><b>Definition:</b> <a href="_curso_8hh_source.html#l00026">Curso.hh:26</a></div></div>
+<div class="ttc" id="aclass_curso_html_a5403b7f1feaeb601b9a2b21c4b6221b6"><div class="ttname"><a href="class_curso.html#a5403b7f1feaeb601b9a2b21c4b6221b6">Curso::map_ses_prob</a></div><div class="ttdeci">map&lt; string, string &gt; map_ses_prob</div><div class="ttdoc">Marca los identificadores de las sesiones a los que pertenecen cada problema del curso.</div><div class="ttdef"><b>Definition:</b> <a href="_curso_8hh_source.html#l00046">Curso.hh:46</a></div></div>
+<div class="ttc" id="aclassconj__sesiones_html"><div class="ttname"><a href="classconj__sesiones.html">conj_sesiones</a></div><div class="ttdoc">Representa un conjunto de sesiones de la plataforma.</div><div class="ttdef"><b>Definition:</b> <a href="conj__sesiones_8hh_source.html#l00024">conj_sesiones.hh:24</a></div></div>
+<div class="ttc" id="aclass_curso_html_a61057ecb095b0657e52f6a3d2007b044"><div class="ttname"><a href="class_curso.html#a61057ecb095b0657e52f6a3d2007b044">Curso::curso</a></div><div class="ttdeci">int curso</div><div class="ttdoc">identificador del curso.</div><div class="ttdef"><b>Definition:</b> <a href="_curso_8hh_source.html#l00031">Curso.hh:31</a></div></div>
+<div class="ttc" id="aclass_curso_html_a03ee091f7d8a78e0c477a61223c07119"><div class="ttname"><a href="class_curso.html#a03ee091f7d8a78e0c477a61223c07119">Curso::identif_sesiones</a></div><div class="ttdeci">vector&lt; string &gt; identif_sesiones</div><div class="ttdoc">Vector que contiene los identificadores de las sesiones del curso.</div><div class="ttdef"><b>Definition:</b> <a href="_curso_8hh_source.html#l00043">Curso.hh:43</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

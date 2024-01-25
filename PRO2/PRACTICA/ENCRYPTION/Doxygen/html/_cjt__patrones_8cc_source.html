@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ENCRIPTACION DE MENSAJES: Plataforma para encriptar y desencriptar mensajes por permutacion y sustitucion.: Fichero Fuente Cjt_patrones.cc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ENCRIPTACION DE MENSAJES: Plataforma para encriptar y desencriptar mensajes por permutacion y sustitucion.
+   &#160;<span id="projectnumber">version 30 Noviembre-2021</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Cjt_patrones.cc</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_cjt__patrones_8cc.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_cjt__patrones_8hh.html">Cjt_patrones.hh</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="class_cjt__patrones.html#ac169314f2961663c592f353a27c6bbf2">    4</a></span>&#160;<a class="code" href="class_cjt__patrones.html#ac169314f2961663c592f353a27c6bbf2">Cjt_patrones::Cjt_patrones</a>() {</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;}</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_cjt__patrones.html#aece0698f5e192f3d108f894aae8f178a">    9</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cjt__patrones.html#aece0698f5e192f3d108f894aae8f178a">Cjt_patrones::leer</a>() {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">int</span> num_ptr;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    cin &gt;&gt; num_ptr;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= num_ptr; ++i) {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="class_patron.html">Patron</a> ptr;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        ptr.<a class="code" href="class_patron.html#a3a599b8dff198a28904a02ced2c296c9">rellenar_parametros</a>(i);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        VEC_patrones.push_back(ptr);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_cjt__patrones.html#ab9efedd70f12de2e2e4f5302874221d9">   21</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cjt__patrones.html#ab9efedd70f12de2e2e4f5302874221d9">Cjt_patrones::nuevo_patron</a>() {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_patron.html">Patron</a> ptr;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> i = VEC_patrones.size()+1;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    ptr.<a class="code" href="class_patron.html#a3a599b8dff198a28904a02ced2c296c9">rellenar_parametros</a>(i);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    VEC_patrones.push_back(ptr);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    cout &lt;&lt; VEC_patrones.size() &lt;&lt; endl; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_cjt__patrones.html#a69727a831d7b91f98ec403c5e7d254bb">   32</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cjt__patrones.html#a69727a831d7b91f98ec403c5e7d254bb">Cjt_patrones::codificar_patron</a>(<span class="keywordtype">int</span> idp, <span class="keywordtype">int</span> b) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">string</span> mensaje;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">string</span> s;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    getline(cin,s);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    getline(cin,mensaje);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    VEC_patrones[idp-1].codificar(mensaje,b);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_cjt__patrones.html#aa306e6819883d7d30270c02bd6494212">   44</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cjt__patrones.html#aa306e6819883d7d30270c02bd6494212">Cjt_patrones::codificar_guardado_patron</a>(<span class="keywordtype">string</span> idm, <span class="keywordtype">int</span> idp, <span class="keywordtype">int</span> b, <a class="code" href="class_cjt__mensajes.html">Cjt_mensajes</a>&amp; cm) {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">string</span> mensaje;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    mensaje = cm.<a class="code" href="class_cjt__mensajes.html#a7152f1ea034c5ec07ef86d83efe29195">obtener_mensaje</a>(idm); </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    VEC_patrones[idp-1].codificar(mensaje,b);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_cjt__patrones.html#a3567443e5f0da1145c3ae58600b0bd7f">   52</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cjt__patrones.html#a3567443e5f0da1145c3ae58600b0bd7f">Cjt_patrones::decodificar_patron</a>(<span class="keywordtype">int</span> idp, <span class="keywordtype">int</span> b) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">string</span> mensaje_codificado;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">string</span> s;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    getline(cin,s);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    getline(cin,mensaje_codificado);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    VEC_patrones[idp-1].decodificar(mensaje_codificado, b);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_cjt__patrones.html#a8260ef553b542ff44f63107e8dc5e977">   63</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_cjt__patrones.html#a8260ef553b542ff44f63107e8dc5e977">Cjt_patrones::existe</a>(<span class="keywordtype">int</span>&amp; idp)<span class="keyword">const </span>{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">int</span> size = VEC_patrones.size();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=1; i &lt;= size; ++i) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">if</span> (i == idp) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_cjt__patrones.html#a0d371a7b647964023174cd172fe83791">   72</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cjt__patrones.html#a0d371a7b647964023174cd172fe83791">Cjt_patrones::listar_patrones</a>() {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">int</span> n = VEC_patrones.size();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        VEC_patrones[i].escribir();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_cjt__mensajes_html_a7152f1ea034c5ec07ef86d83efe29195"><div class="ttname"><a href="class_cjt__mensajes.html#a7152f1ea034c5ec07ef86d83efe29195">Cjt_mensajes::obtener_mensaje</a></div><div class="ttdeci">string obtener_mensaje(string &amp;idm)</div><div class="ttdoc">Busca el mensaje con identificador idm.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__mensajes_8cc_source.html#l00057">Cjt_mensajes.cc:57</a></div></div>
+<div class="ttc" id="aclass_cjt__patrones_html_ac169314f2961663c592f353a27c6bbf2"><div class="ttname"><a href="class_cjt__patrones.html#ac169314f2961663c592f353a27c6bbf2">Cjt_patrones::Cjt_patrones</a></div><div class="ttdeci">Cjt_patrones()</div><div class="ttdoc">Creadora por defecto.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__patrones_8cc_source.html#l00004">Cjt_patrones.cc:4</a></div></div>
+<div class="ttc" id="aclass_cjt__patrones_html_aece0698f5e192f3d108f894aae8f178a"><div class="ttname"><a href="class_cjt__patrones.html#aece0698f5e192f3d108f894aae8f178a">Cjt_patrones::leer</a></div><div class="ttdeci">void leer()</div><div class="ttdoc">Añade los patrones idp introducidos en la entrada del programa a un vector VEC_patrones de clases Pat...</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__patrones_8cc_source.html#l00009">Cjt_patrones.cc:9</a></div></div>
+<div class="ttc" id="aclass_cjt__mensajes_html"><div class="ttname"><a href="class_cjt__mensajes.html">Cjt_mensajes</a></div><div class="ttdoc">Representa un conjunto de mensajes inrtroducidas en la plataforma.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__mensajes_8hh_source.html#l00025">Cjt_mensajes.hh:25</a></div></div>
+<div class="ttc" id="aclass_cjt__patrones_html_ab9efedd70f12de2e2e4f5302874221d9"><div class="ttname"><a href="class_cjt__patrones.html#ab9efedd70f12de2e2e4f5302874221d9">Cjt_patrones::nuevo_patron</a></div><div class="ttdeci">void nuevo_patron()</div><div class="ttdoc">Añade una nuevo patron con identificador idp al conjunto de patrones.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__patrones_8cc_source.html#l00021">Cjt_patrones.cc:21</a></div></div>
+<div class="ttc" id="aclass_cjt__patrones_html_aa306e6819883d7d30270c02bd6494212"><div class="ttname"><a href="class_cjt__patrones.html#aa306e6819883d7d30270c02bd6494212">Cjt_patrones::codificar_guardado_patron</a></div><div class="ttdeci">void codificar_guardado_patron(string idm, int idp, int b, Cjt_mensajes &amp;cm)</div><div class="ttdoc">Codifica el mensaje con identificador idm mediante lel patron con identificador idp,...</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__patrones_8cc_source.html#l00044">Cjt_patrones.cc:44</a></div></div>
+<div class="ttc" id="a_cjt__patrones_8hh_html"><div class="ttname"><a href="_cjt__patrones_8hh.html">Cjt_patrones.hh</a></div><div class="ttdoc">Especificación de la clase Cjt_patrones.</div></div>
+<div class="ttc" id="aclass_patron_html_a3a599b8dff198a28904a02ced2c296c9"><div class="ttname"><a href="class_patron.html#a3a599b8dff198a28904a02ced2c296c9">Patron::rellenar_parametros</a></div><div class="ttdeci">void rellenar_parametros(int &amp;i)</div><div class="ttdoc">Añade los parametros como el identificador idp del patron y la secuencia que formara el arbol binario...</div><div class="ttdef"><b>Definition:</b> <a href="_patron_8cc_source.html#l00025">Patron.cc:25</a></div></div>
+<div class="ttc" id="aclass_patron_html"><div class="ttname"><a href="class_patron.html">Patron</a></div><div class="ttdoc">Representa un patron de la plataforma.</div><div class="ttdef"><b>Definition:</b> <a href="_patron_8hh_source.html#l00024">Patron.hh:24</a></div></div>
+<div class="ttc" id="aclass_cjt__patrones_html_a0d371a7b647964023174cd172fe83791"><div class="ttname"><a href="class_cjt__patrones.html#a0d371a7b647964023174cd172fe83791">Cjt_patrones::listar_patrones</a></div><div class="ttdeci">void listar_patrones()</div><div class="ttdoc">Se listan los patrones de la colección por orden creciente de identificador.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__patrones_8cc_source.html#l00072">Cjt_patrones.cc:72</a></div></div>
+<div class="ttc" id="aclass_cjt__patrones_html_a8260ef553b542ff44f63107e8dc5e977"><div class="ttname"><a href="class_cjt__patrones.html#a8260ef553b542ff44f63107e8dc5e977">Cjt_patrones::existe</a></div><div class="ttdeci">bool existe(int &amp;idp) const</div><div class="ttdoc">Comprueba que el patron idp se encuentre en el conjunto de patrones de la plataforma.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__patrones_8cc_source.html#l00063">Cjt_patrones.cc:63</a></div></div>
+<div class="ttc" id="aclass_cjt__patrones_html_a69727a831d7b91f98ec403c5e7d254bb"><div class="ttname"><a href="class_cjt__patrones.html#a69727a831d7b91f98ec403c5e7d254bb">Cjt_patrones::codificar_patron</a></div><div class="ttdeci">void codificar_patron(int idp, int b)</div><div class="ttdoc">Lee y codifica un mensaje mediante el patron con identificador idp, dividiendo el mensaje en bloques ...</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__patrones_8cc_source.html#l00032">Cjt_patrones.cc:32</a></div></div>
+<div class="ttc" id="aclass_cjt__patrones_html_a3567443e5f0da1145c3ae58600b0bd7f"><div class="ttname"><a href="class_cjt__patrones.html#a3567443e5f0da1145c3ae58600b0bd7f">Cjt_patrones::decodificar_patron</a></div><div class="ttdeci">void decodificar_patron(int idp, int b)</div><div class="ttdoc">Lee y decodifica un mensaje mediante el patron con identificador idp, dividiendo el mensaje en bloque...</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__patrones_8cc_source.html#l00052">Cjt_patrones.cc:52</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

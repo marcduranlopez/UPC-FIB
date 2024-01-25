@@ -1,0 +1,230 @@
+\hypertarget{classconj__problemas}{}\doxysection{Referencia de la Clase conj\+\_\+problemas}
+\label{classconj__problemas}\index{conj\_problemas@{conj\_problemas}}
+
+
+Representa un conjunto de problemas de la plataforma.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classconj__problemas_ace87b134512b2e5011d58d1107e37309}{conj\+\_\+problemas}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__problemas_ade2acfaf9ee49cff3ea5c87196e90241}{leer}} ()
+\begin{DoxyCompactList}\small\item\em Añade los problemas {\itshape p} introducidos en la entrada del programa a un map {\itshape problemas} que tiene como parámetro clave el string del problema y como parámetro asociado la misma clase \mbox{\hyperlink{class_problema}{Problema}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__problemas_afdb44322c3aee291064ecfdf28bababd}{nuevo\+\_\+problema}} (string \&p)
+\begin{DoxyCompactList}\small\item\em Añade un nuevo problema con identificador {\itshape p} al conjunto de problemas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__problemas_a672394fe95ca9a014fcf5c534f09135b}{suma\+\_\+envio}} (string p)
+\begin{DoxyCompactList}\small\item\em Incrementa en una unidad el número de envíos totales de un problema {\itshape p}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__problemas_a7596775e53023ae039718645ea248c1f}{suma\+\_\+envio\+\_\+exito}} (string p)
+\begin{DoxyCompactList}\small\item\em Incrementa en una unidad el número de envíos con éxito de un problema {\itshape p}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__problemas_a7e26f9ff951c77ec1884d218ae331076}{llenar\+\_\+conjunto}} ()
+\begin{DoxyCompactList}\small\item\em Llena un set auxiliar con todos los identificadores de los problemas de la plataforma. (Para ordenarlos crecientemente por ratio). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classconj__problemas_ac2c1dc53ec57fb836e0a66ecc71e2879}{existe}} (string \&p) const
+\begin{DoxyCompactList}\small\item\em Comprueba que el problema {\itshape p} se encuentre en el conjunto de problemas de la plataforma. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__problemas_a1a33d0b8c3fa7f6034a80269e393eb4b}{listar\+\_\+problemas}} ()
+\begin{DoxyCompactList}\small\item\em Se listan los problemas de la colección, indicando para cada problema el string {\itshape p}, el número {\itshape t} de envíos totales y el número {\itshape e} de envíos con éxito a dicho problema, en ambos casos de usuarios presentes o pasados. También se ha de escribir el ratio (t + 1)/(e + 1), y los problemas han de listarse en orden creciente por dicho ratio. En caso de empate, se han de listar por orden creciente de identificador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__problemas_ae5ba60448ac4f6ed0a7cb344ebb050ef}{escribir\+\_\+problema}} (string \&p)
+\begin{DoxyCompactList}\small\item\em Se escribe el string {\itshape p}, el número {\itshape t} de envíos totales y el número {\itshape e} de envíos con éxito de la clase \mbox{\hyperlink{class_problema}{Problema}} correspondiente al problema {\itshape p} y, por último, también se muestra su ratio ((t + 1)/(e + 1)). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \mbox{\hyperlink{classconj__problemas_a8b46dc42ff3d75fe9a9398490a3d94b1}{problemas}}
+\begin{DoxyCompactList}\small\item\em Map (string -\/ \mbox{\hyperlink{class_problema}{Problema}}) que tiene como parámetro clave los identificadores de los problemas de la plataforma y como parámetro asociado la clase \mbox{\hyperlink{class_problema}{Problema}} correspondiente. \end{DoxyCompactList}\item 
+set$<$ \mbox{\hyperlink{class_problema}{Problema}} $>$ \mbox{\hyperlink{classconj__problemas_ae224f966c0eff2317b64a7282637f279}{aux}}
+\begin{DoxyCompactList}\small\item\em Conjunto de problemas de la clase. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa un conjunto de problemas de la plataforma. 
+
+Cada problema del conjunto es representado con un identificador. Como prerrequisito un problema no puede repetirse en la misma sesión ni en el mismo curso. 
+
+Definición en la línea 25 del archivo conj\+\_\+problemas.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classconj__problemas_ace87b134512b2e5011d58d1107e37309}\label{classconj__problemas_ace87b134512b2e5011d58d1107e37309}} 
+\index{conj\_problemas@{conj\_problemas}!conj\_problemas@{conj\_problemas}}
+\index{conj\_problemas@{conj\_problemas}!conj\_problemas@{conj\_problemas}}
+\doxysubsubsection{\texorpdfstring{conj\_problemas()}{conj\_problemas()}}
+{\footnotesize\ttfamily conj\+\_\+problemas\+::conj\+\_\+problemas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+Se ejecuta automáticamente al declarar un conjunto de problemas. \begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es una estructura de conjunto de problemas vacía. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classconj__problemas_ade2acfaf9ee49cff3ea5c87196e90241}\label{classconj__problemas_ade2acfaf9ee49cff3ea5c87196e90241}} 
+\index{conj\_problemas@{conj\_problemas}!leer@{leer}}
+\index{leer@{leer}!conj\_problemas@{conj\_problemas}}
+\doxysubsubsection{\texorpdfstring{leer()}{leer()}}
+{\footnotesize\ttfamily void conj\+\_\+problemas\+::leer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Añade los problemas {\itshape p} introducidos en la entrada del programa a un map {\itshape problemas} que tiene como parámetro clave el string del problema y como parámetro asociado la misma clase \mbox{\hyperlink{class_problema}{Problema}}. 
+
+\begin{DoxyPrecond}{Precondición}
+La clase {\itshape \mbox{\hyperlink{classconj__problemas}{conj\+\_\+problemas}}} está inicializada. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se obtiene el map {\itshape problemas} con todos los problemas introducidos en el canal de entrada del programa y sus respectivas clases \mbox{\hyperlink{class_problema}{Problema}}. Están ordenados por orden alfabético. Queda como parámetro implícito del \mbox{\hyperlink{classconj__problemas}{conj\+\_\+problemas}}. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__problemas_afdb44322c3aee291064ecfdf28bababd}\label{classconj__problemas_afdb44322c3aee291064ecfdf28bababd}} 
+\index{conj\_problemas@{conj\_problemas}!nuevo\_problema@{nuevo\_problema}}
+\index{nuevo\_problema@{nuevo\_problema}!conj\_problemas@{conj\_problemas}}
+\doxysubsubsection{\texorpdfstring{nuevo\_problema()}{nuevo\_problema()}}
+{\footnotesize\ttfamily void conj\+\_\+problemas\+::nuevo\+\_\+problema (\begin{DoxyParamCaption}\item[{string \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Añade un nuevo problema con identificador {\itshape p} al conjunto de problemas. 
+
+\begin{DoxyPrecond}{Precondición}
+El problema {\itshape p} no existe en el conjunto de problemas. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parámetro implícito pasa a contener el conjunto de problemas original más {\itshape p} y escribe el número de problemas después de añadirlo. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__problemas_a672394fe95ca9a014fcf5c534f09135b}\label{classconj__problemas_a672394fe95ca9a014fcf5c534f09135b}} 
+\index{conj\_problemas@{conj\_problemas}!suma\_envio@{suma\_envio}}
+\index{suma\_envio@{suma\_envio}!conj\_problemas@{conj\_problemas}}
+\doxysubsubsection{\texorpdfstring{suma\_envio()}{suma\_envio()}}
+{\footnotesize\ttfamily void conj\+\_\+problemas\+::suma\+\_\+envio (\begin{DoxyParamCaption}\item[{string}]{p }\end{DoxyParamCaption})}
+
+
+
+Incrementa en una unidad el número de envíos totales de un problema {\itshape p}. 
+
+\begin{DoxyPrecond}{Precondición}
+El problema {\itshape p} existe en el conjunto de problemas. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha sumado en uno el número de envíos totales de la clase \mbox{\hyperlink{class_problema}{Problema}} correspondiente al problema {\itshape p}. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__problemas_a7596775e53023ae039718645ea248c1f}\label{classconj__problemas_a7596775e53023ae039718645ea248c1f}} 
+\index{conj\_problemas@{conj\_problemas}!suma\_envio\_exito@{suma\_envio\_exito}}
+\index{suma\_envio\_exito@{suma\_envio\_exito}!conj\_problemas@{conj\_problemas}}
+\doxysubsubsection{\texorpdfstring{suma\_envio\_exito()}{suma\_envio\_exito()}}
+{\footnotesize\ttfamily void conj\+\_\+problemas\+::suma\+\_\+envio\+\_\+exito (\begin{DoxyParamCaption}\item[{string}]{p }\end{DoxyParamCaption})}
+
+
+
+Incrementa en una unidad el número de envíos con éxito de un problema {\itshape p}. 
+
+\begin{DoxyPrecond}{Precondición}
+El problema {\itshape p} existe en el conjunto de problemas. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha sumado en uno el número de envíos con éxito de la clase \mbox{\hyperlink{class_problema}{Problema}} correspondiente al problema {\itshape p}. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__problemas_a7e26f9ff951c77ec1884d218ae331076}\label{classconj__problemas_a7e26f9ff951c77ec1884d218ae331076}} 
+\index{conj\_problemas@{conj\_problemas}!llenar\_conjunto@{llenar\_conjunto}}
+\index{llenar\_conjunto@{llenar\_conjunto}!conj\_problemas@{conj\_problemas}}
+\doxysubsubsection{\texorpdfstring{llenar\_conjunto()}{llenar\_conjunto()}}
+{\footnotesize\ttfamily void conj\+\_\+problemas\+::llenar\+\_\+conjunto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Llena un set auxiliar con todos los identificadores de los problemas de la plataforma. (Para ordenarlos crecientemente por ratio). 
+
+\begin{DoxyPrecond}{Precondición}
+El map problemas está inicializado y contiene los identificadores de los problemas. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se obtiene un set auxiliar con todos los identificadores de los problemas de la plataforma ordenados crecientemente por ratio y por identificador. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__problemas_ac2c1dc53ec57fb836e0a66ecc71e2879}\label{classconj__problemas_ac2c1dc53ec57fb836e0a66ecc71e2879}} 
+\index{conj\_problemas@{conj\_problemas}!existe@{existe}}
+\index{existe@{existe}!conj\_problemas@{conj\_problemas}}
+\doxysubsubsection{\texorpdfstring{existe()}{existe()}}
+{\footnotesize\ttfamily bool conj\+\_\+problemas\+::existe (\begin{DoxyParamCaption}\item[{string \&}]{p }\end{DoxyParamCaption}) const}
+
+
+
+Comprueba que el problema {\itshape p} se encuentre en el conjunto de problemas de la plataforma. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve 1 (cierto) si el problema {\itshape p} existe en el conjunto de problemas de la plataforma. En caso contrario devuelve 0 (falso). 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__problemas_a1a33d0b8c3fa7f6034a80269e393eb4b}\label{classconj__problemas_a1a33d0b8c3fa7f6034a80269e393eb4b}} 
+\index{conj\_problemas@{conj\_problemas}!listar\_problemas@{listar\_problemas}}
+\index{listar\_problemas@{listar\_problemas}!conj\_problemas@{conj\_problemas}}
+\doxysubsubsection{\texorpdfstring{listar\_problemas()}{listar\_problemas()}}
+{\footnotesize\ttfamily void conj\+\_\+problemas\+::listar\+\_\+problemas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Se listan los problemas de la colección, indicando para cada problema el string {\itshape p}, el número {\itshape t} de envíos totales y el número {\itshape e} de envíos con éxito a dicho problema, en ambos casos de usuarios presentes o pasados. También se ha de escribir el ratio (t + 1)/(e + 1), y los problemas han de listarse en orden creciente por dicho ratio. En caso de empate, se han de listar por orden creciente de identificador. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se escribe para cada problema el string {\itshape p}, el número {\itshape t} de envíos totales y el número {\itshape e} de envíos con éxito, de usuarios pasados y actuales y, por último, también imprime el ratio ((t + 1)/(e + 1)) y los problemas irán en orden creciente de este. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__problemas_ae5ba60448ac4f6ed0a7cb344ebb050ef}\label{classconj__problemas_ae5ba60448ac4f6ed0a7cb344ebb050ef}} 
+\index{conj\_problemas@{conj\_problemas}!escribir\_problema@{escribir\_problema}}
+\index{escribir\_problema@{escribir\_problema}!conj\_problemas@{conj\_problemas}}
+\doxysubsubsection{\texorpdfstring{escribir\_problema()}{escribir\_problema()}}
+{\footnotesize\ttfamily void conj\+\_\+problemas\+::escribir\+\_\+problema (\begin{DoxyParamCaption}\item[{string \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Se escribe el string {\itshape p}, el número {\itshape t} de envíos totales y el número {\itshape e} de envíos con éxito de la clase \mbox{\hyperlink{class_problema}{Problema}} correspondiente al problema {\itshape p} y, por último, también se muestra su ratio ((t + 1)/(e + 1)). 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el problema {\itshape p} en la plataforma. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se imprime el string {\itshape p}, el número {\itshape t} de envíos totales y el número {\itshape e} de envíos con éxito de la clase \mbox{\hyperlink{class_problema}{Problema}} correspondiente al problema {\itshape p} y, por último, también se muestra su ratio ((t + 1)/(e + 1)). 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classconj__problemas_a8b46dc42ff3d75fe9a9398490a3d94b1}\label{classconj__problemas_a8b46dc42ff3d75fe9a9398490a3d94b1}} 
+\index{conj\_problemas@{conj\_problemas}!problemas@{problemas}}
+\index{problemas@{problemas}!conj\_problemas@{conj\_problemas}}
+\doxysubsubsection{\texorpdfstring{problemas}{problemas}}
+{\footnotesize\ttfamily map$<$string, \mbox{\hyperlink{class_problema}{Problema}}$>$ conj\+\_\+problemas\+::problemas\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Map (string -\/ \mbox{\hyperlink{class_problema}{Problema}}) que tiene como parámetro clave los identificadores de los problemas de la plataforma y como parámetro asociado la clase \mbox{\hyperlink{class_problema}{Problema}} correspondiente. 
+
+
+
+Definición en la línea 30 del archivo conj\+\_\+problemas.\+hh.
+
+\mbox{\Hypertarget{classconj__problemas_ae224f966c0eff2317b64a7282637f279}\label{classconj__problemas_ae224f966c0eff2317b64a7282637f279}} 
+\index{conj\_problemas@{conj\_problemas}!aux@{aux}}
+\index{aux@{aux}!conj\_problemas@{conj\_problemas}}
+\doxysubsubsection{\texorpdfstring{aux}{aux}}
+{\footnotesize\ttfamily set$<$\mbox{\hyperlink{class_problema}{Problema}}$>$ conj\+\_\+problemas\+::aux\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Conjunto de problemas de la clase. 
+
+
+
+Definición en la línea 33 del archivo conj\+\_\+problemas.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{conj__problemas_8hh}{conj\+\_\+problemas.\+hh}}\end{DoxyCompactItemize}

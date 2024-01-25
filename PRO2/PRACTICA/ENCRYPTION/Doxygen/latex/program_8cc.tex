@@ -1,0 +1,198 @@
+\hypertarget{program_8cc}{}\doxysection{Referencia del Archivo program.\+cc}
+\label{program_8cc}\index{program.cc@{program.cc}}
+
+
+Programa principal para el proyecto E\+N\+C\+R\+I\+P\+T\+A\+C\+I\+ON DE M\+E\+N\+S\+A\+J\+ES\+: {\itshape Plataforma para encriptar y desencriptar mensajes por permutacion y sustitucion}.  
+
+
+Dependencia gráfica adjunta para program.\+cc\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{program_8cc__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Programa principal para el proyecto E\+N\+C\+R\+I\+P\+T\+A\+C\+I\+ON DE M\+E\+N\+S\+A\+J\+ES\+: {\itshape Plataforma para encriptar y desencriptar mensajes por permutacion y sustitucion}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Programa principal para el proyecto E\+N\+C\+R\+I\+P\+T\+A\+C\+I\+ON DE M\+E\+N\+S\+A\+J\+ES\+: {\itshape Plataforma para encriptar y desencriptar mensajes por permutacion y sustitucion}. 
+
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{program.cc@{program.cc}!main@{main}}
+\index{main@{main}!program.cc@{program.cc}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Programa principal para el proyecto E\+N\+C\+R\+I\+P\+T\+A\+C\+I\+ON DE M\+E\+N\+S\+A\+J\+ES\+: {\itshape Plataforma para encriptar y desencriptar mensajes por permutacion y sustitucion}. 
+
+
+
+Definición en la línea 22 del archivo program.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22            \{}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_cjt__mensajes}{Cjt\_mensajes}} cm;}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_cjt__rejillas}{Cjt\_rejillas}} cr;}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_cjt__patrones}{Cjt\_patrones}} cp;}
+\DoxyCodeLine{26     }
+\DoxyCodeLine{27     cm.\mbox{\hyperlink{class_cjt__mensajes_a50f5598e798d7006d6c2805857090a3d}{leer}}();}
+\DoxyCodeLine{28     cr.\mbox{\hyperlink{class_cjt__rejillas_a2210c3692667608e434d027c2dc9cecc}{leer}}();}
+\DoxyCodeLine{29     cp.\mbox{\hyperlink{class_cjt__patrones_aece0698f5e192f3d108f894aae8f178a}{leer}}();}
+\DoxyCodeLine{30     }
+\DoxyCodeLine{31     \textcolor{keywordtype}{string} op;           \textcolor{comment}{//operacion a ejecutar}}
+\DoxyCodeLine{32     cin >> op;}
+\DoxyCodeLine{33     }
+\DoxyCodeLine{34     \textcolor{keywordtype}{string} idm;          \textcolor{comment}{//identificador del mensaje}}
+\DoxyCodeLine{35     \textcolor{keywordtype}{int} idr,idp;         \textcolor{comment}{//identificador de rejilla y patron}}
+\DoxyCodeLine{36     \textcolor{keywordtype}{int} dim, tam;        \textcolor{comment}{//Dimension y tamaño rejilla}}
+\DoxyCodeLine{37     \textcolor{keywordtype}{int} b;               \textcolor{comment}{//tamaño bloques}}
+\DoxyCodeLine{38     }
+\DoxyCodeLine{39      \textcolor{keywordflow}{while} (op != \textcolor{stringliteral}{"fin"}) \{}
+\DoxyCodeLine{40         \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"nuevo\_mensaje"} or op == \textcolor{stringliteral}{"nm"}) \{}
+\DoxyCodeLine{41             cin >> idm;}
+\DoxyCodeLine{42             \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"nm"}) cout << \textcolor{stringliteral}{"\#nm "} << idm << endl;}
+\DoxyCodeLine{43             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"\#nuevo\_mensaje "} << idm << endl;}
+\DoxyCodeLine{44             }
+\DoxyCodeLine{45             \textcolor{keywordflow}{if} (cm.\mbox{\hyperlink{class_cjt__mensajes_ab386edaf857f4514003ee1e15cb77e43}{existe}}(idm)) cout << \textcolor{stringliteral}{"error: ya existe un mensaje con ese identificador"} << endl;}
+\DoxyCodeLine{46             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{47                 cm.\mbox{\hyperlink{class_cjt__mensajes_af50aac65d9c990ef3adfd9d6f6a92935}{nuevo\_mensaje}}(idm);}
+\DoxyCodeLine{48         \}}
+\DoxyCodeLine{49         }
+\DoxyCodeLine{50         }
+\DoxyCodeLine{51         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"nueva\_rejilla"} or op == \textcolor{stringliteral}{"nr"}) \{}
+\DoxyCodeLine{52             cin >> dim >> tam;}
+\DoxyCodeLine{53             \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"nr"}) cout << \textcolor{stringliteral}{"\#nr"} << endl;}
+\DoxyCodeLine{54             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"\#nueva\_rejilla"} << endl;}
+\DoxyCodeLine{55             }
+\DoxyCodeLine{56             \textcolor{keywordflow}{if} (4*tam != ((dim*dim))) cout << \textcolor{stringliteral}{"error: dimensiones incorrectas de la rejilla"} << endl; }
+\DoxyCodeLine{57             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{58                 cr.\mbox{\hyperlink{class_cjt__rejillas_a6faaa3114a25bc133fb2ff32a40b5cb2}{nueva\_rejilla}}(dim, tam);}
+\DoxyCodeLine{59         \}}
+\DoxyCodeLine{60         }
+\DoxyCodeLine{61         }
+\DoxyCodeLine{62         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"nuevo\_patron"} or op == \textcolor{stringliteral}{"np"}) \{}
+\DoxyCodeLine{63             \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"np"}) cout << \textcolor{stringliteral}{"\#np"} << endl;}
+\DoxyCodeLine{64             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"\#nuevo\_patron"} << endl;}
+\DoxyCodeLine{65             }
+\DoxyCodeLine{66                 cp.\mbox{\hyperlink{class_cjt__patrones_ab9efedd70f12de2e2e4f5302874221d9}{nuevo\_patron}}();}
+\DoxyCodeLine{67         \}}
+\DoxyCodeLine{68         }
+\DoxyCodeLine{69         }
+\DoxyCodeLine{70         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"borra\_mensaje"} or op == \textcolor{stringliteral}{"bm"}) \{}
+\DoxyCodeLine{71             cin >> idm;}
+\DoxyCodeLine{72             \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"bm"}) cout << \textcolor{stringliteral}{"\#bm "} << idm << endl;}
+\DoxyCodeLine{73             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"\#borra\_mensaje "} << idm << endl;}
+\DoxyCodeLine{74             }
+\DoxyCodeLine{75             \textcolor{keywordflow}{if} (not cm.\mbox{\hyperlink{class_cjt__mensajes_ab386edaf857f4514003ee1e15cb77e43}{existe}}(idm)) cout << \textcolor{stringliteral}{"error: el mensaje no existe"} << endl;}
+\DoxyCodeLine{76             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{77                 cm.\mbox{\hyperlink{class_cjt__mensajes_a6dfc23a9f32e1d53a3b1c9be95163a48}{borra\_mensaje}}(idm);}
+\DoxyCodeLine{78         \}}
+\DoxyCodeLine{79         }
+\DoxyCodeLine{80         }
+\DoxyCodeLine{81         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"listar\_mensajes"} or op == \textcolor{stringliteral}{"lm"}) \{}
+\DoxyCodeLine{82             \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"lm"}) cout << \textcolor{stringliteral}{"\#lm"} << endl;}
+\DoxyCodeLine{83             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"\#listar\_mensajes"} << endl;}
+\DoxyCodeLine{84             }
+\DoxyCodeLine{85             cm.\mbox{\hyperlink{class_cjt__mensajes_a3cf6baf19b331292052552edf1a411a2}{listar\_mensajes}}();}
+\DoxyCodeLine{86         \}}
+\DoxyCodeLine{87         }
+\DoxyCodeLine{88         }
+\DoxyCodeLine{89         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"listar\_rejillas"} or op == \textcolor{stringliteral}{"lr"}) \{}
+\DoxyCodeLine{90             \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"lr"}) cout << \textcolor{stringliteral}{"\#lr"} << endl;}
+\DoxyCodeLine{91             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"\#listar\_rejillas"} << endl;}
+\DoxyCodeLine{92             }
+\DoxyCodeLine{93             cr.\mbox{\hyperlink{class_cjt__rejillas_a97ab99afd34b8ff515f311ec411a010a}{listar\_rejillas}}();}
+\DoxyCodeLine{94         \}}
+\DoxyCodeLine{95         }
+\DoxyCodeLine{96         }
+\DoxyCodeLine{97         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"listar\_patrones"} or op == \textcolor{stringliteral}{"lp"}) \{}
+\DoxyCodeLine{98             \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"lp"}) cout << \textcolor{stringliteral}{"\#lp"} << endl;}
+\DoxyCodeLine{99             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"\#listar\_patrones"} << endl;}
+\DoxyCodeLine{100             }
+\DoxyCodeLine{101             cp.\mbox{\hyperlink{class_cjt__patrones_a0d371a7b647964023174cd172fe83791}{listar\_patrones}}();}
+\DoxyCodeLine{102         \}}
+\DoxyCodeLine{103         }
+\DoxyCodeLine{104         }
+\DoxyCodeLine{105         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"codificar\_rejilla"} or op == \textcolor{stringliteral}{"cr"}) \{}
+\DoxyCodeLine{106             cin >> idr;}
+\DoxyCodeLine{107             \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"cr"}) cout << \textcolor{stringliteral}{"\#cr "} << idr << endl;}
+\DoxyCodeLine{108             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"\#codificar\_rejilla "} << idr << endl;}
+\DoxyCodeLine{109             }
+\DoxyCodeLine{110             \textcolor{keywordflow}{if} (not cr.\mbox{\hyperlink{class_cjt__rejillas_ab3344ce2b840a60b4a3c5d7516e04a03}{existe}}(idr)) cout << \textcolor{stringliteral}{"error: la rejilla no existe"} << endl;}
+\DoxyCodeLine{111             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{112                 cr.\mbox{\hyperlink{class_cjt__rejillas_a5c9a3fa170b037a7429a52387861ad16}{codificar\_rejilla}}(idr);}
+\DoxyCodeLine{113         \}}
+\DoxyCodeLine{114         }
+\DoxyCodeLine{115         }
+\DoxyCodeLine{116         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"codificar\_guardado\_rejilla"} or op == \textcolor{stringliteral}{"cgr"}) \{}
+\DoxyCodeLine{117             cin >> idm >> idr;}
+\DoxyCodeLine{118             \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"cgr"}) cout << \textcolor{stringliteral}{"\#cgr "} << idm << \textcolor{charliteral}{' '} << idr << endl;}
+\DoxyCodeLine{119             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"\#codificar\_guardado\_rejilla "} << idm << \textcolor{charliteral}{' '} << idr << endl;}
+\DoxyCodeLine{120             }
+\DoxyCodeLine{121             \textcolor{keywordflow}{if} (not cm.\mbox{\hyperlink{class_cjt__mensajes_ab386edaf857f4514003ee1e15cb77e43}{existe}}(idm)) cout << \textcolor{stringliteral}{"error: el mensaje no existe"} << endl;}
+\DoxyCodeLine{122             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (not cr.\mbox{\hyperlink{class_cjt__rejillas_ab3344ce2b840a60b4a3c5d7516e04a03}{existe}}(idr)) cout << \textcolor{stringliteral}{"error: la rejilla no existe"} << endl;}
+\DoxyCodeLine{123             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{124                 cr.\mbox{\hyperlink{class_cjt__rejillas_a73bea369cb2e6c4f1ac5e4cc32adad16}{codificar\_guardado\_rejilla}}(idm, idr, cm);}
+\DoxyCodeLine{125         \}}
+\DoxyCodeLine{126         }
+\DoxyCodeLine{127         }
+\DoxyCodeLine{128         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"decodificar\_rejilla"} or op == \textcolor{stringliteral}{"dr"}) \{}
+\DoxyCodeLine{129             cin >> idr;}
+\DoxyCodeLine{130             \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"dr"}) cout << \textcolor{stringliteral}{"\#dr "} << idr << endl;}
+\DoxyCodeLine{131             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"\#decodificar\_rejilla "} << idr << endl;}
+\DoxyCodeLine{132             }
+\DoxyCodeLine{133             \textcolor{keywordflow}{if} (not cr.\mbox{\hyperlink{class_cjt__rejillas_ab3344ce2b840a60b4a3c5d7516e04a03}{existe}}(idr)) cout << \textcolor{stringliteral}{"error: la rejilla no existe"} << endl;}
+\DoxyCodeLine{134             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{135                 cr.\mbox{\hyperlink{class_cjt__rejillas_ae9e2bd65fe2ff22811458acee2444114}{decodificar\_rejilla}}(idr);}
+\DoxyCodeLine{136         \}}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138         }
+\DoxyCodeLine{139         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"codificar\_patron"} or op == \textcolor{stringliteral}{"cp"}) \{}
+\DoxyCodeLine{140             cin >> idp >> b;}
+\DoxyCodeLine{141             \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"cp"}) cout << \textcolor{stringliteral}{"\#cp "} << idp << \textcolor{charliteral}{' '} << b << endl;}
+\DoxyCodeLine{142             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"\#codificar\_patron "} << idp << \textcolor{charliteral}{' '} << b << endl;}
+\DoxyCodeLine{143             }
+\DoxyCodeLine{144             \textcolor{keywordflow}{if} (not cp.\mbox{\hyperlink{class_cjt__patrones_a8260ef553b542ff44f63107e8dc5e977}{existe}}(idp)) cout << \textcolor{stringliteral}{"error: el patron no existe"} << endl;}
+\DoxyCodeLine{145             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{146                 cp.\mbox{\hyperlink{class_cjt__patrones_a69727a831d7b91f98ec403c5e7d254bb}{codificar\_patron}}(idp, b);}
+\DoxyCodeLine{147         \}}
+\DoxyCodeLine{148         }
+\DoxyCodeLine{149         }
+\DoxyCodeLine{150         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"codificar\_guardado\_patron"} or op == \textcolor{stringliteral}{"cgp"}) \{}
+\DoxyCodeLine{151             cin >> idm >> idp >> b;}
+\DoxyCodeLine{152             \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"cgp"}) cout << \textcolor{stringliteral}{"\#cgp "} << idm << \textcolor{charliteral}{' '} << idp  << \textcolor{charliteral}{' '} << b << endl;}
+\DoxyCodeLine{153             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"\#codificar\_guardado\_patron "} << idm << \textcolor{charliteral}{' '} << idp << \textcolor{charliteral}{' '} << b << endl;}
+\DoxyCodeLine{154             }
+\DoxyCodeLine{155             \textcolor{keywordflow}{if} (not cm.\mbox{\hyperlink{class_cjt__mensajes_ab386edaf857f4514003ee1e15cb77e43}{existe}}(idm)) cout << \textcolor{stringliteral}{"error: el mensaje no existe"} << endl;}
+\DoxyCodeLine{156             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (not cp.\mbox{\hyperlink{class_cjt__patrones_a8260ef553b542ff44f63107e8dc5e977}{existe}}(idp)) cout << \textcolor{stringliteral}{"error: el patron no existe"} << endl;}
+\DoxyCodeLine{157             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{158                 cp.\mbox{\hyperlink{class_cjt__patrones_aa306e6819883d7d30270c02bd6494212}{codificar\_guardado\_patron}}(idm, idp, b, cm);}
+\DoxyCodeLine{159         \}}
+\DoxyCodeLine{160         }
+\DoxyCodeLine{161         }
+\DoxyCodeLine{162         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"decodificar\_patron"} or op == \textcolor{stringliteral}{"dp"}) \{}
+\DoxyCodeLine{163             cin >> idp >> b;}
+\DoxyCodeLine{164             \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"dp"}) cout << \textcolor{stringliteral}{"\#dp "} << idp << \textcolor{charliteral}{' '} << b << endl;}
+\DoxyCodeLine{165             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"\#decodificar\_patron "} << idp << \textcolor{charliteral}{' '} << b << endl;}
+\DoxyCodeLine{166             }
+\DoxyCodeLine{167             \textcolor{keywordflow}{if} (not cp.\mbox{\hyperlink{class_cjt__patrones_a8260ef553b542ff44f63107e8dc5e977}{existe}}(idp)) cout << \textcolor{stringliteral}{"error: el patron no existe"} << endl;}
+\DoxyCodeLine{168             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{169                 cp.\mbox{\hyperlink{class_cjt__patrones_a3567443e5f0da1145c3ae58600b0bd7f}{decodificar\_patron}}(idp, b);}
+\DoxyCodeLine{170         \}}
+\DoxyCodeLine{171         }
+\DoxyCodeLine{172         cin >> op;}
+\DoxyCodeLine{173      \}}
+\DoxyCodeLine{174 \}}
+
+\end{DoxyCode}

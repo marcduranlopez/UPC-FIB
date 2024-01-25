@@ -1,0 +1,286 @@
+\hypertarget{classconj__cursos}{}\doxysection{Referencia de la Clase conj\+\_\+cursos}
+\label{classconj__cursos}\index{conj\_cursos@{conj\_cursos}}
+
+
+Representa un conjunto de cursos de la plataforma.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classconj__cursos_a68afc3f025feaf330397f09da0655217}{conj\+\_\+cursos}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__cursos_a14699980e7a841dcf1269f47b8e3aa5a}{leer}} ()
+\begin{DoxyCompactList}\small\item\em Añade los cursos {\itshape c} introducidos en la entrada del programa a un vector {\itshape cursos} de clases \mbox{\hyperlink{class_curso}{Curso}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classconj__cursos_a43981e142b2221f72efdac1958e31ab9}{incrementar\+\_\+usuario}} (int \&c)
+\begin{DoxyCompactList}\small\item\em Aumenta en una unidad el numero de usuarios inscritos al curso con identificador {\itshape c}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__cursos_a0a124e03220977519b006fe9ebb5b1fb}{decrementar\+\_\+usuario}} (int \&c)
+\begin{DoxyCompactList}\small\item\em Disminuye en una unidad el numero de usuarios inscritos al curso con identificador {\itshape c}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__cursos_a1d9b8515b33dfa2e243afa2ff152bc6e}{nuevo\+\_\+curso}} (\mbox{\hyperlink{classconj__sesiones}{conj\+\_\+sesiones}} \&cs)
+\begin{DoxyCompactList}\small\item\em Añade un nuevo curso con identificador {\itshape N} + 1 al conjunto de cursos. ({\itshape N} es el numero actual de cursos). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__cursos_aae990af03c0a54eaa48ea5b2fd719d03}{suma\+\_\+cursos\+\_\+resueltos}} (int \&c)
+\begin{DoxyCompactList}\small\item\em Aumenta en uno el numero de usuarios que han completado el curso con identificador {\itshape c}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__cursos_a34217ff83efe5bcd75c627f6636f7b3b}{actualiza\+\_\+problem\+\_\+enviables}} (int \&c, \mbox{\hyperlink{classconj__sesiones}{conj\+\_\+sesiones}} \&cs, string \&p, map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&problem\+\_\+enviables, map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&problem\+\_\+resueltos)
+\begin{DoxyCompactList}\small\item\em Actualiza el map de los problemas enviables al curso {\itshape c} despues de hacer el envio del problema con identificador {\itshape p}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classconj__cursos_abb438444d56c7ecaf8eebe3851b2c772}{existe}} (int \&c) const
+\begin{DoxyCompactList}\small\item\em Comprueba que el curso {\itshape c} se encuentre en el conjunto de cursos de la plataforma. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classconj__cursos_a9de357a60d691d335a1e45567662304f}{sesion\+\_\+problema}} (int \&c, string \&p, \mbox{\hyperlink{classconj__sesiones}{conj\+\_\+sesiones}} \&cs)
+\begin{DoxyCompactList}\small\item\em Consulta la sesión del problema {\itshape p} en el curso con identificador {\itshape c}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classconj__cursos_a42234a4f1870e5bcc5ad8c26f4e81175}{pertenece}} (int \&c, string \&p, \mbox{\hyperlink{classconj__sesiones}{conj\+\_\+sesiones}} \&sesiones)
+\begin{DoxyCompactList}\small\item\em Comprueba que el problema {\itshape p} se encuentre en el curso {\itshape c}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_curso}{Curso}} \mbox{\hyperlink{classconj__cursos_a81b9280079e850212530b553a30f4dd8}{buscar\+\_\+curso}} (int \&c) const
+\begin{DoxyCompactList}\small\item\em Busca la clase \mbox{\hyperlink{class_curso}{Curso}} con identificador {\itshape c} del conjunto de cursos existente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__cursos_aab3c50fe9cbf447c88ae16d4b9688eda}{listar\+\_\+cursos}} ()
+\begin{DoxyCompactList}\small\item\em Se escriben los cursos actuales de la plataforma, ordenados crecientemente por su identificador y mostrando, para cada curso, su identificador, el número de usuarios actuales o pasados que lo han completado, el número de usuarios inscritos actualmente, el número de sesiones que lo forman y los identificadores de dichas sesiones, en el mismo orden en el que se leyeron cuando se creó el curso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__cursos_a2421caf2d2c029fbdef0c81613de07bb}{escribir\+\_\+curso}} (int \&c)
+\begin{DoxyCompactList}\small\item\em Se escribe para el curso {\itshape c} su identificador, el número de usuarios actuales o pasados que lo han completado, el nombre el número de usuarios inscritos actualmente, el número de sesiones que lo forman y los identificadores de dichas sesiones, en el mismo orden en el que se leyeron cuando se creó el curso. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{class_curso}{Curso}} $>$ \mbox{\hyperlink{classconj__cursos_af0c619e6399d12e7dbfaecc7abb4d7e2}{cursos}}
+\begin{DoxyCompactList}\small\item\em Vector que contiene las clases \mbox{\hyperlink{class_curso}{Curso}} de todos los cursos de la plataforma. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa un conjunto de cursos de la plataforma. 
+
+Cada curso del conjunto es representado por un entero entre 1 y {\itshape N} que ira seguida del número de sesiones y de una secuencia de identificadores de sesiones, válidos y sin repeticiones. 
+
+Definición en la línea 26 del archivo conj\+\_\+cursos.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classconj__cursos_a68afc3f025feaf330397f09da0655217}\label{classconj__cursos_a68afc3f025feaf330397f09da0655217}} 
+\index{conj\_cursos@{conj\_cursos}!conj\_cursos@{conj\_cursos}}
+\index{conj\_cursos@{conj\_cursos}!conj\_cursos@{conj\_cursos}}
+\doxysubsubsection{\texorpdfstring{conj\_cursos()}{conj\_cursos()}}
+{\footnotesize\ttfamily conj\+\_\+cursos\+::conj\+\_\+cursos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+Se ejecuta automáticamente al declarar un conjunto de cursos. \begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es una estructura de conjunto de cursos vacía. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classconj__cursos_a14699980e7a841dcf1269f47b8e3aa5a}\label{classconj__cursos_a14699980e7a841dcf1269f47b8e3aa5a}} 
+\index{conj\_cursos@{conj\_cursos}!leer@{leer}}
+\index{leer@{leer}!conj\_cursos@{conj\_cursos}}
+\doxysubsubsection{\texorpdfstring{leer()}{leer()}}
+{\footnotesize\ttfamily void conj\+\_\+cursos\+::leer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Añade los cursos {\itshape c} introducidos en la entrada del programa a un vector {\itshape cursos} de clases \mbox{\hyperlink{class_curso}{Curso}}. 
+
+\begin{DoxyPrecond}{Precondición}
+La clase {\itshape \mbox{\hyperlink{classconj__cursos}{conj\+\_\+cursos}}} esta inicializada. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se obtiene el vector {\itshape cursos} con todas las clases \mbox{\hyperlink{class_curso}{Curso}} como parametro implicito del \mbox{\hyperlink{classconj__cursos}{conj\+\_\+cursos}}. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__cursos_a43981e142b2221f72efdac1958e31ab9}\label{classconj__cursos_a43981e142b2221f72efdac1958e31ab9}} 
+\index{conj\_cursos@{conj\_cursos}!incrementar\_usuario@{incrementar\_usuario}}
+\index{incrementar\_usuario@{incrementar\_usuario}!conj\_cursos@{conj\_cursos}}
+\doxysubsubsection{\texorpdfstring{incrementar\_usuario()}{incrementar\_usuario()}}
+{\footnotesize\ttfamily int conj\+\_\+cursos\+::incrementar\+\_\+usuario (\begin{DoxyParamCaption}\item[{int \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Aumenta en una unidad el numero de usuarios inscritos al curso con identificador {\itshape c}. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el curso con identificador {\itshape c}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El numero de usuarios inscritos al curso con identificador {\itshape c} son los inscritos previamente mas uno. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__cursos_a0a124e03220977519b006fe9ebb5b1fb}\label{classconj__cursos_a0a124e03220977519b006fe9ebb5b1fb}} 
+\index{conj\_cursos@{conj\_cursos}!decrementar\_usuario@{decrementar\_usuario}}
+\index{decrementar\_usuario@{decrementar\_usuario}!conj\_cursos@{conj\_cursos}}
+\doxysubsubsection{\texorpdfstring{decrementar\_usuario()}{decrementar\_usuario()}}
+{\footnotesize\ttfamily void conj\+\_\+cursos\+::decrementar\+\_\+usuario (\begin{DoxyParamCaption}\item[{int \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Disminuye en una unidad el numero de usuarios inscritos al curso con identificador {\itshape c}. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el curso con identificador {\itshape c}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El numero de usuarios inscritos al curso con identificador {\itshape c} son los inscritos previamente menos uno. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__cursos_a1d9b8515b33dfa2e243afa2ff152bc6e}\label{classconj__cursos_a1d9b8515b33dfa2e243afa2ff152bc6e}} 
+\index{conj\_cursos@{conj\_cursos}!nuevo\_curso@{nuevo\_curso}}
+\index{nuevo\_curso@{nuevo\_curso}!conj\_cursos@{conj\_cursos}}
+\doxysubsubsection{\texorpdfstring{nuevo\_curso()}{nuevo\_curso()}}
+{\footnotesize\ttfamily void conj\+\_\+cursos\+::nuevo\+\_\+curso (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classconj__sesiones}{conj\+\_\+sesiones}} \&}]{cs }\end{DoxyParamCaption})}
+
+
+
+Añade un nuevo curso con identificador {\itshape N} + 1 al conjunto de cursos. ({\itshape N} es el numero actual de cursos). 
+
+\begin{DoxyPrecond}{Precondición}
+No hay intersección de problemas entre las sesiones. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se añade el curso {\itshape N} + 1 al parámetro implícito y se imprime su identificador. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__cursos_aae990af03c0a54eaa48ea5b2fd719d03}\label{classconj__cursos_aae990af03c0a54eaa48ea5b2fd719d03}} 
+\index{conj\_cursos@{conj\_cursos}!suma\_cursos\_resueltos@{suma\_cursos\_resueltos}}
+\index{suma\_cursos\_resueltos@{suma\_cursos\_resueltos}!conj\_cursos@{conj\_cursos}}
+\doxysubsubsection{\texorpdfstring{suma\_cursos\_resueltos()}{suma\_cursos\_resueltos()}}
+{\footnotesize\ttfamily void conj\+\_\+cursos\+::suma\+\_\+cursos\+\_\+resueltos (\begin{DoxyParamCaption}\item[{int \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Aumenta en uno el numero de usuarios que han completado el curso con identificador {\itshape c}. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe {\itshape c}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El numero de usuarios que han completado el curso con identificador {\itshape c} son los completados previamente mas uno. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__cursos_a34217ff83efe5bcd75c627f6636f7b3b}\label{classconj__cursos_a34217ff83efe5bcd75c627f6636f7b3b}} 
+\index{conj\_cursos@{conj\_cursos}!actualiza\_problem\_enviables@{actualiza\_problem\_enviables}}
+\index{actualiza\_problem\_enviables@{actualiza\_problem\_enviables}!conj\_cursos@{conj\_cursos}}
+\doxysubsubsection{\texorpdfstring{actualiza\_problem\_enviables()}{actualiza\_problem\_enviables()}}
+{\footnotesize\ttfamily void conj\+\_\+cursos\+::actualiza\+\_\+problem\+\_\+enviables (\begin{DoxyParamCaption}\item[{int \&}]{c,  }\item[{\mbox{\hyperlink{classconj__sesiones}{conj\+\_\+sesiones}} \&}]{cs,  }\item[{string \&}]{p,  }\item[{map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&}]{problem\+\_\+enviables,  }\item[{map$<$ string, \mbox{\hyperlink{class_problema}{Problema}} $>$ \&}]{problem\+\_\+resueltos }\end{DoxyParamCaption})}
+
+
+
+Actualiza el map de los problemas enviables al curso {\itshape c} despues de hacer el envio del problema con identificador {\itshape p}. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el curso {\itshape c} y el problema {\itshape p}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se actualiza el map de problemas enviables con los problemas que cumplen todos los prerrequisitos para ser enviados. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__cursos_abb438444d56c7ecaf8eebe3851b2c772}\label{classconj__cursos_abb438444d56c7ecaf8eebe3851b2c772}} 
+\index{conj\_cursos@{conj\_cursos}!existe@{existe}}
+\index{existe@{existe}!conj\_cursos@{conj\_cursos}}
+\doxysubsubsection{\texorpdfstring{existe()}{existe()}}
+{\footnotesize\ttfamily bool conj\+\_\+cursos\+::existe (\begin{DoxyParamCaption}\item[{int \&}]{c }\end{DoxyParamCaption}) const}
+
+
+
+Comprueba que el curso {\itshape c} se encuentre en el conjunto de cursos de la plataforma. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve 1 (cierto) si el curso {\itshape c} existe en el conjunto de cursos de la plataforma. En caso contrario, devuelve 0 (falso). 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__cursos_a9de357a60d691d335a1e45567662304f}\label{classconj__cursos_a9de357a60d691d335a1e45567662304f}} 
+\index{conj\_cursos@{conj\_cursos}!sesion\_problema@{sesion\_problema}}
+\index{sesion\_problema@{sesion\_problema}!conj\_cursos@{conj\_cursos}}
+\doxysubsubsection{\texorpdfstring{sesion\_problema()}{sesion\_problema()}}
+{\footnotesize\ttfamily string conj\+\_\+cursos\+::sesion\+\_\+problema (\begin{DoxyParamCaption}\item[{int \&}]{c,  }\item[{string \&}]{p,  }\item[{\mbox{\hyperlink{classconj__sesiones}{conj\+\_\+sesiones}} \&}]{cs }\end{DoxyParamCaption})}
+
+
+
+Consulta la sesión del problema {\itshape p} en el curso con identificador {\itshape c}. 
+
+\begin{DoxyPrecond}{Precondición}
+El curso {\itshape c} y el problema {\itshape p} existen. El problema {\itshape p} pertenece al curso {\itshape c}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se imprime el identificador de la sesión donde se realiza el problema {\itshape p} en el curso {\itshape c}. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__cursos_a42234a4f1870e5bcc5ad8c26f4e81175}\label{classconj__cursos_a42234a4f1870e5bcc5ad8c26f4e81175}} 
+\index{conj\_cursos@{conj\_cursos}!pertenece@{pertenece}}
+\index{pertenece@{pertenece}!conj\_cursos@{conj\_cursos}}
+\doxysubsubsection{\texorpdfstring{pertenece()}{pertenece()}}
+{\footnotesize\ttfamily bool conj\+\_\+cursos\+::pertenece (\begin{DoxyParamCaption}\item[{int \&}]{c,  }\item[{string \&}]{p,  }\item[{\mbox{\hyperlink{classconj__sesiones}{conj\+\_\+sesiones}} \&}]{sesiones }\end{DoxyParamCaption})}
+
+
+
+Comprueba que el problema {\itshape p} se encuentre en el curso {\itshape c}. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el problema {\itshape p} y el curso {\itshape c}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Imprime 1 (cierto) si el problema {\itshape p} existe en el curso {\itshape c}. En caso contrario, imprime 0 (falso). 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__cursos_a81b9280079e850212530b553a30f4dd8}\label{classconj__cursos_a81b9280079e850212530b553a30f4dd8}} 
+\index{conj\_cursos@{conj\_cursos}!buscar\_curso@{buscar\_curso}}
+\index{buscar\_curso@{buscar\_curso}!conj\_cursos@{conj\_cursos}}
+\doxysubsubsection{\texorpdfstring{buscar\_curso()}{buscar\_curso()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_curso}{Curso}} conj\+\_\+cursos\+::buscar\+\_\+curso (\begin{DoxyParamCaption}\item[{int \&}]{c }\end{DoxyParamCaption}) const}
+
+
+
+Busca la clase \mbox{\hyperlink{class_curso}{Curso}} con identificador {\itshape c} del conjunto de cursos existente. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el curso {\itshape c}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se devuelve la clase \mbox{\hyperlink{class_curso}{Curso}} que corresponde al curso con identificador {\itshape c}. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__cursos_aab3c50fe9cbf447c88ae16d4b9688eda}\label{classconj__cursos_aab3c50fe9cbf447c88ae16d4b9688eda}} 
+\index{conj\_cursos@{conj\_cursos}!listar\_cursos@{listar\_cursos}}
+\index{listar\_cursos@{listar\_cursos}!conj\_cursos@{conj\_cursos}}
+\doxysubsubsection{\texorpdfstring{listar\_cursos()}{listar\_cursos()}}
+{\footnotesize\ttfamily void conj\+\_\+cursos\+::listar\+\_\+cursos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Se escriben los cursos actuales de la plataforma, ordenados crecientemente por su identificador y mostrando, para cada curso, su identificador, el número de usuarios actuales o pasados que lo han completado, el número de usuarios inscritos actualmente, el número de sesiones que lo forman y los identificadores de dichas sesiones, en el mismo orden en el que se leyeron cuando se creó el curso. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se imprime por el canal estandar de salida los cursos actuales de la plataforma, ordenados y mostrando, para cada curso, su identificador, el número de usuarios actuales y pasados que lo han completado. También, el número de usuarios inscritos actualmente y, por último, el número de sesiones y sus identificadores en orden de creación. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__cursos_a2421caf2d2c029fbdef0c81613de07bb}\label{classconj__cursos_a2421caf2d2c029fbdef0c81613de07bb}} 
+\index{conj\_cursos@{conj\_cursos}!escribir\_curso@{escribir\_curso}}
+\index{escribir\_curso@{escribir\_curso}!conj\_cursos@{conj\_cursos}}
+\doxysubsubsection{\texorpdfstring{escribir\_curso()}{escribir\_curso()}}
+{\footnotesize\ttfamily void conj\+\_\+cursos\+::escribir\+\_\+curso (\begin{DoxyParamCaption}\item[{int \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Se escribe para el curso {\itshape c} su identificador, el número de usuarios actuales o pasados que lo han completado, el nombre el número de usuarios inscritos actualmente, el número de sesiones que lo forman y los identificadores de dichas sesiones, en el mismo orden en el que se leyeron cuando se creó el curso. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el curso {\itshape c} en la plataforma. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se imprime por el canal estandar de salida el identificador {\itshape c}, el número de usuarios pasados y actuales que han completado el curso {\itshape c}. También se imprime el número de sesiones que lo forman y los identificadores de dichas sesiones en orden de creación. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classconj__cursos_af0c619e6399d12e7dbfaecc7abb4d7e2}\label{classconj__cursos_af0c619e6399d12e7dbfaecc7abb4d7e2}} 
+\index{conj\_cursos@{conj\_cursos}!cursos@{cursos}}
+\index{cursos@{cursos}!conj\_cursos@{conj\_cursos}}
+\doxysubsubsection{\texorpdfstring{cursos}{cursos}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_curso}{Curso}}$>$ conj\+\_\+cursos\+::cursos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Vector que contiene las clases \mbox{\hyperlink{class_curso}{Curso}} de todos los cursos de la plataforma. 
+
+
+
+Definición en la línea 31 del archivo conj\+\_\+cursos.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{conj__cursos_8hh}{conj\+\_\+cursos.\+hh}}\end{DoxyCompactItemize}

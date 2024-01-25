@@ -1,0 +1,270 @@
+\hypertarget{classconj__usuarios}{}\doxysection{Referencia de la Clase conj\+\_\+usuarios}
+\label{classconj__usuarios}\index{conj\_usuarios@{conj\_usuarios}}
+
+
+Representa un conjunto de usuarios de la plataforma.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classconj__usuarios_ab6b93df86986bb98be74a44d064b48e5}{conj\+\_\+usuarios}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__usuarios_a7916a3eb79089bdf821ac5dd70fbac28}{leer}} ()
+\begin{DoxyCompactList}\small\item\em Añade los usuarios {\itshape u} introducidos en la entrada del programa a un map {\itshape usuarios} que tiene como parametro clave el string del usuario y como parametro asociado la misma clase \mbox{\hyperlink{class_usuario}{Usuario}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__usuarios_a6fd2ab489a1e0097807965d89b5b2fb7}{alta\+\_\+usuario}} (string \&u)
+\begin{DoxyCompactList}\small\item\em Añade un nuevo usuario con identificador {\itshape u} al conjunto de usuarios. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__usuarios_a1f12d2df1d1cf11aae132311ea167f03}{baja\+\_\+usuario}} (string \&u, \mbox{\hyperlink{classconj__cursos}{conj\+\_\+cursos}} \&cc)
+\begin{DoxyCompactList}\small\item\em Suprime el usuario con identificador {\itshape u} del conjunto de usuarios. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__usuarios_a0344d3743e64712d01523bca2be11565}{inscribir\+\_\+curso}} (string \&u, int \&c, \mbox{\hyperlink{classconj__cursos}{conj\+\_\+cursos}} \&cursos, \mbox{\hyperlink{classconj__sesiones}{conj\+\_\+sesiones}} \&s)
+\begin{DoxyCompactList}\small\item\em Inscribe un usuario {\itshape u} en el curso con identificador {\itshape c}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__usuarios_a64d3f04128cdfb976af7c475de2e89fe}{envio}} (string \&u, string \&p, int \&r, \mbox{\hyperlink{classconj__problemas}{conj\+\_\+problemas}} \&cp, \mbox{\hyperlink{classconj__sesiones}{conj\+\_\+sesiones}} \&cs, \mbox{\hyperlink{classconj__cursos}{conj\+\_\+cursos}} \&cc)
+\begin{DoxyCompactList}\small\item\em Se toma nota del resultado {\itshape r} ({\itshape r} = 1 si éxito o {\itshape r} = 0 si fallo) de un nuevo envío del usuario {\itshape u} al problema {\itshape p}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classconj__usuarios_ad5bcd8f38f1ff0b0260a1526a2564810}{existe}} (string \&u) const
+\begin{DoxyCompactList}\small\item\em Comprueba que el usuario {\itshape u} se encuentre en el conjunto de usuarios de la plataforma. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classconj__usuarios_af1f22948be475035e446f6aaf2d92c54}{curso\+\_\+usuario}} (const string \&u)
+\begin{DoxyCompactList}\small\item\em Consulta el curso en el que esta inscrito un usuario {\itshape u}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__usuarios_aa30b4c5798ddbcacf43321520884dc5d}{problemas\+\_\+resueltos}} (string \&u)
+\begin{DoxyCompactList}\small\item\em Se listan en orden creciente por identificador los problemas solucionados con éxito por el usuario {\itshape u}, ya sea en el curso en que está inscrito actualmente (si lo está en alguno) como los resueltos en cursos anteriores. Además de los identificadores se imprime también el número de envíos realizados por el usuario a cada problema listado (valor mayor o igual a uno). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__usuarios_ab39fa55e793d0560d99559c718420459}{problemas\+\_\+enviables}} (string \&u)
+\begin{DoxyCompactList}\small\item\em Se listan en orden creciente por identificador los problemas que el usuario no ha solucionado todavía en el curso en el que está inscrito actualmente, pero a los cuales ya puede realizar un envío (porque cumple todos sus prerequisitos, directos e indirectos). Además de los identificadores se imprime también el número de envíos realizados por el usuario a cada problema del listado (valor mayor o igual que cero). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__usuarios_aabed8e05c902c2f7dae81ced7b41092d}{listar\+\_\+usuarios}} ()
+\begin{DoxyCompactList}\small\item\em Se escriben los usuarios registrados actualmente en la plataforma, ordenados crecientemente por su nombre y mostrando, para cada usuario, su identificador, cuántos envíos en total ha realizado, cuántos problemas ha resuelto satisfactoriamente, cuántos problemas ha intentado resolver (al menos ha hecho un envío), y el identificador del curso en el que está inscrito o un 0 si no está inscrito en ninguno. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classconj__usuarios_a7473bb174a625976d2c33fb5e560e81e}{escribir\+\_\+usuario}} (string \&u)
+\begin{DoxyCompactList}\small\item\em Se escribe para el usuario {\itshape u} su identificador, cuántos envíos en total ha realizado, cuántos problemas ha resuelto satisfactoriamente, cuántos problemas ha intentado resolver (al menos ha hecho un envío), y el identificador del curso en el que está inscrito o un 0 si no está inscrito en ninguno. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ string, \mbox{\hyperlink{class_usuario}{Usuario}} $>$ \mbox{\hyperlink{classconj__usuarios_aa3c806105e40b9096731d06cdf530aef}{usuarios}}
+\begin{DoxyCompactList}\small\item\em Map (string -\/ \mbox{\hyperlink{class_usuario}{Usuario}}) que tiene como parametro clave los identificadores de los usuarios de la plataforma y como parametro asociado la clase \mbox{\hyperlink{class_usuario}{Usuario}} correspondiente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa un conjunto de usuarios de la plataforma. 
+
+Cada usuario tiene un nombre que lo identifica (string). Los usuarios pueden darse de alta y de baja de la plataforma cuando quieran. Al darse de baja, toda la información asociada al usuario es borrada del sistema. Los usuarios también pueden inscribirse en un curso para resolver los problemas de las sesiones que lo forman. 
+
+Definición en la línea 26 del archivo conj\+\_\+usuarios.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classconj__usuarios_ab6b93df86986bb98be74a44d064b48e5}\label{classconj__usuarios_ab6b93df86986bb98be74a44d064b48e5}} 
+\index{conj\_usuarios@{conj\_usuarios}!conj\_usuarios@{conj\_usuarios}}
+\index{conj\_usuarios@{conj\_usuarios}!conj\_usuarios@{conj\_usuarios}}
+\doxysubsubsection{\texorpdfstring{conj\_usuarios()}{conj\_usuarios()}}
+{\footnotesize\ttfamily conj\+\_\+usuarios\+::conj\+\_\+usuarios (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+Se ejecuta automáticamente al declarar un conjunto de usuarios. \begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es una estructura de conjunto de usuarios vacía. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classconj__usuarios_a7916a3eb79089bdf821ac5dd70fbac28}\label{classconj__usuarios_a7916a3eb79089bdf821ac5dd70fbac28}} 
+\index{conj\_usuarios@{conj\_usuarios}!leer@{leer}}
+\index{leer@{leer}!conj\_usuarios@{conj\_usuarios}}
+\doxysubsubsection{\texorpdfstring{leer()}{leer()}}
+{\footnotesize\ttfamily void conj\+\_\+usuarios\+::leer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Añade los usuarios {\itshape u} introducidos en la entrada del programa a un map {\itshape usuarios} que tiene como parametro clave el string del usuario y como parametro asociado la misma clase \mbox{\hyperlink{class_usuario}{Usuario}}. 
+
+\begin{DoxyPrecond}{Precondición}
+La clase {\itshape \mbox{\hyperlink{classconj__usuarios}{conj\+\_\+usuarios}}} esta inicializada. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se obtiene el map {\itshape usuarios} con todos los usuarios introducidos en el canal de entrada del programa y sus respectivas clases \mbox{\hyperlink{class_usuario}{Usuario}}. Estan ordenados por orden alfabetico. Queda como parametro implicito del \mbox{\hyperlink{classconj__usuarios}{conj\+\_\+usuarios}}. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__usuarios_a6fd2ab489a1e0097807965d89b5b2fb7}\label{classconj__usuarios_a6fd2ab489a1e0097807965d89b5b2fb7}} 
+\index{conj\_usuarios@{conj\_usuarios}!alta\_usuario@{alta\_usuario}}
+\index{alta\_usuario@{alta\_usuario}!conj\_usuarios@{conj\_usuarios}}
+\doxysubsubsection{\texorpdfstring{alta\_usuario()}{alta\_usuario()}}
+{\footnotesize\ttfamily void conj\+\_\+usuarios\+::alta\+\_\+usuario (\begin{DoxyParamCaption}\item[{string \&}]{u }\end{DoxyParamCaption})}
+
+
+
+Añade un nuevo usuario con identificador {\itshape u} al conjunto de usuarios. 
+
+\begin{DoxyPrecond}{Precondición}
+El usuario {\itshape u} no existe en el conjunto de usuarios. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parámetro implícito pasa a contener el conjunto de usuarios original más {\itshape u}. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__usuarios_a1f12d2df1d1cf11aae132311ea167f03}\label{classconj__usuarios_a1f12d2df1d1cf11aae132311ea167f03}} 
+\index{conj\_usuarios@{conj\_usuarios}!baja\_usuario@{baja\_usuario}}
+\index{baja\_usuario@{baja\_usuario}!conj\_usuarios@{conj\_usuarios}}
+\doxysubsubsection{\texorpdfstring{baja\_usuario()}{baja\_usuario()}}
+{\footnotesize\ttfamily void conj\+\_\+usuarios\+::baja\+\_\+usuario (\begin{DoxyParamCaption}\item[{string \&}]{u,  }\item[{\mbox{\hyperlink{classconj__cursos}{conj\+\_\+cursos}} \&}]{cc }\end{DoxyParamCaption})}
+
+
+
+Suprime el usuario con identificador {\itshape u} del conjunto de usuarios. 
+
+\begin{DoxyPrecond}{Precondición}
+El usuario {\itshape u} existe en el conjunto de usuarios. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parámetro implícito pasa a contener el conjunto de usuarios original menos {\itshape u}. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__usuarios_a0344d3743e64712d01523bca2be11565}\label{classconj__usuarios_a0344d3743e64712d01523bca2be11565}} 
+\index{conj\_usuarios@{conj\_usuarios}!inscribir\_curso@{inscribir\_curso}}
+\index{inscribir\_curso@{inscribir\_curso}!conj\_usuarios@{conj\_usuarios}}
+\doxysubsubsection{\texorpdfstring{inscribir\_curso()}{inscribir\_curso()}}
+{\footnotesize\ttfamily void conj\+\_\+usuarios\+::inscribir\+\_\+curso (\begin{DoxyParamCaption}\item[{string \&}]{u,  }\item[{int \&}]{c,  }\item[{\mbox{\hyperlink{classconj__cursos}{conj\+\_\+cursos}} \&}]{cursos,  }\item[{\mbox{\hyperlink{classconj__sesiones}{conj\+\_\+sesiones}} \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Inscribe un usuario {\itshape u} en el curso con identificador {\itshape c}. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el usuario {\itshape u} y el curso {\itshape c} y {\itshape u} no esta inscrito en otro curso. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Imprime el número de usuarios inscritos en el curso {\itshape c} después de añadirlo. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__usuarios_a64d3f04128cdfb976af7c475de2e89fe}\label{classconj__usuarios_a64d3f04128cdfb976af7c475de2e89fe}} 
+\index{conj\_usuarios@{conj\_usuarios}!envio@{envio}}
+\index{envio@{envio}!conj\_usuarios@{conj\_usuarios}}
+\doxysubsubsection{\texorpdfstring{envio()}{envio()}}
+{\footnotesize\ttfamily void conj\+\_\+usuarios\+::envio (\begin{DoxyParamCaption}\item[{string \&}]{u,  }\item[{string \&}]{p,  }\item[{int \&}]{r,  }\item[{\mbox{\hyperlink{classconj__problemas}{conj\+\_\+problemas}} \&}]{cp,  }\item[{\mbox{\hyperlink{classconj__sesiones}{conj\+\_\+sesiones}} \&}]{cs,  }\item[{\mbox{\hyperlink{classconj__cursos}{conj\+\_\+cursos}} \&}]{cc }\end{DoxyParamCaption})}
+
+
+
+Se toma nota del resultado {\itshape r} ({\itshape r} = 1 si éxito o {\itshape r} = 0 si fallo) de un nuevo envío del usuario {\itshape u} al problema {\itshape p}. 
+
+\begin{DoxyPrecond}{Precondición}
+El usuario {\itshape u} está registrado e inscrito en un curso donde aparece el problema {\itshape p} y que {\itshape p} pertenece al conjunto de problemas a los que {\itshape u} puede enviar una solución por cumplir los prerequisitos. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se actualizan las estadísticas del usuario {\itshape u} y del problema {\itshape p}. Si r=1, se actualizan los problemas resueltos y enviables del usuario {\itshape u} y se comprueba si se ha completado el curso en el que estaba inscrito. En caso afirmativo, el usuario {\itshape u} deja de estar inscrito en el curso. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__usuarios_ad5bcd8f38f1ff0b0260a1526a2564810}\label{classconj__usuarios_ad5bcd8f38f1ff0b0260a1526a2564810}} 
+\index{conj\_usuarios@{conj\_usuarios}!existe@{existe}}
+\index{existe@{existe}!conj\_usuarios@{conj\_usuarios}}
+\doxysubsubsection{\texorpdfstring{existe()}{existe()}}
+{\footnotesize\ttfamily bool conj\+\_\+usuarios\+::existe (\begin{DoxyParamCaption}\item[{string \&}]{u }\end{DoxyParamCaption}) const}
+
+
+
+Comprueba que el usuario {\itshape u} se encuentre en el conjunto de usuarios de la plataforma. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve 1 (cierto) si el usuario {\itshape u} existe en el conjunto de usuarios de la plataforma. En caso contrario devuelve 0 (falso). 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__usuarios_af1f22948be475035e446f6aaf2d92c54}\label{classconj__usuarios_af1f22948be475035e446f6aaf2d92c54}} 
+\index{conj\_usuarios@{conj\_usuarios}!curso\_usuario@{curso\_usuario}}
+\index{curso\_usuario@{curso\_usuario}!conj\_usuarios@{conj\_usuarios}}
+\doxysubsubsection{\texorpdfstring{curso\_usuario()}{curso\_usuario()}}
+{\footnotesize\ttfamily int conj\+\_\+usuarios\+::curso\+\_\+usuario (\begin{DoxyParamCaption}\item[{const string \&}]{u }\end{DoxyParamCaption})}
+
+
+
+Consulta el curso en el que esta inscrito un usuario {\itshape u}. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el usuario {\itshape u} en la plataforma. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se imprime el identificador del curso o un cero si no esta inscrito en ningún curso. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__usuarios_aa30b4c5798ddbcacf43321520884dc5d}\label{classconj__usuarios_aa30b4c5798ddbcacf43321520884dc5d}} 
+\index{conj\_usuarios@{conj\_usuarios}!problemas\_resueltos@{problemas\_resueltos}}
+\index{problemas\_resueltos@{problemas\_resueltos}!conj\_usuarios@{conj\_usuarios}}
+\doxysubsubsection{\texorpdfstring{problemas\_resueltos()}{problemas\_resueltos()}}
+{\footnotesize\ttfamily void conj\+\_\+usuarios\+::problemas\+\_\+resueltos (\begin{DoxyParamCaption}\item[{string \&}]{u }\end{DoxyParamCaption})}
+
+
+
+Se listan en orden creciente por identificador los problemas solucionados con éxito por el usuario {\itshape u}, ya sea en el curso en que está inscrito actualmente (si lo está en alguno) como los resueltos en cursos anteriores. Además de los identificadores se imprime también el número de envíos realizados por el usuario a cada problema listado (valor mayor o igual a uno). 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el usuario {\itshape u} en la plataforma. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Listado con los problemas resueltos del curso donde está inscrito el usuario {\itshape u} y de sus cursos anteriores. Imprime, también, el número de envíos realizados por el usuario {\itshape u} a cada problema. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__usuarios_ab39fa55e793d0560d99559c718420459}\label{classconj__usuarios_ab39fa55e793d0560d99559c718420459}} 
+\index{conj\_usuarios@{conj\_usuarios}!problemas\_enviables@{problemas\_enviables}}
+\index{problemas\_enviables@{problemas\_enviables}!conj\_usuarios@{conj\_usuarios}}
+\doxysubsubsection{\texorpdfstring{problemas\_enviables()}{problemas\_enviables()}}
+{\footnotesize\ttfamily void conj\+\_\+usuarios\+::problemas\+\_\+enviables (\begin{DoxyParamCaption}\item[{string \&}]{u }\end{DoxyParamCaption})}
+
+
+
+Se listan en orden creciente por identificador los problemas que el usuario no ha solucionado todavía en el curso en el que está inscrito actualmente, pero a los cuales ya puede realizar un envío (porque cumple todos sus prerequisitos, directos e indirectos). Además de los identificadores se imprime también el número de envíos realizados por el usuario a cada problema del listado (valor mayor o igual que cero). 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el usuario {\itshape u} en la plataforma y este pertenece a algún curso. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se imprime una lista con los problemas del curso donde está inscrito {\itshape u} que no ha resuelto todavía y el número de envíos realizados de dichos problemas. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__usuarios_aabed8e05c902c2f7dae81ced7b41092d}\label{classconj__usuarios_aabed8e05c902c2f7dae81ced7b41092d}} 
+\index{conj\_usuarios@{conj\_usuarios}!listar\_usuarios@{listar\_usuarios}}
+\index{listar\_usuarios@{listar\_usuarios}!conj\_usuarios@{conj\_usuarios}}
+\doxysubsubsection{\texorpdfstring{listar\_usuarios()}{listar\_usuarios()}}
+{\footnotesize\ttfamily void conj\+\_\+usuarios\+::listar\+\_\+usuarios (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Se escriben los usuarios registrados actualmente en la plataforma, ordenados crecientemente por su nombre y mostrando, para cada usuario, su identificador, cuántos envíos en total ha realizado, cuántos problemas ha resuelto satisfactoriamente, cuántos problemas ha intentado resolver (al menos ha hecho un envío), y el identificador del curso en el que está inscrito o un 0 si no está inscrito en ninguno. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Un listado con los usuarios registrados en la plataforma actualmente ordenados por nombre. También se obtiene, para cada usuario, su identificador, sus envíos totales, el número de problemas resueltos y de los que ha intentado resolver y, por último, el identificador el curso donde está inscrito. Si no está inscrito en ninguno se imprime un 0. ~\newline
+ 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classconj__usuarios_a7473bb174a625976d2c33fb5e560e81e}\label{classconj__usuarios_a7473bb174a625976d2c33fb5e560e81e}} 
+\index{conj\_usuarios@{conj\_usuarios}!escribir\_usuario@{escribir\_usuario}}
+\index{escribir\_usuario@{escribir\_usuario}!conj\_usuarios@{conj\_usuarios}}
+\doxysubsubsection{\texorpdfstring{escribir\_usuario()}{escribir\_usuario()}}
+{\footnotesize\ttfamily void conj\+\_\+usuarios\+::escribir\+\_\+usuario (\begin{DoxyParamCaption}\item[{string \&}]{u }\end{DoxyParamCaption})}
+
+
+
+Se escribe para el usuario {\itshape u} su identificador, cuántos envíos en total ha realizado, cuántos problemas ha resuelto satisfactoriamente, cuántos problemas ha intentado resolver (al menos ha hecho un envío), y el identificador del curso en el que está inscrito o un 0 si no está inscrito en ninguno. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el usuario {\itshape u} en la plataforma. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Imprime para el usuario {\itshape u}, su identificador, sus envíos totales realizados, los problemas resueltos y los que ha intentado resolver y, por último, el identificador el curso donde está inscrito. Si no está inscrito en ninguno se imprime un 0. ~\newline
+ 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classconj__usuarios_aa3c806105e40b9096731d06cdf530aef}\label{classconj__usuarios_aa3c806105e40b9096731d06cdf530aef}} 
+\index{conj\_usuarios@{conj\_usuarios}!usuarios@{usuarios}}
+\index{usuarios@{usuarios}!conj\_usuarios@{conj\_usuarios}}
+\doxysubsubsection{\texorpdfstring{usuarios}{usuarios}}
+{\footnotesize\ttfamily map$<$string, \mbox{\hyperlink{class_usuario}{Usuario}}$>$ conj\+\_\+usuarios\+::usuarios\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Map (string -\/ \mbox{\hyperlink{class_usuario}{Usuario}}) que tiene como parametro clave los identificadores de los usuarios de la plataforma y como parametro asociado la clase \mbox{\hyperlink{class_usuario}{Usuario}} correspondiente. 
+
+
+
+Definición en la línea 31 del archivo conj\+\_\+usuarios.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{conj__usuarios_8hh}{conj\+\_\+usuarios.\+hh}}\end{DoxyCompactItemize}

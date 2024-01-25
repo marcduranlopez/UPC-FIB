@@ -1,0 +1,12 @@
+<map id="program.cc" name="program.cc">
+<area shape="rect" id="node1" title="Programa principal para el proyecto EVALUATOR: Plataforma de gestión de problemas y cursos de program..." alt="" coords="108,5,195,32"/>
+<area shape="rect" id="node2" href="$conj__problemas_8hh.html" title="Especificación de la clase conj_problemas." alt="" coords="44,379,174,405"/>
+<area shape="rect" id="node3" href="$conj__sesiones_8hh.html" title="Especificación de la clase conj_sesiones." alt="" coords="201,453,324,480"/>
+<area shape="rect" id="node6" href="$conj__cursos_8hh.html" title="Especificación de la clase conj_cursos." alt="" coords="152,229,261,256"/>
+<area shape="rect" id="node8" href="$conj__usuarios_8hh.html" title="Especificación de la clase conj_usuarios." alt="" coords="190,80,308,107"/>
+<area shape="rect" id="node10" title=" " alt="" coords="333,80,405,107"/>
+<area shape="rect" id="node4" href="$_sesion_8hh.html" title="Especificación de la clase Sesion." alt="" coords="260,528,339,555"/>
+<area shape="rect" id="node5" href="$_problema_8hh.html" title="Especificación de la clase Problema." alt="" coords="291,603,386,629"/>
+<area shape="rect" id="node7" href="$_curso_8hh.html" title="Especificación de la clase Curso." alt="" coords="151,304,224,331"/>
+<area shape="rect" id="node9" href="$_usuario_8hh.html" title="Especificación de la clase Usuario." alt="" coords="351,155,435,181"/>
+</map>
